@@ -1,0 +1,11 @@
+# Generator metadata
+.openapi-generator/
+.openapi-generator-ignore
+# TypeScript sources (consumers get compiled JS from dist/)
+src/
+# Dev config
+tsconfig*.json
+.gitignore
+.npmignore
+# Docs
+docs/
