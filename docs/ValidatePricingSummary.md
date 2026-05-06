@@ -7,11 +7,11 @@ Order-level summary of totals
 
 Name | Type
 ------------ | -------------
-`subtotal` | number
-`discountTotal` | number
-`totalDue` | number
+`subtotal` | string
+`discountTotal` | string
+`totalDue` | string
 `recurring` | [ValidatePricingSummaryRecurring](ValidatePricingSummaryRecurring.md)
-`prorataTotal` | number
+`prorataTotal` | string
 `promoApplied` | string
 
 ## Example

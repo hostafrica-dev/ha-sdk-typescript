@@ -48,10 +48,10 @@ export interface ValidatePricingBreakdown {
     _configuration: Array<ValidatePricingConfigItem>;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingBreakdown
      */
-    setupTotal: number;
+    setupTotal: string;
 }
 
 /**

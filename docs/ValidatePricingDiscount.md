@@ -10,8 +10,8 @@ Name | Type
 `applied` | boolean
 `code` | string
 `type` | string
-`amount` | number
-`recurringAmount` | number
+`amount` | string
+`recurringAmount` | string
 `applyOnce` | boolean
 
 ## Example

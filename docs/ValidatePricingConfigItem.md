@@ -14,8 +14,8 @@ Name | Type
 `selectedName` | string
 `planConfig` | [ValidatePricingPlanConfig](ValidatePricingPlanConfig.md)
 `pricing` | [ValidatePricingPlanPricing](ValidatePricingPlanPricing.md)
-`price` | number
-`setup` | number
+`price` | string
+`setup` | string
 
 ## Example
 

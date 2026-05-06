@@ -20,11 +20,11 @@ import { mapValues } from '../runtime';
  */
 export interface CreateOrderTotal {
     /**
-     * Total amount charged
-     * @type {number}
+     * Total amount charged (decimal string, e.g. "2333.33")
+     * @type {string}
      * @memberof CreateOrderTotal
      */
-    amount: number;
+    amount: string;
     /**
      * Currency code (e.g. USD)
      * @type {string}

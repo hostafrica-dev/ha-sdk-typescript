@@ -27,10 +27,10 @@ export interface ValidatePricingProrata {
     applied: boolean;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingProrata
      */
-    amount?: number;
+    amount?: string;
     /**
      * 
      * @type {string}

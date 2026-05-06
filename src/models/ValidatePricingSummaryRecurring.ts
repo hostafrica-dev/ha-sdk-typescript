@@ -21,22 +21,22 @@ import { mapValues } from '../runtime';
 export interface ValidatePricingSummaryRecurring {
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingSummaryRecurring
      */
-    beforeDiscount: number;
+    beforeDiscount: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingSummaryRecurring
      */
-    discount: number;
+    discount: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingSummaryRecurring
      */
-    afterDiscount: number;
+    afterDiscount: string;
 }
 
 /**

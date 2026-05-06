@@ -7,7 +7,7 @@ Total amount breakdown for an order
 
 Name | Type
 ------------ | -------------
-`amount` | number
+`amount` | string
 `currency` | string
 `prefix` | string
 

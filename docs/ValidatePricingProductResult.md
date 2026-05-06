@@ -14,8 +14,8 @@ Name | Type
 `prorata` | [ValidatePricingProrata](ValidatePricingProrata.md)
 `recurringPrice` | [ValidatePricingPriceRange](ValidatePricingPriceRange.md)
 `discount` | [ValidatePricingDiscount](ValidatePricingDiscount.md)
-`lineTotalBeforeDiscount` | number
-`lineTotal` | number
+`lineTotalBeforeDiscount` | string
+`lineTotal` | string
 `breakdown` | [ValidatePricingBreakdown](ValidatePricingBreakdown.md)
 
 ## Example

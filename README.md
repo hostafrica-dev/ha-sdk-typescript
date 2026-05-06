@@ -63,6 +63,9 @@ All URIs are relative to *https://api.hostafrica.com*
 *BackupsApi* | [**listBackups**](docs/BackupsApi.md#listbackups) | **POST** /vps/list-backups | 
 *BackupsApi* | [**restoreBackup**](docs/BackupsApi.md#restorebackup) | **POST** /vps/restore-backup | 
 *ConsoleAccessApi* | [**getNoVncConsole**](docs/ConsoleAccessApi.md#getnovncconsole) | **POST** /vps/novnc-console | 
+*DNSApi* | [**createRdnsRecord**](docs/DNSApi.md#createrdnsrecord) | **POST** /dns/create-rdns-record | 
+*DNSApi* | [**deleteRdnsRecord**](docs/DNSApi.md#deleterdnsrecord) | **POST** /dns/delete-rdns-record | 
+*DNSApi* | [**listRdnsRecords**](docs/DNSApi.md#listrdnsrecords) | **POST** /dns/list-rdns-records | 
 *FirewallApi* | [**createFirewallRule**](docs/FirewallApi.md#createfirewallrule) | **POST** /vps/create-firewall-rule | 
 *FirewallApi* | [**deleteFirewallRule**](docs/FirewallApi.md#deletefirewallrule) | **POST** /vps/delete-firewall-rule | 
 *FirewallApi* | [**listFirewallRules**](docs/FirewallApi.md#listfirewallrules) | **POST** /vps/list-firewall-rules | 
@@ -165,6 +168,11 @@ All URIs are relative to *https://api.hostafrica.com*
 - [CreatePowerTaskOutput](docs/CreatePowerTaskOutput.md)
 - [CreatePowerTaskRequestContent](docs/CreatePowerTaskRequestContent.md)
 - [CreatePowerTaskResponseContent](docs/CreatePowerTaskResponseContent.md)
+- [CreateRdnsRecordInput](docs/CreateRdnsRecordInput.md)
+- [CreateRdnsRecordOutput](docs/CreateRdnsRecordOutput.md)
+- [CreateRdnsRecordRequestContent](docs/CreateRdnsRecordRequestContent.md)
+- [CreateRdnsRecordResponseContent](docs/CreateRdnsRecordResponseContent.md)
+- [CreateRdnsRecordResponseData](docs/CreateRdnsRecordResponseData.md)
 - [CreateSnapshotInput](docs/CreateSnapshotInput.md)
 - [CreateSnapshotOutput](docs/CreateSnapshotOutput.md)
 - [CreateSnapshotRequestContent](docs/CreateSnapshotRequestContent.md)
@@ -189,6 +197,10 @@ All URIs are relative to *https://api.hostafrica.com*
 - [DeletePowerTaskOutput](docs/DeletePowerTaskOutput.md)
 - [DeletePowerTaskRequestContent](docs/DeletePowerTaskRequestContent.md)
 - [DeletePowerTaskResponseContent](docs/DeletePowerTaskResponseContent.md)
+- [DeleteRdnsRecordInput](docs/DeleteRdnsRecordInput.md)
+- [DeleteRdnsRecordOutput](docs/DeleteRdnsRecordOutput.md)
+- [DeleteRdnsRecordRequestContent](docs/DeleteRdnsRecordRequestContent.md)
+- [DeleteRdnsRecordResponseContent](docs/DeleteRdnsRecordResponseContent.md)
 - [DeleteSnapshotInput](docs/DeleteSnapshotInput.md)
 - [DeleteSnapshotOutput](docs/DeleteSnapshotOutput.md)
 - [DeleteSnapshotRequestContent](docs/DeleteSnapshotRequestContent.md)
@@ -276,6 +288,9 @@ All URIs are relative to *https://api.hostafrica.com*
 - [ListPowerTasksOutput](docs/ListPowerTasksOutput.md)
 - [ListPowerTasksRequestContent](docs/ListPowerTasksRequestContent.md)
 - [ListPowerTasksResponseContent](docs/ListPowerTasksResponseContent.md)
+- [ListRdnsRecordsOutput](docs/ListRdnsRecordsOutput.md)
+- [ListRdnsRecordsResponseContent](docs/ListRdnsRecordsResponseContent.md)
+- [ListRdnsResponseData](docs/ListRdnsResponseData.md)
 - [ListReinstallOsInput](docs/ListReinstallOsInput.md)
 - [ListReinstallOsOutput](docs/ListReinstallOsOutput.md)
 - [ListReinstallOsRequestContent](docs/ListReinstallOsRequestContent.md)
@@ -315,6 +330,9 @@ All URIs are relative to *https://api.hostafrica.com*
 - [PowerTaskDialogRules](docs/PowerTaskDialogRules.md)
 - [PowerTaskListResponseData](docs/PowerTaskListResponseData.md)
 - [PublicSshKeyResponseData](docs/PublicSshKeyResponseData.md)
+- [RdnsAvailableItem](docs/RdnsAvailableItem.md)
+- [RdnsPool](docs/RdnsPool.md)
+- [RdnsRecord](docs/RdnsRecord.md)
 - [RebootVpsInput](docs/RebootVpsInput.md)
 - [RebootVpsOutput](docs/RebootVpsOutput.md)
 - [RebootVpsRequestContent](docs/RebootVpsRequestContent.md)

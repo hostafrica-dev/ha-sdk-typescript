@@ -62,11 +62,11 @@ export interface CreateOrderProductItem {
      */
     hostname?: string;
     /**
-     * Line item amount charged
-     * @type {number}
+     * Line item amount charged (decimal string, e.g. "2333.33")
+     * @type {string}
      * @memberof CreateOrderProductItem
      */
-    amount: number;
+    amount: string;
 }
 
 /**

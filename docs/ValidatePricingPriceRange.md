@@ -7,9 +7,9 @@ Price before and after discount
 
 Name | Type
 ------------ | -------------
-`beforeDiscount` | number
-`discount` | number
-`afterDiscount` | number
+`beforeDiscount` | string
+`discount` | string
+`afterDiscount` | string
 
 ## Example
 

@@ -39,16 +39,16 @@ export interface ValidatePricingDiscount {
     type?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingDiscount
      */
-    amount: number;
+    amount: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingDiscount
      */
-    recurringAmount: number;
+    recurringAmount: string;
     /**
      * 
      * @type {boolean}

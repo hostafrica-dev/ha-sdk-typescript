@@ -21,16 +21,16 @@ import { mapValues } from '../runtime';
 export interface ValidatePricingBase {
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingBase
      */
-    recurring: number;
+    recurring: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingBase
      */
-    setup: number;
+    setup: string;
 }
 
 /**

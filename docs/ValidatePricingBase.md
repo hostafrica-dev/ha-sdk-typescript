@@ -7,8 +7,8 @@ Base price breakdown (recurring + setup)
 
 Name | Type
 ------------ | -------------
-`recurring` | number
-`setup` | number
+`recurring` | string
+`setup` | string
 
 ## Example
 

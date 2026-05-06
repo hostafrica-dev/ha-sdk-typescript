@@ -92,16 +92,16 @@ export interface ValidatePricingProductResult {
     discount?: ValidatePricingDiscount;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingProductResult
      */
-    lineTotalBeforeDiscount: number;
+    lineTotalBeforeDiscount: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingProductResult
      */
-    lineTotal: number;
+    lineTotal: string;
     /**
      * 
      * @type {ValidatePricingBreakdown}

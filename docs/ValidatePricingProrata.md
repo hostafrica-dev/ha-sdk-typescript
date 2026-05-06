@@ -8,7 +8,7 @@ Prorata charge details for a product
 Name | Type
 ------------ | -------------
 `applied` | boolean
-`amount` | number
+`amount` | string
 `date` | string
 `invoiceDate` | string
 `days` | number

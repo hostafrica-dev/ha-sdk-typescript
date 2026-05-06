@@ -14,7 +14,7 @@ Name | Type
 `billingCycle` | string
 `domain` | string
 `hostname` | string
-`amount` | number
+`amount` | string
 
 ## Example
 

@@ -9,7 +9,7 @@ Name | Type
 ------------ | -------------
 `base` | [ValidatePricingBase](ValidatePricingBase.md)
 `_configuration` | [Array&lt;ValidatePricingConfigItem&gt;](ValidatePricingConfigItem.md)
-`setupTotal` | number
+`setupTotal` | string
 
 ## Example
 

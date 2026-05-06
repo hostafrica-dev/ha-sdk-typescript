@@ -14,7 +14,7 @@ Name | Type
 `period` | number
 `domainWarranty` | boolean
 `autorenew` | boolean
-`amount` | number
+`amount` | string
 
 ## Example
 

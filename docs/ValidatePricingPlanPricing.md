@@ -7,8 +7,8 @@ Pricing detail within a plan configuration item
 
 Name | Type
 ------------ | -------------
-`price` | number
-`setup` | number
+`price` | string
+`setup` | string
 
 ## Example
 

@@ -21,22 +21,22 @@ import { mapValues } from '../runtime';
 export interface ValidatePricingPriceRange {
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingPriceRange
      */
-    beforeDiscount: number;
+    beforeDiscount: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingPriceRange
      */
-    discount: number;
+    discount: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingPriceRange
      */
-    afterDiscount: number;
+    afterDiscount: string;
 }
 
 /**

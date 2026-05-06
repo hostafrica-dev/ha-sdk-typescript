@@ -78,16 +78,16 @@ export interface ValidatePricingConfigItem {
     pricing?: ValidatePricingPlanPricing;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingConfigItem
      */
-    price?: number;
+    price?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingConfigItem
      */
-    setup?: number;
+    setup?: string;
 }
 
 /**

@@ -7,9 +7,9 @@ Recurring totals in the order summary
 
 Name | Type
 ------------ | -------------
-`beforeDiscount` | number
-`discount` | number
-`afterDiscount` | number
+`beforeDiscount` | string
+`discount` | string
+`afterDiscount` | string
 
 ## Example
 

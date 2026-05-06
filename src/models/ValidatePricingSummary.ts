@@ -29,22 +29,22 @@ import {
 export interface ValidatePricingSummary {
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingSummary
      */
-    subtotal: number;
+    subtotal: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingSummary
      */
-    discountTotal: number;
+    discountTotal: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingSummary
      */
-    totalDue: number;
+    totalDue: string;
     /**
      * 
      * @type {ValidatePricingSummaryRecurring}
@@ -53,10 +53,10 @@ export interface ValidatePricingSummary {
     recurring?: ValidatePricingSummaryRecurring;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ValidatePricingSummary
      */
-    prorataTotal?: number;
+    prorataTotal?: string;
     /**
      * 
      * @type {string}
