@@ -3,3 +3,4 @@
 
 # Manually maintained - generator must not overwrite
 .gitignore
+package.json
