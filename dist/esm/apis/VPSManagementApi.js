@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { GetOsTemplateDetailsRequestContentToJSON, GetOsTemplateDetailsResponseContentFromJSON, GetVpsConfigRequestContentToJSON, GetVpsConfigResponseContentFromJSON, GetVpsDetailsRequestContentToJSON, GetVpsDetailsResponseContentFromJSON, ListAllowedFeaturesRequestContentToJSON, ListAllowedFeaturesResponseContentFromJSON, ListIsosRequestContentToJSON, ListIsosResponseContentFromJSON, ListOsTemplatesRequestContentToJSON, ListOsTemplatesResponseContentFromJSON, ListReinstallOsRequestContentToJSON, ListReinstallOsResponseContentFromJSON, ListVpsServicesResponseContentFromJSON, MountIsoRequestContentToJSON, MountIsoResponseContentFromJSON, SuspendVpsRequestContentToJSON, SuspendVpsResponseContentFromJSON, TerminateVpsRequestContentToJSON, TerminateVpsResponseContentFromJSON, TriggerReinstallRequestContentToJSON, TriggerReinstallResponseContentFromJSON, UnsuspendVpsRequestContentToJSON, UnsuspendVpsResponseContentFromJSON, UpdateVpsConfigRequestContentToJSON, UpdateVpsConfigResponseContentFromJSON, } from '../models/index';
+import { GetOsTemplateDetailsRequestContentToJSON, GetOsTemplateDetailsResponseContentFromJSON, GetVpsConfigRequestContentToJSON, GetVpsConfigResponseContentFromJSON, GetVpsDetailsRequestContentToJSON, GetVpsDetailsResponseContentFromJSON, ListIsosRequestContentToJSON, ListIsosResponseContentFromJSON, ListOsTemplatesRequestContentToJSON, ListOsTemplatesResponseContentFromJSON, ListReinstallOsRequestContentToJSON, ListReinstallOsResponseContentFromJSON, ListVpsServicesResponseContentFromJSON, MountIsoRequestContentToJSON, MountIsoResponseContentFromJSON, TriggerReinstallRequestContentToJSON, TriggerReinstallResponseContentFromJSON, UpdateVpsConfigRequestContentToJSON, UpdateVpsConfigResponseContentFromJSON, } from '../models/index';
 /**
  *
  */
@@ -164,53 +164,6 @@ export class VPSManagementApi extends runtime.BaseAPI {
     getVpsDetails(requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.getVpsDetailsRaw(requestParameters, initOverrides);
-            return yield response.value();
-        });
-    }
-    /**
-     * Creates request options for listAllowedFeatures without sending the request
-     */
-    listAllowedFeaturesRequestOpts(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['listAllowedFeaturesRequestContent'] == null) {
-                throw new runtime.RequiredError('listAllowedFeaturesRequestContent', 'Required parameter "listAllowedFeaturesRequestContent" was null or undefined when calling listAllowedFeatures().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            if (this.configuration && this.configuration.accessToken) {
-                const token = this.configuration.accessToken;
-                const tokenString = yield token("smithy.api.httpBearerAuth", []);
-                if (tokenString) {
-                    headerParameters["Authorization"] = `Bearer ${tokenString}`;
-                }
-            }
-            let urlPath = `/vps/list-allowed-features`;
-            return {
-                path: urlPath,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: ListAllowedFeaturesRequestContentToJSON(requestParameters['listAllowedFeaturesRequestContent']),
-            };
-        });
-    }
-    /**
-     * Gets the allowed features and capabilities for a VPS service
-     */
-    listAllowedFeaturesRaw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const requestOptions = yield this.listAllowedFeaturesRequestOpts(requestParameters);
-            const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => ListAllowedFeaturesResponseContentFromJSON(jsonValue));
-        });
-    }
-    /**
-     * Gets the allowed features and capabilities for a VPS service
-     */
-    listAllowedFeatures(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.listAllowedFeaturesRaw(requestParameters, initOverrides);
             return yield response.value();
         });
     }
@@ -445,100 +398,6 @@ export class VPSManagementApi extends runtime.BaseAPI {
         });
     }
     /**
-     * Creates request options for suspendVps without sending the request
-     */
-    suspendVpsRequestOpts(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['suspendVpsRequestContent'] == null) {
-                throw new runtime.RequiredError('suspendVpsRequestContent', 'Required parameter "suspendVpsRequestContent" was null or undefined when calling suspendVps().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            if (this.configuration && this.configuration.accessToken) {
-                const token = this.configuration.accessToken;
-                const tokenString = yield token("smithy.api.httpBearerAuth", []);
-                if (tokenString) {
-                    headerParameters["Authorization"] = `Bearer ${tokenString}`;
-                }
-            }
-            let urlPath = `/vps/suspend`;
-            return {
-                path: urlPath,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: SuspendVpsRequestContentToJSON(requestParameters['suspendVpsRequestContent']),
-            };
-        });
-    }
-    /**
-     * [Under development] Suspends an active VPS service through WHMCS. Requires a reason for suspension
-     */
-    suspendVpsRaw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const requestOptions = yield this.suspendVpsRequestOpts(requestParameters);
-            const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => SuspendVpsResponseContentFromJSON(jsonValue));
-        });
-    }
-    /**
-     * [Under development] Suspends an active VPS service through WHMCS. Requires a reason for suspension
-     */
-    suspendVps(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.suspendVpsRaw(requestParameters, initOverrides);
-            return yield response.value();
-        });
-    }
-    /**
-     * Creates request options for terminateVps without sending the request
-     */
-    terminateVpsRequestOpts(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['terminateVpsRequestContent'] == null) {
-                throw new runtime.RequiredError('terminateVpsRequestContent', 'Required parameter "terminateVpsRequestContent" was null or undefined when calling terminateVps().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            if (this.configuration && this.configuration.accessToken) {
-                const token = this.configuration.accessToken;
-                const tokenString = yield token("smithy.api.httpBearerAuth", []);
-                if (tokenString) {
-                    headerParameters["Authorization"] = `Bearer ${tokenString}`;
-                }
-            }
-            let urlPath = `/vps/terminate`;
-            return {
-                path: urlPath,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: TerminateVpsRequestContentToJSON(requestParameters['terminateVpsRequestContent']),
-            };
-        });
-    }
-    /**
-     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
-     */
-    terminateVpsRaw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const requestOptions = yield this.terminateVpsRequestOpts(requestParameters);
-            const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => TerminateVpsResponseContentFromJSON(jsonValue));
-        });
-    }
-    /**
-     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
-     */
-    terminateVps(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.terminateVpsRaw(requestParameters, initOverrides);
-            return yield response.value();
-        });
-    }
-    /**
      * Creates request options for triggerReinstall without sending the request
      */
     triggerReinstallRequestOpts(requestParameters) {
@@ -582,53 +441,6 @@ export class VPSManagementApi extends runtime.BaseAPI {
     triggerReinstall(requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.triggerReinstallRaw(requestParameters, initOverrides);
-            return yield response.value();
-        });
-    }
-    /**
-     * Creates request options for unsuspendVps without sending the request
-     */
-    unsuspendVpsRequestOpts(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['unsuspendVpsRequestContent'] == null) {
-                throw new runtime.RequiredError('unsuspendVpsRequestContent', 'Required parameter "unsuspendVpsRequestContent" was null or undefined when calling unsuspendVps().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            if (this.configuration && this.configuration.accessToken) {
-                const token = this.configuration.accessToken;
-                const tokenString = yield token("smithy.api.httpBearerAuth", []);
-                if (tokenString) {
-                    headerParameters["Authorization"] = `Bearer ${tokenString}`;
-                }
-            }
-            let urlPath = `/vps/unsuspend`;
-            return {
-                path: urlPath,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: UnsuspendVpsRequestContentToJSON(requestParameters['unsuspendVpsRequestContent']),
-            };
-        });
-    }
-    /**
-     * [Under development] Unsuspends a suspended VPS service through WHMCS. Can only unsuspend services that were suspended via API
-     */
-    unsuspendVpsRaw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const requestOptions = yield this.unsuspendVpsRequestOpts(requestParameters);
-            const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => UnsuspendVpsResponseContentFromJSON(jsonValue));
-        });
-    }
-    /**
-     * [Under development] Unsuspends a suspended VPS service through WHMCS. Can only unsuspend services that were suspended via API
-     */
-    unsuspendVps(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.unsuspendVpsRaw(requestParameters, initOverrides);
             return yield response.value();
         });
     }

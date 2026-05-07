@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import type { CreateOrderRequestContent, CreateOrderResponseContent, GetCatalogueRequestContent, GetCatalogueResponseContent, ListOrdersResponseContent, RetryPaymentRequestContent, RetryPaymentResponseContent, ValidatePricingRequestContent, ValidatePricingResponseContent } from '../models/index';
+import type { CreateOrderRequestContent, CreateOrderResponseContent, GetCatalogueRequestContent, GetCatalogueResponseContent, ListOrdersResponseContent, RetryPaymentRequestContent, RetryPaymentResponseContent, TerminateVpsRequestContent, TerminateVpsResponseContent, ValidatePricingRequestContent, ValidatePricingResponseContent } from '../models/index';
 export interface CreateOrderRequest {
     createOrderRequestContent: CreateOrderRequestContent;
 }
@@ -19,6 +19,9 @@ export interface GetCatalogueRequest {
 }
 export interface RetryPaymentRequest {
     retryPaymentRequestContent: RetryPaymentRequestContent;
+}
+export interface TerminateVpsRequest {
+    terminateVpsRequestContent: TerminateVpsRequestContent;
 }
 export interface ValidatePricingRequest {
     validatePricingRequestContent: ValidatePricingRequestContent;
@@ -75,6 +78,18 @@ export declare class ServiceManagementApi extends runtime.BaseAPI {
      * Retries a failed or pending payment for an existing order
      */
     retryPayment(requestParameters: RetryPaymentRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RetryPaymentResponseContent>;
+    /**
+     * Creates request options for terminateVps without sending the request
+     */
+    terminateVpsRequestOpts(requestParameters: TerminateVpsRequest): Promise<runtime.RequestOpts>;
+    /**
+     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
+     */
+    terminateVpsRaw(requestParameters: TerminateVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<TerminateVpsResponseContent>>;
+    /**
+     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
+     */
+    terminateVps(requestParameters: TerminateVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TerminateVpsResponseContent>;
     /**
      * Creates request options for validatePricing without sending the request
      */

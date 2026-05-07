@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import type { GetOsTemplateDetailsRequestContent, GetOsTemplateDetailsResponseContent, GetVpsConfigRequestContent, GetVpsConfigResponseContent, GetVpsDetailsRequestContent, GetVpsDetailsResponseContent, ListAllowedFeaturesRequestContent, ListAllowedFeaturesResponseContent, ListIsosRequestContent, ListIsosResponseContent, ListOsTemplatesRequestContent, ListOsTemplatesResponseContent, ListReinstallOsRequestContent, ListReinstallOsResponseContent, ListVpsServicesResponseContent, MountIsoRequestContent, MountIsoResponseContent, SuspendVpsRequestContent, SuspendVpsResponseContent, TerminateVpsRequestContent, TerminateVpsResponseContent, TriggerReinstallRequestContent, TriggerReinstallResponseContent, UnsuspendVpsRequestContent, UnsuspendVpsResponseContent, UpdateVpsConfigRequestContent, UpdateVpsConfigResponseContent } from '../models/index';
+import type { GetOsTemplateDetailsRequestContent, GetOsTemplateDetailsResponseContent, GetVpsConfigRequestContent, GetVpsConfigResponseContent, GetVpsDetailsRequestContent, GetVpsDetailsResponseContent, ListIsosRequestContent, ListIsosResponseContent, ListOsTemplatesRequestContent, ListOsTemplatesResponseContent, ListReinstallOsRequestContent, ListReinstallOsResponseContent, ListVpsServicesResponseContent, MountIsoRequestContent, MountIsoResponseContent, TriggerReinstallRequestContent, TriggerReinstallResponseContent, UpdateVpsConfigRequestContent, UpdateVpsConfigResponseContent } from '../models/index';
 export interface GetOsTemplateDetailsRequest {
     getOsTemplateDetailsRequestContent: GetOsTemplateDetailsRequestContent;
 }
@@ -19,9 +19,6 @@ export interface GetVpsConfigRequest {
 }
 export interface GetVpsDetailsRequest {
     getVpsDetailsRequestContent: GetVpsDetailsRequestContent;
-}
-export interface ListAllowedFeaturesRequest {
-    listAllowedFeaturesRequestContent: ListAllowedFeaturesRequestContent;
 }
 export interface ListIsosRequest {
     listIsosRequestContent: ListIsosRequestContent;
@@ -35,17 +32,8 @@ export interface ListReinstallOsRequest {
 export interface MountIsoRequest {
     mountIsoRequestContent: MountIsoRequestContent;
 }
-export interface SuspendVpsRequest {
-    suspendVpsRequestContent: SuspendVpsRequestContent;
-}
-export interface TerminateVpsRequest {
-    terminateVpsRequestContent: TerminateVpsRequestContent;
-}
 export interface TriggerReinstallRequest {
     triggerReinstallRequestContent: TriggerReinstallRequestContent;
-}
-export interface UnsuspendVpsRequest {
-    unsuspendVpsRequestContent: UnsuspendVpsRequestContent;
 }
 export interface UpdateVpsConfigRequest {
     updateVpsConfigRequestContent: UpdateVpsConfigRequestContent;
@@ -90,18 +78,6 @@ export declare class VPSManagementApi extends runtime.BaseAPI {
      * Gets detailed information about a VPS service including configuration, network settings, and statistics
      */
     getVpsDetails(requestParameters: GetVpsDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GetVpsDetailsResponseContent>;
-    /**
-     * Creates request options for listAllowedFeatures without sending the request
-     */
-    listAllowedFeaturesRequestOpts(requestParameters: ListAllowedFeaturesRequest): Promise<runtime.RequestOpts>;
-    /**
-     * Gets the allowed features and capabilities for a VPS service
-     */
-    listAllowedFeaturesRaw(requestParameters: ListAllowedFeaturesRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListAllowedFeaturesResponseContent>>;
-    /**
-     * Gets the allowed features and capabilities for a VPS service
-     */
-    listAllowedFeatures(requestParameters: ListAllowedFeaturesRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListAllowedFeaturesResponseContent>;
     /**
      * Creates request options for listIsos without sending the request
      */
@@ -163,30 +139,6 @@ export declare class VPSManagementApi extends runtime.BaseAPI {
      */
     mountIso(requestParameters: MountIsoRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MountIsoResponseContent>;
     /**
-     * Creates request options for suspendVps without sending the request
-     */
-    suspendVpsRequestOpts(requestParameters: SuspendVpsRequest): Promise<runtime.RequestOpts>;
-    /**
-     * [Under development] Suspends an active VPS service through WHMCS. Requires a reason for suspension
-     */
-    suspendVpsRaw(requestParameters: SuspendVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<SuspendVpsResponseContent>>;
-    /**
-     * [Under development] Suspends an active VPS service through WHMCS. Requires a reason for suspension
-     */
-    suspendVps(requestParameters: SuspendVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<SuspendVpsResponseContent>;
-    /**
-     * Creates request options for terminateVps without sending the request
-     */
-    terminateVpsRequestOpts(requestParameters: TerminateVpsRequest): Promise<runtime.RequestOpts>;
-    /**
-     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
-     */
-    terminateVpsRaw(requestParameters: TerminateVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<TerminateVpsResponseContent>>;
-    /**
-     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
-     */
-    terminateVps(requestParameters: TerminateVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TerminateVpsResponseContent>;
-    /**
      * Creates request options for triggerReinstall without sending the request
      */
     triggerReinstallRequestOpts(requestParameters: TriggerReinstallRequest): Promise<runtime.RequestOpts>;
@@ -198,18 +150,6 @@ export declare class VPSManagementApi extends runtime.BaseAPI {
      * Triggers a VPS reinstallation with the specified OS template
      */
     triggerReinstall(requestParameters: TriggerReinstallRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TriggerReinstallResponseContent>;
-    /**
-     * Creates request options for unsuspendVps without sending the request
-     */
-    unsuspendVpsRequestOpts(requestParameters: UnsuspendVpsRequest): Promise<runtime.RequestOpts>;
-    /**
-     * [Under development] Unsuspends a suspended VPS service through WHMCS. Can only unsuspend services that were suspended via API
-     */
-    unsuspendVpsRaw(requestParameters: UnsuspendVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UnsuspendVpsResponseContent>>;
-    /**
-     * [Under development] Unsuspends a suspended VPS service through WHMCS. Can only unsuspend services that were suspended via API
-     */
-    unsuspendVps(requestParameters: UnsuspendVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UnsuspendVpsResponseContent>;
     /**
      * Creates request options for updateVpsConfig without sending the request
      */

@@ -16,7 +16,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 /* eslint-disable */
-__exportStar(require("./AllowedFeaturesResponseData"), exports);
 __exportStar(require("./BackupCreateResponseData"), exports);
 __exportStar(require("./BackupCreationInfo"), exports);
 __exportStar(require("./BackupItem"), exports);
@@ -99,8 +98,6 @@ __exportStar(require("./GetVpsDetailsRequestContent"), exports);
 __exportStar(require("./GetVpsDetailsResponseContent"), exports);
 __exportStar(require("./InternalServiceErrorResponseContent"), exports);
 __exportStar(require("./InvalidStateErrorResponseContent"), exports);
-__exportStar(require("./ListAllowedFeaturesRequestContent"), exports);
-__exportStar(require("./ListAllowedFeaturesResponseContent"), exports);
 __exportStar(require("./ListBackupSchedulesRequestContent"), exports);
 __exportStar(require("./ListBackupSchedulesResponseContent"), exports);
 __exportStar(require("./ListBackupsRequestContent"), exports);
@@ -177,8 +174,6 @@ __exportStar(require("./StartVpsRequestContent"), exports);
 __exportStar(require("./StartVpsResponseContent"), exports);
 __exportStar(require("./StopVpsRequestContent"), exports);
 __exportStar(require("./StopVpsResponseContent"), exports);
-__exportStar(require("./SuspendVpsRequestContent"), exports);
-__exportStar(require("./SuspendVpsResponseContent"), exports);
 __exportStar(require("./TerminateVpsRequestContent"), exports);
 __exportStar(require("./TerminateVpsResponseContent"), exports);
 __exportStar(require("./TooManyRequestsErrorResponseContent"), exports);
@@ -186,8 +181,6 @@ __exportStar(require("./TriggerReinstallRequestContent"), exports);
 __exportStar(require("./TriggerReinstallResponseContent"), exports);
 __exportStar(require("./TriggerReinstallResponseData"), exports);
 __exportStar(require("./UnauthorizedErrorResponseContent"), exports);
-__exportStar(require("./UnsuspendVpsRequestContent"), exports);
-__exportStar(require("./UnsuspendVpsResponseContent"), exports);
 __exportStar(require("./UpdateFirewallRuleRequestContent"), exports);
 __exportStar(require("./UpdateFirewallRuleResponseContent"), exports);
 __exportStar(require("./UpdateNotificationRequestContent"), exports);

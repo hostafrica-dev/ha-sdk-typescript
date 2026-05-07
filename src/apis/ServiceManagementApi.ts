@@ -22,11 +22,14 @@ import type {
   GetCatalogueRequestContent,
   GetCatalogueResponseContent,
   InternalServiceErrorResponseContent,
+  InvalidStateErrorResponseContent,
   ListOrdersResponseContent,
   ResourceNotFoundErrorResponseContent,
   RetryPaymentRequestContent,
   RetryPaymentResponseContent,
   ServiceUnavailableErrorResponseContent,
+  TerminateVpsRequestContent,
+  TerminateVpsResponseContent,
   TooManyRequestsErrorResponseContent,
   UnauthorizedErrorResponseContent,
   ValidatePricingRequestContent,
@@ -48,6 +51,8 @@ import {
     GetCatalogueResponseContentToJSON,
     InternalServiceErrorResponseContentFromJSON,
     InternalServiceErrorResponseContentToJSON,
+    InvalidStateErrorResponseContentFromJSON,
+    InvalidStateErrorResponseContentToJSON,
     ListOrdersResponseContentFromJSON,
     ListOrdersResponseContentToJSON,
     ResourceNotFoundErrorResponseContentFromJSON,
@@ -58,6 +63,10 @@ import {
     RetryPaymentResponseContentToJSON,
     ServiceUnavailableErrorResponseContentFromJSON,
     ServiceUnavailableErrorResponseContentToJSON,
+    TerminateVpsRequestContentFromJSON,
+    TerminateVpsRequestContentToJSON,
+    TerminateVpsResponseContentFromJSON,
+    TerminateVpsResponseContentToJSON,
     TooManyRequestsErrorResponseContentFromJSON,
     TooManyRequestsErrorResponseContentToJSON,
     UnauthorizedErrorResponseContentFromJSON,
@@ -80,6 +89,10 @@ export interface GetCatalogueRequest {
 
 export interface RetryPaymentRequest {
     retryPaymentRequestContent: RetryPaymentRequestContent;
+}
+
+export interface TerminateVpsRequest {
+    terminateVpsRequestContent: TerminateVpsRequestContent;
 }
 
 export interface ValidatePricingRequest {
@@ -291,6 +304,61 @@ export class ServiceManagementApi extends runtime.BaseAPI {
      */
     async retryPayment(requestParameters: RetryPaymentRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RetryPaymentResponseContent> {
         const response = await this.retryPaymentRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for terminateVps without sending the request
+     */
+    async terminateVpsRequestOpts(requestParameters: TerminateVpsRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['terminateVpsRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'terminateVpsRequestContent',
+                'Required parameter "terminateVpsRequestContent" was null or undefined when calling terminateVps().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("smithy.api.httpBearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/vps/terminate`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: TerminateVpsRequestContentToJSON(requestParameters['terminateVpsRequestContent']),
+        };
+    }
+
+    /**
+     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
+     */
+    async terminateVpsRaw(requestParameters: TerminateVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<TerminateVpsResponseContent>> {
+        const requestOptions = await this.terminateVpsRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => TerminateVpsResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
+     */
+    async terminateVps(requestParameters: TerminateVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TerminateVpsResponseContent> {
+        const response = await this.terminateVpsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

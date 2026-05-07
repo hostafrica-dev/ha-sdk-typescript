@@ -1,6 +1,5 @@
 /* tslint:disable */
 /* eslint-disable */
-export * from './AllowedFeaturesResponseData';
 export * from './BackupCreateResponseData';
 export * from './BackupCreationInfo';
 export * from './BackupItem';
@@ -83,8 +82,6 @@ export * from './GetVpsDetailsRequestContent';
 export * from './GetVpsDetailsResponseContent';
 export * from './InternalServiceErrorResponseContent';
 export * from './InvalidStateErrorResponseContent';
-export * from './ListAllowedFeaturesRequestContent';
-export * from './ListAllowedFeaturesResponseContent';
 export * from './ListBackupSchedulesRequestContent';
 export * from './ListBackupSchedulesResponseContent';
 export * from './ListBackupsRequestContent';
@@ -161,8 +158,6 @@ export * from './StartVpsRequestContent';
 export * from './StartVpsResponseContent';
 export * from './StopVpsRequestContent';
 export * from './StopVpsResponseContent';
-export * from './SuspendVpsRequestContent';
-export * from './SuspendVpsResponseContent';
 export * from './TerminateVpsRequestContent';
 export * from './TerminateVpsResponseContent';
 export * from './TooManyRequestsErrorResponseContent';
@@ -170,8 +165,6 @@ export * from './TriggerReinstallRequestContent';
 export * from './TriggerReinstallResponseContent';
 export * from './TriggerReinstallResponseData';
 export * from './UnauthorizedErrorResponseContent';
-export * from './UnsuspendVpsRequestContent';
-export * from './UnsuspendVpsResponseContent';
 export * from './UpdateFirewallRuleRequestContent';
 export * from './UpdateFirewallRuleResponseContent';
 export * from './UpdateNotificationRequestContent';

@@ -25,8 +25,6 @@ import type {
   GetVpsDetailsResponseContent,
   InternalServiceErrorResponseContent,
   InvalidStateErrorResponseContent,
-  ListAllowedFeaturesRequestContent,
-  ListAllowedFeaturesResponseContent,
   ListIsosRequestContent,
   ListIsosResponseContent,
   ListOsTemplatesRequestContent,
@@ -38,16 +36,10 @@ import type {
   MountIsoResponseContent,
   ResourceNotFoundErrorResponseContent,
   ServiceUnavailableErrorResponseContent,
-  SuspendVpsRequestContent,
-  SuspendVpsResponseContent,
-  TerminateVpsRequestContent,
-  TerminateVpsResponseContent,
   TooManyRequestsErrorResponseContent,
   TriggerReinstallRequestContent,
   TriggerReinstallResponseContent,
   UnauthorizedErrorResponseContent,
-  UnsuspendVpsRequestContent,
-  UnsuspendVpsResponseContent,
   UpdateVpsConfigRequestContent,
   UpdateVpsConfigResponseContent,
   ValidationErrorResponseContent,
@@ -73,10 +65,6 @@ import {
     InternalServiceErrorResponseContentToJSON,
     InvalidStateErrorResponseContentFromJSON,
     InvalidStateErrorResponseContentToJSON,
-    ListAllowedFeaturesRequestContentFromJSON,
-    ListAllowedFeaturesRequestContentToJSON,
-    ListAllowedFeaturesResponseContentFromJSON,
-    ListAllowedFeaturesResponseContentToJSON,
     ListIsosRequestContentFromJSON,
     ListIsosRequestContentToJSON,
     ListIsosResponseContentFromJSON,
@@ -99,14 +87,6 @@ import {
     ResourceNotFoundErrorResponseContentToJSON,
     ServiceUnavailableErrorResponseContentFromJSON,
     ServiceUnavailableErrorResponseContentToJSON,
-    SuspendVpsRequestContentFromJSON,
-    SuspendVpsRequestContentToJSON,
-    SuspendVpsResponseContentFromJSON,
-    SuspendVpsResponseContentToJSON,
-    TerminateVpsRequestContentFromJSON,
-    TerminateVpsRequestContentToJSON,
-    TerminateVpsResponseContentFromJSON,
-    TerminateVpsResponseContentToJSON,
     TooManyRequestsErrorResponseContentFromJSON,
     TooManyRequestsErrorResponseContentToJSON,
     TriggerReinstallRequestContentFromJSON,
@@ -115,10 +95,6 @@ import {
     TriggerReinstallResponseContentToJSON,
     UnauthorizedErrorResponseContentFromJSON,
     UnauthorizedErrorResponseContentToJSON,
-    UnsuspendVpsRequestContentFromJSON,
-    UnsuspendVpsRequestContentToJSON,
-    UnsuspendVpsResponseContentFromJSON,
-    UnsuspendVpsResponseContentToJSON,
     UpdateVpsConfigRequestContentFromJSON,
     UpdateVpsConfigRequestContentToJSON,
     UpdateVpsConfigResponseContentFromJSON,
@@ -139,10 +115,6 @@ export interface GetVpsDetailsRequest {
     getVpsDetailsRequestContent: GetVpsDetailsRequestContent;
 }
 
-export interface ListAllowedFeaturesRequest {
-    listAllowedFeaturesRequestContent: ListAllowedFeaturesRequestContent;
-}
-
 export interface ListIsosRequest {
     listIsosRequestContent: ListIsosRequestContent;
 }
@@ -159,20 +131,8 @@ export interface MountIsoRequest {
     mountIsoRequestContent: MountIsoRequestContent;
 }
 
-export interface SuspendVpsRequest {
-    suspendVpsRequestContent: SuspendVpsRequestContent;
-}
-
-export interface TerminateVpsRequest {
-    terminateVpsRequestContent: TerminateVpsRequestContent;
-}
-
 export interface TriggerReinstallRequest {
     triggerReinstallRequestContent: TriggerReinstallRequestContent;
-}
-
-export interface UnsuspendVpsRequest {
-    unsuspendVpsRequestContent: UnsuspendVpsRequestContent;
 }
 
 export interface UpdateVpsConfigRequest {
@@ -346,61 +306,6 @@ export class VPSManagementApi extends runtime.BaseAPI {
      */
     async getVpsDetails(requestParameters: GetVpsDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GetVpsDetailsResponseContent> {
         const response = await this.getVpsDetailsRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     * Creates request options for listAllowedFeatures without sending the request
-     */
-    async listAllowedFeaturesRequestOpts(requestParameters: ListAllowedFeaturesRequest): Promise<runtime.RequestOpts> {
-        if (requestParameters['listAllowedFeaturesRequestContent'] == null) {
-            throw new runtime.RequiredError(
-                'listAllowedFeaturesRequestContent',
-                'Required parameter "listAllowedFeaturesRequestContent" was null or undefined when calling listAllowedFeatures().'
-            );
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json';
-
-        if (this.configuration && this.configuration.accessToken) {
-            const token = this.configuration.accessToken;
-            const tokenString = await token("smithy.api.httpBearerAuth", []);
-
-            if (tokenString) {
-                headerParameters["Authorization"] = `Bearer ${tokenString}`;
-            }
-        }
-
-        let urlPath = `/vps/list-allowed-features`;
-
-        return {
-            path: urlPath,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: ListAllowedFeaturesRequestContentToJSON(requestParameters['listAllowedFeaturesRequestContent']),
-        };
-    }
-
-    /**
-     * Gets the allowed features and capabilities for a VPS service
-     */
-    async listAllowedFeaturesRaw(requestParameters: ListAllowedFeaturesRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListAllowedFeaturesResponseContent>> {
-        const requestOptions = await this.listAllowedFeaturesRequestOpts(requestParameters);
-        const response = await this.request(requestOptions, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => ListAllowedFeaturesResponseContentFromJSON(jsonValue));
-    }
-
-    /**
-     * Gets the allowed features and capabilities for a VPS service
-     */
-    async listAllowedFeatures(requestParameters: ListAllowedFeaturesRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListAllowedFeaturesResponseContent> {
-        const response = await this.listAllowedFeaturesRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
@@ -670,116 +575,6 @@ export class VPSManagementApi extends runtime.BaseAPI {
     }
 
     /**
-     * Creates request options for suspendVps without sending the request
-     */
-    async suspendVpsRequestOpts(requestParameters: SuspendVpsRequest): Promise<runtime.RequestOpts> {
-        if (requestParameters['suspendVpsRequestContent'] == null) {
-            throw new runtime.RequiredError(
-                'suspendVpsRequestContent',
-                'Required parameter "suspendVpsRequestContent" was null or undefined when calling suspendVps().'
-            );
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json';
-
-        if (this.configuration && this.configuration.accessToken) {
-            const token = this.configuration.accessToken;
-            const tokenString = await token("smithy.api.httpBearerAuth", []);
-
-            if (tokenString) {
-                headerParameters["Authorization"] = `Bearer ${tokenString}`;
-            }
-        }
-
-        let urlPath = `/vps/suspend`;
-
-        return {
-            path: urlPath,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: SuspendVpsRequestContentToJSON(requestParameters['suspendVpsRequestContent']),
-        };
-    }
-
-    /**
-     * [Under development] Suspends an active VPS service through WHMCS. Requires a reason for suspension
-     */
-    async suspendVpsRaw(requestParameters: SuspendVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<SuspendVpsResponseContent>> {
-        const requestOptions = await this.suspendVpsRequestOpts(requestParameters);
-        const response = await this.request(requestOptions, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => SuspendVpsResponseContentFromJSON(jsonValue));
-    }
-
-    /**
-     * [Under development] Suspends an active VPS service through WHMCS. Requires a reason for suspension
-     */
-    async suspendVps(requestParameters: SuspendVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<SuspendVpsResponseContent> {
-        const response = await this.suspendVpsRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     * Creates request options for terminateVps without sending the request
-     */
-    async terminateVpsRequestOpts(requestParameters: TerminateVpsRequest): Promise<runtime.RequestOpts> {
-        if (requestParameters['terminateVpsRequestContent'] == null) {
-            throw new runtime.RequiredError(
-                'terminateVpsRequestContent',
-                'Required parameter "terminateVpsRequestContent" was null or undefined when calling terminateVps().'
-            );
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json';
-
-        if (this.configuration && this.configuration.accessToken) {
-            const token = this.configuration.accessToken;
-            const tokenString = await token("smithy.api.httpBearerAuth", []);
-
-            if (tokenString) {
-                headerParameters["Authorization"] = `Bearer ${tokenString}`;
-            }
-        }
-
-        let urlPath = `/vps/terminate`;
-
-        return {
-            path: urlPath,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: TerminateVpsRequestContentToJSON(requestParameters['terminateVpsRequestContent']),
-        };
-    }
-
-    /**
-     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
-     */
-    async terminateVpsRaw(requestParameters: TerminateVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<TerminateVpsResponseContent>> {
-        const requestOptions = await this.terminateVpsRequestOpts(requestParameters);
-        const response = await this.request(requestOptions, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => TerminateVpsResponseContentFromJSON(jsonValue));
-    }
-
-    /**
-     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
-     */
-    async terminateVps(requestParameters: TerminateVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TerminateVpsResponseContent> {
-        const response = await this.terminateVpsRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
      * Creates request options for triggerReinstall without sending the request
      */
     async triggerReinstallRequestOpts(requestParameters: TriggerReinstallRequest): Promise<runtime.RequestOpts> {
@@ -831,61 +626,6 @@ export class VPSManagementApi extends runtime.BaseAPI {
      */
     async triggerReinstall(requestParameters: TriggerReinstallRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TriggerReinstallResponseContent> {
         const response = await this.triggerReinstallRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     * Creates request options for unsuspendVps without sending the request
-     */
-    async unsuspendVpsRequestOpts(requestParameters: UnsuspendVpsRequest): Promise<runtime.RequestOpts> {
-        if (requestParameters['unsuspendVpsRequestContent'] == null) {
-            throw new runtime.RequiredError(
-                'unsuspendVpsRequestContent',
-                'Required parameter "unsuspendVpsRequestContent" was null or undefined when calling unsuspendVps().'
-            );
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json';
-
-        if (this.configuration && this.configuration.accessToken) {
-            const token = this.configuration.accessToken;
-            const tokenString = await token("smithy.api.httpBearerAuth", []);
-
-            if (tokenString) {
-                headerParameters["Authorization"] = `Bearer ${tokenString}`;
-            }
-        }
-
-        let urlPath = `/vps/unsuspend`;
-
-        return {
-            path: urlPath,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: UnsuspendVpsRequestContentToJSON(requestParameters['unsuspendVpsRequestContent']),
-        };
-    }
-
-    /**
-     * [Under development] Unsuspends a suspended VPS service through WHMCS. Can only unsuspend services that were suspended via API
-     */
-    async unsuspendVpsRaw(requestParameters: UnsuspendVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UnsuspendVpsResponseContent>> {
-        const requestOptions = await this.unsuspendVpsRequestOpts(requestParameters);
-        const response = await this.request(requestOptions, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => UnsuspendVpsResponseContentFromJSON(jsonValue));
-    }
-
-    /**
-     * [Under development] Unsuspends a suspended VPS service through WHMCS. Can only unsuspend services that were suspended via API
-     */
-    async unsuspendVps(requestParameters: UnsuspendVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UnsuspendVpsResponseContent> {
-        const response = await this.unsuspendVpsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

@@ -91,6 +91,7 @@ All URIs are relative to *https://api.hostafrica.com*
 *ServiceManagementApi* | [**getCatalogue**](docs/ServiceManagementApi.md#getcatalogue) | **POST** /vps/get-catalogue | 
 *ServiceManagementApi* | [**listOrders**](docs/ServiceManagementApi.md#listorders) | **POST** /vps/list-orders | 
 *ServiceManagementApi* | [**retryPayment**](docs/ServiceManagementApi.md#retrypayment) | **POST** /vps/retry-payment | 
+*ServiceManagementApi* | [**terminateVps**](docs/ServiceManagementApi.md#terminatevps) | **POST** /vps/terminate | 
 *ServiceManagementApi* | [**validatePricing**](docs/ServiceManagementApi.md#validatepricing) | **POST** /vps/validate-pricing | 
 *SnapshotsApi* | [**createSnapshot**](docs/SnapshotsApi.md#createsnapshot) | **POST** /vps/create-snapshot | 
 *SnapshotsApi* | [**deleteSnapshot**](docs/SnapshotsApi.md#deletesnapshot) | **POST** /vps/delete-snapshot | 
@@ -101,22 +102,17 @@ All URIs are relative to *https://api.hostafrica.com*
 *VPSManagementApi* | [**getOsTemplateDetails**](docs/VPSManagementApi.md#getostemplatedetails) | **POST** /vps/get-os-template-details | 
 *VPSManagementApi* | [**getVpsConfig**](docs/VPSManagementApi.md#getvpsconfig) | **POST** /vps/get-config | 
 *VPSManagementApi* | [**getVpsDetails**](docs/VPSManagementApi.md#getvpsdetails) | **POST** /vps/get-details | 
-*VPSManagementApi* | [**listAllowedFeatures**](docs/VPSManagementApi.md#listallowedfeatures) | **POST** /vps/list-allowed-features | 
 *VPSManagementApi* | [**listIsos**](docs/VPSManagementApi.md#listisos) | **POST** /vps/list-isos | 
 *VPSManagementApi* | [**listOsTemplates**](docs/VPSManagementApi.md#listostemplates) | **POST** /vps/list-os-templates | 
 *VPSManagementApi* | [**listReinstallOs**](docs/VPSManagementApi.md#listreinstallos) | **POST** /vps/list-reinstall-images | 
 *VPSManagementApi* | [**listVpsServices**](docs/VPSManagementApi.md#listvpsservices) | **POST** /vps/list-vps-services | 
 *VPSManagementApi* | [**mountIso**](docs/VPSManagementApi.md#mountiso) | **POST** /vps/mount-iso | 
-*VPSManagementApi* | [**suspendVps**](docs/VPSManagementApi.md#suspendvps) | **POST** /vps/suspend | 
-*VPSManagementApi* | [**terminateVps**](docs/VPSManagementApi.md#terminatevps) | **POST** /vps/terminate | 
 *VPSManagementApi* | [**triggerReinstall**](docs/VPSManagementApi.md#triggerreinstall) | **POST** /vps/trigger-reinstall | 
-*VPSManagementApi* | [**unsuspendVps**](docs/VPSManagementApi.md#unsuspendvps) | **POST** /vps/unsuspend | 
 *VPSManagementApi* | [**updateVpsConfig**](docs/VPSManagementApi.md#updatevpsconfig) | **POST** /vps/update-config | 
 
 
 ### Models
 
-- [AllowedFeaturesResponseData](docs/AllowedFeaturesResponseData.md)
 - [BackupCreateResponseData](docs/BackupCreateResponseData.md)
 - [BackupCreationInfo](docs/BackupCreationInfo.md)
 - [BackupItem](docs/BackupItem.md)
@@ -199,8 +195,6 @@ All URIs are relative to *https://api.hostafrica.com*
 - [GetVpsDetailsResponseContent](docs/GetVpsDetailsResponseContent.md)
 - [InternalServiceErrorResponseContent](docs/InternalServiceErrorResponseContent.md)
 - [InvalidStateErrorResponseContent](docs/InvalidStateErrorResponseContent.md)
-- [ListAllowedFeaturesRequestContent](docs/ListAllowedFeaturesRequestContent.md)
-- [ListAllowedFeaturesResponseContent](docs/ListAllowedFeaturesResponseContent.md)
 - [ListBackupSchedulesRequestContent](docs/ListBackupSchedulesRequestContent.md)
 - [ListBackupSchedulesResponseContent](docs/ListBackupSchedulesResponseContent.md)
 - [ListBackupsRequestContent](docs/ListBackupsRequestContent.md)
@@ -277,8 +271,6 @@ All URIs are relative to *https://api.hostafrica.com*
 - [StartVpsResponseContent](docs/StartVpsResponseContent.md)
 - [StopVpsRequestContent](docs/StopVpsRequestContent.md)
 - [StopVpsResponseContent](docs/StopVpsResponseContent.md)
-- [SuspendVpsRequestContent](docs/SuspendVpsRequestContent.md)
-- [SuspendVpsResponseContent](docs/SuspendVpsResponseContent.md)
 - [TerminateVpsRequestContent](docs/TerminateVpsRequestContent.md)
 - [TerminateVpsResponseContent](docs/TerminateVpsResponseContent.md)
 - [TooManyRequestsErrorResponseContent](docs/TooManyRequestsErrorResponseContent.md)
@@ -286,8 +278,6 @@ All URIs are relative to *https://api.hostafrica.com*
 - [TriggerReinstallResponseContent](docs/TriggerReinstallResponseContent.md)
 - [TriggerReinstallResponseData](docs/TriggerReinstallResponseData.md)
 - [UnauthorizedErrorResponseContent](docs/UnauthorizedErrorResponseContent.md)
-- [UnsuspendVpsRequestContent](docs/UnsuspendVpsRequestContent.md)
-- [UnsuspendVpsResponseContent](docs/UnsuspendVpsResponseContent.md)
 - [UpdateFirewallRuleRequestContent](docs/UpdateFirewallRuleRequestContent.md)
 - [UpdateFirewallRuleResponseContent](docs/UpdateFirewallRuleResponseContent.md)
 - [UpdateNotificationRequestContent](docs/UpdateNotificationRequestContent.md)

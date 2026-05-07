@@ -8,6 +8,7 @@ All URIs are relative to *https://api.hostafrica.com*
 | [**getCatalogue**](ServiceManagementApi.md#getcatalogue) | **POST** /vps/get-catalogue |  |
 | [**listOrders**](ServiceManagementApi.md#listorders) | **POST** /vps/list-orders |  |
 | [**retryPayment**](ServiceManagementApi.md#retrypayment) | **POST** /vps/retry-payment |  |
+| [**terminateVps**](ServiceManagementApi.md#terminatevps) | **POST** /vps/terminate |  |
 | [**validatePricing**](ServiceManagementApi.md#validatepricing) | **POST** /vps/validate-pricing |  |
 
 
@@ -310,6 +311,85 @@ example().catch(console.error);
 | **403** | ForbiddenError 403 response |  -  |
 | **404** | ResourceNotFoundError 404 response |  -  |
 | **422** | ValidationError 422 response |  -  |
+| **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+| **500** | InternalServiceError 500 response |  -  |
+| **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
+## terminateVps
+
+> TerminateVpsResponseContent terminateVps(terminateVpsRequestContent)
+
+
+
+[Under development] Terminates a VPS service through WHMCS. This action is irreversible
+
+### Example
+
+```ts
+import {
+  Configuration,
+  ServiceManagementApi,
+} from '@hostafrica/sdk-typescript';
+import type { TerminateVpsRequest } from '@hostafrica/sdk-typescript';
+
+async function example() {
+  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new ServiceManagementApi(config);
+
+  const body = {
+    // TerminateVpsRequestContent
+    terminateVpsRequestContent: ...,
+  } satisfies TerminateVpsRequest;
+
+  try {
+    const data = await api.terminateVps(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **terminateVpsRequestContent** | [TerminateVpsRequestContent](TerminateVpsRequestContent.md) |  | |
+
+### Return type
+
+[**TerminateVpsResponseContent**](TerminateVpsResponseContent.md)
+
+### Authorization
+
+[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | TerminateVps 200 response |  -  |
+| **400** | BadRequestError 400 response |  -  |
+| **401** | UnauthorizedError 401 response |  -  |
+| **403** | ForbiddenError 403 response |  -  |
+| **404** | ResourceNotFoundError 404 response |  -  |
+| **409** | InvalidStateError 409 response |  -  |
 | **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
 | **500** | InternalServiceError 500 response |  -  |
 | **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
