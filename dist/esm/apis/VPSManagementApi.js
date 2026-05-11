@@ -21,58 +21,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { GetOsTemplateDetailsRequestContentToJSON, GetOsTemplateDetailsResponseContentFromJSON, GetVpsConfigRequestContentToJSON, GetVpsConfigResponseContentFromJSON, GetVpsDetailsRequestContentToJSON, GetVpsDetailsResponseContentFromJSON, ListIsosRequestContentToJSON, ListIsosResponseContentFromJSON, ListOsTemplatesRequestContentToJSON, ListOsTemplatesResponseContentFromJSON, ListReinstallOsRequestContentToJSON, ListReinstallOsResponseContentFromJSON, ListVpsServicesResponseContentFromJSON, MountIsoRequestContentToJSON, MountIsoResponseContentFromJSON, TriggerReinstallRequestContentToJSON, TriggerReinstallResponseContentFromJSON, UpdateVpsConfigRequestContentToJSON, UpdateVpsConfigResponseContentFromJSON, } from '../models/index';
+import { GetVpsConfigRequestContentToJSON, GetVpsConfigResponseContentFromJSON, GetVpsDetailsRequestContentToJSON, GetVpsDetailsResponseContentFromJSON, ListIsosRequestContentToJSON, ListIsosResponseContentFromJSON, ListReinstallOsRequestContentToJSON, ListReinstallOsResponseContentFromJSON, ListVpsServicesResponseContentFromJSON, MountIsoRequestContentToJSON, MountIsoResponseContentFromJSON, TriggerReinstallRequestContentToJSON, TriggerReinstallResponseContentFromJSON, UpdateVpsConfigRequestContentToJSON, UpdateVpsConfigResponseContentFromJSON, } from '../models/index';
 /**
  *
  */
 export class VPSManagementApi extends runtime.BaseAPI {
-    /**
-     * Creates request options for getOsTemplateDetails without sending the request
-     */
-    getOsTemplateDetailsRequestOpts(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['getOsTemplateDetailsRequestContent'] == null) {
-                throw new runtime.RequiredError('getOsTemplateDetailsRequestContent', 'Required parameter "getOsTemplateDetailsRequestContent" was null or undefined when calling getOsTemplateDetails().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            if (this.configuration && this.configuration.accessToken) {
-                const token = this.configuration.accessToken;
-                const tokenString = yield token("smithy.api.httpBearerAuth", []);
-                if (tokenString) {
-                    headerParameters["Authorization"] = `Bearer ${tokenString}`;
-                }
-            }
-            let urlPath = `/vps/get-os-template-details`;
-            return {
-                path: urlPath,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: GetOsTemplateDetailsRequestContentToJSON(requestParameters['getOsTemplateDetailsRequestContent']),
-            };
-        });
-    }
-    /**
-     * [Under development] Retrieves detailed information about a specific OS template
-     */
-    getOsTemplateDetailsRaw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const requestOptions = yield this.getOsTemplateDetailsRequestOpts(requestParameters);
-            const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => GetOsTemplateDetailsResponseContentFromJSON(jsonValue));
-        });
-    }
-    /**
-     * [Under development] Retrieves detailed information about a specific OS template
-     */
-    getOsTemplateDetails(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.getOsTemplateDetailsRaw(requestParameters, initOverrides);
-            return yield response.value();
-        });
-    }
     /**
      * Creates request options for getVpsConfig without sending the request
      */
@@ -211,53 +164,6 @@ export class VPSManagementApi extends runtime.BaseAPI {
     listIsos(requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.listIsosRaw(requestParameters, initOverrides);
-            return yield response.value();
-        });
-    }
-    /**
-     * Creates request options for listOsTemplates without sending the request
-     */
-    listOsTemplatesRequestOpts(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['listOsTemplatesRequestContent'] == null) {
-                throw new runtime.RequiredError('listOsTemplatesRequestContent', 'Required parameter "listOsTemplatesRequestContent" was null or undefined when calling listOsTemplates().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            if (this.configuration && this.configuration.accessToken) {
-                const token = this.configuration.accessToken;
-                const tokenString = yield token("smithy.api.httpBearerAuth", []);
-                if (tokenString) {
-                    headerParameters["Authorization"] = `Bearer ${tokenString}`;
-                }
-            }
-            let urlPath = `/vps/list-os-templates`;
-            return {
-                path: urlPath,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: ListOsTemplatesRequestContentToJSON(requestParameters['listOsTemplatesRequestContent']),
-            };
-        });
-    }
-    /**
-     * [Under development] Retrieves the list of available OS templates
-     */
-    listOsTemplatesRaw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const requestOptions = yield this.listOsTemplatesRequestOpts(requestParameters);
-            const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => ListOsTemplatesResponseContentFromJSON(jsonValue));
-        });
-    }
-    /**
-     * [Under development] Retrieves the list of available OS templates
-     */
-    listOsTemplates(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.listOsTemplatesRaw(requestParameters, initOverrides);
             return yield response.value();
         });
     }

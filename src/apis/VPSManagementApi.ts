@@ -17,8 +17,6 @@ import * as runtime from '../runtime';
 import type {
   BadRequestErrorResponseContent,
   ForbiddenErrorResponseContent,
-  GetOsTemplateDetailsRequestContent,
-  GetOsTemplateDetailsResponseContent,
   GetVpsConfigRequestContent,
   GetVpsConfigResponseContent,
   GetVpsDetailsRequestContent,
@@ -27,8 +25,6 @@ import type {
   InvalidStateErrorResponseContent,
   ListIsosRequestContent,
   ListIsosResponseContent,
-  ListOsTemplatesRequestContent,
-  ListOsTemplatesResponseContent,
   ListReinstallOsRequestContent,
   ListReinstallOsResponseContent,
   ListVpsServicesResponseContent,
@@ -49,10 +45,6 @@ import {
     BadRequestErrorResponseContentToJSON,
     ForbiddenErrorResponseContentFromJSON,
     ForbiddenErrorResponseContentToJSON,
-    GetOsTemplateDetailsRequestContentFromJSON,
-    GetOsTemplateDetailsRequestContentToJSON,
-    GetOsTemplateDetailsResponseContentFromJSON,
-    GetOsTemplateDetailsResponseContentToJSON,
     GetVpsConfigRequestContentFromJSON,
     GetVpsConfigRequestContentToJSON,
     GetVpsConfigResponseContentFromJSON,
@@ -69,10 +61,6 @@ import {
     ListIsosRequestContentToJSON,
     ListIsosResponseContentFromJSON,
     ListIsosResponseContentToJSON,
-    ListOsTemplatesRequestContentFromJSON,
-    ListOsTemplatesRequestContentToJSON,
-    ListOsTemplatesResponseContentFromJSON,
-    ListOsTemplatesResponseContentToJSON,
     ListReinstallOsRequestContentFromJSON,
     ListReinstallOsRequestContentToJSON,
     ListReinstallOsResponseContentFromJSON,
@@ -103,10 +91,6 @@ import {
     ValidationErrorResponseContentToJSON,
 } from '../models/index';
 
-export interface GetOsTemplateDetailsRequest {
-    getOsTemplateDetailsRequestContent: GetOsTemplateDetailsRequestContent;
-}
-
 export interface GetVpsConfigRequest {
     getVpsConfigRequestContent: GetVpsConfigRequestContent;
 }
@@ -117,10 +101,6 @@ export interface GetVpsDetailsRequest {
 
 export interface ListIsosRequest {
     listIsosRequestContent: ListIsosRequestContent;
-}
-
-export interface ListOsTemplatesRequest {
-    listOsTemplatesRequestContent: ListOsTemplatesRequestContent;
 }
 
 export interface ListReinstallOsRequest {
@@ -143,61 +123,6 @@ export interface UpdateVpsConfigRequest {
  * 
  */
 export class VPSManagementApi extends runtime.BaseAPI {
-
-    /**
-     * Creates request options for getOsTemplateDetails without sending the request
-     */
-    async getOsTemplateDetailsRequestOpts(requestParameters: GetOsTemplateDetailsRequest): Promise<runtime.RequestOpts> {
-        if (requestParameters['getOsTemplateDetailsRequestContent'] == null) {
-            throw new runtime.RequiredError(
-                'getOsTemplateDetailsRequestContent',
-                'Required parameter "getOsTemplateDetailsRequestContent" was null or undefined when calling getOsTemplateDetails().'
-            );
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json';
-
-        if (this.configuration && this.configuration.accessToken) {
-            const token = this.configuration.accessToken;
-            const tokenString = await token("smithy.api.httpBearerAuth", []);
-
-            if (tokenString) {
-                headerParameters["Authorization"] = `Bearer ${tokenString}`;
-            }
-        }
-
-        let urlPath = `/vps/get-os-template-details`;
-
-        return {
-            path: urlPath,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: GetOsTemplateDetailsRequestContentToJSON(requestParameters['getOsTemplateDetailsRequestContent']),
-        };
-    }
-
-    /**
-     * [Under development] Retrieves detailed information about a specific OS template
-     */
-    async getOsTemplateDetailsRaw(requestParameters: GetOsTemplateDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<GetOsTemplateDetailsResponseContent>> {
-        const requestOptions = await this.getOsTemplateDetailsRequestOpts(requestParameters);
-        const response = await this.request(requestOptions, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => GetOsTemplateDetailsResponseContentFromJSON(jsonValue));
-    }
-
-    /**
-     * [Under development] Retrieves detailed information about a specific OS template
-     */
-    async getOsTemplateDetails(requestParameters: GetOsTemplateDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GetOsTemplateDetailsResponseContent> {
-        const response = await this.getOsTemplateDetailsRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
 
     /**
      * Creates request options for getVpsConfig without sending the request
@@ -361,61 +286,6 @@ export class VPSManagementApi extends runtime.BaseAPI {
      */
     async listIsos(requestParameters: ListIsosRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListIsosResponseContent> {
         const response = await this.listIsosRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     * Creates request options for listOsTemplates without sending the request
-     */
-    async listOsTemplatesRequestOpts(requestParameters: ListOsTemplatesRequest): Promise<runtime.RequestOpts> {
-        if (requestParameters['listOsTemplatesRequestContent'] == null) {
-            throw new runtime.RequiredError(
-                'listOsTemplatesRequestContent',
-                'Required parameter "listOsTemplatesRequestContent" was null or undefined when calling listOsTemplates().'
-            );
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json';
-
-        if (this.configuration && this.configuration.accessToken) {
-            const token = this.configuration.accessToken;
-            const tokenString = await token("smithy.api.httpBearerAuth", []);
-
-            if (tokenString) {
-                headerParameters["Authorization"] = `Bearer ${tokenString}`;
-            }
-        }
-
-        let urlPath = `/vps/list-os-templates`;
-
-        return {
-            path: urlPath,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: ListOsTemplatesRequestContentToJSON(requestParameters['listOsTemplatesRequestContent']),
-        };
-    }
-
-    /**
-     * [Under development] Retrieves the list of available OS templates
-     */
-    async listOsTemplatesRaw(requestParameters: ListOsTemplatesRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListOsTemplatesResponseContent>> {
-        const requestOptions = await this.listOsTemplatesRequestOpts(requestParameters);
-        const response = await this.request(requestOptions, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => ListOsTemplatesResponseContentFromJSON(jsonValue));
-    }
-
-    /**
-     * [Under development] Retrieves the list of available OS templates
-     */
-    async listOsTemplates(requestParameters: ListOsTemplatesRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListOsTemplatesResponseContent> {
-        const response = await this.listOsTemplatesRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

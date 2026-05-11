@@ -10,10 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import type { GetOsTemplateDetailsRequestContent, GetOsTemplateDetailsResponseContent, GetVpsConfigRequestContent, GetVpsConfigResponseContent, GetVpsDetailsRequestContent, GetVpsDetailsResponseContent, ListIsosRequestContent, ListIsosResponseContent, ListOsTemplatesRequestContent, ListOsTemplatesResponseContent, ListReinstallOsRequestContent, ListReinstallOsResponseContent, ListVpsServicesResponseContent, MountIsoRequestContent, MountIsoResponseContent, TriggerReinstallRequestContent, TriggerReinstallResponseContent, UpdateVpsConfigRequestContent, UpdateVpsConfigResponseContent } from '../models/index';
-export interface GetOsTemplateDetailsRequest {
-    getOsTemplateDetailsRequestContent: GetOsTemplateDetailsRequestContent;
-}
+import type { GetVpsConfigRequestContent, GetVpsConfigResponseContent, GetVpsDetailsRequestContent, GetVpsDetailsResponseContent, ListIsosRequestContent, ListIsosResponseContent, ListReinstallOsRequestContent, ListReinstallOsResponseContent, ListVpsServicesResponseContent, MountIsoRequestContent, MountIsoResponseContent, TriggerReinstallRequestContent, TriggerReinstallResponseContent, UpdateVpsConfigRequestContent, UpdateVpsConfigResponseContent } from '../models/index';
 export interface GetVpsConfigRequest {
     getVpsConfigRequestContent: GetVpsConfigRequestContent;
 }
@@ -22,9 +19,6 @@ export interface GetVpsDetailsRequest {
 }
 export interface ListIsosRequest {
     listIsosRequestContent: ListIsosRequestContent;
-}
-export interface ListOsTemplatesRequest {
-    listOsTemplatesRequestContent: ListOsTemplatesRequestContent;
 }
 export interface ListReinstallOsRequest {
     listReinstallOsRequestContent: ListReinstallOsRequestContent;
@@ -42,18 +36,6 @@ export interface UpdateVpsConfigRequest {
  *
  */
 export declare class VPSManagementApi extends runtime.BaseAPI {
-    /**
-     * Creates request options for getOsTemplateDetails without sending the request
-     */
-    getOsTemplateDetailsRequestOpts(requestParameters: GetOsTemplateDetailsRequest): Promise<runtime.RequestOpts>;
-    /**
-     * [Under development] Retrieves detailed information about a specific OS template
-     */
-    getOsTemplateDetailsRaw(requestParameters: GetOsTemplateDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<GetOsTemplateDetailsResponseContent>>;
-    /**
-     * [Under development] Retrieves detailed information about a specific OS template
-     */
-    getOsTemplateDetails(requestParameters: GetOsTemplateDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GetOsTemplateDetailsResponseContent>;
     /**
      * Creates request options for getVpsConfig without sending the request
      */
@@ -90,18 +72,6 @@ export declare class VPSManagementApi extends runtime.BaseAPI {
      * Retrieves the list of available ISO images for a VPS service
      */
     listIsos(requestParameters: ListIsosRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListIsosResponseContent>;
-    /**
-     * Creates request options for listOsTemplates without sending the request
-     */
-    listOsTemplatesRequestOpts(requestParameters: ListOsTemplatesRequest): Promise<runtime.RequestOpts>;
-    /**
-     * [Under development] Retrieves the list of available OS templates
-     */
-    listOsTemplatesRaw(requestParameters: ListOsTemplatesRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListOsTemplatesResponseContent>>;
-    /**
-     * [Under development] Retrieves the list of available OS templates
-     */
-    listOsTemplates(requestParameters: ListOsTemplatesRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListOsTemplatesResponseContent>;
     /**
      * Creates request options for listReinstallOs without sending the request
      */

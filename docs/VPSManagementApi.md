@@ -4,96 +4,15 @@ All URIs are relative to *https://api.hostafrica.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getOsTemplateDetails**](VPSManagementApi.md#getostemplatedetails) | **POST** /vps/get-os-template-details |  |
 | [**getVpsConfig**](VPSManagementApi.md#getvpsconfig) | **POST** /vps/get-config |  |
 | [**getVpsDetails**](VPSManagementApi.md#getvpsdetails) | **POST** /vps/get-details |  |
 | [**listIsos**](VPSManagementApi.md#listisos) | **POST** /vps/list-isos |  |
-| [**listOsTemplates**](VPSManagementApi.md#listostemplates) | **POST** /vps/list-os-templates |  |
 | [**listReinstallOs**](VPSManagementApi.md#listreinstallos) | **POST** /vps/list-reinstall-images |  |
 | [**listVpsServices**](VPSManagementApi.md#listvpsservices) | **POST** /vps/list-vps-services |  |
 | [**mountIso**](VPSManagementApi.md#mountiso) | **POST** /vps/mount-iso |  |
 | [**triggerReinstall**](VPSManagementApi.md#triggerreinstall) | **POST** /vps/trigger-reinstall |  |
 | [**updateVpsConfig**](VPSManagementApi.md#updatevpsconfig) | **POST** /vps/update-config |  |
 
-
-
-## getOsTemplateDetails
-
-> GetOsTemplateDetailsResponseContent getOsTemplateDetails(getOsTemplateDetailsRequestContent)
-
-
-
-[Under development] Retrieves detailed information about a specific OS template
-
-### Example
-
-```ts
-import {
-  Configuration,
-  VPSManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { GetOsTemplateDetailsRequest } from '@hostafrica/sdk-typescript';
-
-async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
-  const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
-    accessToken: "YOUR BEARER TOKEN",
-  });
-  const api = new VPSManagementApi(config);
-
-  const body = {
-    // GetOsTemplateDetailsRequestContent
-    getOsTemplateDetailsRequestContent: ...,
-  } satisfies GetOsTemplateDetailsRequest;
-
-  try {
-    const data = await api.getOsTemplateDetails(body);
-    console.log(data);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-// Run the test
-example().catch(console.error);
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **getOsTemplateDetailsRequestContent** | [GetOsTemplateDetailsRequestContent](GetOsTemplateDetailsRequestContent.md) |  | |
-
-### Return type
-
-[**GetOsTemplateDetailsResponseContent**](GetOsTemplateDetailsResponseContent.md)
-
-### Authorization
-
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | GetOsTemplateDetails 200 response |  -  |
-| **400** | BadRequestError 400 response |  -  |
-| **401** | UnauthorizedError 401 response |  -  |
-| **403** | ForbiddenError 403 response |  -  |
-| **404** | ResourceNotFoundError 404 response |  -  |
-| **422** | ValidationError 422 response |  -  |
-| **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
-| **500** | InternalServiceError 500 response |  -  |
-| **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 
 ## getVpsConfig
@@ -319,84 +238,6 @@ example().catch(console.error);
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | ListIsos 200 response |  -  |
-| **400** | BadRequestError 400 response |  -  |
-| **401** | UnauthorizedError 401 response |  -  |
-| **403** | ForbiddenError 403 response |  -  |
-| **404** | ResourceNotFoundError 404 response |  -  |
-| **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
-| **500** | InternalServiceError 500 response |  -  |
-| **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
-
-
-## listOsTemplates
-
-> ListOsTemplatesResponseContent listOsTemplates(listOsTemplatesRequestContent)
-
-
-
-[Under development] Retrieves the list of available OS templates
-
-### Example
-
-```ts
-import {
-  Configuration,
-  VPSManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { ListOsTemplatesRequest } from '@hostafrica/sdk-typescript';
-
-async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
-  const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
-    accessToken: "YOUR BEARER TOKEN",
-  });
-  const api = new VPSManagementApi(config);
-
-  const body = {
-    // ListOsTemplatesRequestContent
-    listOsTemplatesRequestContent: ...,
-  } satisfies ListOsTemplatesRequest;
-
-  try {
-    const data = await api.listOsTemplates(body);
-    console.log(data);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-// Run the test
-example().catch(console.error);
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **listOsTemplatesRequestContent** | [ListOsTemplatesRequestContent](ListOsTemplatesRequestContent.md) |  | |
-
-### Return type
-
-[**ListOsTemplatesResponseContent**](ListOsTemplatesResponseContent.md)
-
-### Authorization
-
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | ListOsTemplates 200 response |  -  |
 | **400** | BadRequestError 400 response |  -  |
 | **401** | UnauthorizedError 401 response |  -  |
 | **403** | ForbiddenError 403 response |  -  |

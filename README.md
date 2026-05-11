@@ -99,11 +99,9 @@ All URIs are relative to *https://api.hostafrica.com*
 *SnapshotsApi* | [**rollbackSnapshot**](docs/SnapshotsApi.md#rollbacksnapshot) | **POST** /vps/rollback-snapshot | 
 *SnapshotsApi* | [**updateSnapshot**](docs/SnapshotsApi.md#updatesnapshot) | **POST** /vps/update-snapshot | 
 *UserManagementApi* | [**userChangePassword**](docs/UserManagementApi.md#userchangepassword) | **POST** /user/change-password | 
-*VPSManagementApi* | [**getOsTemplateDetails**](docs/VPSManagementApi.md#getostemplatedetails) | **POST** /vps/get-os-template-details | 
 *VPSManagementApi* | [**getVpsConfig**](docs/VPSManagementApi.md#getvpsconfig) | **POST** /vps/get-config | 
 *VPSManagementApi* | [**getVpsDetails**](docs/VPSManagementApi.md#getvpsdetails) | **POST** /vps/get-details | 
 *VPSManagementApi* | [**listIsos**](docs/VPSManagementApi.md#listisos) | **POST** /vps/list-isos | 
-*VPSManagementApi* | [**listOsTemplates**](docs/VPSManagementApi.md#listostemplates) | **POST** /vps/list-os-templates | 
 *VPSManagementApi* | [**listReinstallOs**](docs/VPSManagementApi.md#listreinstallos) | **POST** /vps/list-reinstall-images | 
 *VPSManagementApi* | [**listVpsServices**](docs/VPSManagementApi.md#listvpsservices) | **POST** /vps/list-vps-services | 
 *VPSManagementApi* | [**mountIso**](docs/VPSManagementApi.md#mountiso) | **POST** /vps/mount-iso | 
@@ -184,9 +182,6 @@ All URIs are relative to *https://api.hostafrica.com*
 - [GetCatalogueResponseContent](docs/GetCatalogueResponseContent.md)
 - [GetNoVncConsoleRequestContent](docs/GetNoVncConsoleRequestContent.md)
 - [GetNoVncConsoleResponseContent](docs/GetNoVncConsoleResponseContent.md)
-- [GetOsTemplateDetailsRequestContent](docs/GetOsTemplateDetailsRequestContent.md)
-- [GetOsTemplateDetailsResponseContent](docs/GetOsTemplateDetailsResponseContent.md)
-- [GetOsTemplateDetailsResponseData](docs/GetOsTemplateDetailsResponseData.md)
 - [GetPrivateSshKeyRequestContent](docs/GetPrivateSshKeyRequestContent.md)
 - [GetPrivateSshKeyResponseContent](docs/GetPrivateSshKeyResponseContent.md)
 - [GetPublicSshKeyRequestContent](docs/GetPublicSshKeyRequestContent.md)
@@ -210,9 +205,6 @@ All URIs are relative to *https://api.hostafrica.com*
 - [ListNotificationsResponseContent](docs/ListNotificationsResponseContent.md)
 - [ListOrdersResponseContent](docs/ListOrdersResponseContent.md)
 - [ListOrdersResponseData](docs/ListOrdersResponseData.md)
-- [ListOsTemplatesRequestContent](docs/ListOsTemplatesRequestContent.md)
-- [ListOsTemplatesResponseContent](docs/ListOsTemplatesResponseContent.md)
-- [ListOsTemplatesResponseData](docs/ListOsTemplatesResponseData.md)
 - [ListPowerTasksRequestContent](docs/ListPowerTasksRequestContent.md)
 - [ListPowerTasksResponseContent](docs/ListPowerTasksResponseContent.md)
 - [ListRdnsRecordsResponseContent](docs/ListRdnsRecordsResponseContent.md)
@@ -239,7 +231,6 @@ All URIs are relative to *https://api.hostafrica.com*
 - [Order](docs/Order.md)
 - [OrderLastAttempt](docs/OrderLastAttempt.md)
 - [OrderWarning](docs/OrderWarning.md)
-- [OsImage](docs/OsImage.md)
 - [PaymentError](docs/PaymentError.md)
 - [PaymentStatus](docs/PaymentStatus.md)
 - [PowerTask](docs/PowerTask.md)
