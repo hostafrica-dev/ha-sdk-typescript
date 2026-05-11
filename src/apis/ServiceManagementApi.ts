@@ -16,6 +16,8 @@
 import * as runtime from '../runtime';
 import type {
   BadRequestErrorResponseContent,
+  CancelVpsRequestContent,
+  CancelVpsResponseContent,
   CreateOrderRequestContent,
   CreateOrderResponseContent,
   ForbiddenErrorResponseContent,
@@ -28,8 +30,6 @@ import type {
   RetryPaymentRequestContent,
   RetryPaymentResponseContent,
   ServiceUnavailableErrorResponseContent,
-  TerminateVpsRequestContent,
-  TerminateVpsResponseContent,
   TooManyRequestsErrorResponseContent,
   UnauthorizedErrorResponseContent,
   ValidatePricingRequestContent,
@@ -39,6 +39,10 @@ import type {
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
+    CancelVpsRequestContentFromJSON,
+    CancelVpsRequestContentToJSON,
+    CancelVpsResponseContentFromJSON,
+    CancelVpsResponseContentToJSON,
     CreateOrderRequestContentFromJSON,
     CreateOrderRequestContentToJSON,
     CreateOrderResponseContentFromJSON,
@@ -63,10 +67,6 @@ import {
     RetryPaymentResponseContentToJSON,
     ServiceUnavailableErrorResponseContentFromJSON,
     ServiceUnavailableErrorResponseContentToJSON,
-    TerminateVpsRequestContentFromJSON,
-    TerminateVpsRequestContentToJSON,
-    TerminateVpsResponseContentFromJSON,
-    TerminateVpsResponseContentToJSON,
     TooManyRequestsErrorResponseContentFromJSON,
     TooManyRequestsErrorResponseContentToJSON,
     UnauthorizedErrorResponseContentFromJSON,
@@ -78,6 +78,10 @@ import {
     ValidationErrorResponseContentFromJSON,
     ValidationErrorResponseContentToJSON,
 } from '../models/index';
+
+export interface CancelVpsRequest {
+    cancelVpsRequestContent: CancelVpsRequestContent;
+}
 
 export interface CreateOrderRequest {
     createOrderRequestContent: CreateOrderRequestContent;
@@ -91,10 +95,6 @@ export interface RetryPaymentRequest {
     retryPaymentRequestContent: RetryPaymentRequestContent;
 }
 
-export interface TerminateVpsRequest {
-    terminateVpsRequestContent: TerminateVpsRequestContent;
-}
-
 export interface ValidatePricingRequest {
     validatePricingRequestContent: ValidatePricingRequestContent;
 }
@@ -103,6 +103,61 @@ export interface ValidatePricingRequest {
  * 
  */
 export class ServiceManagementApi extends runtime.BaseAPI {
+
+    /**
+     * Creates request options for cancelVps without sending the request
+     */
+    async cancelVpsRequestOpts(requestParameters: CancelVpsRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['cancelVpsRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'cancelVpsRequestContent',
+                'Required parameter "cancelVpsRequestContent" was null or undefined when calling cancelVps().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("smithy.api.httpBearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/vps/cancel`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: CancelVpsRequestContentToJSON(requestParameters['cancelVpsRequestContent']),
+        };
+    }
+
+    /**
+     * Cancels a VPS service through WHMCS. This action is irreversible
+     */
+    async cancelVpsRaw(requestParameters: CancelVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CancelVpsResponseContent>> {
+        const requestOptions = await this.cancelVpsRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => CancelVpsResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Cancels a VPS service through WHMCS. This action is irreversible
+     */
+    async cancelVps(requestParameters: CancelVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CancelVpsResponseContent> {
+        const response = await this.cancelVpsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
 
     /**
      * Creates request options for createOrder without sending the request
@@ -304,61 +359,6 @@ export class ServiceManagementApi extends runtime.BaseAPI {
      */
     async retryPayment(requestParameters: RetryPaymentRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RetryPaymentResponseContent> {
         const response = await this.retryPaymentRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     * Creates request options for terminateVps without sending the request
-     */
-    async terminateVpsRequestOpts(requestParameters: TerminateVpsRequest): Promise<runtime.RequestOpts> {
-        if (requestParameters['terminateVpsRequestContent'] == null) {
-            throw new runtime.RequiredError(
-                'terminateVpsRequestContent',
-                'Required parameter "terminateVpsRequestContent" was null or undefined when calling terminateVps().'
-            );
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json';
-
-        if (this.configuration && this.configuration.accessToken) {
-            const token = this.configuration.accessToken;
-            const tokenString = await token("smithy.api.httpBearerAuth", []);
-
-            if (tokenString) {
-                headerParameters["Authorization"] = `Bearer ${tokenString}`;
-            }
-        }
-
-        let urlPath = `/vps/terminate`;
-
-        return {
-            path: urlPath,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: TerminateVpsRequestContentToJSON(requestParameters['terminateVpsRequestContent']),
-        };
-    }
-
-    /**
-     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
-     */
-    async terminateVpsRaw(requestParameters: TerminateVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<TerminateVpsResponseContent>> {
-        const requestOptions = await this.terminateVpsRequestOpts(requestParameters);
-        const response = await this.request(requestOptions, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => TerminateVpsResponseContentFromJSON(jsonValue));
-    }
-
-    /**
-     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
-     */
-    async terminateVps(requestParameters: TerminateVpsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<TerminateVpsResponseContent> {
-        const response = await this.terminateVpsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

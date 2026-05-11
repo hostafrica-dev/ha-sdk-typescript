@@ -87,11 +87,11 @@ All URIs are relative to *https://api.hostafrica.com*
 *SecurityApi* | [**getPrivateSshKey**](docs/SecurityApi.md#getprivatesshkey) | **POST** /vps/get-private-ssh-keys | 
 *SecurityApi* | [**getPublicSshKey**](docs/SecurityApi.md#getpublicsshkey) | **POST** /vps/get-public-ssh-keys | 
 *SecurityApi* | [**updateSshKeys**](docs/SecurityApi.md#updatesshkeys) | **POST** /vps/update-ssh-keys | 
+*ServiceManagementApi* | [**cancelVps**](docs/ServiceManagementApi.md#cancelvps) | **POST** /vps/cancel | 
 *ServiceManagementApi* | [**createOrder**](docs/ServiceManagementApi.md#createorder) | **POST** /vps/create-order | 
 *ServiceManagementApi* | [**getCatalogue**](docs/ServiceManagementApi.md#getcatalogue) | **POST** /vps/get-catalogue | 
 *ServiceManagementApi* | [**listOrders**](docs/ServiceManagementApi.md#listorders) | **POST** /vps/list-orders | 
 *ServiceManagementApi* | [**retryPayment**](docs/ServiceManagementApi.md#retrypayment) | **POST** /vps/retry-payment | 
-*ServiceManagementApi* | [**terminateVps**](docs/ServiceManagementApi.md#terminatevps) | **POST** /vps/terminate | 
 *ServiceManagementApi* | [**validatePricing**](docs/ServiceManagementApi.md#validatepricing) | **POST** /vps/validate-pricing | 
 *SnapshotsApi* | [**createSnapshot**](docs/SnapshotsApi.md#createsnapshot) | **POST** /vps/create-snapshot | 
 *SnapshotsApi* | [**deleteSnapshot**](docs/SnapshotsApi.md#deletesnapshot) | **POST** /vps/delete-snapshot | 
@@ -120,6 +120,8 @@ All URIs are relative to *https://api.hostafrica.com*
 - [BackupSchedule](docs/BackupSchedule.md)
 - [BackupScheduleListResponseData](docs/BackupScheduleListResponseData.md)
 - [BadRequestErrorResponseContent](docs/BadRequestErrorResponseContent.md)
+- [CancelVpsRequestContent](docs/CancelVpsRequestContent.md)
+- [CancelVpsResponseContent](docs/CancelVpsResponseContent.md)
 - [CatalogueConfigOption](docs/CatalogueConfigOption.md)
 - [CatalogueConfigSuboption](docs/CatalogueConfigSuboption.md)
 - [CatalogueCurrency](docs/CatalogueCurrency.md)
@@ -271,8 +273,6 @@ All URIs are relative to *https://api.hostafrica.com*
 - [StartVpsResponseContent](docs/StartVpsResponseContent.md)
 - [StopVpsRequestContent](docs/StopVpsRequestContent.md)
 - [StopVpsResponseContent](docs/StopVpsResponseContent.md)
-- [TerminateVpsRequestContent](docs/TerminateVpsRequestContent.md)
-- [TerminateVpsResponseContent](docs/TerminateVpsResponseContent.md)
 - [TooManyRequestsErrorResponseContent](docs/TooManyRequestsErrorResponseContent.md)
 - [TriggerReinstallRequestContent](docs/TriggerReinstallRequestContent.md)
 - [TriggerReinstallResponseContent](docs/TriggerReinstallResponseContent.md)

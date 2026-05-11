@@ -21,11 +21,58 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { CreateOrderRequestContentToJSON, CreateOrderResponseContentFromJSON, GetCatalogueRequestContentToJSON, GetCatalogueResponseContentFromJSON, ListOrdersResponseContentFromJSON, RetryPaymentRequestContentToJSON, RetryPaymentResponseContentFromJSON, TerminateVpsRequestContentToJSON, TerminateVpsResponseContentFromJSON, ValidatePricingRequestContentToJSON, ValidatePricingResponseContentFromJSON, } from '../models/index';
+import { CancelVpsRequestContentToJSON, CancelVpsResponseContentFromJSON, CreateOrderRequestContentToJSON, CreateOrderResponseContentFromJSON, GetCatalogueRequestContentToJSON, GetCatalogueResponseContentFromJSON, ListOrdersResponseContentFromJSON, RetryPaymentRequestContentToJSON, RetryPaymentResponseContentFromJSON, ValidatePricingRequestContentToJSON, ValidatePricingResponseContentFromJSON, } from '../models/index';
 /**
  *
  */
 export class ServiceManagementApi extends runtime.BaseAPI {
+    /**
+     * Creates request options for cancelVps without sending the request
+     */
+    cancelVpsRequestOpts(requestParameters) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['cancelVpsRequestContent'] == null) {
+                throw new runtime.RequiredError('cancelVpsRequestContent', 'Required parameter "cancelVpsRequestContent" was null or undefined when calling cancelVps().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            if (this.configuration && this.configuration.accessToken) {
+                const token = this.configuration.accessToken;
+                const tokenString = yield token("smithy.api.httpBearerAuth", []);
+                if (tokenString) {
+                    headerParameters["Authorization"] = `Bearer ${tokenString}`;
+                }
+            }
+            let urlPath = `/vps/cancel`;
+            return {
+                path: urlPath,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: CancelVpsRequestContentToJSON(requestParameters['cancelVpsRequestContent']),
+            };
+        });
+    }
+    /**
+     * Cancels a VPS service through WHMCS. This action is irreversible
+     */
+    cancelVpsRaw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const requestOptions = yield this.cancelVpsRequestOpts(requestParameters);
+            const response = yield this.request(requestOptions, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => CancelVpsResponseContentFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Cancels a VPS service through WHMCS. This action is irreversible
+     */
+    cancelVps(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.cancelVpsRaw(requestParameters, initOverrides);
+            return yield response.value();
+        });
+    }
     /**
      * Creates request options for createOrder without sending the request
      */
@@ -203,53 +250,6 @@ export class ServiceManagementApi extends runtime.BaseAPI {
     retryPayment(requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.retryPaymentRaw(requestParameters, initOverrides);
-            return yield response.value();
-        });
-    }
-    /**
-     * Creates request options for terminateVps without sending the request
-     */
-    terminateVpsRequestOpts(requestParameters) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['terminateVpsRequestContent'] == null) {
-                throw new runtime.RequiredError('terminateVpsRequestContent', 'Required parameter "terminateVpsRequestContent" was null or undefined when calling terminateVps().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            if (this.configuration && this.configuration.accessToken) {
-                const token = this.configuration.accessToken;
-                const tokenString = yield token("smithy.api.httpBearerAuth", []);
-                if (tokenString) {
-                    headerParameters["Authorization"] = `Bearer ${tokenString}`;
-                }
-            }
-            let urlPath = `/vps/terminate`;
-            return {
-                path: urlPath,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: TerminateVpsRequestContentToJSON(requestParameters['terminateVpsRequestContent']),
-            };
-        });
-    }
-    /**
-     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
-     */
-    terminateVpsRaw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const requestOptions = yield this.terminateVpsRequestOpts(requestParameters);
-            const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => TerminateVpsResponseContentFromJSON(jsonValue));
-        });
-    }
-    /**
-     * [Under development] Terminates a VPS service through WHMCS. This action is irreversible
-     */
-    terminateVps(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.terminateVpsRaw(requestParameters, initOverrides);
             return yield response.value();
         });
     }
