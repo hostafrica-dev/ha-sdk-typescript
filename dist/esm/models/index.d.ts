@@ -191,6 +191,8 @@ export * from './ValidatePricingSummaryRecurring';
 export * from './ValidationErrorResponseContent';
 export * from './VpsAvailableFeatures';
 export * from './VpsBandwidthInfo';
+export * from './VpsCancelResponseData';
+export * from './VpsCancelType';
 export * from './VpsConfigResponseData';
 export * from './VpsCpuInfo';
 export * from './VpsCredentials';

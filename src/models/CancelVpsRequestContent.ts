@@ -13,6 +13,14 @@
  */
 
 import { mapValues } from '../runtime';
+import type { VpsCancelType } from './VpsCancelType';
+import {
+    VpsCancelTypeFromJSON,
+    VpsCancelTypeFromJSONTyped,
+    VpsCancelTypeToJSON,
+    VpsCancelTypeToJSONTyped,
+} from './VpsCancelType';
+
 /**
  * 
  * @export
@@ -25,7 +33,15 @@ export interface CancelVpsRequestContent {
      * @memberof CancelVpsRequestContent
      */
     serviceId: string;
+    /**
+     * 
+     * @type {VpsCancelType}
+     * @memberof CancelVpsRequestContent
+     */
+    type?: VpsCancelType;
 }
+
+
 
 /**
  * Check if a given object implements the CancelVpsRequestContent interface.
@@ -46,6 +62,7 @@ export function CancelVpsRequestContentFromJSONTyped(json: any, ignoreDiscrimina
     return {
         
         'serviceId': json['service_id'],
+        'type': json['type'] == null ? undefined : VpsCancelTypeFromJSON(json['type']),
     };
 }
 
@@ -61,6 +78,7 @@ export function CancelVpsRequestContentToJSONTyped(value?: CancelVpsRequestConte
     return {
         
         'service_id': value['serviceId'],
+        'type': VpsCancelTypeToJSON(value['type']),
     };
 }
 

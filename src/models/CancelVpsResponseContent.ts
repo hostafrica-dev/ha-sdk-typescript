@@ -13,13 +13,6 @@
  */
 
 import { mapValues } from '../runtime';
-import type { VpsSimpleActionResponseData } from './VpsSimpleActionResponseData';
-import {
-    VpsSimpleActionResponseDataFromJSON,
-    VpsSimpleActionResponseDataFromJSONTyped,
-    VpsSimpleActionResponseDataToJSON,
-    VpsSimpleActionResponseDataToJSONTyped,
-} from './VpsSimpleActionResponseData';
 import type { OperationStatus } from './OperationStatus';
 import {
     OperationStatusFromJSON,
@@ -27,6 +20,13 @@ import {
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
 } from './OperationStatus';
+import type { VpsCancelResponseData } from './VpsCancelResponseData';
+import {
+    VpsCancelResponseDataFromJSON,
+    VpsCancelResponseDataFromJSONTyped,
+    VpsCancelResponseDataToJSON,
+    VpsCancelResponseDataToJSONTyped,
+} from './VpsCancelResponseData';
 
 /**
  * 
@@ -42,10 +42,10 @@ export interface CancelVpsResponseContent {
     status: OperationStatus;
     /**
      * 
-     * @type {VpsSimpleActionResponseData}
+     * @type {VpsCancelResponseData}
      * @memberof CancelVpsResponseContent
      */
-    data: VpsSimpleActionResponseData;
+    data: VpsCancelResponseData;
 }
 
 
@@ -70,7 +70,7 @@ export function CancelVpsResponseContentFromJSONTyped(json: any, ignoreDiscrimin
     return {
         
         'status': OperationStatusFromJSON(json['status']),
-        'data': VpsSimpleActionResponseDataFromJSON(json['data']),
+        'data': VpsCancelResponseDataFromJSON(json['data']),
     };
 }
 
@@ -86,7 +86,7 @@ export function CancelVpsResponseContentToJSONTyped(value?: CancelVpsResponseCon
     return {
         
         'status': OperationStatusToJSON(value['status']),
-        'data': VpsSimpleActionResponseDataToJSON(value['data']),
+        'data': VpsCancelResponseDataToJSON(value['data']),
     };
 }
 

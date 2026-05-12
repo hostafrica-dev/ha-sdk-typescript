@@ -7,6 +7,7 @@
 Name | Type
 ------------ | -------------
 `serviceId` | string
+`type` | [VpsCancelType](VpsCancelType.md)
 
 ## Example
 
@@ -16,6 +17,7 @@ import type { CancelVpsRequestContent } from '@hostafrica/sdk-typescript'
 // TODO: Update the object below with actual values
 const example = {
   "serviceId": null,
+  "type": null,
 } satisfies CancelVpsRequestContent
 
 console.log(example)

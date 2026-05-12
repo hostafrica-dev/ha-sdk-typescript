@@ -209,6 +209,8 @@ __exportStar(require("./ValidatePricingSummaryRecurring"), exports);
 __exportStar(require("./ValidationErrorResponseContent"), exports);
 __exportStar(require("./VpsAvailableFeatures"), exports);
 __exportStar(require("./VpsBandwidthInfo"), exports);
+__exportStar(require("./VpsCancelResponseData"), exports);
+__exportStar(require("./VpsCancelType"), exports);
 __exportStar(require("./VpsConfigResponseData"), exports);
 __exportStar(require("./VpsCpuInfo"), exports);
 __exportStar(require("./VpsCredentials"), exports);

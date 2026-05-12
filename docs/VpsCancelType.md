@@ -1,24 +1,21 @@
 
-# CancelVpsResponseContent
+# VpsCancelType
 
+Cancel type enum - controls when a VPS service cancellation takes effect
 
 ## Properties
 
 Name | Type
 ------------ | -------------
-`status` | [OperationStatus](OperationStatus.md)
-`data` | [VpsCancelResponseData](VpsCancelResponseData.md)
 
 ## Example
 
 ```typescript
-import type { CancelVpsResponseContent } from '@hostafrica/sdk-typescript'
+import type { VpsCancelType } from '@hostafrica/sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "status": null,
-  "data": null,
-} satisfies CancelVpsResponseContent
+} satisfies VpsCancelType
 
 console.log(example)
 
@@ -27,7 +24,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as CancelVpsResponseContent
+const exampleParsed = JSON.parse(exampleJSON) as VpsCancelType
 console.log(exampleParsed)
 ```
 

@@ -1,24 +1,27 @@
 
-# CancelVpsResponseContent
+# VpsCancelDetails
 
+Nested details within a VPS cancellation response
 
 ## Properties
 
 Name | Type
 ------------ | -------------
-`status` | [OperationStatus](OperationStatus.md)
-`data` | [VpsCancelResponseData](VpsCancelResponseData.md)
+`serviceId` | number
+`cancellationType` | string
+`status` | string
 
 ## Example
 
 ```typescript
-import type { CancelVpsResponseContent } from '@hostafrica/sdk-typescript'
+import type { VpsCancelDetails } from '@hostafrica/sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {
+  "serviceId": null,
+  "cancellationType": null,
   "status": null,
-  "data": null,
-} satisfies CancelVpsResponseContent
+} satisfies VpsCancelDetails
 
 console.log(example)
 
@@ -27,7 +30,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as CancelVpsResponseContent
+const exampleParsed = JSON.parse(exampleJSON) as VpsCancelDetails
 console.log(exampleParsed)
 ```
 
