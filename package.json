@@ -1,6 +1,6 @@
 {
   "name": "@hostafrica/sdk-typescript",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "HostAfrica API TypeScript SDK",
   "author": "HostAfrica",
   "repository": {
