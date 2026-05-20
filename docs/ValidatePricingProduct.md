@@ -8,7 +8,7 @@ A single product line item in a validate pricing request
 Name | Type
 ------------ | -------------
 `pid` | number
-`billingCycle` | string
+`billingCycle` | [BillingCycle](BillingCycle.md)
 `planId` | number
 `hostname` | string
 `configOptions` | any
@@ -16,7 +16,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { ValidatePricingProduct } from '@hostafrica/sdk-typescript'
+import type { ValidatePricingProduct } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

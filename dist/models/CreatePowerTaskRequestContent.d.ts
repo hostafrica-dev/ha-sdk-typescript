@@ -1,6 +1,6 @@
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  *
@@ -9,6 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import type { DayOfWeek } from './DayOfWeek';
+import type { PowerTaskJobType } from './PowerTaskJobType';
+import type { PowerTaskAction } from './PowerTaskAction';
 /**
  *
  * @export
@@ -22,11 +25,11 @@ export interface CreatePowerTaskRequestContent {
      */
     serviceId: string;
     /**
-     * Power action to perform (start, stop, restart)
-     * @type {string}
+     *
+     * @type {PowerTaskAction}
      * @memberof CreatePowerTaskRequestContent
      */
-    powerTaskAction: string;
+    powerTaskAction: PowerTaskAction;
     /**
      * Start date in Y-m-d format (e.g., 2026-03-25)
      * @type {string}
@@ -58,11 +61,11 @@ export interface CreatePowerTaskRequestContent {
      */
     endTime?: string;
     /**
-     * Job type: oneTime, daily, or weekly
-     * @type {string}
+     *
+     * @type {PowerTaskJobType}
      * @memberof CreatePowerTaskRequestContent
      */
-    jobType?: string;
+    jobType?: PowerTaskJobType;
     /**
      * Job execution time in HH:MM or HH:MM:SS format
      * @type {string}
@@ -82,11 +85,11 @@ export interface CreatePowerTaskRequestContent {
      */
     jobMinutes?: number;
     /**
-     * Days of the week for weekly jobs (array of mon, tue, wed, thu, fri, sat, sun)
-     * @type {Array<string>}
+     * Days of the week for weekly jobs
+     * @type {Array<DayOfWeek>}
      * @memberof CreatePowerTaskRequestContent
      */
-    days?: Array<string>;
+    days?: Array<DayOfWeek>;
 }
 /**
  * Check if a given object implements the CreatePowerTaskRequestContent interface.

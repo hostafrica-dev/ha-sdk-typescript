@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { RestoreBackupRequestContent } from '@hostafrica/sdk-typescript'
+import type { RestoreBackupRequestContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

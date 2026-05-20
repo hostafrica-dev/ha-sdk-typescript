@@ -23,7 +23,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { UpdateNotificationRequestContent } from '@hostafrica/sdk-typescript'
+import type { UpdateNotificationRequestContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

@@ -1,6 +1,6 @@
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  *

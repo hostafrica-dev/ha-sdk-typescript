@@ -13,7 +13,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { NotificationCreateResponseData } from '@hostafrica/sdk-typescript'
+import type { NotificationCreateResponseData } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

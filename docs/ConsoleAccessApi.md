@@ -22,13 +22,13 @@ Retrieves noVNC console access credentials and connection details for a VPS
 import {
   Configuration,
   ConsoleAccessApi,
-} from '@hostafrica/sdk-typescript';
-import type { GetNoVncConsoleRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { GetNoVncConsoleRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new ConsoleAccessApi(config);
@@ -63,7 +63,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

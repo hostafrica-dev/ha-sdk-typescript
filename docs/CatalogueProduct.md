@@ -21,7 +21,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { CatalogueProduct } from '@hostafrica/sdk-typescript'
+import type { CatalogueProduct } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

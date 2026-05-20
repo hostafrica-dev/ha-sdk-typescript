@@ -1,6 +1,6 @@
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  *
@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import type { BackupModeType } from './BackupModeType';
 import type { CompressionType } from './CompressionType';
 /**
  *
@@ -29,11 +30,11 @@ export interface CreateBackupRequestContent {
      */
     compress?: CompressionType;
     /**
-     * Backup mode (e.g., snapshot, suspend, stop)
-     * @type {string}
+     *
+     * @type {BackupModeType}
      * @memberof CreateBackupRequestContent
      */
-    mode?: string;
+    mode?: BackupModeType;
 }
 /**
  * Check if a given object implements the CreateBackupRequestContent interface.

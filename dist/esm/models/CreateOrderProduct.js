@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  *
@@ -11,6 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { BillingCycleFromJSON, BillingCycleToJSON, } from './BillingCycle';
 /**
  * Check if a given object implements the CreateOrderProduct interface.
  */
@@ -36,7 +37,7 @@ export function CreateOrderProductFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'pid': json['pid'],
-        'billingCycle': json['billing_cycle'],
+        'billingCycle': BillingCycleFromJSON(json['billing_cycle']),
         'planId': json['plan_id'],
         'hostname': json['hostname'],
         'configOptions': json['config_options'],
@@ -52,7 +53,7 @@ export function CreateOrderProductToJSONTyped(value, ignoreDiscriminator = false
     }
     return {
         'pid': value['pid'],
-        'billing_cycle': value['billingCycle'],
+        'billing_cycle': BillingCycleToJSON(value['billingCycle']),
         'plan_id': value['planId'],
         'hostname': value['hostname'],
         'config_options': value['configOptions'],

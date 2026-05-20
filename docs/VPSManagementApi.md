@@ -29,13 +29,13 @@ Retrieves VPS configuration settings including name, hostname, auto-start, boot 
 import {
   Configuration,
   VPSManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { GetVpsConfigRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { GetVpsConfigRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new VPSManagementApi(config);
@@ -70,7 +70,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -107,13 +107,13 @@ Gets detailed information about a VPS service including configuration, network s
 import {
   Configuration,
   VPSManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { GetVpsDetailsRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { GetVpsDetailsRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new VPSManagementApi(config);
@@ -148,7 +148,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -185,13 +185,13 @@ Retrieves the list of available ISO images for a VPS service
 import {
   Configuration,
   VPSManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { ListIsosRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { ListIsosRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new VPSManagementApi(config);
@@ -226,7 +226,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -263,13 +263,13 @@ example().catch(console.error);
 import {
   Configuration,
   VPSManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { ListReinstallOsRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { ListReinstallOsRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new VPSManagementApi(config);
@@ -304,7 +304,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -341,13 +341,13 @@ Lists all VPS services accessible by the authenticated user
 import {
   Configuration,
   VPSManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { ListVpsServicesRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { ListVpsServicesRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new VPSManagementApi(config);
@@ -374,7 +374,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -410,13 +410,13 @@ Mounts an ISO image on a VPS service
 import {
   Configuration,
   VPSManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { MountIsoRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { MountIsoRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new VPSManagementApi(config);
@@ -451,7 +451,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -489,13 +489,13 @@ Triggers a VPS reinstallation with the specified OS template
 import {
   Configuration,
   VPSManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { TriggerReinstallRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { TriggerReinstallRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new VPSManagementApi(config);
@@ -530,7 +530,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -568,13 +568,13 @@ Updates VPS configuration settings such as name, hostname, auto-start, boot orde
 import {
   Configuration,
   VPSManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { UpdateVpsConfigRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { UpdateVpsConfigRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new VPSManagementApi(config);
@@ -609,7 +609,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

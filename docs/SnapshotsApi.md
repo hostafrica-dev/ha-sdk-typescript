@@ -26,13 +26,13 @@ Creates a new snapshot for a VPS service
 import {
   Configuration,
   SnapshotsApi,
-} from '@hostafrica/sdk-typescript';
-import type { CreateSnapshotRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { CreateSnapshotRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new SnapshotsApi(config);
@@ -67,7 +67,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -105,13 +105,13 @@ Deletes a specific snapshot from a VPS service
 import {
   Configuration,
   SnapshotsApi,
-} from '@hostafrica/sdk-typescript';
-import type { DeleteSnapshotRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { DeleteSnapshotRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new SnapshotsApi(config);
@@ -146,7 +146,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -184,13 +184,13 @@ Retrieves the list of snapshots for a VPS service
 import {
   Configuration,
   SnapshotsApi,
-} from '@hostafrica/sdk-typescript';
-import type { ListSnapshotsRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { ListSnapshotsRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new SnapshotsApi(config);
@@ -225,7 +225,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -262,13 +262,13 @@ example().catch(console.error);
 import {
   Configuration,
   SnapshotsApi,
-} from '@hostafrica/sdk-typescript';
-import type { RollbackSnapshotRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { RollbackSnapshotRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new SnapshotsApi(config);
@@ -303,7 +303,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -341,13 +341,13 @@ Updates a snapshot\&#39;s metadata
 import {
   Configuration,
   SnapshotsApi,
-} from '@hostafrica/sdk-typescript';
-import type { UpdateSnapshotRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { UpdateSnapshotRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new SnapshotsApi(config);
@@ -382,7 +382,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

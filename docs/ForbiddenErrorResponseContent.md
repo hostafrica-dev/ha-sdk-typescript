@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { ForbiddenErrorResponseContent } from '@hostafrica/sdk-typescript'
+import type { ForbiddenErrorResponseContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

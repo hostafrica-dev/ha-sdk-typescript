@@ -29,13 +29,13 @@ Creates a new backup for a VPS service
 import {
   Configuration,
   BackupsApi,
-} from '@hostafrica/sdk-typescript';
-import type { CreateBackupRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { CreateBackupRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new BackupsApi(config);
@@ -70,7 +70,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -108,13 +108,13 @@ Creates a new backup schedule for a VPS service
 import {
   Configuration,
   BackupsApi,
-} from '@hostafrica/sdk-typescript';
-import type { CreateBackupScheduleRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { CreateBackupScheduleRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new BackupsApi(config);
@@ -149,7 +149,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -187,13 +187,13 @@ Deletes a specific backup from a VPS service
 import {
   Configuration,
   BackupsApi,
-} from '@hostafrica/sdk-typescript';
-import type { DeleteBackupRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { DeleteBackupRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new BackupsApi(config);
@@ -228,7 +228,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -266,13 +266,13 @@ Deletes a backup schedule from a VPS service
 import {
   Configuration,
   BackupsApi,
-} from '@hostafrica/sdk-typescript';
-import type { DeleteBackupScheduleRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { DeleteBackupScheduleRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new BackupsApi(config);
@@ -307,7 +307,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -345,13 +345,13 @@ Edits an existing backup schedule for a VPS service
 import {
   Configuration,
   BackupsApi,
-} from '@hostafrica/sdk-typescript';
-import type { EditBackupScheduleRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { EditBackupScheduleRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new BackupsApi(config);
@@ -386,7 +386,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -424,13 +424,13 @@ Retrieves the list of backup schedules for a VPS service
 import {
   Configuration,
   BackupsApi,
-} from '@hostafrica/sdk-typescript';
-import type { ListBackupSchedulesRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { ListBackupSchedulesRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new BackupsApi(config);
@@ -465,7 +465,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -502,13 +502,13 @@ Retrieves the list of backups for a VPS service including quota information and 
 import {
   Configuration,
   BackupsApi,
-} from '@hostafrica/sdk-typescript';
-import type { ListBackupsRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { ListBackupsRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new BackupsApi(config);
@@ -543,7 +543,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -580,13 +580,13 @@ Restores a VPS from a backup with the specified backup identifier
 import {
   Configuration,
   BackupsApi,
-} from '@hostafrica/sdk-typescript';
-import type { RestoreBackupRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { RestoreBackupRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new BackupsApi(config);
@@ -621,7 +621,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

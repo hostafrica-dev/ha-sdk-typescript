@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  *
@@ -11,6 +11,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { DayOfWeekFromJSON, DayOfWeekToJSON, } from './DayOfWeek';
+import { PowerTaskJobTypeFromJSON, PowerTaskJobTypeToJSON, } from './PowerTaskJobType';
+import { PowerTaskActionFromJSON, PowerTaskActionToJSON, } from './PowerTaskAction';
 /**
  * Check if a given object implements the CreatePowerTaskRequestContent interface.
  */
@@ -32,17 +35,17 @@ export function CreatePowerTaskRequestContentFromJSONTyped(json, ignoreDiscrimin
     }
     return {
         'serviceId': json['service_id'],
-        'powerTaskAction': json['power_task_action'],
+        'powerTaskAction': PowerTaskActionFromJSON(json['power_task_action']),
         'startDate': json['start_date'],
         'description': json['description'] == null ? undefined : json['description'],
         'startTime': json['start_time'] == null ? undefined : json['start_time'],
         'endDate': json['end_date'] == null ? undefined : json['end_date'],
         'endTime': json['end_time'] == null ? undefined : json['end_time'],
-        'jobType': json['job_type'] == null ? undefined : json['job_type'],
+        'jobType': json['job_type'] == null ? undefined : PowerTaskJobTypeFromJSON(json['job_type']),
         'jobTime': json['job_time'] == null ? undefined : json['job_time'],
         'jobHour': json['job_hour'] == null ? undefined : json['job_hour'],
         'jobMinutes': json['job_minutes'] == null ? undefined : json['job_minutes'],
-        'days': json['days'] == null ? undefined : json['days'],
+        'days': json['days'] == null ? undefined : (json['days'].map(DayOfWeekFromJSON)),
     };
 }
 export function CreatePowerTaskRequestContentToJSON(json) {
@@ -54,16 +57,16 @@ export function CreatePowerTaskRequestContentToJSONTyped(value, ignoreDiscrimina
     }
     return {
         'service_id': value['serviceId'],
-        'power_task_action': value['powerTaskAction'],
+        'power_task_action': PowerTaskActionToJSON(value['powerTaskAction']),
         'start_date': value['startDate'],
         'description': value['description'],
         'start_time': value['startTime'],
         'end_date': value['endDate'],
         'end_time': value['endTime'],
-        'job_type': value['jobType'],
+        'job_type': PowerTaskJobTypeToJSON(value['jobType']),
         'job_time': value['jobTime'],
         'job_hour': value['jobHour'],
         'job_minutes': value['jobMinutes'],
-        'days': value['days'],
+        'days': value['days'] == null ? undefined : (value['days'].map(DayOfWeekToJSON)),
     };
 }

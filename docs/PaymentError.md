@@ -13,7 +13,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { PaymentError } from '@hostafrica/sdk-typescript'
+import type { PaymentError } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

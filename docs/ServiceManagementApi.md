@@ -27,13 +27,13 @@ Cancels a VPS service through WHMCS. This action is irreversible
 import {
   Configuration,
   ServiceManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { CancelVpsRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { CancelVpsRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new ServiceManagementApi(config);
@@ -68,7 +68,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -106,13 +106,13 @@ Creates an order through checkout. Returns payment status; on failure also inclu
 import {
   Configuration,
   ServiceManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { CreateOrderRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { CreateOrderRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new ServiceManagementApi(config);
@@ -147,7 +147,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -184,13 +184,13 @@ Retrieves the product catalogue, optionally filtered by group or product
 import {
   Configuration,
   ServiceManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { GetCatalogueRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { GetCatalogueRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new ServiceManagementApi(config);
@@ -225,7 +225,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -262,13 +262,13 @@ Lists all orders for the authenticated user, including payment and invoice statu
 import {
   Configuration,
   ServiceManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { ListOrdersRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { ListOrdersRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new ServiceManagementApi(config);
@@ -295,7 +295,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -332,13 +332,13 @@ Retries a failed or pending payment for an existing order
 import {
   Configuration,
   ServiceManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { RetryPaymentRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { RetryPaymentRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new ServiceManagementApi(config);
@@ -373,7 +373,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -411,13 +411,13 @@ Validates pricing for one or more products, returning per-product breakdown and 
 import {
   Configuration,
   ServiceManagementApi,
-} from '@hostafrica/sdk-typescript';
-import type { ValidatePricingRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { ValidatePricingRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new ServiceManagementApi(config);
@@ -452,7 +452,7 @@ example().catch(console.error);
 
 ### Authorization
 
-[smithy.api.httpBearerAuth](../README.md#smithy.api.httpBearerAuth)
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

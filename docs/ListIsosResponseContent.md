@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { ListIsosResponseContent } from '@hostafrica/sdk-typescript'
+import type { ListIsosResponseContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  * 
@@ -13,6 +13,14 @@
  */
 
 import { mapValues } from '../runtime';
+import type { BillingCycle } from './BillingCycle';
+import {
+    BillingCycleFromJSON,
+    BillingCycleFromJSONTyped,
+    BillingCycleToJSON,
+    BillingCycleToJSONTyped,
+} from './BillingCycle';
+
 /**
  * A single product line item in a create order request
  * @export
@@ -26,11 +34,11 @@ export interface CreateOrderProduct {
      */
     pid: number;
     /**
-     * Billing cycle (e.g. monthly, annually)
-     * @type {string}
+     * 
+     * @type {BillingCycle}
      * @memberof CreateOrderProduct
      */
-    billingCycle: string;
+    billingCycle: BillingCycle;
     /**
      * Plan ID for the selected product configuration
      * @type {number}
@@ -57,6 +65,8 @@ export interface CreateOrderProduct {
     additionalData?: any | null;
 }
 
+
+
 /**
  * Check if a given object implements the CreateOrderProduct interface.
  */
@@ -80,7 +90,7 @@ export function CreateOrderProductFromJSONTyped(json: any, ignoreDiscriminator: 
     return {
         
         'pid': json['pid'],
-        'billingCycle': json['billing_cycle'],
+        'billingCycle': BillingCycleFromJSON(json['billing_cycle']),
         'planId': json['plan_id'],
         'hostname': json['hostname'],
         'configOptions': json['config_options'],
@@ -100,7 +110,7 @@ export function CreateOrderProductToJSONTyped(value?: CreateOrderProduct | null,
     return {
         
         'pid': value['pid'],
-        'billing_cycle': value['billingCycle'],
+        'billing_cycle': BillingCycleToJSON(value['billingCycle']),
         'plan_id': value['planId'],
         'hostname': value['hostname'],
         'config_options': value['configOptions'],

@@ -17,7 +17,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { ValidatePricingSummary } from '@hostafrica/sdk-typescript'
+import type { ValidatePricingSummary } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

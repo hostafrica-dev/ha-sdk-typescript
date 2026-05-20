@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  * 
@@ -13,6 +13,28 @@
  */
 
 import { mapValues } from '../runtime';
+import type { DayOfWeek } from './DayOfWeek';
+import {
+    DayOfWeekFromJSON,
+    DayOfWeekFromJSONTyped,
+    DayOfWeekToJSON,
+    DayOfWeekToJSONTyped,
+} from './DayOfWeek';
+import type { PowerTaskJobType } from './PowerTaskJobType';
+import {
+    PowerTaskJobTypeFromJSON,
+    PowerTaskJobTypeFromJSONTyped,
+    PowerTaskJobTypeToJSON,
+    PowerTaskJobTypeToJSONTyped,
+} from './PowerTaskJobType';
+import type { PowerTaskAction } from './PowerTaskAction';
+import {
+    PowerTaskActionFromJSON,
+    PowerTaskActionFromJSONTyped,
+    PowerTaskActionToJSON,
+    PowerTaskActionToJSONTyped,
+} from './PowerTaskAction';
+
 /**
  * 
  * @export
@@ -26,11 +48,11 @@ export interface CreatePowerTaskRequestContent {
      */
     serviceId: string;
     /**
-     * Power action to perform (start, stop, restart)
-     * @type {string}
+     * 
+     * @type {PowerTaskAction}
      * @memberof CreatePowerTaskRequestContent
      */
-    powerTaskAction: string;
+    powerTaskAction: PowerTaskAction;
     /**
      * Start date in Y-m-d format (e.g., 2026-03-25)
      * @type {string}
@@ -62,11 +84,11 @@ export interface CreatePowerTaskRequestContent {
      */
     endTime?: string;
     /**
-     * Job type: oneTime, daily, or weekly
-     * @type {string}
+     * 
+     * @type {PowerTaskJobType}
      * @memberof CreatePowerTaskRequestContent
      */
-    jobType?: string;
+    jobType?: PowerTaskJobType;
     /**
      * Job execution time in HH:MM or HH:MM:SS format
      * @type {string}
@@ -86,12 +108,14 @@ export interface CreatePowerTaskRequestContent {
      */
     jobMinutes?: number;
     /**
-     * Days of the week for weekly jobs (array of mon, tue, wed, thu, fri, sat, sun)
-     * @type {Array<string>}
+     * Days of the week for weekly jobs
+     * @type {Array<DayOfWeek>}
      * @memberof CreatePowerTaskRequestContent
      */
-    days?: Array<string>;
+    days?: Array<DayOfWeek>;
 }
+
+
 
 /**
  * Check if a given object implements the CreatePowerTaskRequestContent interface.
@@ -114,17 +138,17 @@ export function CreatePowerTaskRequestContentFromJSONTyped(json: any, ignoreDisc
     return {
         
         'serviceId': json['service_id'],
-        'powerTaskAction': json['power_task_action'],
+        'powerTaskAction': PowerTaskActionFromJSON(json['power_task_action']),
         'startDate': json['start_date'],
         'description': json['description'] == null ? undefined : json['description'],
         'startTime': json['start_time'] == null ? undefined : json['start_time'],
         'endDate': json['end_date'] == null ? undefined : json['end_date'],
         'endTime': json['end_time'] == null ? undefined : json['end_time'],
-        'jobType': json['job_type'] == null ? undefined : json['job_type'],
+        'jobType': json['job_type'] == null ? undefined : PowerTaskJobTypeFromJSON(json['job_type']),
         'jobTime': json['job_time'] == null ? undefined : json['job_time'],
         'jobHour': json['job_hour'] == null ? undefined : json['job_hour'],
         'jobMinutes': json['job_minutes'] == null ? undefined : json['job_minutes'],
-        'days': json['days'] == null ? undefined : json['days'],
+        'days': json['days'] == null ? undefined : ((json['days'] as Array<any>).map(DayOfWeekFromJSON)),
     };
 }
 
@@ -140,17 +164,17 @@ export function CreatePowerTaskRequestContentToJSONTyped(value?: CreatePowerTask
     return {
         
         'service_id': value['serviceId'],
-        'power_task_action': value['powerTaskAction'],
+        'power_task_action': PowerTaskActionToJSON(value['powerTaskAction']),
         'start_date': value['startDate'],
         'description': value['description'],
         'start_time': value['startTime'],
         'end_date': value['endDate'],
         'end_time': value['endTime'],
-        'job_type': value['jobType'],
+        'job_type': PowerTaskJobTypeToJSON(value['jobType']),
         'job_time': value['jobTime'],
         'job_hour': value['jobHour'],
         'job_minutes': value['jobMinutes'],
-        'days': value['days'],
+        'days': value['days'] == null ? undefined : ((value['days'] as Array<any>).map(DayOfWeekToJSON)),
     };
 }
 

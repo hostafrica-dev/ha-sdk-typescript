@@ -1,4 +1,4 @@
-# @hostafrica/sdk-typescript@1.0.0
+# @hostafrica/ha-sdk-typescript@1.0.0
 
 A TypeScript SDK client for the api.hostafrica.com API.
 
@@ -7,7 +7,7 @@ A TypeScript SDK client for the api.hostafrica.com API.
 First, install the SDK from npm.
 
 ```bash
-npm install @hostafrica/sdk-typescript --save
+npm install @hostafrica/ha-sdk-typescript --save
 ```
 
 Next, try it out.
@@ -17,13 +17,13 @@ Next, try it out.
 import {
   Configuration,
   BackupsApi,
-} from '@hostafrica/sdk-typescript';
-import type { CreateBackupRequest } from '@hostafrica/sdk-typescript';
+} from '@hostafrica/ha-sdk-typescript';
+import type { CreateBackupRequest } from '@hostafrica/ha-sdk-typescript';
 
 async function example() {
-  console.log("🚀 Testing @hostafrica/sdk-typescript SDK...");
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
   const config = new Configuration({ 
-    // Configure HTTP bearer authorization: smithy.api.httpBearerAuth
+    // Configure HTTP bearer authorization: BearerAuth
     accessToken: "YOUR BEARER TOKEN",
   });
   const api = new BackupsApi(config);
@@ -115,9 +115,11 @@ All URIs are relative to *https://api.hostafrica.com*
 - [BackupCreationInfo](docs/BackupCreationInfo.md)
 - [BackupItem](docs/BackupItem.md)
 - [BackupMode](docs/BackupMode.md)
+- [BackupModeType](docs/BackupModeType.md)
 - [BackupSchedule](docs/BackupSchedule.md)
 - [BackupScheduleListResponseData](docs/BackupScheduleListResponseData.md)
 - [BadRequestErrorResponseContent](docs/BadRequestErrorResponseContent.md)
+- [BillingCycle](docs/BillingCycle.md)
 - [CancelVpsRequestContent](docs/CancelVpsRequestContent.md)
 - [CancelVpsResponseContent](docs/CancelVpsResponseContent.md)
 - [CatalogueConfigOption](docs/CatalogueConfigOption.md)
@@ -154,6 +156,7 @@ All URIs are relative to *https://api.hostafrica.com*
 - [CreateRdnsRecordResponseData](docs/CreateRdnsRecordResponseData.md)
 - [CreateSnapshotRequestContent](docs/CreateSnapshotRequestContent.md)
 - [CreateSnapshotResponseContent](docs/CreateSnapshotResponseContent.md)
+- [DayOfWeek](docs/DayOfWeek.md)
 - [DeleteBackupRequestContent](docs/DeleteBackupRequestContent.md)
 - [DeleteBackupResponseContent](docs/DeleteBackupResponseContent.md)
 - [DeleteBackupScheduleRequestContent](docs/DeleteBackupScheduleRequestContent.md)
@@ -234,8 +237,10 @@ All URIs are relative to *https://api.hostafrica.com*
 - [PaymentError](docs/PaymentError.md)
 - [PaymentStatus](docs/PaymentStatus.md)
 - [PowerTask](docs/PowerTask.md)
+- [PowerTaskAction](docs/PowerTaskAction.md)
 - [PowerTaskCreateResponseData](docs/PowerTaskCreateResponseData.md)
 - [PowerTaskDialogRules](docs/PowerTaskDialogRules.md)
+- [PowerTaskJobType](docs/PowerTaskJobType.md)
 - [PowerTaskListResponseData](docs/PowerTaskListResponseData.md)
 - [PublicSshKeyResponseData](docs/PublicSshKeyResponseData.md)
 - [RdnsAvailableItem](docs/RdnsAvailableItem.md)
@@ -324,6 +329,11 @@ All URIs are relative to *https://api.hostafrica.com*
 Authentication schemes defined for the API:
 <a id="smithy.api.httpBearerAuth"></a>
 #### smithy.api.httpBearerAuth
+
+
+- **Type**: HTTP Bearer Token authentication
+<a id="BearerAuth"></a>
+#### BearerAuth
 
 
 - **Type**: HTTP Bearer Token authentication

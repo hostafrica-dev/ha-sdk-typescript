@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  * 
@@ -13,6 +13,20 @@
  */
 
 import { mapValues } from '../runtime';
+import type { DayOfWeek } from './DayOfWeek';
+import {
+    DayOfWeekFromJSON,
+    DayOfWeekFromJSONTyped,
+    DayOfWeekToJSON,
+    DayOfWeekToJSONTyped,
+} from './DayOfWeek';
+import type { BackupModeType } from './BackupModeType';
+import {
+    BackupModeTypeFromJSON,
+    BackupModeTypeFromJSONTyped,
+    BackupModeTypeToJSON,
+    BackupModeTypeToJSONTyped,
+} from './BackupModeType';
 import type { CompressionType } from './CompressionType';
 import {
     CompressionTypeFromJSON,
@@ -40,11 +54,11 @@ export interface CreateBackupScheduleRequestContent {
      */
     starttime: string;
     /**
-     * Days of week when backup should run. Valid values: mon, tue, wed, thu, fri, sat, sun. Provide as an array of day names.
-     * @type {Array<string>}
+     * Days of week when backup should run
+     * @type {Array<DayOfWeek>}
      * @memberof CreateBackupScheduleRequestContent
      */
-    dow: Array<string>;
+    dow: Array<DayOfWeek>;
     /**
      * 
      * @type {CompressionType}
@@ -52,11 +66,11 @@ export interface CreateBackupScheduleRequestContent {
      */
     compress: CompressionType;
     /**
-     * Backup mode. Valid values: 'snapshot', 'suspend', 'stop'
-     * @type {string}
+     * 
+     * @type {BackupModeType}
      * @memberof CreateBackupScheduleRequestContent
      */
-    mode: string;
+    mode: BackupModeType;
     /**
      * Email notification setting. Set to true to send notifications to client's email, false or omit to disable
      * @type {boolean}
@@ -91,9 +105,9 @@ export function CreateBackupScheduleRequestContentFromJSONTyped(json: any, ignor
         
         'serviceId': json['service_id'],
         'starttime': json['starttime'],
-        'dow': json['dow'],
+        'dow': ((json['dow'] as Array<any>).map(DayOfWeekFromJSON)),
         'compress': CompressionTypeFromJSON(json['compress']),
-        'mode': json['mode'],
+        'mode': BackupModeTypeFromJSON(json['mode']),
         'mailto': json['mailto'] == null ? undefined : json['mailto'],
     };
 }
@@ -111,9 +125,9 @@ export function CreateBackupScheduleRequestContentToJSONTyped(value?: CreateBack
         
         'service_id': value['serviceId'],
         'starttime': value['starttime'],
-        'dow': value['dow'],
+        'dow': ((value['dow'] as Array<any>).map(DayOfWeekToJSON)),
         'compress': CompressionTypeToJSON(value['compress']),
-        'mode': value['mode'],
+        'mode': BackupModeTypeToJSON(value['mode']),
         'mailto': value['mailto'],
     };
 }

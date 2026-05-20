@@ -7,22 +7,22 @@
 Name | Type
 ------------ | -------------
 `serviceId` | string
-`powerTaskAction` | string
+`powerTaskAction` | [PowerTaskAction](PowerTaskAction.md)
 `startDate` | string
 `description` | string
 `startTime` | string
 `endDate` | string
 `endTime` | string
-`jobType` | string
+`jobType` | [PowerTaskJobType](PowerTaskJobType.md)
 `jobTime` | string
 `jobHour` | number
 `jobMinutes` | number
-`days` | Array&lt;string&gt;
+`days` | [Array&lt;DayOfWeek&gt;](DayOfWeek.md)
 
 ## Example
 
 ```typescript
-import type { CreatePowerTaskRequestContent } from '@hostafrica/sdk-typescript'
+import type { CreatePowerTaskRequestContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

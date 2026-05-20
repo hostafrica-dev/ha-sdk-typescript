@@ -3,7 +3,7 @@
 /* eslint-disable */
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  *
@@ -18,6 +18,8 @@ exports.CreateBackupScheduleRequestContentFromJSON = CreateBackupScheduleRequest
 exports.CreateBackupScheduleRequestContentFromJSONTyped = CreateBackupScheduleRequestContentFromJSONTyped;
 exports.CreateBackupScheduleRequestContentToJSON = CreateBackupScheduleRequestContentToJSON;
 exports.CreateBackupScheduleRequestContentToJSONTyped = CreateBackupScheduleRequestContentToJSONTyped;
+const DayOfWeek_1 = require("./DayOfWeek");
+const BackupModeType_1 = require("./BackupModeType");
 const CompressionType_1 = require("./CompressionType");
 /**
  * Check if a given object implements the CreateBackupScheduleRequestContent interface.
@@ -45,9 +47,9 @@ function CreateBackupScheduleRequestContentFromJSONTyped(json, ignoreDiscriminat
     return {
         'serviceId': json['service_id'],
         'starttime': json['starttime'],
-        'dow': json['dow'],
+        'dow': (json['dow'].map(DayOfWeek_1.DayOfWeekFromJSON)),
         'compress': (0, CompressionType_1.CompressionTypeFromJSON)(json['compress']),
-        'mode': json['mode'],
+        'mode': (0, BackupModeType_1.BackupModeTypeFromJSON)(json['mode']),
         'mailto': json['mailto'] == null ? undefined : json['mailto'],
     };
 }
@@ -61,9 +63,9 @@ function CreateBackupScheduleRequestContentToJSONTyped(value, ignoreDiscriminato
     return {
         'service_id': value['serviceId'],
         'starttime': value['starttime'],
-        'dow': value['dow'],
+        'dow': (value['dow'].map(DayOfWeek_1.DayOfWeekToJSON)),
         'compress': (0, CompressionType_1.CompressionTypeToJSON)(value['compress']),
-        'mode': value['mode'],
+        'mode': (0, BackupModeType_1.BackupModeTypeToJSON)(value['mode']),
         'mailto': value['mailto'],
     };
 }

@@ -8,15 +8,15 @@ Name | Type
 ------------ | -------------
 `serviceId` | string
 `starttime` | string
-`dow` | Array&lt;string&gt;
+`dow` | [Array&lt;DayOfWeek&gt;](DayOfWeek.md)
 `compress` | [CompressionType](CompressionType.md)
-`mode` | string
+`mode` | [BackupModeType](BackupModeType.md)
 `mailto` | boolean
 
 ## Example
 
 ```typescript
-import type { CreateBackupScheduleRequestContent } from '@hostafrica/sdk-typescript'
+import type { CreateBackupScheduleRequestContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

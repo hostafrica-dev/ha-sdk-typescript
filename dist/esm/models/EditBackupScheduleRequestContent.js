@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  *
@@ -11,6 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { DayOfWeekFromJSON, DayOfWeekToJSON, } from './DayOfWeek';
+import { BackupModeTypeFromJSON, BackupModeTypeToJSON, } from './BackupModeType';
 import { CompressionTypeFromJSON, CompressionTypeToJSON, } from './CompressionType';
 /**
  * Check if a given object implements the EditBackupScheduleRequestContent interface.
@@ -41,9 +43,9 @@ export function EditBackupScheduleRequestContentFromJSONTyped(json, ignoreDiscri
         'serviceId': json['service_id'],
         'scheduleId': json['schedule_id'],
         'starttime': json['starttime'],
-        'dow': json['dow'],
+        'dow': (json['dow'].map(DayOfWeekFromJSON)),
         'compress': CompressionTypeFromJSON(json['compress']),
-        'mode': json['mode'],
+        'mode': BackupModeTypeFromJSON(json['mode']),
         'mailto': json['mailto'] == null ? undefined : json['mailto'],
     };
 }
@@ -58,9 +60,9 @@ export function EditBackupScheduleRequestContentToJSONTyped(value, ignoreDiscrim
         'service_id': value['serviceId'],
         'schedule_id': value['scheduleId'],
         'starttime': value['starttime'],
-        'dow': value['dow'],
+        'dow': (value['dow'].map(DayOfWeekToJSON)),
         'compress': CompressionTypeToJSON(value['compress']),
-        'mode': value['mode'],
+        'mode': BackupModeTypeToJSON(value['mode']),
         'mailto': value['mailto'],
     };
 }

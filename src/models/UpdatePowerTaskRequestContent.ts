@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  * 
@@ -13,6 +13,21 @@
  */
 
 import { mapValues } from '../runtime';
+import type { DayOfWeek } from './DayOfWeek';
+import {
+    DayOfWeekFromJSON,
+    DayOfWeekFromJSONTyped,
+    DayOfWeekToJSON,
+    DayOfWeekToJSONTyped,
+} from './DayOfWeek';
+import type { PowerTaskJobType } from './PowerTaskJobType';
+import {
+    PowerTaskJobTypeFromJSON,
+    PowerTaskJobTypeFromJSONTyped,
+    PowerTaskJobTypeToJSON,
+    PowerTaskJobTypeToJSONTyped,
+} from './PowerTaskJobType';
+
 /**
  * 
  * @export
@@ -68,11 +83,11 @@ export interface UpdatePowerTaskRequestContent {
      */
     endTime?: string;
     /**
-     * Job type: oneTime, daily, or weekly
-     * @type {string}
+     * 
+     * @type {PowerTaskJobType}
      * @memberof UpdatePowerTaskRequestContent
      */
-    jobType?: string;
+    jobType?: PowerTaskJobType;
     /**
      * Job execution time in HH:MM or HH:MM:SS format
      * @type {string}
@@ -92,12 +107,14 @@ export interface UpdatePowerTaskRequestContent {
      */
     jobMinutes?: number;
     /**
-     * Days of the week for weekly jobs (array of mon, tue, wed, thu, fri, sat, sun)
-     * @type {Array<string>}
+     * Days of the week for weekly jobs
+     * @type {Array<DayOfWeek>}
      * @memberof UpdatePowerTaskRequestContent
      */
-    days?: Array<string>;
+    days?: Array<DayOfWeek>;
 }
+
+
 
 /**
  * Check if a given object implements the UpdatePowerTaskRequestContent interface.
@@ -126,11 +143,11 @@ export function UpdatePowerTaskRequestContentFromJSONTyped(json: any, ignoreDisc
         'startTime': json['start_time'] == null ? undefined : json['start_time'],
         'endDate': json['end_date'] == null ? undefined : json['end_date'],
         'endTime': json['end_time'] == null ? undefined : json['end_time'],
-        'jobType': json['job_type'] == null ? undefined : json['job_type'],
+        'jobType': json['job_type'] == null ? undefined : PowerTaskJobTypeFromJSON(json['job_type']),
         'jobTime': json['job_time'] == null ? undefined : json['job_time'],
         'jobHour': json['job_hour'] == null ? undefined : json['job_hour'],
         'jobMinutes': json['job_minutes'] == null ? undefined : json['job_minutes'],
-        'days': json['days'] == null ? undefined : json['days'],
+        'days': json['days'] == null ? undefined : ((json['days'] as Array<any>).map(DayOfWeekFromJSON)),
     };
 }
 
@@ -153,11 +170,11 @@ export function UpdatePowerTaskRequestContentToJSONTyped(value?: UpdatePowerTask
         'start_time': value['startTime'],
         'end_date': value['endDate'],
         'end_time': value['endTime'],
-        'job_type': value['jobType'],
+        'job_type': PowerTaskJobTypeToJSON(value['jobType']),
         'job_time': value['jobTime'],
         'job_hour': value['jobHour'],
         'job_minutes': value['jobMinutes'],
-        'days': value['days'],
+        'days': value['days'] == null ? undefined : ((value['days'] as Array<any>).map(DayOfWeekToJSON)),
     };
 }
 

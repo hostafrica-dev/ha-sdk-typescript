@@ -20,7 +20,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { VpsConfigResponseData } from '@hostafrica/sdk-typescript'
+import type { VpsConfigResponseData } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

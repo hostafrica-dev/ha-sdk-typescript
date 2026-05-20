@@ -1,6 +1,6 @@
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  *
@@ -9,6 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import type { DayOfWeek } from './DayOfWeek';
+import type { BackupModeType } from './BackupModeType';
 import type { CompressionType } from './CompressionType';
 /**
  *
@@ -29,11 +31,11 @@ export interface CreateBackupScheduleRequestContent {
      */
     starttime: string;
     /**
-     * Days of week when backup should run. Valid values: mon, tue, wed, thu, fri, sat, sun. Provide as an array of day names.
-     * @type {Array<string>}
+     * Days of week when backup should run
+     * @type {Array<DayOfWeek>}
      * @memberof CreateBackupScheduleRequestContent
      */
-    dow: Array<string>;
+    dow: Array<DayOfWeek>;
     /**
      *
      * @type {CompressionType}
@@ -41,11 +43,11 @@ export interface CreateBackupScheduleRequestContent {
      */
     compress: CompressionType;
     /**
-     * Backup mode. Valid values: 'snapshot', 'suspend', 'stop'
-     * @type {string}
+     *
+     * @type {BackupModeType}
      * @memberof CreateBackupScheduleRequestContent
      */
-    mode: string;
+    mode: BackupModeType;
     /**
      * Email notification setting. Set to true to send notifications to client's email, false or omit to disable
      * @type {boolean}

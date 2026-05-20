@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  *
@@ -11,6 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { BackupModeTypeFromJSON, BackupModeTypeToJSON, } from './BackupModeType';
 import { CompressionTypeFromJSON, CompressionTypeToJSON, } from './CompressionType';
 /**
  * Check if a given object implements the CreateBackupRequestContent interface.
@@ -30,7 +31,7 @@ export function CreateBackupRequestContentFromJSONTyped(json, ignoreDiscriminato
     return {
         'serviceId': json['service_id'],
         'compress': json['compress'] == null ? undefined : CompressionTypeFromJSON(json['compress']),
-        'mode': json['mode'] == null ? undefined : json['mode'],
+        'mode': json['mode'] == null ? undefined : BackupModeTypeFromJSON(json['mode']),
     };
 }
 export function CreateBackupRequestContentToJSON(json) {
@@ -43,6 +44,6 @@ export function CreateBackupRequestContentToJSONTyped(value, ignoreDiscriminator
     return {
         'service_id': value['serviceId'],
         'compress': CompressionTypeToJSON(value['compress']),
-        'mode': value['mode'],
+        'mode': BackupModeTypeToJSON(value['mode']),
     };
 }

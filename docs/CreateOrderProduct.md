@@ -8,7 +8,7 @@ A single product line item in a create order request
 Name | Type
 ------------ | -------------
 `pid` | number
-`billingCycle` | string
+`billingCycle` | [BillingCycle](BillingCycle.md)
 `planId` | number
 `hostname` | string
 `configOptions` | any
@@ -17,7 +17,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { CreateOrderProduct } from '@hostafrica/sdk-typescript'
+import type { CreateOrderProduct } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

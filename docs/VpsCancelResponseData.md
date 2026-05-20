@@ -15,7 +15,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { VpsCancelResponseData } from '@hostafrica/sdk-typescript'
+import type { VpsCancelResponseData } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

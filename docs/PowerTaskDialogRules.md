@@ -16,7 +16,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { PowerTaskDialogRules } from '@hostafrica/sdk-typescript'
+import type { PowerTaskDialogRules } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

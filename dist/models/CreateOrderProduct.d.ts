@@ -1,6 +1,6 @@
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  *
@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import type { BillingCycle } from './BillingCycle';
 /**
  * A single product line item in a create order request
  * @export
@@ -22,11 +23,11 @@ export interface CreateOrderProduct {
      */
     pid: number;
     /**
-     * Billing cycle (e.g. monthly, annually)
-     * @type {string}
+     *
+     * @type {BillingCycle}
      * @memberof CreateOrderProduct
      */
-    billingCycle: string;
+    billingCycle: BillingCycle;
     /**
      * Plan ID for the selected product configuration
      * @type {number}

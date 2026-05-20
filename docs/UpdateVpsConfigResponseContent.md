@@ -12,7 +12,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { UpdateVpsConfigResponseContent } from '@hostafrica/sdk-typescript'
+import type { UpdateVpsConfigResponseContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

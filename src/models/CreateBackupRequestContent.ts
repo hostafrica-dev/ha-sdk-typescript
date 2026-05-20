@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * HostAfricaApi
- * HostAfrica API - Manages VPS instances and operations
+ * HostAfrica API
  *
  * The version of the OpenAPI document: 2026-01-01
  * 
@@ -13,6 +13,13 @@
  */
 
 import { mapValues } from '../runtime';
+import type { BackupModeType } from './BackupModeType';
+import {
+    BackupModeTypeFromJSON,
+    BackupModeTypeFromJSONTyped,
+    BackupModeTypeToJSON,
+    BackupModeTypeToJSONTyped,
+} from './BackupModeType';
 import type { CompressionType } from './CompressionType';
 import {
     CompressionTypeFromJSON,
@@ -40,11 +47,11 @@ export interface CreateBackupRequestContent {
      */
     compress?: CompressionType;
     /**
-     * Backup mode (e.g., snapshot, suspend, stop)
-     * @type {string}
+     * 
+     * @type {BackupModeType}
      * @memberof CreateBackupRequestContent
      */
-    mode?: string;
+    mode?: BackupModeType;
 }
 
 
@@ -69,7 +76,7 @@ export function CreateBackupRequestContentFromJSONTyped(json: any, ignoreDiscrim
         
         'serviceId': json['service_id'],
         'compress': json['compress'] == null ? undefined : CompressionTypeFromJSON(json['compress']),
-        'mode': json['mode'] == null ? undefined : json['mode'],
+        'mode': json['mode'] == null ? undefined : BackupModeTypeFromJSON(json['mode']),
     };
 }
 
@@ -86,7 +93,7 @@ export function CreateBackupRequestContentToJSONTyped(value?: CreateBackupReques
         
         'service_id': value['serviceId'],
         'compress': CompressionTypeToJSON(value['compress']),
-        'mode': value['mode'],
+        'mode': BackupModeTypeToJSON(value['mode']),
     };
 }
 

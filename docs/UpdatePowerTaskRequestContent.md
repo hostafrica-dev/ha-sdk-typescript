@@ -14,16 +14,16 @@ Name | Type
 `startTime` | string
 `endDate` | string
 `endTime` | string
-`jobType` | string
+`jobType` | [PowerTaskJobType](PowerTaskJobType.md)
 `jobTime` | string
 `jobHour` | number
 `jobMinutes` | number
-`days` | Array&lt;string&gt;
+`days` | [Array&lt;DayOfWeek&gt;](DayOfWeek.md)
 
 ## Example
 
 ```typescript
-import type { UpdatePowerTaskRequestContent } from '@hostafrica/sdk-typescript'
+import type { UpdatePowerTaskRequestContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

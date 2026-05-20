@@ -8,12 +8,12 @@ Name | Type
 ------------ | -------------
 `serviceId` | string
 `compress` | [CompressionType](CompressionType.md)
-`mode` | string
+`mode` | [BackupModeType](BackupModeType.md)
 
 ## Example
 
 ```typescript
-import type { CreateBackupRequestContent } from '@hostafrica/sdk-typescript'
+import type { CreateBackupRequestContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

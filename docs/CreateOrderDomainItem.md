@@ -19,7 +19,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { CreateOrderDomainItem } from '@hostafrica/sdk-typescript'
+import type { CreateOrderDomainItem } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {

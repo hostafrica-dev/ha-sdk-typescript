@@ -11,7 +11,7 @@ Name | Type
 ## Example
 
 ```typescript
-import type { DeleteRdnsRecordRequestContent } from '@hostafrica/sdk-typescript'
+import type { DeleteRdnsRecordRequestContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {
