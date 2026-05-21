@@ -18,8 +18,8 @@ exports.ListVpsServicesResponseContentFromJSON = ListVpsServicesResponseContentF
 exports.ListVpsServicesResponseContentFromJSONTyped = ListVpsServicesResponseContentFromJSONTyped;
 exports.ListVpsServicesResponseContentToJSON = ListVpsServicesResponseContentToJSON;
 exports.ListVpsServicesResponseContentToJSONTyped = ListVpsServicesResponseContentToJSONTyped;
-const ListVpsServicesData_1 = require("./ListVpsServicesData");
-const OperationStatus_1 = require("./OperationStatus");
+const ListVpsServicesData_js_1 = require("./ListVpsServicesData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the ListVpsServicesResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListVpsServicesResponseContentFromJSONTyped(json, ignoreDiscriminator) 
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, ListVpsServicesData_1.ListVpsServicesDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, ListVpsServicesData_js_1.ListVpsServicesDataFromJSON)(json['data']),
     };
 }
 function ListVpsServicesResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListVpsServicesResponseContentToJSONTyped(value, ignoreDiscriminator = 
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, ListVpsServicesData_1.ListVpsServicesDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, ListVpsServicesData_js_1.ListVpsServicesDataToJSON)(value['data']),
     };
 }

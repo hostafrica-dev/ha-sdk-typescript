@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { CompressionType } from './CompressionType';
+import { mapValues } from '../runtime.js';
+import type { CompressionType } from './CompressionType.js';
 import {
     CompressionTypeFromJSON,
     CompressionTypeFromJSONTyped,
     CompressionTypeToJSON,
     CompressionTypeToJSONTyped,
-} from './CompressionType';
+} from './CompressionType.js';
 
 /**
  * Individual backup schedule item

@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { TriggerReinstallResponseData } from './TriggerReinstallResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { TriggerReinstallResponseData } from './TriggerReinstallResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

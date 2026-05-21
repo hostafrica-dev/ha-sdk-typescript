@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import type { CancelVpsRequestContent, CancelVpsResponseContent, CreateOrderRequestContent, CreateOrderResponseContent, GetCatalogueRequestContent, GetCatalogueResponseContent, ListOrdersResponseContent, RetryPaymentRequestContent, RetryPaymentResponseContent, ValidatePricingRequestContent, ValidatePricingResponseContent } from '../models/index';
+import * as runtime from '../runtime.js';
+import type { CancelVpsRequestContent, CancelVpsResponseContent, CreateOrderRequestContent, CreateOrderResponseContent, GetCatalogueRequestContent, GetCatalogueResponseContent, ListOrdersResponseContent, RetryPaymentRequestContent, RetryPaymentResponseContent, ValidatePricingRequestContent, ValidatePricingResponseContent } from '../models/index.js';
 export interface CancelVpsRequest {
     cancelVpsRequestContent: CancelVpsRequestContent;
 }

@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { RetryPaymentTotalFromJSON, RetryPaymentTotalToJSON, } from './RetryPaymentTotal';
-import { PaymentStatusFromJSON, PaymentStatusToJSON, } from './PaymentStatus';
+import { RetryPaymentTotalFromJSON, RetryPaymentTotalToJSON, } from './RetryPaymentTotal.js';
+import { PaymentStatusFromJSON, PaymentStatusToJSON, } from './PaymentStatus.js';
 /**
  * Check if a given object implements the RetryPaymentResponseData interface.
  */

@@ -13,7 +13,7 @@
  */
 
 
-import * as runtime from '../runtime';
+import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
   CreateRdnsRecordRequestContent,
@@ -29,7 +29,7 @@ import type {
   TooManyRequestsErrorResponseContent,
   UnauthorizedErrorResponseContent,
   ValidationErrorResponseContent,
-} from '../models/index';
+} from '../models/index.js';
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
@@ -59,7 +59,7 @@ import {
     UnauthorizedErrorResponseContentToJSON,
     ValidationErrorResponseContentFromJSON,
     ValidationErrorResponseContentToJSON,
-} from '../models/index';
+} from '../models/index.js';
 
 export interface CreateRdnsRecordRequest {
     createRdnsRecordRequestContent: CreateRdnsRecordRequestContent;

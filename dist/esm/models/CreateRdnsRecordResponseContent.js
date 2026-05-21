@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
-import { CreateRdnsRecordResponseDataFromJSON, CreateRdnsRecordResponseDataToJSON, } from './CreateRdnsRecordResponseData';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
+import { CreateRdnsRecordResponseDataFromJSON, CreateRdnsRecordResponseDataToJSON, } from './CreateRdnsRecordResponseData.js';
 /**
  * Check if a given object implements the CreateRdnsRecordResponseContent interface.
  */

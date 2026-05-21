@@ -18,8 +18,8 @@ exports.CreateSnapshotResponseContentFromJSON = CreateSnapshotResponseContentFro
 exports.CreateSnapshotResponseContentFromJSONTyped = CreateSnapshotResponseContentFromJSONTyped;
 exports.CreateSnapshotResponseContentToJSON = CreateSnapshotResponseContentToJSON;
 exports.CreateSnapshotResponseContentToJSONTyped = CreateSnapshotResponseContentToJSONTyped;
-const SnapshotCreateResponseData_1 = require("./SnapshotCreateResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const SnapshotCreateResponseData_js_1 = require("./SnapshotCreateResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the CreateSnapshotResponseContent interface.
  */
@@ -38,8 +38,8 @@ function CreateSnapshotResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, SnapshotCreateResponseData_1.SnapshotCreateResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, SnapshotCreateResponseData_js_1.SnapshotCreateResponseDataFromJSON)(json['data']),
     };
 }
 function CreateSnapshotResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function CreateSnapshotResponseContentToJSONTyped(value, ignoreDiscriminator = f
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, SnapshotCreateResponseData_1.SnapshotCreateResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, SnapshotCreateResponseData_js_1.SnapshotCreateResponseDataToJSON)(value['data']),
     };
 }

@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { BackupCreationInfo } from './BackupCreationInfo';
+import type { BackupCreationInfo } from './BackupCreationInfo.js';
 /**
  * Response data for backup creation operation
  * @export

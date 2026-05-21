@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { ListOrdersResponseData } from './ListOrdersResponseData';
+import { mapValues } from '../runtime.js';
+import type { ListOrdersResponseData } from './ListOrdersResponseData.js';
 import {
     ListOrdersResponseDataFromJSON,
     ListOrdersResponseDataFromJSONTyped,
     ListOrdersResponseDataToJSON,
     ListOrdersResponseDataToJSONTyped,
-} from './ListOrdersResponseData';
-import type { OperationStatus } from './OperationStatus';
+} from './ListOrdersResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
+} from './OperationStatus.js';
 
 /**
  * 

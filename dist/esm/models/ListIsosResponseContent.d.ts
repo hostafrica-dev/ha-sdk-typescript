@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { OperationStatus } from './OperationStatus';
-import type { ListIsosResponseData } from './ListIsosResponseData';
+import type { OperationStatus } from './OperationStatus.js';
+import type { ListIsosResponseData } from './ListIsosResponseData.js';
 /**
  *
  * @export

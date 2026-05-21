@@ -12,42 +12,42 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { OrderWarning } from './OrderWarning';
+import { mapValues } from '../runtime.js';
+import type { OrderWarning } from './OrderWarning.js';
 import {
     OrderWarningFromJSON,
     OrderWarningFromJSONTyped,
     OrderWarningToJSON,
     OrderWarningToJSONTyped,
-} from './OrderWarning';
-import type { CreateOrderItems } from './CreateOrderItems';
+} from './OrderWarning.js';
+import type { CreateOrderItems } from './CreateOrderItems.js';
 import {
     CreateOrderItemsFromJSON,
     CreateOrderItemsFromJSONTyped,
     CreateOrderItemsToJSON,
     CreateOrderItemsToJSONTyped,
-} from './CreateOrderItems';
-import type { CreateOrderTotal } from './CreateOrderTotal';
+} from './CreateOrderItems.js';
+import type { CreateOrderTotal } from './CreateOrderTotal.js';
 import {
     CreateOrderTotalFromJSON,
     CreateOrderTotalFromJSONTyped,
     CreateOrderTotalToJSON,
     CreateOrderTotalToJSONTyped,
-} from './CreateOrderTotal';
-import type { PaymentStatus } from './PaymentStatus';
+} from './CreateOrderTotal.js';
+import type { PaymentStatus } from './PaymentStatus.js';
 import {
     PaymentStatusFromJSON,
     PaymentStatusFromJSONTyped,
     PaymentStatusToJSON,
     PaymentStatusToJSONTyped,
-} from './PaymentStatus';
-import type { PaymentError } from './PaymentError';
+} from './PaymentStatus.js';
+import type { PaymentError } from './PaymentError.js';
 import {
     PaymentErrorFromJSON,
     PaymentErrorFromJSONTyped,
     PaymentErrorToJSON,
     PaymentErrorToJSONTyped,
-} from './PaymentError';
+} from './PaymentError.js';
 
 /**
  * Response data for a successful or pending order

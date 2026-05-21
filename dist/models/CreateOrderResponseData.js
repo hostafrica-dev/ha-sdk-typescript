@@ -18,11 +18,11 @@ exports.CreateOrderResponseDataFromJSON = CreateOrderResponseDataFromJSON;
 exports.CreateOrderResponseDataFromJSONTyped = CreateOrderResponseDataFromJSONTyped;
 exports.CreateOrderResponseDataToJSON = CreateOrderResponseDataToJSON;
 exports.CreateOrderResponseDataToJSONTyped = CreateOrderResponseDataToJSONTyped;
-const OrderWarning_1 = require("./OrderWarning");
-const CreateOrderItems_1 = require("./CreateOrderItems");
-const CreateOrderTotal_1 = require("./CreateOrderTotal");
-const PaymentStatus_1 = require("./PaymentStatus");
-const PaymentError_1 = require("./PaymentError");
+const OrderWarning_js_1 = require("./OrderWarning.js");
+const CreateOrderItems_js_1 = require("./CreateOrderItems.js");
+const CreateOrderTotal_js_1 = require("./CreateOrderTotal.js");
+const PaymentStatus_js_1 = require("./PaymentStatus.js");
+const PaymentError_js_1 = require("./PaymentError.js");
 /**
  * Check if a given object implements the CreateOrderResponseData interface.
  */
@@ -54,13 +54,13 @@ function CreateOrderResponseDataFromJSONTyped(json, ignoreDiscriminator) {
         'orderId': json['order_id'],
         'invoiceId': json['invoice_id'],
         'orderNumber': json['order_number'],
-        'total': (0, CreateOrderTotal_1.CreateOrderTotalFromJSON)(json['total']),
+        'total': (0, CreateOrderTotal_js_1.CreateOrderTotalFromJSON)(json['total']),
         'promoApplied': json['promo_applied'] == null ? undefined : json['promo_applied'],
         'paymentMethod': json['payment_method'],
-        'paymentStatus': (0, PaymentStatus_1.PaymentStatusFromJSON)(json['payment_status']),
-        'items': (0, CreateOrderItems_1.CreateOrderItemsFromJSON)(json['items']),
-        'paymentError': json['payment_error'] == null ? undefined : (0, PaymentError_1.PaymentErrorFromJSON)(json['payment_error']),
-        'warnings': json['warnings'] == null ? undefined : (json['warnings'].map(OrderWarning_1.OrderWarningFromJSON)),
+        'paymentStatus': (0, PaymentStatus_js_1.PaymentStatusFromJSON)(json['payment_status']),
+        'items': (0, CreateOrderItems_js_1.CreateOrderItemsFromJSON)(json['items']),
+        'paymentError': json['payment_error'] == null ? undefined : (0, PaymentError_js_1.PaymentErrorFromJSON)(json['payment_error']),
+        'warnings': json['warnings'] == null ? undefined : (json['warnings'].map(OrderWarning_js_1.OrderWarningFromJSON)),
     };
 }
 function CreateOrderResponseDataToJSON(json) {
@@ -74,12 +74,12 @@ function CreateOrderResponseDataToJSONTyped(value, ignoreDiscriminator = false) 
         'order_id': value['orderId'],
         'invoice_id': value['invoiceId'],
         'order_number': value['orderNumber'],
-        'total': (0, CreateOrderTotal_1.CreateOrderTotalToJSON)(value['total']),
+        'total': (0, CreateOrderTotal_js_1.CreateOrderTotalToJSON)(value['total']),
         'promo_applied': value['promoApplied'],
         'payment_method': value['paymentMethod'],
-        'payment_status': (0, PaymentStatus_1.PaymentStatusToJSON)(value['paymentStatus']),
-        'items': (0, CreateOrderItems_1.CreateOrderItemsToJSON)(value['items']),
-        'payment_error': (0, PaymentError_1.PaymentErrorToJSON)(value['paymentError']),
-        'warnings': value['warnings'] == null ? undefined : (value['warnings'].map(OrderWarning_1.OrderWarningToJSON)),
+        'payment_status': (0, PaymentStatus_js_1.PaymentStatusToJSON)(value['paymentStatus']),
+        'items': (0, CreateOrderItems_js_1.CreateOrderItemsToJSON)(value['items']),
+        'payment_error': (0, PaymentError_js_1.PaymentErrorToJSON)(value['paymentError']),
+        'warnings': value['warnings'] == null ? undefined : (value['warnings'].map(OrderWarning_js_1.OrderWarningToJSON)),
     };
 }

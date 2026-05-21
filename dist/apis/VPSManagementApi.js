@@ -23,8 +23,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.VPSManagementApi = void 0;
-const runtime = require("../runtime");
-const index_1 = require("../models/index");
+const runtime = require("../runtime.js");
+const index_js_1 = require("../models/index.js");
 /**
  *
  */
@@ -53,7 +53,7 @@ class VPSManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.GetVpsConfigRequestContentToJSON)(requestParameters['getVpsConfigRequestContent']),
+                body: (0, index_js_1.GetVpsConfigRequestContentToJSON)(requestParameters['getVpsConfigRequestContent']),
             };
         });
     }
@@ -64,7 +64,7 @@ class VPSManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.getVpsConfigRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.GetVpsConfigResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.GetVpsConfigResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -100,7 +100,7 @@ class VPSManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.GetVpsDetailsRequestContentToJSON)(requestParameters['getVpsDetailsRequestContent']),
+                body: (0, index_js_1.GetVpsDetailsRequestContentToJSON)(requestParameters['getVpsDetailsRequestContent']),
             };
         });
     }
@@ -111,7 +111,7 @@ class VPSManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.getVpsDetailsRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.GetVpsDetailsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.GetVpsDetailsResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -147,7 +147,7 @@ class VPSManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ListIsosRequestContentToJSON)(requestParameters['listIsosRequestContent']),
+                body: (0, index_js_1.ListIsosRequestContentToJSON)(requestParameters['listIsosRequestContent']),
             };
         });
     }
@@ -158,7 +158,7 @@ class VPSManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listIsosRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListIsosResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListIsosResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -194,7 +194,7 @@ class VPSManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ListReinstallOsRequestContentToJSON)(requestParameters['listReinstallOsRequestContent']),
+                body: (0, index_js_1.ListReinstallOsRequestContentToJSON)(requestParameters['listReinstallOsRequestContent']),
             };
         });
     }
@@ -205,7 +205,7 @@ class VPSManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listReinstallOsRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListReinstallOsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListReinstallOsResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -247,7 +247,7 @@ class VPSManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listVpsServicesRequestOpts();
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListVpsServicesResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListVpsServicesResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -283,7 +283,7 @@ class VPSManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.MountIsoRequestContentToJSON)(requestParameters['mountIsoRequestContent']),
+                body: (0, index_js_1.MountIsoRequestContentToJSON)(requestParameters['mountIsoRequestContent']),
             };
         });
     }
@@ -294,7 +294,7 @@ class VPSManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.mountIsoRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.MountIsoResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.MountIsoResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -330,7 +330,7 @@ class VPSManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.TriggerReinstallRequestContentToJSON)(requestParameters['triggerReinstallRequestContent']),
+                body: (0, index_js_1.TriggerReinstallRequestContentToJSON)(requestParameters['triggerReinstallRequestContent']),
             };
         });
     }
@@ -341,7 +341,7 @@ class VPSManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.triggerReinstallRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.TriggerReinstallResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.TriggerReinstallResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -377,7 +377,7 @@ class VPSManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.UpdateVpsConfigRequestContentToJSON)(requestParameters['updateVpsConfigRequestContent']),
+                body: (0, index_js_1.UpdateVpsConfigRequestContentToJSON)(requestParameters['updateVpsConfigRequestContent']),
             };
         });
     }
@@ -388,7 +388,7 @@ class VPSManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.updateVpsConfigRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.UpdateVpsConfigResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.UpdateVpsConfigResponseContentFromJSON)(jsonValue));
         });
     }
     /**

@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ListReinstallOsResponseDataFromJSON, ListReinstallOsResponseDataToJSON, } from './ListReinstallOsResponseData';
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
+import { ListReinstallOsResponseDataFromJSON, ListReinstallOsResponseDataToJSON, } from './ListReinstallOsResponseData.js';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
 /**
  * Check if a given object implements the ListReinstallOsResponseContent interface.
  */

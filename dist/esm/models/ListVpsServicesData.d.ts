@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { VpsServiceInfo } from './VpsServiceInfo';
+import type { VpsServiceInfo } from './VpsServiceInfo.js';
 /**
  * List VPS response data - matches upstream API format
  * @export

@@ -18,8 +18,8 @@ exports.ListRdnsResponseDataFromJSON = ListRdnsResponseDataFromJSON;
 exports.ListRdnsResponseDataFromJSONTyped = ListRdnsResponseDataFromJSONTyped;
 exports.ListRdnsResponseDataToJSON = ListRdnsResponseDataToJSON;
 exports.ListRdnsResponseDataToJSONTyped = ListRdnsResponseDataToJSONTyped;
-const RdnsRecord_1 = require("./RdnsRecord");
-const RdnsAvailableItem_1 = require("./RdnsAvailableItem");
+const RdnsRecord_js_1 = require("./RdnsRecord.js");
+const RdnsAvailableItem_js_1 = require("./RdnsAvailableItem.js");
 /**
  * Check if a given object implements the ListRdnsResponseData interface.
  */
@@ -48,13 +48,13 @@ function ListRdnsResponseDataFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'records': (json['records'].map(RdnsRecord_1.RdnsRecordFromJSON)),
+        'records': (json['records'].map(RdnsRecord_js_1.RdnsRecordFromJSON)),
         'ptrCount': json['ptr_count'],
         'ptrLimit': json['ptr_limit'],
         'customIpMode': json['custom_ip_mode'],
         'subnetCustomIpMode': json['subnet_custom_ip_mode'],
         'serviceOnlyIps': json['service_only_ips'],
-        'availableItems': (json['available_items'].map(RdnsAvailableItem_1.RdnsAvailableItemFromJSON)),
+        'availableItems': (json['available_items'].map(RdnsAvailableItem_js_1.RdnsAvailableItemFromJSON)),
     };
 }
 function ListRdnsResponseDataToJSON(json) {
@@ -65,12 +65,12 @@ function ListRdnsResponseDataToJSONTyped(value, ignoreDiscriminator = false) {
         return value;
     }
     return {
-        'records': (value['records'].map(RdnsRecord_1.RdnsRecordToJSON)),
+        'records': (value['records'].map(RdnsRecord_js_1.RdnsRecordToJSON)),
         'ptr_count': value['ptrCount'],
         'ptr_limit': value['ptrLimit'],
         'custom_ip_mode': value['customIpMode'],
         'subnet_custom_ip_mode': value['subnetCustomIpMode'],
         'service_only_ips': value['serviceOnlyIps'],
-        'available_items': (value['availableItems'].map(RdnsAvailableItem_1.RdnsAvailableItemToJSON)),
+        'available_items': (value['availableItems'].map(RdnsAvailableItem_js_1.RdnsAvailableItemToJSON)),
     };
 }

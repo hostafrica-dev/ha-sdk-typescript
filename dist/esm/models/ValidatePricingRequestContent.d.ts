@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ValidatePricingProduct } from './ValidatePricingProduct';
+import type { ValidatePricingProduct } from './ValidatePricingProduct.js';
 /**
  *
  * @export

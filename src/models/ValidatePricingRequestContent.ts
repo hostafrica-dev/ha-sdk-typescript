@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { ValidatePricingProduct } from './ValidatePricingProduct';
+import { mapValues } from '../runtime.js';
+import type { ValidatePricingProduct } from './ValidatePricingProduct.js';
 import {
     ValidatePricingProductFromJSON,
     ValidatePricingProductFromJSONTyped,
     ValidatePricingProductToJSON,
     ValidatePricingProductToJSONTyped,
-} from './ValidatePricingProduct';
+} from './ValidatePricingProduct.js';
 
 /**
  * 

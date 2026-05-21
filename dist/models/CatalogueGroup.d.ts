@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { CatalogueProduct } from './CatalogueProduct';
+import type { CatalogueProduct } from './CatalogueProduct.js';
 /**
  * A product group in the catalogue
  * @export

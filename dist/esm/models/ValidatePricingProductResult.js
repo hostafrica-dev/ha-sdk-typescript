@@ -11,10 +11,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ValidatePricingBreakdownFromJSON, ValidatePricingBreakdownToJSON, } from './ValidatePricingBreakdown';
-import { ValidatePricingDiscountFromJSON, ValidatePricingDiscountToJSON, } from './ValidatePricingDiscount';
-import { ValidatePricingProrataFromJSON, ValidatePricingProrataToJSON, } from './ValidatePricingProrata';
-import { ValidatePricingPriceRangeFromJSON, ValidatePricingPriceRangeToJSON, } from './ValidatePricingPriceRange';
+import { ValidatePricingBreakdownFromJSON, ValidatePricingBreakdownToJSON, } from './ValidatePricingBreakdown.js';
+import { ValidatePricingDiscountFromJSON, ValidatePricingDiscountToJSON, } from './ValidatePricingDiscount.js';
+import { ValidatePricingProrataFromJSON, ValidatePricingProrataToJSON, } from './ValidatePricingProrata.js';
+import { ValidatePricingPriceRangeFromJSON, ValidatePricingPriceRangeToJSON, } from './ValidatePricingPriceRange.js';
 /**
  * Check if a given object implements the ValidatePricingProductResult interface.
  */

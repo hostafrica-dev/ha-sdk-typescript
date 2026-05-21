@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { NoVncConsoleDetails } from './NoVncConsoleDetails';
+import { mapValues } from '../runtime.js';
+import type { NoVncConsoleDetails } from './NoVncConsoleDetails.js';
 import {
     NoVncConsoleDetailsFromJSON,
     NoVncConsoleDetailsFromJSONTyped,
     NoVncConsoleDetailsToJSON,
     NoVncConsoleDetailsToJSONTyped,
-} from './NoVncConsoleDetails';
+} from './NoVncConsoleDetails.js';
 
 /**
  * Response data for noVNC console operation

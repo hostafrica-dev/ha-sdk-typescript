@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { BackupModeTypeFromJSON, BackupModeTypeToJSON, } from './BackupModeType';
-import { CompressionTypeFromJSON, CompressionTypeToJSON, } from './CompressionType';
+import { BackupModeTypeFromJSON, BackupModeTypeToJSON, } from './BackupModeType.js';
+import { CompressionTypeFromJSON, CompressionTypeToJSON, } from './CompressionType.js';
 /**
  * Check if a given object implements the CreateBackupRequestContent interface.
  */

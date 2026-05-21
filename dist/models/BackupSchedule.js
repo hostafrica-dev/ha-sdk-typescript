@@ -18,7 +18,7 @@ exports.BackupScheduleFromJSON = BackupScheduleFromJSON;
 exports.BackupScheduleFromJSONTyped = BackupScheduleFromJSONTyped;
 exports.BackupScheduleToJSON = BackupScheduleToJSON;
 exports.BackupScheduleToJSONTyped = BackupScheduleToJSONTyped;
-const CompressionType_1 = require("./CompressionType");
+const CompressionType_js_1 = require("./CompressionType.js");
 /**
  * Check if a given object implements the BackupSchedule interface.
  */
@@ -46,7 +46,7 @@ function BackupScheduleFromJSONTyped(json, ignoreDiscriminator) {
         'id': json['id'],
         'starttime': json['starttime'],
         'dow': json['dow'],
-        'compress': (0, CompressionType_1.CompressionTypeFromJSON)(json['compress']),
+        'compress': (0, CompressionType_js_1.CompressionTypeFromJSON)(json['compress']),
         'mode': json['mode'],
         'mailto': json['mailto'] == null ? undefined : json['mailto'],
     };
@@ -62,7 +62,7 @@ function BackupScheduleToJSONTyped(value, ignoreDiscriminator = false) {
         'id': value['id'],
         'starttime': value['starttime'],
         'dow': value['dow'],
-        'compress': (0, CompressionType_1.CompressionTypeToJSON)(value['compress']),
+        'compress': (0, CompressionType_js_1.CompressionTypeToJSON)(value['compress']),
         'mode': value['mode'],
         'mailto': value['mailto'],
     };

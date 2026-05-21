@@ -13,7 +13,7 @@
  */
 
 
-import * as runtime from '../runtime';
+import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
   CreatePowerTaskRequestContent,
@@ -40,7 +40,7 @@ import type {
   UpdatePowerTaskRequestContent,
   UpdatePowerTaskResponseContent,
   ValidationErrorResponseContent,
-} from '../models/index';
+} from '../models/index.js';
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
@@ -92,7 +92,7 @@ import {
     UpdatePowerTaskResponseContentToJSON,
     ValidationErrorResponseContentFromJSON,
     ValidationErrorResponseContentToJSON,
-} from '../models/index';
+} from '../models/index.js';
 
 export interface CreatePowerTaskRequest {
     createPowerTaskRequestContent: CreatePowerTaskRequestContent;

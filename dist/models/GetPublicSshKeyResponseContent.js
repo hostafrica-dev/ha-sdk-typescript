@@ -18,8 +18,8 @@ exports.GetPublicSshKeyResponseContentFromJSON = GetPublicSshKeyResponseContentF
 exports.GetPublicSshKeyResponseContentFromJSONTyped = GetPublicSshKeyResponseContentFromJSONTyped;
 exports.GetPublicSshKeyResponseContentToJSON = GetPublicSshKeyResponseContentToJSON;
 exports.GetPublicSshKeyResponseContentToJSONTyped = GetPublicSshKeyResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const PublicSshKeyResponseData_1 = require("./PublicSshKeyResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const PublicSshKeyResponseData_js_1 = require("./PublicSshKeyResponseData.js");
 /**
  * Check if a given object implements the GetPublicSshKeyResponseContent interface.
  */
@@ -38,8 +38,8 @@ function GetPublicSshKeyResponseContentFromJSONTyped(json, ignoreDiscriminator) 
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, PublicSshKeyResponseData_1.PublicSshKeyResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, PublicSshKeyResponseData_js_1.PublicSshKeyResponseDataFromJSON)(json['data']),
     };
 }
 function GetPublicSshKeyResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function GetPublicSshKeyResponseContentToJSONTyped(value, ignoreDiscriminator = 
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, PublicSshKeyResponseData_1.PublicSshKeyResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, PublicSshKeyResponseData_js_1.PublicSshKeyResponseDataToJSON)(value['data']),
     };
 }

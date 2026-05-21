@@ -11,9 +11,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { DayOfWeekFromJSON, DayOfWeekToJSON, } from './DayOfWeek';
-import { PowerTaskJobTypeFromJSON, PowerTaskJobTypeToJSON, } from './PowerTaskJobType';
-import { PowerTaskActionFromJSON, PowerTaskActionToJSON, } from './PowerTaskAction';
+import { DayOfWeekFromJSON, DayOfWeekToJSON, } from './DayOfWeek.js';
+import { PowerTaskJobTypeFromJSON, PowerTaskJobTypeToJSON, } from './PowerTaskJobType.js';
+import { PowerTaskActionFromJSON, PowerTaskActionToJSON, } from './PowerTaskAction.js';
 /**
  * Check if a given object implements the CreatePowerTaskRequestContent interface.
  */

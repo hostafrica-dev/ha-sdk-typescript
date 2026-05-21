@@ -18,7 +18,7 @@ exports.PowerTaskCreateResponseDataFromJSON = PowerTaskCreateResponseDataFromJSO
 exports.PowerTaskCreateResponseDataFromJSONTyped = PowerTaskCreateResponseDataFromJSONTyped;
 exports.PowerTaskCreateResponseDataToJSON = PowerTaskCreateResponseDataToJSON;
 exports.PowerTaskCreateResponseDataToJSONTyped = PowerTaskCreateResponseDataToJSONTyped;
-const PowerTask_1 = require("./PowerTask");
+const PowerTask_js_1 = require("./PowerTask.js");
 /**
  * Check if a given object implements the PowerTaskCreateResponseData interface.
  */
@@ -38,7 +38,7 @@ function PowerTaskCreateResponseDataFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'message': json['message'],
-        'task': (0, PowerTask_1.PowerTaskFromJSON)(json['task']),
+        'task': (0, PowerTask_js_1.PowerTaskFromJSON)(json['task']),
     };
 }
 function PowerTaskCreateResponseDataToJSON(json) {
@@ -50,6 +50,6 @@ function PowerTaskCreateResponseDataToJSONTyped(value, ignoreDiscriminator = fal
     }
     return {
         'message': value['message'],
-        'task': (0, PowerTask_1.PowerTaskToJSON)(value['task']),
+        'task': (0, PowerTask_js_1.PowerTaskToJSON)(value['task']),
     };
 }

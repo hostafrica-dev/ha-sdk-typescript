@@ -18,15 +18,15 @@ exports.VpsDetailsResponseFromJSON = VpsDetailsResponseFromJSON;
 exports.VpsDetailsResponseFromJSONTyped = VpsDetailsResponseFromJSONTyped;
 exports.VpsDetailsResponseToJSON = VpsDetailsResponseToJSON;
 exports.VpsDetailsResponseToJSONTyped = VpsDetailsResponseToJSONTyped;
-const VpsDiskInfo_1 = require("./VpsDiskInfo");
-const VpsAvailableFeatures_1 = require("./VpsAvailableFeatures");
-const VpsBandwidthInfo_1 = require("./VpsBandwidthInfo");
-const VpsCredentials_1 = require("./VpsCredentials");
-const VpsOsInfo_1 = require("./VpsOsInfo");
-const VpsCpuInfo_1 = require("./VpsCpuInfo");
-const VpsNetworkRate_1 = require("./VpsNetworkRate");
-const VpsMemoryInfo_1 = require("./VpsMemoryInfo");
-const VpsVmInfo_1 = require("./VpsVmInfo");
+const VpsDiskInfo_js_1 = require("./VpsDiskInfo.js");
+const VpsAvailableFeatures_js_1 = require("./VpsAvailableFeatures.js");
+const VpsBandwidthInfo_js_1 = require("./VpsBandwidthInfo.js");
+const VpsCredentials_js_1 = require("./VpsCredentials.js");
+const VpsOsInfo_js_1 = require("./VpsOsInfo.js");
+const VpsCpuInfo_js_1 = require("./VpsCpuInfo.js");
+const VpsNetworkRate_js_1 = require("./VpsNetworkRate.js");
+const VpsMemoryInfo_js_1 = require("./VpsMemoryInfo.js");
+const VpsVmInfo_js_1 = require("./VpsVmInfo.js");
 /**
  * Check if a given object implements the VpsDetailsResponse interface.
  */
@@ -60,16 +60,16 @@ function VpsDetailsResponseFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'message': json['message'],
-        'vmInfo': (0, VpsVmInfo_1.VpsVmInfoFromJSON)(json['vm_info']),
-        'cpu': (0, VpsCpuInfo_1.VpsCpuInfoFromJSON)(json['cpu']),
-        'memory': (0, VpsMemoryInfo_1.VpsMemoryInfoFromJSON)(json['memory']),
-        'disk': (0, VpsDiskInfo_1.VpsDiskInfoFromJSON)(json['disk']),
-        'bandwidth': (0, VpsBandwidthInfo_1.VpsBandwidthInfoFromJSON)(json['bandwidth']),
-        'networkRate': json['network_rate'] == null ? undefined : (0, VpsNetworkRate_1.VpsNetworkRateFromJSON)(json['network_rate']),
+        'vmInfo': (0, VpsVmInfo_js_1.VpsVmInfoFromJSON)(json['vm_info']),
+        'cpu': (0, VpsCpuInfo_js_1.VpsCpuInfoFromJSON)(json['cpu']),
+        'memory': (0, VpsMemoryInfo_js_1.VpsMemoryInfoFromJSON)(json['memory']),
+        'disk': (0, VpsDiskInfo_js_1.VpsDiskInfoFromJSON)(json['disk']),
+        'bandwidth': (0, VpsBandwidthInfo_js_1.VpsBandwidthInfoFromJSON)(json['bandwidth']),
+        'networkRate': json['network_rate'] == null ? undefined : (0, VpsNetworkRate_js_1.VpsNetworkRateFromJSON)(json['network_rate']),
         'ipAddresses': json['ip_addresses'],
-        'credentials': (0, VpsCredentials_1.VpsCredentialsFromJSON)(json['credentials']),
-        'availableFeatures': (0, VpsAvailableFeatures_1.VpsAvailableFeaturesFromJSON)(json['available_features']),
-        'osInfo': json['os_info'] == null ? undefined : (0, VpsOsInfo_1.VpsOsInfoFromJSON)(json['os_info']),
+        'credentials': (0, VpsCredentials_js_1.VpsCredentialsFromJSON)(json['credentials']),
+        'availableFeatures': (0, VpsAvailableFeatures_js_1.VpsAvailableFeaturesFromJSON)(json['available_features']),
+        'osInfo': json['os_info'] == null ? undefined : (0, VpsOsInfo_js_1.VpsOsInfoFromJSON)(json['os_info']),
     };
 }
 function VpsDetailsResponseToJSON(json) {
@@ -81,15 +81,15 @@ function VpsDetailsResponseToJSONTyped(value, ignoreDiscriminator = false) {
     }
     return {
         'message': value['message'],
-        'vm_info': (0, VpsVmInfo_1.VpsVmInfoToJSON)(value['vmInfo']),
-        'cpu': (0, VpsCpuInfo_1.VpsCpuInfoToJSON)(value['cpu']),
-        'memory': (0, VpsMemoryInfo_1.VpsMemoryInfoToJSON)(value['memory']),
-        'disk': (0, VpsDiskInfo_1.VpsDiskInfoToJSON)(value['disk']),
-        'bandwidth': (0, VpsBandwidthInfo_1.VpsBandwidthInfoToJSON)(value['bandwidth']),
-        'network_rate': (0, VpsNetworkRate_1.VpsNetworkRateToJSON)(value['networkRate']),
+        'vm_info': (0, VpsVmInfo_js_1.VpsVmInfoToJSON)(value['vmInfo']),
+        'cpu': (0, VpsCpuInfo_js_1.VpsCpuInfoToJSON)(value['cpu']),
+        'memory': (0, VpsMemoryInfo_js_1.VpsMemoryInfoToJSON)(value['memory']),
+        'disk': (0, VpsDiskInfo_js_1.VpsDiskInfoToJSON)(value['disk']),
+        'bandwidth': (0, VpsBandwidthInfo_js_1.VpsBandwidthInfoToJSON)(value['bandwidth']),
+        'network_rate': (0, VpsNetworkRate_js_1.VpsNetworkRateToJSON)(value['networkRate']),
         'ip_addresses': value['ipAddresses'],
-        'credentials': (0, VpsCredentials_1.VpsCredentialsToJSON)(value['credentials']),
-        'available_features': (0, VpsAvailableFeatures_1.VpsAvailableFeaturesToJSON)(value['availableFeatures']),
-        'os_info': (0, VpsOsInfo_1.VpsOsInfoToJSON)(value['osInfo']),
+        'credentials': (0, VpsCredentials_js_1.VpsCredentialsToJSON)(value['credentials']),
+        'available_features': (0, VpsAvailableFeatures_js_1.VpsAvailableFeaturesToJSON)(value['availableFeatures']),
+        'os_info': (0, VpsOsInfo_js_1.VpsOsInfoToJSON)(value['osInfo']),
     };
 }

@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { BackupSchedule } from './BackupSchedule';
+import { mapValues } from '../runtime.js';
+import type { BackupSchedule } from './BackupSchedule.js';
 import {
     BackupScheduleFromJSON,
     BackupScheduleFromJSONTyped,
     BackupScheduleToJSON,
     BackupScheduleToJSONTyped,
-} from './BackupSchedule';
+} from './BackupSchedule.js';
 
 /**
  * Response data for backup schedule list operation

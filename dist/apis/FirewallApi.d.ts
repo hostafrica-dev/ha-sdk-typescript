@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import type { CreateFirewallRuleRequestContent, CreateFirewallRuleResponseContent, DeleteFirewallRuleRequestContent, DeleteFirewallRuleResponseContent, ListFirewallRulesRequestContent, ListFirewallRulesResponseContent, MoveFirewallRuleRequestContent, MoveFirewallRuleResponseContent, UpdateFirewallRuleRequestContent, UpdateFirewallRuleResponseContent } from '../models/index';
+import * as runtime from '../runtime.js';
+import type { CreateFirewallRuleRequestContent, CreateFirewallRuleResponseContent, DeleteFirewallRuleRequestContent, DeleteFirewallRuleResponseContent, ListFirewallRulesRequestContent, ListFirewallRulesResponseContent, MoveFirewallRuleRequestContent, MoveFirewallRuleResponseContent, UpdateFirewallRuleRequestContent, UpdateFirewallRuleResponseContent } from '../models/index.js';
 export interface CreateFirewallRuleRequest {
     createFirewallRuleRequestContent: CreateFirewallRuleRequestContent;
 }

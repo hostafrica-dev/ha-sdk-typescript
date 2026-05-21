@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { ServiceBackupsResponseData } from './ServiceBackupsResponseData';
+import { mapValues } from '../runtime.js';
+import type { ServiceBackupsResponseData } from './ServiceBackupsResponseData.js';
 import {
     ServiceBackupsResponseDataFromJSON,
     ServiceBackupsResponseDataFromJSONTyped,
     ServiceBackupsResponseDataToJSON,
     ServiceBackupsResponseDataToJSONTyped,
-} from './ServiceBackupsResponseData';
-import type { OperationStatus } from './OperationStatus';
+} from './ServiceBackupsResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
+} from './OperationStatus.js';
 
 /**
  * 

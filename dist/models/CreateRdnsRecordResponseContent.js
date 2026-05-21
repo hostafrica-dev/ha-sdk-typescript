@@ -18,8 +18,8 @@ exports.CreateRdnsRecordResponseContentFromJSON = CreateRdnsRecordResponseConten
 exports.CreateRdnsRecordResponseContentFromJSONTyped = CreateRdnsRecordResponseContentFromJSONTyped;
 exports.CreateRdnsRecordResponseContentToJSON = CreateRdnsRecordResponseContentToJSON;
 exports.CreateRdnsRecordResponseContentToJSONTyped = CreateRdnsRecordResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const CreateRdnsRecordResponseData_1 = require("./CreateRdnsRecordResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const CreateRdnsRecordResponseData_js_1 = require("./CreateRdnsRecordResponseData.js");
 /**
  * Check if a given object implements the CreateRdnsRecordResponseContent interface.
  */
@@ -38,8 +38,8 @@ function CreateRdnsRecordResponseContentFromJSONTyped(json, ignoreDiscriminator)
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, CreateRdnsRecordResponseData_1.CreateRdnsRecordResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, CreateRdnsRecordResponseData_js_1.CreateRdnsRecordResponseDataFromJSON)(json['data']),
     };
 }
 function CreateRdnsRecordResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function CreateRdnsRecordResponseContentToJSONTyped(value, ignoreDiscriminator =
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, CreateRdnsRecordResponseData_1.CreateRdnsRecordResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, CreateRdnsRecordResponseData_js_1.CreateRdnsRecordResponseDataToJSON)(value['data']),
     };
 }

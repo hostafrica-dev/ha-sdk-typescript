@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CatalogueConfigOptionFromJSON, CatalogueConfigOptionToJSON, } from './CatalogueConfigOption';
-import { CataloguePlanFromJSON, CataloguePlanToJSON, } from './CataloguePlan';
+import { CatalogueConfigOptionFromJSON, CatalogueConfigOptionToJSON, } from './CatalogueConfigOption.js';
+import { CataloguePlanFromJSON, CataloguePlanToJSON, } from './CataloguePlan.js';
 /**
  * Check if a given object implements the CatalogueProduct interface.
  */

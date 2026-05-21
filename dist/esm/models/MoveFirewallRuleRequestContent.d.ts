@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { FirewallMoveDirection } from './FirewallMoveDirection';
+import type { FirewallMoveDirection } from './FirewallMoveDirection.js';
 /**
  *
  * @export

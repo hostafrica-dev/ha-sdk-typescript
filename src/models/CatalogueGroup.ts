@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { CatalogueProduct } from './CatalogueProduct';
+import { mapValues } from '../runtime.js';
+import type { CatalogueProduct } from './CatalogueProduct.js';
 import {
     CatalogueProductFromJSON,
     CatalogueProductFromJSONTyped,
     CatalogueProductToJSON,
     CatalogueProductToJSONTyped,
-} from './CatalogueProduct';
+} from './CatalogueProduct.js';
 
 /**
  * A product group in the catalogue

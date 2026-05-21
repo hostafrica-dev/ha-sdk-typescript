@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ValidatePricingBase } from './ValidatePricingBase';
-import type { ValidatePricingConfigItem } from './ValidatePricingConfigItem';
+import type { ValidatePricingBase } from './ValidatePricingBase.js';
+import type { ValidatePricingConfigItem } from './ValidatePricingConfigItem.js';
 /**
  * Full breakdown of a product's pricing
  * @export

@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import type { CreateRdnsRecordRequestContent, CreateRdnsRecordResponseContent, DeleteRdnsRecordRequestContent, DeleteRdnsRecordResponseContent, ListRdnsRecordsResponseContent } from '../models/index';
+import * as runtime from '../runtime.js';
+import type { CreateRdnsRecordRequestContent, CreateRdnsRecordResponseContent, DeleteRdnsRecordRequestContent, DeleteRdnsRecordResponseContent, ListRdnsRecordsResponseContent } from '../models/index.js';
 export interface CreateRdnsRecordRequest {
     createRdnsRecordRequestContent: CreateRdnsRecordRequestContent;
 }

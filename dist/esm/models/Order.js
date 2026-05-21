@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OrderLastAttemptFromJSON, OrderLastAttemptToJSON, } from './OrderLastAttempt';
+import { OrderLastAttemptFromJSON, OrderLastAttemptToJSON, } from './OrderLastAttempt.js';
 /**
  * Check if a given object implements the Order interface.
  */

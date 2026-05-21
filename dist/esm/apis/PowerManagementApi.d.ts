@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import type { CreatePowerTaskRequestContent, CreatePowerTaskResponseContent, DeletePowerTaskRequestContent, DeletePowerTaskResponseContent, ListPowerTasksRequestContent, ListPowerTasksResponseContent, RebootVpsRequestContent, RebootVpsResponseContent, ShutdownVpsRequestContent, ShutdownVpsResponseContent, StartVpsRequestContent, StartVpsResponseContent, StopVpsRequestContent, StopVpsResponseContent, UpdatePowerTaskRequestContent, UpdatePowerTaskResponseContent } from '../models/index';
+import * as runtime from '../runtime.js';
+import type { CreatePowerTaskRequestContent, CreatePowerTaskResponseContent, DeletePowerTaskRequestContent, DeletePowerTaskResponseContent, ListPowerTasksRequestContent, ListPowerTasksResponseContent, RebootVpsRequestContent, RebootVpsResponseContent, ShutdownVpsRequestContent, ShutdownVpsResponseContent, StartVpsRequestContent, StartVpsResponseContent, StopVpsRequestContent, StopVpsResponseContent, UpdatePowerTaskRequestContent, UpdatePowerTaskResponseContent } from '../models/index.js';
 export interface CreatePowerTaskRequest {
     createPowerTaskRequestContent: CreatePowerTaskRequestContent;
 }

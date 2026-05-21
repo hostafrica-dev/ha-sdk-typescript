@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { FirewallMoveDirectionFromJSON, FirewallMoveDirectionToJSON, } from './FirewallMoveDirection';
+import { FirewallMoveDirectionFromJSON, FirewallMoveDirectionToJSON, } from './FirewallMoveDirection.js';
 /**
  * Check if a given object implements the MoveFirewallRuleRequestContent interface.
  */

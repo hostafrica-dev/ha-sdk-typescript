@@ -18,8 +18,8 @@ exports.GetVpsConfigResponseContentFromJSON = GetVpsConfigResponseContentFromJSO
 exports.GetVpsConfigResponseContentFromJSONTyped = GetVpsConfigResponseContentFromJSONTyped;
 exports.GetVpsConfigResponseContentToJSON = GetVpsConfigResponseContentToJSON;
 exports.GetVpsConfigResponseContentToJSONTyped = GetVpsConfigResponseContentToJSONTyped;
-const VpsConfigResponseData_1 = require("./VpsConfigResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const VpsConfigResponseData_js_1 = require("./VpsConfigResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the GetVpsConfigResponseContent interface.
  */
@@ -38,8 +38,8 @@ function GetVpsConfigResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, VpsConfigResponseData_1.VpsConfigResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, VpsConfigResponseData_js_1.VpsConfigResponseDataFromJSON)(json['data']),
     };
 }
 function GetVpsConfigResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function GetVpsConfigResponseContentToJSONTyped(value, ignoreDiscriminator = fal
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, VpsConfigResponseData_1.VpsConfigResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, VpsConfigResponseData_js_1.VpsConfigResponseDataToJSON)(value['data']),
     };
 }

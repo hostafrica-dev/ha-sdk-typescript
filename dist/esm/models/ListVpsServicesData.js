@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { VpsServiceInfoFromJSON, VpsServiceInfoToJSON, } from './VpsServiceInfo';
+import { VpsServiceInfoFromJSON, VpsServiceInfoToJSON, } from './VpsServiceInfo.js';
 /**
  * Check if a given object implements the ListVpsServicesData interface.
  */

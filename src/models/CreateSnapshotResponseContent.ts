@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { SnapshotCreateResponseData } from './SnapshotCreateResponseData';
+import { mapValues } from '../runtime.js';
+import type { SnapshotCreateResponseData } from './SnapshotCreateResponseData.js';
 import {
     SnapshotCreateResponseDataFromJSON,
     SnapshotCreateResponseDataFromJSONTyped,
     SnapshotCreateResponseDataToJSON,
     SnapshotCreateResponseDataToJSONTyped,
-} from './SnapshotCreateResponseData';
-import type { OperationStatus } from './OperationStatus';
+} from './SnapshotCreateResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
+} from './OperationStatus.js';
 
 /**
  * 

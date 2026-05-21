@@ -11,10 +11,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { BackupItemFromJSON, BackupItemToJSON, } from './BackupItem';
-import { BackupModeFromJSON, BackupModeToJSON, } from './BackupMode';
-import { BackupCreationInfoFromJSON, BackupCreationInfoToJSON, } from './BackupCreationInfo';
-import { CompressionMethodFromJSON, CompressionMethodToJSON, } from './CompressionMethod';
+import { BackupItemFromJSON, BackupItemToJSON, } from './BackupItem.js';
+import { BackupModeFromJSON, BackupModeToJSON, } from './BackupMode.js';
+import { BackupCreationInfoFromJSON, BackupCreationInfoToJSON, } from './BackupCreationInfo.js';
+import { CompressionMethodFromJSON, CompressionMethodToJSON, } from './CompressionMethod.js';
 /**
  * Check if a given object implements the ServiceBackupsResponseData interface.
  */

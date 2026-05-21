@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { PowerTask } from './PowerTask';
+import type { PowerTask } from './PowerTask.js';
 /**
  * Response data for power task creation operation
  * @export

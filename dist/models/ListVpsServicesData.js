@@ -18,7 +18,7 @@ exports.ListVpsServicesDataFromJSON = ListVpsServicesDataFromJSON;
 exports.ListVpsServicesDataFromJSONTyped = ListVpsServicesDataFromJSONTyped;
 exports.ListVpsServicesDataToJSON = ListVpsServicesDataToJSON;
 exports.ListVpsServicesDataToJSONTyped = ListVpsServicesDataToJSONTyped;
-const VpsServiceInfo_1 = require("./VpsServiceInfo");
+const VpsServiceInfo_js_1 = require("./VpsServiceInfo.js");
 /**
  * Check if a given object implements the ListVpsServicesData interface.
  */
@@ -35,7 +35,7 @@ function ListVpsServicesDataFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'services': (json['services'].map(VpsServiceInfo_1.VpsServiceInfoFromJSON)),
+        'services': (json['services'].map(VpsServiceInfo_js_1.VpsServiceInfoFromJSON)),
     };
 }
 function ListVpsServicesDataToJSON(json) {
@@ -46,6 +46,6 @@ function ListVpsServicesDataToJSONTyped(value, ignoreDiscriminator = false) {
         return value;
     }
     return {
-        'services': (value['services'].map(VpsServiceInfo_1.VpsServiceInfoToJSON)),
+        'services': (value['services'].map(VpsServiceInfo_js_1.VpsServiceInfoToJSON)),
     };
 }

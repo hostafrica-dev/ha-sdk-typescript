@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { RetryPaymentResponseData } from './RetryPaymentResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { RetryPaymentResponseData } from './RetryPaymentResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

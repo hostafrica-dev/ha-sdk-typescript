@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { CreateOrderDomainItem } from './CreateOrderDomainItem';
-import type { CreateOrderProductItem } from './CreateOrderProductItem';
+import type { CreateOrderDomainItem } from './CreateOrderDomainItem.js';
+import type { CreateOrderProductItem } from './CreateOrderProductItem.js';
 /**
  * Line items grouped by type in the order response
  * @export

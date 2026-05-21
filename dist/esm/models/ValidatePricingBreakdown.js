@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ValidatePricingBaseFromJSON, ValidatePricingBaseToJSON, } from './ValidatePricingBase';
-import { ValidatePricingConfigItemFromJSON, ValidatePricingConfigItemToJSON, } from './ValidatePricingConfigItem';
+import { ValidatePricingBaseFromJSON, ValidatePricingBaseToJSON, } from './ValidatePricingBase.js';
+import { ValidatePricingConfigItemFromJSON, ValidatePricingConfigItemToJSON, } from './ValidatePricingConfigItem.js';
 /**
  * Check if a given object implements the ValidatePricingBreakdown interface.
  */

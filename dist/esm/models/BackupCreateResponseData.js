@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { BackupCreationInfoFromJSON, BackupCreationInfoToJSON, } from './BackupCreationInfo';
+import { BackupCreationInfoFromJSON, BackupCreationInfoToJSON, } from './BackupCreationInfo.js';
 /**
  * Check if a given object implements the BackupCreateResponseData interface.
  */

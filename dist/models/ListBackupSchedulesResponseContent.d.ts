@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { BackupScheduleListResponseData } from './BackupScheduleListResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { BackupScheduleListResponseData } from './BackupScheduleListResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

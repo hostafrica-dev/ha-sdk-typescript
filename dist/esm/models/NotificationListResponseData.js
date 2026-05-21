@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { NotificationDialogRulesFromJSON, NotificationDialogRulesToJSON, } from './NotificationDialogRules';
-import { NotificationFromJSON, NotificationToJSON, } from './Notification';
+import { NotificationDialogRulesFromJSON, NotificationDialogRulesToJSON, } from './NotificationDialogRules.js';
+import { NotificationFromJSON, NotificationToJSON, } from './Notification.js';
 /**
  * Check if a given object implements the NotificationListResponseData interface.
  */

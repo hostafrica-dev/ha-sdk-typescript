@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { RetryPaymentTotal } from './RetryPaymentTotal';
+import { mapValues } from '../runtime.js';
+import type { RetryPaymentTotal } from './RetryPaymentTotal.js';
 import {
     RetryPaymentTotalFromJSON,
     RetryPaymentTotalFromJSONTyped,
     RetryPaymentTotalToJSON,
     RetryPaymentTotalToJSONTyped,
-} from './RetryPaymentTotal';
-import type { PaymentStatus } from './PaymentStatus';
+} from './RetryPaymentTotal.js';
+import type { PaymentStatus } from './PaymentStatus.js';
 import {
     PaymentStatusFromJSON,
     PaymentStatusFromJSONTyped,
     PaymentStatusToJSON,
     PaymentStatusToJSONTyped,
-} from './PaymentStatus';
+} from './PaymentStatus.js';
 
 /**
  * Response data for a retry payment operation

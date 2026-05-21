@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ServiceBackupsResponseData } from './ServiceBackupsResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { ServiceBackupsResponseData } from './ServiceBackupsResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

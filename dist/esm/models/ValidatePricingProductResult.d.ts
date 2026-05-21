@@ -9,10 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ValidatePricingBreakdown } from './ValidatePricingBreakdown';
-import type { ValidatePricingDiscount } from './ValidatePricingDiscount';
-import type { ValidatePricingProrata } from './ValidatePricingProrata';
-import type { ValidatePricingPriceRange } from './ValidatePricingPriceRange';
+import type { ValidatePricingBreakdown } from './ValidatePricingBreakdown.js';
+import type { ValidatePricingDiscount } from './ValidatePricingDiscount.js';
+import type { ValidatePricingProrata } from './ValidatePricingProrata.js';
+import type { ValidatePricingPriceRange } from './ValidatePricingPriceRange.js';
 /**
  * Per-product pricing detail in the validate pricing response
  * @export

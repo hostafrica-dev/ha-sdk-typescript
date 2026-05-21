@@ -18,7 +18,7 @@ exports.ValidatePricingRequestContentFromJSON = ValidatePricingRequestContentFro
 exports.ValidatePricingRequestContentFromJSONTyped = ValidatePricingRequestContentFromJSONTyped;
 exports.ValidatePricingRequestContentToJSON = ValidatePricingRequestContentToJSON;
 exports.ValidatePricingRequestContentToJSONTyped = ValidatePricingRequestContentToJSONTyped;
-const ValidatePricingProduct_1 = require("./ValidatePricingProduct");
+const ValidatePricingProduct_js_1 = require("./ValidatePricingProduct.js");
 /**
  * Check if a given object implements the ValidatePricingRequestContent interface.
  */
@@ -36,7 +36,7 @@ function ValidatePricingRequestContentFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'promo': json['promo'] == null ? undefined : json['promo'],
-        'products': (json['products'].map(ValidatePricingProduct_1.ValidatePricingProductFromJSON)),
+        'products': (json['products'].map(ValidatePricingProduct_js_1.ValidatePricingProductFromJSON)),
     };
 }
 function ValidatePricingRequestContentToJSON(json) {
@@ -48,6 +48,6 @@ function ValidatePricingRequestContentToJSONTyped(value, ignoreDiscriminator = f
     }
     return {
         'promo': value['promo'],
-        'products': (value['products'].map(ValidatePricingProduct_1.ValidatePricingProductToJSON)),
+        'products': (value['products'].map(ValidatePricingProduct_js_1.ValidatePricingProductToJSON)),
     };
 }

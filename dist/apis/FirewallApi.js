@@ -23,8 +23,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FirewallApi = void 0;
-const runtime = require("../runtime");
-const index_1 = require("../models/index");
+const runtime = require("../runtime.js");
+const index_js_1 = require("../models/index.js");
 /**
  *
  */
@@ -53,7 +53,7 @@ class FirewallApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.CreateFirewallRuleRequestContentToJSON)(requestParameters['createFirewallRuleRequestContent']),
+                body: (0, index_js_1.CreateFirewallRuleRequestContentToJSON)(requestParameters['createFirewallRuleRequestContent']),
             };
         });
     }
@@ -64,7 +64,7 @@ class FirewallApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.createFirewallRuleRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CreateFirewallRuleResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.CreateFirewallRuleResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -100,7 +100,7 @@ class FirewallApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.DeleteFirewallRuleRequestContentToJSON)(requestParameters['deleteFirewallRuleRequestContent']),
+                body: (0, index_js_1.DeleteFirewallRuleRequestContentToJSON)(requestParameters['deleteFirewallRuleRequestContent']),
             };
         });
     }
@@ -111,7 +111,7 @@ class FirewallApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.deleteFirewallRuleRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.DeleteFirewallRuleResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.DeleteFirewallRuleResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -147,7 +147,7 @@ class FirewallApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ListFirewallRulesRequestContentToJSON)(requestParameters['listFirewallRulesRequestContent']),
+                body: (0, index_js_1.ListFirewallRulesRequestContentToJSON)(requestParameters['listFirewallRulesRequestContent']),
             };
         });
     }
@@ -158,7 +158,7 @@ class FirewallApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listFirewallRulesRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListFirewallRulesResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListFirewallRulesResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -194,7 +194,7 @@ class FirewallApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.MoveFirewallRuleRequestContentToJSON)(requestParameters['moveFirewallRuleRequestContent']),
+                body: (0, index_js_1.MoveFirewallRuleRequestContentToJSON)(requestParameters['moveFirewallRuleRequestContent']),
             };
         });
     }
@@ -205,7 +205,7 @@ class FirewallApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.moveFirewallRuleRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.MoveFirewallRuleResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.MoveFirewallRuleResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -241,7 +241,7 @@ class FirewallApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.UpdateFirewallRuleRequestContentToJSON)(requestParameters['updateFirewallRuleRequestContent']),
+                body: (0, index_js_1.UpdateFirewallRuleRequestContentToJSON)(requestParameters['updateFirewallRuleRequestContent']),
             };
         });
     }
@@ -252,7 +252,7 @@ class FirewallApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.updateFirewallRuleRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.UpdateFirewallRuleResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.UpdateFirewallRuleResponseContentFromJSON)(jsonValue));
         });
     }
     /**

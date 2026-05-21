@@ -12,28 +12,28 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { CatalogueProduct } from './CatalogueProduct';
+import { mapValues } from '../runtime.js';
+import type { CatalogueProduct } from './CatalogueProduct.js';
 import {
     CatalogueProductFromJSON,
     CatalogueProductFromJSONTyped,
     CatalogueProductToJSON,
     CatalogueProductToJSONTyped,
-} from './CatalogueProduct';
-import type { CatalogueCurrency } from './CatalogueCurrency';
+} from './CatalogueProduct.js';
+import type { CatalogueCurrency } from './CatalogueCurrency.js';
 import {
     CatalogueCurrencyFromJSON,
     CatalogueCurrencyFromJSONTyped,
     CatalogueCurrencyToJSON,
     CatalogueCurrencyToJSONTyped,
-} from './CatalogueCurrency';
-import type { CatalogueGroup } from './CatalogueGroup';
+} from './CatalogueCurrency.js';
+import type { CatalogueGroup } from './CatalogueGroup.js';
 import {
     CatalogueGroupFromJSON,
     CatalogueGroupFromJSONTyped,
     CatalogueGroupToJSON,
     CatalogueGroupToJSONTyped,
-} from './CatalogueGroup';
+} from './CatalogueGroup.js';
 
 /**
  * Top-level data payload for the GetCatalogue response.

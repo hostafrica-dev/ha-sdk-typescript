@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { VpsDetailsResponseFromJSON, VpsDetailsResponseToJSON, } from './VpsDetailsResponse';
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
+import { VpsDetailsResponseFromJSON, VpsDetailsResponseToJSON, } from './VpsDetailsResponse.js';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
 /**
  * Check if a given object implements the GetVpsDetailsResponseContent interface.
  */

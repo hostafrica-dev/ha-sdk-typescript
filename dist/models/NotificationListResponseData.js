@@ -18,8 +18,8 @@ exports.NotificationListResponseDataFromJSON = NotificationListResponseDataFromJ
 exports.NotificationListResponseDataFromJSONTyped = NotificationListResponseDataFromJSONTyped;
 exports.NotificationListResponseDataToJSON = NotificationListResponseDataToJSON;
 exports.NotificationListResponseDataToJSONTyped = NotificationListResponseDataToJSONTyped;
-const NotificationDialogRules_1 = require("./NotificationDialogRules");
-const Notification_1 = require("./Notification");
+const NotificationDialogRules_js_1 = require("./NotificationDialogRules.js");
+const Notification_js_1 = require("./Notification.js");
 /**
  * Check if a given object implements the NotificationListResponseData interface.
  */
@@ -41,8 +41,8 @@ function NotificationListResponseDataFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'message': json['message'],
-        'notifications': (json['notifications'].map(Notification_1.NotificationFromJSON)),
-        'dialogRules': (0, NotificationDialogRules_1.NotificationDialogRulesFromJSON)(json['dialog_rules']),
+        'notifications': (json['notifications'].map(Notification_js_1.NotificationFromJSON)),
+        'dialogRules': (0, NotificationDialogRules_js_1.NotificationDialogRulesFromJSON)(json['dialog_rules']),
     };
 }
 function NotificationListResponseDataToJSON(json) {
@@ -54,7 +54,7 @@ function NotificationListResponseDataToJSONTyped(value, ignoreDiscriminator = fa
     }
     return {
         'message': value['message'],
-        'notifications': (value['notifications'].map(Notification_1.NotificationToJSON)),
-        'dialog_rules': (0, NotificationDialogRules_1.NotificationDialogRulesToJSON)(value['dialogRules']),
+        'notifications': (value['notifications'].map(Notification_js_1.NotificationToJSON)),
+        'dialog_rules': (0, NotificationDialogRules_js_1.NotificationDialogRulesToJSON)(value['dialogRules']),
     };
 }

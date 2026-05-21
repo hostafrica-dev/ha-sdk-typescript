@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { ListRdnsResponseData } from './ListRdnsResponseData';
+import { mapValues } from '../runtime.js';
+import type { ListRdnsResponseData } from './ListRdnsResponseData.js';
 import {
     ListRdnsResponseDataFromJSON,
     ListRdnsResponseDataFromJSONTyped,
     ListRdnsResponseDataToJSON,
     ListRdnsResponseDataToJSONTyped,
-} from './ListRdnsResponseData';
-import type { OperationStatus } from './OperationStatus';
+} from './ListRdnsResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
+} from './OperationStatus.js';
 
 /**
  * 

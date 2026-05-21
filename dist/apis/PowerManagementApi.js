@@ -23,8 +23,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PowerManagementApi = void 0;
-const runtime = require("../runtime");
-const index_1 = require("../models/index");
+const runtime = require("../runtime.js");
+const index_js_1 = require("../models/index.js");
 /**
  *
  */
@@ -53,7 +53,7 @@ class PowerManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.CreatePowerTaskRequestContentToJSON)(requestParameters['createPowerTaskRequestContent']),
+                body: (0, index_js_1.CreatePowerTaskRequestContentToJSON)(requestParameters['createPowerTaskRequestContent']),
             };
         });
     }
@@ -64,7 +64,7 @@ class PowerManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.createPowerTaskRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CreatePowerTaskResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.CreatePowerTaskResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -100,7 +100,7 @@ class PowerManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.DeletePowerTaskRequestContentToJSON)(requestParameters['deletePowerTaskRequestContent']),
+                body: (0, index_js_1.DeletePowerTaskRequestContentToJSON)(requestParameters['deletePowerTaskRequestContent']),
             };
         });
     }
@@ -111,7 +111,7 @@ class PowerManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.deletePowerTaskRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.DeletePowerTaskResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.DeletePowerTaskResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -147,7 +147,7 @@ class PowerManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ListPowerTasksRequestContentToJSON)(requestParameters['listPowerTasksRequestContent']),
+                body: (0, index_js_1.ListPowerTasksRequestContentToJSON)(requestParameters['listPowerTasksRequestContent']),
             };
         });
     }
@@ -158,7 +158,7 @@ class PowerManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listPowerTasksRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListPowerTasksResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListPowerTasksResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -194,7 +194,7 @@ class PowerManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.RebootVpsRequestContentToJSON)(requestParameters['rebootVpsRequestContent']),
+                body: (0, index_js_1.RebootVpsRequestContentToJSON)(requestParameters['rebootVpsRequestContent']),
             };
         });
     }
@@ -205,7 +205,7 @@ class PowerManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.rebootVpsRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.RebootVpsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.RebootVpsResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -241,7 +241,7 @@ class PowerManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ShutdownVpsRequestContentToJSON)(requestParameters['shutdownVpsRequestContent']),
+                body: (0, index_js_1.ShutdownVpsRequestContentToJSON)(requestParameters['shutdownVpsRequestContent']),
             };
         });
     }
@@ -252,7 +252,7 @@ class PowerManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.shutdownVpsRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ShutdownVpsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ShutdownVpsResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -288,7 +288,7 @@ class PowerManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.StartVpsRequestContentToJSON)(requestParameters['startVpsRequestContent']),
+                body: (0, index_js_1.StartVpsRequestContentToJSON)(requestParameters['startVpsRequestContent']),
             };
         });
     }
@@ -299,7 +299,7 @@ class PowerManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.startVpsRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.StartVpsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.StartVpsResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -335,7 +335,7 @@ class PowerManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.StopVpsRequestContentToJSON)(requestParameters['stopVpsRequestContent']),
+                body: (0, index_js_1.StopVpsRequestContentToJSON)(requestParameters['stopVpsRequestContent']),
             };
         });
     }
@@ -346,7 +346,7 @@ class PowerManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.stopVpsRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.StopVpsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.StopVpsResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -382,7 +382,7 @@ class PowerManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.UpdatePowerTaskRequestContentToJSON)(requestParameters['updatePowerTaskRequestContent']),
+                body: (0, index_js_1.UpdatePowerTaskRequestContentToJSON)(requestParameters['updatePowerTaskRequestContent']),
             };
         });
     }
@@ -393,7 +393,7 @@ class PowerManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.updatePowerTaskRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.UpdatePowerTaskResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.UpdatePowerTaskResponseContentFromJSON)(jsonValue));
         });
     }
     /**

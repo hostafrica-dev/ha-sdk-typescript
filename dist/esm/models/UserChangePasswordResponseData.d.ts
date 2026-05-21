@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { UserChangePasswordDetails } from './UserChangePasswordDetails';
+import type { UserChangePasswordDetails } from './UserChangePasswordDetails.js';
 /**
  * Response data for user change password operation
  * @export

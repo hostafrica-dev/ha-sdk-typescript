@@ -18,8 +18,8 @@ exports.ListRdnsRecordsResponseContentFromJSON = ListRdnsRecordsResponseContentF
 exports.ListRdnsRecordsResponseContentFromJSONTyped = ListRdnsRecordsResponseContentFromJSONTyped;
 exports.ListRdnsRecordsResponseContentToJSON = ListRdnsRecordsResponseContentToJSON;
 exports.ListRdnsRecordsResponseContentToJSONTyped = ListRdnsRecordsResponseContentToJSONTyped;
-const ListRdnsResponseData_1 = require("./ListRdnsResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const ListRdnsResponseData_js_1 = require("./ListRdnsResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the ListRdnsRecordsResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListRdnsRecordsResponseContentFromJSONTyped(json, ignoreDiscriminator) 
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, ListRdnsResponseData_1.ListRdnsResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, ListRdnsResponseData_js_1.ListRdnsResponseDataFromJSON)(json['data']),
     };
 }
 function ListRdnsRecordsResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListRdnsRecordsResponseContentToJSONTyped(value, ignoreDiscriminator = 
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, ListRdnsResponseData_1.ListRdnsResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, ListRdnsResponseData_js_1.ListRdnsResponseDataToJSON)(value['data']),
     };
 }

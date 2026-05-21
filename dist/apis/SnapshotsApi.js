@@ -23,8 +23,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SnapshotsApi = void 0;
-const runtime = require("../runtime");
-const index_1 = require("../models/index");
+const runtime = require("../runtime.js");
+const index_js_1 = require("../models/index.js");
 /**
  *
  */
@@ -53,7 +53,7 @@ class SnapshotsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.CreateSnapshotRequestContentToJSON)(requestParameters['createSnapshotRequestContent']),
+                body: (0, index_js_1.CreateSnapshotRequestContentToJSON)(requestParameters['createSnapshotRequestContent']),
             };
         });
     }
@@ -64,7 +64,7 @@ class SnapshotsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.createSnapshotRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CreateSnapshotResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.CreateSnapshotResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -100,7 +100,7 @@ class SnapshotsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.DeleteSnapshotRequestContentToJSON)(requestParameters['deleteSnapshotRequestContent']),
+                body: (0, index_js_1.DeleteSnapshotRequestContentToJSON)(requestParameters['deleteSnapshotRequestContent']),
             };
         });
     }
@@ -111,7 +111,7 @@ class SnapshotsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.deleteSnapshotRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.DeleteSnapshotResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.DeleteSnapshotResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -147,7 +147,7 @@ class SnapshotsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ListSnapshotsRequestContentToJSON)(requestParameters['listSnapshotsRequestContent']),
+                body: (0, index_js_1.ListSnapshotsRequestContentToJSON)(requestParameters['listSnapshotsRequestContent']),
             };
         });
     }
@@ -158,7 +158,7 @@ class SnapshotsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listSnapshotsRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListSnapshotsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListSnapshotsResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -194,7 +194,7 @@ class SnapshotsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.RollbackSnapshotRequestContentToJSON)(requestParameters['rollbackSnapshotRequestContent']),
+                body: (0, index_js_1.RollbackSnapshotRequestContentToJSON)(requestParameters['rollbackSnapshotRequestContent']),
             };
         });
     }
@@ -205,7 +205,7 @@ class SnapshotsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.rollbackSnapshotRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.RollbackSnapshotResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.RollbackSnapshotResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -241,7 +241,7 @@ class SnapshotsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.UpdateSnapshotRequestContentToJSON)(requestParameters['updateSnapshotRequestContent']),
+                body: (0, index_js_1.UpdateSnapshotRequestContentToJSON)(requestParameters['updateSnapshotRequestContent']),
             };
         });
     }
@@ -252,7 +252,7 @@ class SnapshotsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.updateSnapshotRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.UpdateSnapshotResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.UpdateSnapshotResponseContentFromJSON)(jsonValue));
         });
     }
     /**

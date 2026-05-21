@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { OrderLastAttempt } from './OrderLastAttempt';
+import type { OrderLastAttempt } from './OrderLastAttempt.js';
 /**
  * A single order entry in the list orders response
  * @export

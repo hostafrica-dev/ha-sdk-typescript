@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import type { UserChangePasswordRequestContent, UserChangePasswordResponseContent } from '../models/index';
+import * as runtime from '../runtime.js';
+import type { UserChangePasswordRequestContent, UserChangePasswordResponseContent } from '../models/index.js';
 export interface UserChangePasswordRequest {
     userChangePasswordRequestContent: UserChangePasswordRequestContent;
 }

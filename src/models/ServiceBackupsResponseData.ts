@@ -12,35 +12,35 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { BackupItem } from './BackupItem';
+import { mapValues } from '../runtime.js';
+import type { BackupItem } from './BackupItem.js';
 import {
     BackupItemFromJSON,
     BackupItemFromJSONTyped,
     BackupItemToJSON,
     BackupItemToJSONTyped,
-} from './BackupItem';
-import type { BackupMode } from './BackupMode';
+} from './BackupItem.js';
+import type { BackupMode } from './BackupMode.js';
 import {
     BackupModeFromJSON,
     BackupModeFromJSONTyped,
     BackupModeToJSON,
     BackupModeToJSONTyped,
-} from './BackupMode';
-import type { BackupCreationInfo } from './BackupCreationInfo';
+} from './BackupMode.js';
+import type { BackupCreationInfo } from './BackupCreationInfo.js';
 import {
     BackupCreationInfoFromJSON,
     BackupCreationInfoFromJSONTyped,
     BackupCreationInfoToJSON,
     BackupCreationInfoToJSONTyped,
-} from './BackupCreationInfo';
-import type { CompressionMethod } from './CompressionMethod';
+} from './BackupCreationInfo.js';
+import type { CompressionMethod } from './CompressionMethod.js';
 import {
     CompressionMethodFromJSON,
     CompressionMethodFromJSONTyped,
     CompressionMethodToJSON,
     CompressionMethodToJSONTyped,
-} from './CompressionMethod';
+} from './CompressionMethod.js';
 
 /**
  * Response data for service backups operation

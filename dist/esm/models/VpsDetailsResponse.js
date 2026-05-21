@@ -11,15 +11,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { VpsDiskInfoFromJSON, VpsDiskInfoToJSON, } from './VpsDiskInfo';
-import { VpsAvailableFeaturesFromJSON, VpsAvailableFeaturesToJSON, } from './VpsAvailableFeatures';
-import { VpsBandwidthInfoFromJSON, VpsBandwidthInfoToJSON, } from './VpsBandwidthInfo';
-import { VpsCredentialsFromJSON, VpsCredentialsToJSON, } from './VpsCredentials';
-import { VpsOsInfoFromJSON, VpsOsInfoToJSON, } from './VpsOsInfo';
-import { VpsCpuInfoFromJSON, VpsCpuInfoToJSON, } from './VpsCpuInfo';
-import { VpsNetworkRateFromJSON, VpsNetworkRateToJSON, } from './VpsNetworkRate';
-import { VpsMemoryInfoFromJSON, VpsMemoryInfoToJSON, } from './VpsMemoryInfo';
-import { VpsVmInfoFromJSON, VpsVmInfoToJSON, } from './VpsVmInfo';
+import { VpsDiskInfoFromJSON, VpsDiskInfoToJSON, } from './VpsDiskInfo.js';
+import { VpsAvailableFeaturesFromJSON, VpsAvailableFeaturesToJSON, } from './VpsAvailableFeatures.js';
+import { VpsBandwidthInfoFromJSON, VpsBandwidthInfoToJSON, } from './VpsBandwidthInfo.js';
+import { VpsCredentialsFromJSON, VpsCredentialsToJSON, } from './VpsCredentials.js';
+import { VpsOsInfoFromJSON, VpsOsInfoToJSON, } from './VpsOsInfo.js';
+import { VpsCpuInfoFromJSON, VpsCpuInfoToJSON, } from './VpsCpuInfo.js';
+import { VpsNetworkRateFromJSON, VpsNetworkRateToJSON, } from './VpsNetworkRate.js';
+import { VpsMemoryInfoFromJSON, VpsMemoryInfoToJSON, } from './VpsMemoryInfo.js';
+import { VpsVmInfoFromJSON, VpsVmInfoToJSON, } from './VpsVmInfo.js';
 /**
  * Check if a given object implements the VpsDetailsResponse interface.
  */

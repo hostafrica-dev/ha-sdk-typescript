@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CompressionTypeFromJSON, CompressionTypeToJSON, } from './CompressionType';
+import { CompressionTypeFromJSON, CompressionTypeToJSON, } from './CompressionType.js';
 /**
  * Check if a given object implements the BackupSchedule interface.
  */

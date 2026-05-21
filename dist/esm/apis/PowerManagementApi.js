@@ -20,8 +20,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import * as runtime from '../runtime';
-import { CreatePowerTaskRequestContentToJSON, CreatePowerTaskResponseContentFromJSON, DeletePowerTaskRequestContentToJSON, DeletePowerTaskResponseContentFromJSON, ListPowerTasksRequestContentToJSON, ListPowerTasksResponseContentFromJSON, RebootVpsRequestContentToJSON, RebootVpsResponseContentFromJSON, ShutdownVpsRequestContentToJSON, ShutdownVpsResponseContentFromJSON, StartVpsRequestContentToJSON, StartVpsResponseContentFromJSON, StopVpsRequestContentToJSON, StopVpsResponseContentFromJSON, UpdatePowerTaskRequestContentToJSON, UpdatePowerTaskResponseContentFromJSON, } from '../models/index';
+import * as runtime from '../runtime.js';
+import { CreatePowerTaskRequestContentToJSON, CreatePowerTaskResponseContentFromJSON, DeletePowerTaskRequestContentToJSON, DeletePowerTaskResponseContentFromJSON, ListPowerTasksRequestContentToJSON, ListPowerTasksResponseContentFromJSON, RebootVpsRequestContentToJSON, RebootVpsResponseContentFromJSON, ShutdownVpsRequestContentToJSON, ShutdownVpsResponseContentFromJSON, StartVpsRequestContentToJSON, StartVpsResponseContentFromJSON, StopVpsRequestContentToJSON, StopVpsResponseContentFromJSON, UpdatePowerTaskRequestContentToJSON, UpdatePowerTaskResponseContentFromJSON, } from '../models/index.js';
 /**
  *
  */

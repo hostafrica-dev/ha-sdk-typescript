@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { NotificationDialogRules } from './NotificationDialogRules';
+import { mapValues } from '../runtime.js';
+import type { NotificationDialogRules } from './NotificationDialogRules.js';
 import {
     NotificationDialogRulesFromJSON,
     NotificationDialogRulesFromJSONTyped,
     NotificationDialogRulesToJSON,
     NotificationDialogRulesToJSONTyped,
-} from './NotificationDialogRules';
-import type { Notification } from './Notification';
+} from './NotificationDialogRules.js';
+import type { Notification } from './Notification.js';
 import {
     NotificationFromJSON,
     NotificationFromJSONTyped,
     NotificationToJSON,
     NotificationToJSONTyped,
-} from './Notification';
+} from './Notification.js';
 
 /**
  * Response data for listing notifications

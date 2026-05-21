@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ValidatePricingSummaryRecurringFromJSON, ValidatePricingSummaryRecurringToJSON, } from './ValidatePricingSummaryRecurring';
+import { ValidatePricingSummaryRecurringFromJSON, ValidatePricingSummaryRecurringToJSON, } from './ValidatePricingSummaryRecurring.js';
 /**
  * Check if a given object implements the ValidatePricingSummary interface.
  */

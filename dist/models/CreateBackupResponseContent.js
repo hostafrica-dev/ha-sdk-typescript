@@ -18,8 +18,8 @@ exports.CreateBackupResponseContentFromJSON = CreateBackupResponseContentFromJSO
 exports.CreateBackupResponseContentFromJSONTyped = CreateBackupResponseContentFromJSONTyped;
 exports.CreateBackupResponseContentToJSON = CreateBackupResponseContentToJSON;
 exports.CreateBackupResponseContentToJSONTyped = CreateBackupResponseContentToJSONTyped;
-const BackupCreateResponseData_1 = require("./BackupCreateResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const BackupCreateResponseData_js_1 = require("./BackupCreateResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the CreateBackupResponseContent interface.
  */
@@ -38,8 +38,8 @@ function CreateBackupResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, BackupCreateResponseData_1.BackupCreateResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, BackupCreateResponseData_js_1.BackupCreateResponseDataFromJSON)(json['data']),
     };
 }
 function CreateBackupResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function CreateBackupResponseContentToJSONTyped(value, ignoreDiscriminator = fal
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, BackupCreateResponseData_1.BackupCreateResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, BackupCreateResponseData_js_1.BackupCreateResponseDataToJSON)(value['data']),
     };
 }

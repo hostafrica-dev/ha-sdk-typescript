@@ -18,7 +18,7 @@ exports.CreateOrderRequestContentFromJSON = CreateOrderRequestContentFromJSON;
 exports.CreateOrderRequestContentFromJSONTyped = CreateOrderRequestContentFromJSONTyped;
 exports.CreateOrderRequestContentToJSON = CreateOrderRequestContentToJSON;
 exports.CreateOrderRequestContentToJSONTyped = CreateOrderRequestContentToJSONTyped;
-const CreateOrderProduct_1 = require("./CreateOrderProduct");
+const CreateOrderProduct_js_1 = require("./CreateOrderProduct.js");
 /**
  * Check if a given object implements the CreateOrderRequestContent interface.
  */
@@ -36,7 +36,7 @@ function CreateOrderRequestContentFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'promo': json['promo'] == null ? undefined : json['promo'],
-        'products': (json['products'].map(CreateOrderProduct_1.CreateOrderProductFromJSON)),
+        'products': (json['products'].map(CreateOrderProduct_js_1.CreateOrderProductFromJSON)),
     };
 }
 function CreateOrderRequestContentToJSON(json) {
@@ -48,6 +48,6 @@ function CreateOrderRequestContentToJSONTyped(value, ignoreDiscriminator = false
     }
     return {
         'promo': value['promo'],
-        'products': (value['products'].map(CreateOrderProduct_1.CreateOrderProductToJSON)),
+        'products': (value['products'].map(CreateOrderProduct_js_1.CreateOrderProductToJSON)),
     };
 }

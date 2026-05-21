@@ -9,11 +9,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { OrderWarning } from './OrderWarning';
-import type { CreateOrderItems } from './CreateOrderItems';
-import type { CreateOrderTotal } from './CreateOrderTotal';
-import type { PaymentStatus } from './PaymentStatus';
-import type { PaymentError } from './PaymentError';
+import type { OrderWarning } from './OrderWarning.js';
+import type { CreateOrderItems } from './CreateOrderItems.js';
+import type { CreateOrderTotal } from './CreateOrderTotal.js';
+import type { PaymentStatus } from './PaymentStatus.js';
+import type { PaymentError } from './PaymentError.js';
 /**
  * Response data for a successful or pending order
  * @export

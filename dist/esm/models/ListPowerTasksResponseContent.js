@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
-import { PowerTaskListResponseDataFromJSON, PowerTaskListResponseDataToJSON, } from './PowerTaskListResponseData';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
+import { PowerTaskListResponseDataFromJSON, PowerTaskListResponseDataToJSON, } from './PowerTaskListResponseData.js';
 /**
  * Check if a given object implements the ListPowerTasksResponseContent interface.
  */

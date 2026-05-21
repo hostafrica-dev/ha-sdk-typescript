@@ -18,7 +18,7 @@ exports.CreateOrderProductFromJSON = CreateOrderProductFromJSON;
 exports.CreateOrderProductFromJSONTyped = CreateOrderProductFromJSONTyped;
 exports.CreateOrderProductToJSON = CreateOrderProductToJSON;
 exports.CreateOrderProductToJSONTyped = CreateOrderProductToJSONTyped;
-const BillingCycle_1 = require("./BillingCycle");
+const BillingCycle_js_1 = require("./BillingCycle.js");
 /**
  * Check if a given object implements the CreateOrderProduct interface.
  */
@@ -44,7 +44,7 @@ function CreateOrderProductFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'pid': json['pid'],
-        'billingCycle': (0, BillingCycle_1.BillingCycleFromJSON)(json['billing_cycle']),
+        'billingCycle': (0, BillingCycle_js_1.BillingCycleFromJSON)(json['billing_cycle']),
         'planId': json['plan_id'],
         'hostname': json['hostname'],
         'configOptions': json['config_options'],
@@ -60,7 +60,7 @@ function CreateOrderProductToJSONTyped(value, ignoreDiscriminator = false) {
     }
     return {
         'pid': value['pid'],
-        'billing_cycle': (0, BillingCycle_1.BillingCycleToJSON)(value['billingCycle']),
+        'billing_cycle': (0, BillingCycle_js_1.BillingCycleToJSON)(value['billingCycle']),
         'plan_id': value['planId'],
         'hostname': value['hostname'],
         'config_options': value['configOptions'],

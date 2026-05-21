@@ -18,8 +18,8 @@ exports.CreateFirewallRuleRequestContentFromJSON = CreateFirewallRuleRequestCont
 exports.CreateFirewallRuleRequestContentFromJSONTyped = CreateFirewallRuleRequestContentFromJSONTyped;
 exports.CreateFirewallRuleRequestContentToJSON = CreateFirewallRuleRequestContentToJSON;
 exports.CreateFirewallRuleRequestContentToJSONTyped = CreateFirewallRuleRequestContentToJSONTyped;
-const FirewallRuleAction_1 = require("./FirewallRuleAction");
-const FirewallRuleType_1 = require("./FirewallRuleType");
+const FirewallRuleAction_js_1 = require("./FirewallRuleAction.js");
+const FirewallRuleType_js_1 = require("./FirewallRuleType.js");
 /**
  * Check if a given object implements the CreateFirewallRuleRequestContent interface.
  */
@@ -41,8 +41,8 @@ function CreateFirewallRuleRequestContentFromJSONTyped(json, ignoreDiscriminator
     }
     return {
         'serviceId': json['service_id'],
-        'type': (0, FirewallRuleType_1.FirewallRuleTypeFromJSON)(json['type']),
-        'ruleAction': (0, FirewallRuleAction_1.FirewallRuleActionFromJSON)(json['rule_action']),
+        'type': (0, FirewallRuleType_js_1.FirewallRuleTypeFromJSON)(json['type']),
+        'ruleAction': (0, FirewallRuleAction_js_1.FirewallRuleActionFromJSON)(json['rule_action']),
         'enable': json['enable'] == null ? undefined : json['enable'],
         'comment': json['comment'] == null ? undefined : json['comment'],
         'source': json['source'] == null ? undefined : json['source'],
@@ -65,8 +65,8 @@ function CreateFirewallRuleRequestContentToJSONTyped(value, ignoreDiscriminator 
     }
     return {
         'service_id': value['serviceId'],
-        'type': (0, FirewallRuleType_1.FirewallRuleTypeToJSON)(value['type']),
-        'rule_action': (0, FirewallRuleAction_1.FirewallRuleActionToJSON)(value['ruleAction']),
+        'type': (0, FirewallRuleType_js_1.FirewallRuleTypeToJSON)(value['type']),
+        'rule_action': (0, FirewallRuleAction_js_1.FirewallRuleActionToJSON)(value['ruleAction']),
         'enable': value['enable'],
         'comment': value['comment'],
         'source': value['source'],

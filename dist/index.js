@@ -16,6 +16,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 /* eslint-disable */
-__exportStar(require("./runtime"), exports);
-__exportStar(require("./apis/index"), exports);
-__exportStar(require("./models/index"), exports);
+__exportStar(require("./runtime.js"), exports);
+__exportStar(require("./apis/index.js"), exports);
+__exportStar(require("./models/index.js"), exports);

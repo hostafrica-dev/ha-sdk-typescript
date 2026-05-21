@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { FirewallRuleActionFromJSON, FirewallRuleActionToJSON, } from './FirewallRuleAction';
-import { FirewallRuleTypeFromJSON, FirewallRuleTypeToJSON, } from './FirewallRuleType';
+import { FirewallRuleActionFromJSON, FirewallRuleActionToJSON, } from './FirewallRuleAction.js';
+import { FirewallRuleTypeFromJSON, FirewallRuleTypeToJSON, } from './FirewallRuleType.js';
 /**
  * Check if a given object implements the CreateFirewallRuleRequestContent interface.
  */

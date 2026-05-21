@@ -18,7 +18,7 @@ exports.PublicSshKeyResponseDataFromJSON = PublicSshKeyResponseDataFromJSON;
 exports.PublicSshKeyResponseDataFromJSONTyped = PublicSshKeyResponseDataFromJSONTyped;
 exports.PublicSshKeyResponseDataToJSON = PublicSshKeyResponseDataToJSON;
 exports.PublicSshKeyResponseDataToJSONTyped = PublicSshKeyResponseDataToJSONTyped;
-const SshKeyDetails_1 = require("./SshKeyDetails");
+const SshKeyDetails_js_1 = require("./SshKeyDetails.js");
 /**
  * Check if a given object implements the PublicSshKeyResponseData interface.
  */
@@ -38,7 +38,7 @@ function PublicSshKeyResponseDataFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'message': json['message'],
-        'data': (0, SshKeyDetails_1.SshKeyDetailsFromJSON)(json['data']),
+        'data': (0, SshKeyDetails_js_1.SshKeyDetailsFromJSON)(json['data']),
     };
 }
 function PublicSshKeyResponseDataToJSON(json) {
@@ -50,6 +50,6 @@ function PublicSshKeyResponseDataToJSONTyped(value, ignoreDiscriminator = false)
     }
     return {
         'message': value['message'],
-        'data': (0, SshKeyDetails_1.SshKeyDetailsToJSON)(value['data']),
+        'data': (0, SshKeyDetails_js_1.SshKeyDetailsToJSON)(value['data']),
     };
 }

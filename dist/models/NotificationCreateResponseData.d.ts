@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { Notification } from './Notification';
+import type { Notification } from './Notification.js';
 /**
  * Response data for notification creation operation
  * @export

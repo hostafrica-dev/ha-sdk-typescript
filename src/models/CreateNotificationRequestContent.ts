@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { NotificationStatus } from './NotificationStatus';
+import { mapValues } from '../runtime.js';
+import type { NotificationStatus } from './NotificationStatus.js';
 import {
     NotificationStatusFromJSON,
     NotificationStatusFromJSONTyped,
     NotificationStatusToJSON,
     NotificationStatusToJSONTyped,
-} from './NotificationStatus';
+} from './NotificationStatus.js';
 
 /**
  * 

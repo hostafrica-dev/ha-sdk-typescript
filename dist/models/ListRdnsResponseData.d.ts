@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { RdnsRecord } from './RdnsRecord';
-import type { RdnsAvailableItem } from './RdnsAvailableItem';
+import type { RdnsRecord } from './RdnsRecord.js';
+import type { RdnsAvailableItem } from './RdnsAvailableItem.js';
 /**
  * Response data for the list-rdns operation
  * @export

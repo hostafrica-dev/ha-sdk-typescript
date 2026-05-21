@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { CatalogueConfigSuboption } from './CatalogueConfigSuboption';
+import { mapValues } from '../runtime.js';
+import type { CatalogueConfigSuboption } from './CatalogueConfigSuboption.js';
 import {
     CatalogueConfigSuboptionFromJSON,
     CatalogueConfigSuboptionFromJSONTyped,
     CatalogueConfigSuboptionToJSON,
     CatalogueConfigSuboptionToJSONTyped,
-} from './CatalogueConfigSuboption';
+} from './CatalogueConfigSuboption.js';
 
 /**
  * A configurable option available for a product (e.g. Backup Quota, OS Template)

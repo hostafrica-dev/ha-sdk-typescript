@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { CreateOrderDomainItem } from './CreateOrderDomainItem';
+import { mapValues } from '../runtime.js';
+import type { CreateOrderDomainItem } from './CreateOrderDomainItem.js';
 import {
     CreateOrderDomainItemFromJSON,
     CreateOrderDomainItemFromJSONTyped,
     CreateOrderDomainItemToJSON,
     CreateOrderDomainItemToJSONTyped,
-} from './CreateOrderDomainItem';
-import type { CreateOrderProductItem } from './CreateOrderProductItem';
+} from './CreateOrderDomainItem.js';
+import type { CreateOrderProductItem } from './CreateOrderProductItem.js';
 import {
     CreateOrderProductItemFromJSON,
     CreateOrderProductItemFromJSONTyped,
     CreateOrderProductItemToJSON,
     CreateOrderProductItemToJSONTyped,
-} from './CreateOrderProductItem';
+} from './CreateOrderProductItem.js';
 
 /**
  * Line items grouped by type in the order response

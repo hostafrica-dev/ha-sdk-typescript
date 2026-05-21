@@ -13,7 +13,7 @@
  */
 
 
-import * as runtime from '../runtime';
+import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
   CreateBackupRequestContent,
@@ -39,7 +39,7 @@ import type {
   TooManyRequestsErrorResponseContent,
   UnauthorizedErrorResponseContent,
   ValidationErrorResponseContent,
-} from '../models/index';
+} from '../models/index.js';
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
@@ -89,7 +89,7 @@ import {
     UnauthorizedErrorResponseContentToJSON,
     ValidationErrorResponseContentFromJSON,
     ValidationErrorResponseContentToJSON,
-} from '../models/index';
+} from '../models/index.js';
 
 export interface CreateBackupRequest {
     createBackupRequestContent: CreateBackupRequestContent;

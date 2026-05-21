@@ -18,7 +18,7 @@ exports.CatalogueGroupFromJSON = CatalogueGroupFromJSON;
 exports.CatalogueGroupFromJSONTyped = CatalogueGroupFromJSONTyped;
 exports.CatalogueGroupToJSON = CatalogueGroupToJSON;
 exports.CatalogueGroupToJSONTyped = CatalogueGroupToJSONTyped;
-const CatalogueProduct_1 = require("./CatalogueProduct");
+const CatalogueProduct_js_1 = require("./CatalogueProduct.js");
 /**
  * Check if a given object implements the CatalogueGroup interface.
  */
@@ -41,7 +41,7 @@ function CatalogueGroupFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'id': json['id'],
         'name': json['name'],
-        'products': (json['products'].map(CatalogueProduct_1.CatalogueProductFromJSON)),
+        'products': (json['products'].map(CatalogueProduct_js_1.CatalogueProductFromJSON)),
     };
 }
 function CatalogueGroupToJSON(json) {
@@ -54,6 +54,6 @@ function CatalogueGroupToJSONTyped(value, ignoreDiscriminator = false) {
     return {
         'id': value['id'],
         'name': value['name'],
-        'products': (value['products'].map(CatalogueProduct_1.CatalogueProductToJSON)),
+        'products': (value['products'].map(CatalogueProduct_js_1.CatalogueProductToJSON)),
     };
 }

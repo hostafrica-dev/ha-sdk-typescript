@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { RdnsRecordFromJSON, RdnsRecordToJSON, } from './RdnsRecord';
+import { RdnsRecordFromJSON, RdnsRecordToJSON, } from './RdnsRecord.js';
 /**
  * Check if a given object implements the CreateRdnsRecordResponseData interface.
  */

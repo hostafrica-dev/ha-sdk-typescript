@@ -9,9 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { CatalogueProduct } from './CatalogueProduct';
-import type { CatalogueCurrency } from './CatalogueCurrency';
-import type { CatalogueGroup } from './CatalogueGroup';
+import type { CatalogueProduct } from './CatalogueProduct.js';
+import type { CatalogueCurrency } from './CatalogueCurrency.js';
+import type { CatalogueGroup } from './CatalogueGroup.js';
 /**
  * Top-level data payload for the GetCatalogue response.
  * When product_id is specified, product is populated instead of groups.

@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ServiceBackupsResponseDataFromJSON, ServiceBackupsResponseDataToJSON, } from './ServiceBackupsResponseData';
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
+import { ServiceBackupsResponseDataFromJSON, ServiceBackupsResponseDataToJSON, } from './ServiceBackupsResponseData.js';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
 /**
  * Check if a given object implements the ListBackupsResponseContent interface.
  */

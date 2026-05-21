@@ -12,35 +12,35 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { ValidatePricingBreakdown } from './ValidatePricingBreakdown';
+import { mapValues } from '../runtime.js';
+import type { ValidatePricingBreakdown } from './ValidatePricingBreakdown.js';
 import {
     ValidatePricingBreakdownFromJSON,
     ValidatePricingBreakdownFromJSONTyped,
     ValidatePricingBreakdownToJSON,
     ValidatePricingBreakdownToJSONTyped,
-} from './ValidatePricingBreakdown';
-import type { ValidatePricingDiscount } from './ValidatePricingDiscount';
+} from './ValidatePricingBreakdown.js';
+import type { ValidatePricingDiscount } from './ValidatePricingDiscount.js';
 import {
     ValidatePricingDiscountFromJSON,
     ValidatePricingDiscountFromJSONTyped,
     ValidatePricingDiscountToJSON,
     ValidatePricingDiscountToJSONTyped,
-} from './ValidatePricingDiscount';
-import type { ValidatePricingProrata } from './ValidatePricingProrata';
+} from './ValidatePricingDiscount.js';
+import type { ValidatePricingProrata } from './ValidatePricingProrata.js';
 import {
     ValidatePricingProrataFromJSON,
     ValidatePricingProrataFromJSONTyped,
     ValidatePricingProrataToJSON,
     ValidatePricingProrataToJSONTyped,
-} from './ValidatePricingProrata';
-import type { ValidatePricingPriceRange } from './ValidatePricingPriceRange';
+} from './ValidatePricingProrata.js';
+import type { ValidatePricingPriceRange } from './ValidatePricingPriceRange.js';
 import {
     ValidatePricingPriceRangeFromJSON,
     ValidatePricingPriceRangeFromJSONTyped,
     ValidatePricingPriceRangeToJSON,
     ValidatePricingPriceRangeToJSONTyped,
-} from './ValidatePricingPriceRange';
+} from './ValidatePricingPriceRange.js';
 
 /**
  * Per-product pricing detail in the validate pricing response

@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { UserChangePasswordResponseData } from './UserChangePasswordResponseData';
+import { mapValues } from '../runtime.js';
+import type { UserChangePasswordResponseData } from './UserChangePasswordResponseData.js';
 import {
     UserChangePasswordResponseDataFromJSON,
     UserChangePasswordResponseDataFromJSONTyped,
     UserChangePasswordResponseDataToJSON,
     UserChangePasswordResponseDataToJSONTyped,
-} from './UserChangePasswordResponseData';
-import type { OperationStatus } from './OperationStatus';
+} from './UserChangePasswordResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
+} from './OperationStatus.js';
 
 /**
  * 

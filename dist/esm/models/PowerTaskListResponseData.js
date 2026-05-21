@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { PowerTaskFromJSON, PowerTaskToJSON, } from './PowerTask';
-import { PowerTaskDialogRulesFromJSON, PowerTaskDialogRulesToJSON, } from './PowerTaskDialogRules';
+import { PowerTaskFromJSON, PowerTaskToJSON, } from './PowerTask.js';
+import { PowerTaskDialogRulesFromJSON, PowerTaskDialogRulesToJSON, } from './PowerTaskDialogRules.js';
 /**
  * Check if a given object implements the PowerTaskListResponseData interface.
  */

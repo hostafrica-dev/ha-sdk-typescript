@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { ValidatePricingSummaryRecurring } from './ValidatePricingSummaryRecurring';
+import { mapValues } from '../runtime.js';
+import type { ValidatePricingSummaryRecurring } from './ValidatePricingSummaryRecurring.js';
 import {
     ValidatePricingSummaryRecurringFromJSON,
     ValidatePricingSummaryRecurringFromJSONTyped,
     ValidatePricingSummaryRecurringToJSON,
     ValidatePricingSummaryRecurringToJSONTyped,
-} from './ValidatePricingSummaryRecurring';
+} from './ValidatePricingSummaryRecurring.js';
 
 /**
  * Order-level summary of totals

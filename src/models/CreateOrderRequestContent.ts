@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { CreateOrderProduct } from './CreateOrderProduct';
+import { mapValues } from '../runtime.js';
+import type { CreateOrderProduct } from './CreateOrderProduct.js';
 import {
     CreateOrderProductFromJSON,
     CreateOrderProductFromJSONTyped,
     CreateOrderProductToJSON,
     CreateOrderProductToJSONTyped,
-} from './CreateOrderProduct';
+} from './CreateOrderProduct.js';
 
 /**
  * 

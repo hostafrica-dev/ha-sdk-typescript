@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { CatalogueConfigSuboption } from './CatalogueConfigSuboption';
+import type { CatalogueConfigSuboption } from './CatalogueConfigSuboption.js';
 /**
  * A configurable option available for a product (e.g. Backup Quota, OS Template)
  * @export

@@ -18,8 +18,8 @@ exports.ListSnapshotsResponseContentFromJSON = ListSnapshotsResponseContentFromJ
 exports.ListSnapshotsResponseContentFromJSONTyped = ListSnapshotsResponseContentFromJSONTyped;
 exports.ListSnapshotsResponseContentToJSON = ListSnapshotsResponseContentToJSON;
 exports.ListSnapshotsResponseContentToJSONTyped = ListSnapshotsResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const ServiceSnapshotsResponseData_1 = require("./ServiceSnapshotsResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const ServiceSnapshotsResponseData_js_1 = require("./ServiceSnapshotsResponseData.js");
 /**
  * Check if a given object implements the ListSnapshotsResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListSnapshotsResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, ServiceSnapshotsResponseData_1.ServiceSnapshotsResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, ServiceSnapshotsResponseData_js_1.ServiceSnapshotsResponseDataFromJSON)(json['data']),
     };
 }
 function ListSnapshotsResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListSnapshotsResponseContentToJSONTyped(value, ignoreDiscriminator = fa
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, ServiceSnapshotsResponseData_1.ServiceSnapshotsResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, ServiceSnapshotsResponseData_js_1.ServiceSnapshotsResponseDataToJSON)(value['data']),
     };
 }

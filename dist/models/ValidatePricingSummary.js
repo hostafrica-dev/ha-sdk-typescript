@@ -18,7 +18,7 @@ exports.ValidatePricingSummaryFromJSON = ValidatePricingSummaryFromJSON;
 exports.ValidatePricingSummaryFromJSONTyped = ValidatePricingSummaryFromJSONTyped;
 exports.ValidatePricingSummaryToJSON = ValidatePricingSummaryToJSON;
 exports.ValidatePricingSummaryToJSONTyped = ValidatePricingSummaryToJSONTyped;
-const ValidatePricingSummaryRecurring_1 = require("./ValidatePricingSummaryRecurring");
+const ValidatePricingSummaryRecurring_js_1 = require("./ValidatePricingSummaryRecurring.js");
 /**
  * Check if a given object implements the ValidatePricingSummary interface.
  */
@@ -42,7 +42,7 @@ function ValidatePricingSummaryFromJSONTyped(json, ignoreDiscriminator) {
         'subtotal': json['subtotal'],
         'discountTotal': json['discount_total'],
         'totalDue': json['total_due'],
-        'recurring': json['recurring'] == null ? undefined : (0, ValidatePricingSummaryRecurring_1.ValidatePricingSummaryRecurringFromJSON)(json['recurring']),
+        'recurring': json['recurring'] == null ? undefined : (0, ValidatePricingSummaryRecurring_js_1.ValidatePricingSummaryRecurringFromJSON)(json['recurring']),
         'prorataTotal': json['prorata_total'] == null ? undefined : json['prorata_total'],
         'promoApplied': json['promo_applied'] == null ? undefined : json['promo_applied'],
     };
@@ -58,7 +58,7 @@ function ValidatePricingSummaryToJSONTyped(value, ignoreDiscriminator = false) {
         'subtotal': value['subtotal'],
         'discount_total': value['discountTotal'],
         'total_due': value['totalDue'],
-        'recurring': (0, ValidatePricingSummaryRecurring_1.ValidatePricingSummaryRecurringToJSON)(value['recurring']),
+        'recurring': (0, ValidatePricingSummaryRecurring_js_1.ValidatePricingSummaryRecurringToJSON)(value['recurring']),
         'prorata_total': value['prorataTotal'],
         'promo_applied': value['promoApplied'],
     };

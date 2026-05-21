@@ -18,8 +18,8 @@ exports.CreateOrderItemsFromJSON = CreateOrderItemsFromJSON;
 exports.CreateOrderItemsFromJSONTyped = CreateOrderItemsFromJSONTyped;
 exports.CreateOrderItemsToJSON = CreateOrderItemsToJSON;
 exports.CreateOrderItemsToJSONTyped = CreateOrderItemsToJSONTyped;
-const CreateOrderDomainItem_1 = require("./CreateOrderDomainItem");
-const CreateOrderProductItem_1 = require("./CreateOrderProductItem");
+const CreateOrderDomainItem_js_1 = require("./CreateOrderDomainItem.js");
+const CreateOrderProductItem_js_1 = require("./CreateOrderProductItem.js");
 /**
  * Check if a given object implements the CreateOrderItems interface.
  */
@@ -34,8 +34,8 @@ function CreateOrderItemsFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'products': json['products'] == null ? undefined : (json['products'].map(CreateOrderProductItem_1.CreateOrderProductItemFromJSON)),
-        'domains': json['domains'] == null ? undefined : (json['domains'].map(CreateOrderDomainItem_1.CreateOrderDomainItemFromJSON)),
+        'products': json['products'] == null ? undefined : (json['products'].map(CreateOrderProductItem_js_1.CreateOrderProductItemFromJSON)),
+        'domains': json['domains'] == null ? undefined : (json['domains'].map(CreateOrderDomainItem_js_1.CreateOrderDomainItemFromJSON)),
     };
 }
 function CreateOrderItemsToJSON(json) {
@@ -46,7 +46,7 @@ function CreateOrderItemsToJSONTyped(value, ignoreDiscriminator = false) {
         return value;
     }
     return {
-        'products': value['products'] == null ? undefined : (value['products'].map(CreateOrderProductItem_1.CreateOrderProductItemToJSON)),
-        'domains': value['domains'] == null ? undefined : (value['domains'].map(CreateOrderDomainItem_1.CreateOrderDomainItemToJSON)),
+        'products': value['products'] == null ? undefined : (value['products'].map(CreateOrderProductItem_js_1.CreateOrderProductItemToJSON)),
+        'domains': value['domains'] == null ? undefined : (value['domains'].map(CreateOrderDomainItem_js_1.CreateOrderDomainItemToJSON)),
     };
 }

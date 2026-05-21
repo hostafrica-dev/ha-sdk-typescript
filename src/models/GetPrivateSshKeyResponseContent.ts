@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { OperationStatus } from './OperationStatus';
+import { mapValues } from '../runtime.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
-import type { PublicSshKeyResponseData } from './PublicSshKeyResponseData';
+} from './OperationStatus.js';
+import type { PublicSshKeyResponseData } from './PublicSshKeyResponseData.js';
 import {
     PublicSshKeyResponseDataFromJSON,
     PublicSshKeyResponseDataFromJSONTyped,
     PublicSshKeyResponseDataToJSON,
     PublicSshKeyResponseDataToJSONTyped,
-} from './PublicSshKeyResponseData';
+} from './PublicSshKeyResponseData.js';
 
 /**
  * 

@@ -9,15 +9,15 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { VpsDiskInfo } from './VpsDiskInfo';
-import type { VpsAvailableFeatures } from './VpsAvailableFeatures';
-import type { VpsBandwidthInfo } from './VpsBandwidthInfo';
-import type { VpsCredentials } from './VpsCredentials';
-import type { VpsOsInfo } from './VpsOsInfo';
-import type { VpsCpuInfo } from './VpsCpuInfo';
-import type { VpsNetworkRate } from './VpsNetworkRate';
-import type { VpsMemoryInfo } from './VpsMemoryInfo';
-import type { VpsVmInfo } from './VpsVmInfo';
+import type { VpsDiskInfo } from './VpsDiskInfo.js';
+import type { VpsAvailableFeatures } from './VpsAvailableFeatures.js';
+import type { VpsBandwidthInfo } from './VpsBandwidthInfo.js';
+import type { VpsCredentials } from './VpsCredentials.js';
+import type { VpsOsInfo } from './VpsOsInfo.js';
+import type { VpsCpuInfo } from './VpsCpuInfo.js';
+import type { VpsNetworkRate } from './VpsNetworkRate.js';
+import type { VpsMemoryInfo } from './VpsMemoryInfo.js';
+import type { VpsVmInfo } from './VpsVmInfo.js';
 /**
  *
  * @export

@@ -18,8 +18,8 @@ exports.RetryPaymentResponseContentFromJSON = RetryPaymentResponseContentFromJSO
 exports.RetryPaymentResponseContentFromJSONTyped = RetryPaymentResponseContentFromJSONTyped;
 exports.RetryPaymentResponseContentToJSON = RetryPaymentResponseContentToJSON;
 exports.RetryPaymentResponseContentToJSONTyped = RetryPaymentResponseContentToJSONTyped;
-const RetryPaymentResponseData_1 = require("./RetryPaymentResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const RetryPaymentResponseData_js_1 = require("./RetryPaymentResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the RetryPaymentResponseContent interface.
  */
@@ -38,8 +38,8 @@ function RetryPaymentResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, RetryPaymentResponseData_1.RetryPaymentResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, RetryPaymentResponseData_js_1.RetryPaymentResponseDataFromJSON)(json['data']),
     };
 }
 function RetryPaymentResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function RetryPaymentResponseContentToJSONTyped(value, ignoreDiscriminator = fal
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, RetryPaymentResponseData_1.RetryPaymentResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, RetryPaymentResponseData_js_1.RetryPaymentResponseDataToJSON)(value['data']),
     };
 }

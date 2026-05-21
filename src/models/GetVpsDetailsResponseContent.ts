@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { VpsDetailsResponse } from './VpsDetailsResponse';
+import { mapValues } from '../runtime.js';
+import type { VpsDetailsResponse } from './VpsDetailsResponse.js';
 import {
     VpsDetailsResponseFromJSON,
     VpsDetailsResponseFromJSONTyped,
     VpsDetailsResponseToJSON,
     VpsDetailsResponseToJSONTyped,
-} from './VpsDetailsResponse';
-import type { OperationStatus } from './OperationStatus';
+} from './VpsDetailsResponse.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
+} from './OperationStatus.js';
 
 /**
  * 

@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { PowerTask } from './PowerTask';
+import { mapValues } from '../runtime.js';
+import type { PowerTask } from './PowerTask.js';
 import {
     PowerTaskFromJSON,
     PowerTaskFromJSONTyped,
     PowerTaskToJSON,
     PowerTaskToJSONTyped,
-} from './PowerTask';
+} from './PowerTask.js';
 
 /**
  * Response data for power task creation operation

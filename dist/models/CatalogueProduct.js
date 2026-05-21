@@ -18,8 +18,8 @@ exports.CatalogueProductFromJSON = CatalogueProductFromJSON;
 exports.CatalogueProductFromJSONTyped = CatalogueProductFromJSONTyped;
 exports.CatalogueProductToJSON = CatalogueProductToJSON;
 exports.CatalogueProductToJSONTyped = CatalogueProductToJSONTyped;
-const CatalogueConfigOption_1 = require("./CatalogueConfigOption");
-const CataloguePlan_1 = require("./CataloguePlan");
+const CatalogueConfigOption_js_1 = require("./CatalogueConfigOption.js");
+const CataloguePlan_js_1 = require("./CataloguePlan.js");
 /**
  * Check if a given object implements the CatalogueProduct interface.
  */
@@ -61,8 +61,8 @@ function CatalogueProductFromJSONTyped(json, ignoreDiscriminator) {
         'billingCycles': json['billing_cycles'],
         'pricing': json['pricing'],
         'usePlans': json['use_plans'],
-        'plans': (json['plans'].map(CataloguePlan_1.CataloguePlanFromJSON)),
-        'configOptions': (json['config_options'].map(CatalogueConfigOption_1.CatalogueConfigOptionFromJSON)),
+        'plans': (json['plans'].map(CataloguePlan_js_1.CataloguePlanFromJSON)),
+        'configOptions': (json['config_options'].map(CatalogueConfigOption_js_1.CatalogueConfigOptionFromJSON)),
         'additionalInformation': json['additional_information'],
     };
 }
@@ -81,8 +81,8 @@ function CatalogueProductToJSONTyped(value, ignoreDiscriminator = false) {
         'billing_cycles': value['billingCycles'],
         'pricing': value['pricing'],
         'use_plans': value['usePlans'],
-        'plans': (value['plans'].map(CataloguePlan_1.CataloguePlanToJSON)),
-        'config_options': (value['configOptions'].map(CatalogueConfigOption_1.CatalogueConfigOptionToJSON)),
+        'plans': (value['plans'].map(CataloguePlan_js_1.CataloguePlanToJSON)),
+        'config_options': (value['configOptions'].map(CatalogueConfigOption_js_1.CatalogueConfigOptionToJSON)),
         'additional_information': value['additionalInformation'],
     };
 }

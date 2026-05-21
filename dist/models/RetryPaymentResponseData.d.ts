@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { RetryPaymentTotal } from './RetryPaymentTotal';
-import type { PaymentStatus } from './PaymentStatus';
+import type { RetryPaymentTotal } from './RetryPaymentTotal.js';
+import type { PaymentStatus } from './PaymentStatus.js';
 /**
  * Response data for a retry payment operation
  * @export

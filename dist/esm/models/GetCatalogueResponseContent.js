@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
-import { CatalogueDataFromJSON, CatalogueDataToJSON, } from './CatalogueData';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
+import { CatalogueDataFromJSON, CatalogueDataToJSON, } from './CatalogueData.js';
 /**
  * Check if a given object implements the GetCatalogueResponseContent interface.
  */

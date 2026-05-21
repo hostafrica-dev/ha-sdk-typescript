@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { SnapshotItem } from './SnapshotItem';
+import type { SnapshotItem } from './SnapshotItem.js';
 /**
  * Response data for service snapshots operation
  * @export

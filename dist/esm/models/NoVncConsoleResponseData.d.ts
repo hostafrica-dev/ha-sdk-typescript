@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { NoVncConsoleDetails } from './NoVncConsoleDetails';
+import type { NoVncConsoleDetails } from './NoVncConsoleDetails.js';
 /**
  * Response data for noVNC console operation
  * @export

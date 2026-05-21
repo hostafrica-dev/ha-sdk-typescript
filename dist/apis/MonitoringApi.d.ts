@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import type { CreateNotificationRequestContent, CreateNotificationResponseContent, DeleteNotificationRequestContent, DeleteNotificationResponseContent, ListNotificationsRequestContent, ListNotificationsResponseContent, UpdateNotificationRequestContent, UpdateNotificationResponseContent } from '../models/index';
+import * as runtime from '../runtime.js';
+import type { CreateNotificationRequestContent, CreateNotificationResponseContent, DeleteNotificationRequestContent, DeleteNotificationResponseContent, ListNotificationsRequestContent, ListNotificationsResponseContent, UpdateNotificationRequestContent, UpdateNotificationResponseContent } from '../models/index.js';
 export interface CreateNotificationRequest {
     createNotificationRequestContent: CreateNotificationRequestContent;
 }

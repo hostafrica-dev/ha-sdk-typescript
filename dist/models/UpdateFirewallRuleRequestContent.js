@@ -18,7 +18,7 @@ exports.UpdateFirewallRuleRequestContentFromJSON = UpdateFirewallRuleRequestCont
 exports.UpdateFirewallRuleRequestContentFromJSONTyped = UpdateFirewallRuleRequestContentFromJSONTyped;
 exports.UpdateFirewallRuleRequestContentToJSON = UpdateFirewallRuleRequestContentToJSON;
 exports.UpdateFirewallRuleRequestContentToJSONTyped = UpdateFirewallRuleRequestContentToJSONTyped;
-const FirewallRuleAction_1 = require("./FirewallRuleAction");
+const FirewallRuleAction_js_1 = require("./FirewallRuleAction.js");
 /**
  * Check if a given object implements the UpdateFirewallRuleRequestContent interface.
  */
@@ -40,7 +40,7 @@ function UpdateFirewallRuleRequestContentFromJSONTyped(json, ignoreDiscriminator
         'serviceId': json['service_id'],
         'pos': json['pos'],
         'comment': json['comment'] == null ? undefined : json['comment'],
-        'ruleAction': json['rule_action'] == null ? undefined : (0, FirewallRuleAction_1.FirewallRuleActionFromJSON)(json['rule_action']),
+        'ruleAction': json['rule_action'] == null ? undefined : (0, FirewallRuleAction_js_1.FirewallRuleActionFromJSON)(json['rule_action']),
     };
 }
 function UpdateFirewallRuleRequestContentToJSON(json) {
@@ -54,6 +54,6 @@ function UpdateFirewallRuleRequestContentToJSONTyped(value, ignoreDiscriminator 
         'service_id': value['serviceId'],
         'pos': value['pos'],
         'comment': value['comment'],
-        'rule_action': (0, FirewallRuleAction_1.FirewallRuleActionToJSON)(value['ruleAction']),
+        'rule_action': (0, FirewallRuleAction_js_1.FirewallRuleActionToJSON)(value['ruleAction']),
     };
 }

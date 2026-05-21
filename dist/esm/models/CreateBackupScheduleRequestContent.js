@@ -11,9 +11,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { DayOfWeekFromJSON, DayOfWeekToJSON, } from './DayOfWeek';
-import { BackupModeTypeFromJSON, BackupModeTypeToJSON, } from './BackupModeType';
-import { CompressionTypeFromJSON, CompressionTypeToJSON, } from './CompressionType';
+import { DayOfWeekFromJSON, DayOfWeekToJSON, } from './DayOfWeek.js';
+import { BackupModeTypeFromJSON, BackupModeTypeToJSON, } from './BackupModeType.js';
+import { CompressionTypeFromJSON, CompressionTypeToJSON, } from './CompressionType.js';
 /**
  * Check if a given object implements the CreateBackupScheduleRequestContent interface.
  */

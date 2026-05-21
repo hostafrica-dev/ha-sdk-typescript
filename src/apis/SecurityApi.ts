@@ -13,7 +13,7 @@
  */
 
 
-import * as runtime from '../runtime';
+import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
   ChangePasswordRequestContent,
@@ -32,7 +32,7 @@ import type {
   UpdateSshKeysRequestContent,
   UpdateSshKeysResponseContent,
   ValidationErrorResponseContent,
-} from '../models/index';
+} from '../models/index.js';
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
@@ -68,7 +68,7 @@ import {
     UpdateSshKeysResponseContentToJSON,
     ValidationErrorResponseContentFromJSON,
     ValidationErrorResponseContentToJSON,
-} from '../models/index';
+} from '../models/index.js';
 
 export interface ChangePasswordRequest {
     changePasswordRequestContent: ChangePasswordRequestContent;

@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
-import { ServiceSnapshotsResponseDataFromJSON, ServiceSnapshotsResponseDataToJSON, } from './ServiceSnapshotsResponseData';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
+import { ServiceSnapshotsResponseDataFromJSON, ServiceSnapshotsResponseDataToJSON, } from './ServiceSnapshotsResponseData.js';
 /**
  * Check if a given object implements the ListSnapshotsResponseContent interface.
  */

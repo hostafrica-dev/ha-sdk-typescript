@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { SnapshotItem } from './SnapshotItem';
+import { mapValues } from '../runtime.js';
+import type { SnapshotItem } from './SnapshotItem.js';
 import {
     SnapshotItemFromJSON,
     SnapshotItemFromJSONTyped,
     SnapshotItemToJSON,
     SnapshotItemToJSONTyped,
-} from './SnapshotItem';
+} from './SnapshotItem.js';
 
 /**
  * Response data for service snapshots operation

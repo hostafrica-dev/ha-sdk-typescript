@@ -18,8 +18,8 @@ exports.ListNotificationsResponseContentFromJSON = ListNotificationsResponseCont
 exports.ListNotificationsResponseContentFromJSONTyped = ListNotificationsResponseContentFromJSONTyped;
 exports.ListNotificationsResponseContentToJSON = ListNotificationsResponseContentToJSON;
 exports.ListNotificationsResponseContentToJSONTyped = ListNotificationsResponseContentToJSONTyped;
-const NotificationListResponseData_1 = require("./NotificationListResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const NotificationListResponseData_js_1 = require("./NotificationListResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the ListNotificationsResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListNotificationsResponseContentFromJSONTyped(json, ignoreDiscriminator
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, NotificationListResponseData_1.NotificationListResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, NotificationListResponseData_js_1.NotificationListResponseDataFromJSON)(json['data']),
     };
 }
 function ListNotificationsResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListNotificationsResponseContentToJSONTyped(value, ignoreDiscriminator 
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, NotificationListResponseData_1.NotificationListResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, NotificationListResponseData_js_1.NotificationListResponseDataToJSON)(value['data']),
     };
 }

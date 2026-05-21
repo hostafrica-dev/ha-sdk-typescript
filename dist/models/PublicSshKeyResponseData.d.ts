@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { SshKeyDetails } from './SshKeyDetails';
+import type { SshKeyDetails } from './SshKeyDetails.js';
 /**
  * Response data for public SSH key retrieval
  * @export

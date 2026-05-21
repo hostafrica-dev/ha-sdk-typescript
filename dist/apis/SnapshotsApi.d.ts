@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import type { CreateSnapshotRequestContent, CreateSnapshotResponseContent, DeleteSnapshotRequestContent, DeleteSnapshotResponseContent, ListSnapshotsRequestContent, ListSnapshotsResponseContent, RollbackSnapshotRequestContent, RollbackSnapshotResponseContent, UpdateSnapshotRequestContent, UpdateSnapshotResponseContent } from '../models/index';
+import * as runtime from '../runtime.js';
+import type { CreateSnapshotRequestContent, CreateSnapshotResponseContent, DeleteSnapshotRequestContent, DeleteSnapshotResponseContent, ListSnapshotsRequestContent, ListSnapshotsResponseContent, RollbackSnapshotRequestContent, RollbackSnapshotResponseContent, UpdateSnapshotRequestContent, UpdateSnapshotResponseContent } from '../models/index.js';
 export interface CreateSnapshotRequest {
     createSnapshotRequestContent: CreateSnapshotRequestContent;
 }

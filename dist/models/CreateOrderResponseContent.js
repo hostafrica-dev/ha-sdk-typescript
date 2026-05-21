@@ -18,8 +18,8 @@ exports.CreateOrderResponseContentFromJSON = CreateOrderResponseContentFromJSON;
 exports.CreateOrderResponseContentFromJSONTyped = CreateOrderResponseContentFromJSONTyped;
 exports.CreateOrderResponseContentToJSON = CreateOrderResponseContentToJSON;
 exports.CreateOrderResponseContentToJSONTyped = CreateOrderResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const CreateOrderResponseData_1 = require("./CreateOrderResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const CreateOrderResponseData_js_1 = require("./CreateOrderResponseData.js");
 /**
  * Check if a given object implements the CreateOrderResponseContent interface.
  */
@@ -38,8 +38,8 @@ function CreateOrderResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, CreateOrderResponseData_1.CreateOrderResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, CreateOrderResponseData_js_1.CreateOrderResponseDataFromJSON)(json['data']),
     };
 }
 function CreateOrderResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function CreateOrderResponseContentToJSONTyped(value, ignoreDiscriminator = fals
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, CreateOrderResponseData_1.CreateOrderResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, CreateOrderResponseData_js_1.CreateOrderResponseDataToJSON)(value['data']),
     };
 }

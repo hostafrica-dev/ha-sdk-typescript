@@ -13,7 +13,7 @@
  */
 
 
-import * as runtime from '../runtime';
+import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
   CreateFirewallRuleRequestContent,
@@ -33,7 +33,7 @@ import type {
   UpdateFirewallRuleRequestContent,
   UpdateFirewallRuleResponseContent,
   ValidationErrorResponseContent,
-} from '../models/index';
+} from '../models/index.js';
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
@@ -71,7 +71,7 @@ import {
     UpdateFirewallRuleResponseContentToJSON,
     ValidationErrorResponseContentFromJSON,
     ValidationErrorResponseContentToJSON,
-} from '../models/index';
+} from '../models/index.js';
 
 export interface CreateFirewallRuleRequest {
     createFirewallRuleRequestContent: CreateFirewallRuleRequestContent;

@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { VpsCancelType } from './VpsCancelType';
+import { mapValues } from '../runtime.js';
+import type { VpsCancelType } from './VpsCancelType.js';
 import {
     VpsCancelTypeFromJSON,
     VpsCancelTypeFromJSONTyped,
     VpsCancelTypeToJSON,
     VpsCancelTypeToJSONTyped,
-} from './VpsCancelType';
+} from './VpsCancelType.js';
 
 /**
  * 

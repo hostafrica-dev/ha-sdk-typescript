@@ -18,8 +18,8 @@ exports.ListPowerTasksResponseContentFromJSON = ListPowerTasksResponseContentFro
 exports.ListPowerTasksResponseContentFromJSONTyped = ListPowerTasksResponseContentFromJSONTyped;
 exports.ListPowerTasksResponseContentToJSON = ListPowerTasksResponseContentToJSON;
 exports.ListPowerTasksResponseContentToJSONTyped = ListPowerTasksResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const PowerTaskListResponseData_1 = require("./PowerTaskListResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const PowerTaskListResponseData_js_1 = require("./PowerTaskListResponseData.js");
 /**
  * Check if a given object implements the ListPowerTasksResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListPowerTasksResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, PowerTaskListResponseData_1.PowerTaskListResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, PowerTaskListResponseData_js_1.PowerTaskListResponseDataFromJSON)(json['data']),
     };
 }
 function ListPowerTasksResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListPowerTasksResponseContentToJSONTyped(value, ignoreDiscriminator = f
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, PowerTaskListResponseData_1.PowerTaskListResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, PowerTaskListResponseData_js_1.PowerTaskListResponseDataToJSON)(value['data']),
     };
 }

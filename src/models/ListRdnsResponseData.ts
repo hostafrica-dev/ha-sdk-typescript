@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { RdnsRecord } from './RdnsRecord';
+import { mapValues } from '../runtime.js';
+import type { RdnsRecord } from './RdnsRecord.js';
 import {
     RdnsRecordFromJSON,
     RdnsRecordFromJSONTyped,
     RdnsRecordToJSON,
     RdnsRecordToJSONTyped,
-} from './RdnsRecord';
-import type { RdnsAvailableItem } from './RdnsAvailableItem';
+} from './RdnsRecord.js';
+import type { RdnsAvailableItem } from './RdnsAvailableItem.js';
 import {
     RdnsAvailableItemFromJSON,
     RdnsAvailableItemFromJSONTyped,
     RdnsAvailableItemToJSON,
     RdnsAvailableItemToJSONTyped,
-} from './RdnsAvailableItem';
+} from './RdnsAvailableItem.js';
 
 /**
  * Response data for the list-rdns operation

@@ -18,8 +18,8 @@ exports.GetCatalogueResponseContentFromJSON = GetCatalogueResponseContentFromJSO
 exports.GetCatalogueResponseContentFromJSONTyped = GetCatalogueResponseContentFromJSONTyped;
 exports.GetCatalogueResponseContentToJSON = GetCatalogueResponseContentToJSON;
 exports.GetCatalogueResponseContentToJSONTyped = GetCatalogueResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const CatalogueData_1 = require("./CatalogueData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const CatalogueData_js_1 = require("./CatalogueData.js");
 /**
  * Check if a given object implements the GetCatalogueResponseContent interface.
  */
@@ -38,8 +38,8 @@ function GetCatalogueResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, CatalogueData_1.CatalogueDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, CatalogueData_js_1.CatalogueDataFromJSON)(json['data']),
     };
 }
 function GetCatalogueResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function GetCatalogueResponseContentToJSONTyped(value, ignoreDiscriminator = fal
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, CatalogueData_1.CatalogueDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, CatalogueData_js_1.CatalogueDataToJSON)(value['data']),
     };
 }

@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { CatalogueConfigOption } from './CatalogueConfigOption';
-import type { CataloguePlan } from './CataloguePlan';
+import type { CatalogueConfigOption } from './CatalogueConfigOption.js';
+import type { CataloguePlan } from './CataloguePlan.js';
 /**
  * A product entry within a catalogue group
  * @export

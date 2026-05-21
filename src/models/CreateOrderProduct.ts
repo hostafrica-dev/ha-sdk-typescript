@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { BillingCycle } from './BillingCycle';
+import { mapValues } from '../runtime.js';
+import type { BillingCycle } from './BillingCycle.js';
 import {
     BillingCycleFromJSON,
     BillingCycleFromJSONTyped,
     BillingCycleToJSON,
     BillingCycleToJSONTyped,
-} from './BillingCycle';
+} from './BillingCycle.js';
 
 /**
  * A single product line item in a create order request

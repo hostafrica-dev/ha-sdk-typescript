@@ -9,9 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { DayOfWeek } from './DayOfWeek';
-import type { PowerTaskJobType } from './PowerTaskJobType';
-import type { PowerTaskAction } from './PowerTaskAction';
+import type { DayOfWeek } from './DayOfWeek.js';
+import type { PowerTaskJobType } from './PowerTaskJobType.js';
+import type { PowerTaskAction } from './PowerTaskAction.js';
 /**
  *
  * @export

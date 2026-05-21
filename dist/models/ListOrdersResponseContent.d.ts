@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ListOrdersResponseData } from './ListOrdersResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { ListOrdersResponseData } from './ListOrdersResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

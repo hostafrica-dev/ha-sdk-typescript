@@ -20,8 +20,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import * as runtime from '../runtime';
-import { CreateNotificationRequestContentToJSON, CreateNotificationResponseContentFromJSON, DeleteNotificationRequestContentToJSON, DeleteNotificationResponseContentFromJSON, ListNotificationsRequestContentToJSON, ListNotificationsResponseContentFromJSON, UpdateNotificationRequestContentToJSON, UpdateNotificationResponseContentFromJSON, } from '../models/index';
+import * as runtime from '../runtime.js';
+import { CreateNotificationRequestContentToJSON, CreateNotificationResponseContentFromJSON, DeleteNotificationRequestContentToJSON, DeleteNotificationResponseContentFromJSON, ListNotificationsRequestContentToJSON, ListNotificationsResponseContentFromJSON, UpdateNotificationRequestContentToJSON, UpdateNotificationResponseContentFromJSON, } from '../models/index.js';
 /**
  *
  */

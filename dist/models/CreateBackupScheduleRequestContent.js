@@ -18,9 +18,9 @@ exports.CreateBackupScheduleRequestContentFromJSON = CreateBackupScheduleRequest
 exports.CreateBackupScheduleRequestContentFromJSONTyped = CreateBackupScheduleRequestContentFromJSONTyped;
 exports.CreateBackupScheduleRequestContentToJSON = CreateBackupScheduleRequestContentToJSON;
 exports.CreateBackupScheduleRequestContentToJSONTyped = CreateBackupScheduleRequestContentToJSONTyped;
-const DayOfWeek_1 = require("./DayOfWeek");
-const BackupModeType_1 = require("./BackupModeType");
-const CompressionType_1 = require("./CompressionType");
+const DayOfWeek_js_1 = require("./DayOfWeek.js");
+const BackupModeType_js_1 = require("./BackupModeType.js");
+const CompressionType_js_1 = require("./CompressionType.js");
 /**
  * Check if a given object implements the CreateBackupScheduleRequestContent interface.
  */
@@ -47,9 +47,9 @@ function CreateBackupScheduleRequestContentFromJSONTyped(json, ignoreDiscriminat
     return {
         'serviceId': json['service_id'],
         'starttime': json['starttime'],
-        'dow': (json['dow'].map(DayOfWeek_1.DayOfWeekFromJSON)),
-        'compress': (0, CompressionType_1.CompressionTypeFromJSON)(json['compress']),
-        'mode': (0, BackupModeType_1.BackupModeTypeFromJSON)(json['mode']),
+        'dow': (json['dow'].map(DayOfWeek_js_1.DayOfWeekFromJSON)),
+        'compress': (0, CompressionType_js_1.CompressionTypeFromJSON)(json['compress']),
+        'mode': (0, BackupModeType_js_1.BackupModeTypeFromJSON)(json['mode']),
         'mailto': json['mailto'] == null ? undefined : json['mailto'],
     };
 }
@@ -63,9 +63,9 @@ function CreateBackupScheduleRequestContentToJSONTyped(value, ignoreDiscriminato
     return {
         'service_id': value['serviceId'],
         'starttime': value['starttime'],
-        'dow': (value['dow'].map(DayOfWeek_1.DayOfWeekToJSON)),
-        'compress': (0, CompressionType_1.CompressionTypeToJSON)(value['compress']),
-        'mode': (0, BackupModeType_1.BackupModeTypeToJSON)(value['mode']),
+        'dow': (value['dow'].map(DayOfWeek_js_1.DayOfWeekToJSON)),
+        'compress': (0, CompressionType_js_1.CompressionTypeToJSON)(value['compress']),
+        'mode': (0, BackupModeType_js_1.BackupModeTypeToJSON)(value['mode']),
         'mailto': value['mailto'],
     };
 }

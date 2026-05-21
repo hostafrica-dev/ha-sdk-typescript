@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { UserChangePasswordDetailsFromJSON, UserChangePasswordDetailsToJSON, } from './UserChangePasswordDetails';
+import { UserChangePasswordDetailsFromJSON, UserChangePasswordDetailsToJSON, } from './UserChangePasswordDetails.js';
 /**
  * Check if a given object implements the UserChangePasswordResponseData interface.
  */

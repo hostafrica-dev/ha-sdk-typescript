@@ -18,8 +18,8 @@ exports.ListFirewallRulesResponseContentFromJSON = ListFirewallRulesResponseCont
 exports.ListFirewallRulesResponseContentFromJSONTyped = ListFirewallRulesResponseContentFromJSONTyped;
 exports.ListFirewallRulesResponseContentToJSON = ListFirewallRulesResponseContentToJSON;
 exports.ListFirewallRulesResponseContentToJSONTyped = ListFirewallRulesResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const FirewallListResponseData_1 = require("./FirewallListResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const FirewallListResponseData_js_1 = require("./FirewallListResponseData.js");
 /**
  * Check if a given object implements the ListFirewallRulesResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListFirewallRulesResponseContentFromJSONTyped(json, ignoreDiscriminator
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, FirewallListResponseData_1.FirewallListResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, FirewallListResponseData_js_1.FirewallListResponseDataFromJSON)(json['data']),
     };
 }
 function ListFirewallRulesResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListFirewallRulesResponseContentToJSONTyped(value, ignoreDiscriminator 
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, FirewallListResponseData_1.FirewallListResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, FirewallListResponseData_js_1.FirewallListResponseDataToJSON)(value['data']),
     };
 }

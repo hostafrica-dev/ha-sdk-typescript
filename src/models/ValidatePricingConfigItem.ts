@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { ValidatePricingPlanPricing } from './ValidatePricingPlanPricing';
+import { mapValues } from '../runtime.js';
+import type { ValidatePricingPlanPricing } from './ValidatePricingPlanPricing.js';
 import {
     ValidatePricingPlanPricingFromJSON,
     ValidatePricingPlanPricingFromJSONTyped,
     ValidatePricingPlanPricingToJSON,
     ValidatePricingPlanPricingToJSONTyped,
-} from './ValidatePricingPlanPricing';
-import type { ValidatePricingPlanConfig } from './ValidatePricingPlanConfig';
+} from './ValidatePricingPlanPricing.js';
+import type { ValidatePricingPlanConfig } from './ValidatePricingPlanConfig.js';
 import {
     ValidatePricingPlanConfigFromJSON,
     ValidatePricingPlanConfigFromJSONTyped,
     ValidatePricingPlanConfigToJSON,
     ValidatePricingPlanConfigToJSONTyped,
-} from './ValidatePricingPlanConfig';
+} from './ValidatePricingPlanConfig.js';
 
 /**
  * A single configuration item in the pricing breakdown

@@ -13,7 +13,7 @@
  */
 
 
-import * as runtime from '../runtime';
+import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
   CreateNotificationRequestContent,
@@ -31,7 +31,7 @@ import type {
   UpdateNotificationRequestContent,
   UpdateNotificationResponseContent,
   ValidationErrorResponseContent,
-} from '../models/index';
+} from '../models/index.js';
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
@@ -65,7 +65,7 @@ import {
     UpdateNotificationResponseContentToJSON,
     ValidationErrorResponseContentFromJSON,
     ValidationErrorResponseContentToJSON,
-} from '../models/index';
+} from '../models/index.js';
 
 export interface CreateNotificationRequest {
     createNotificationRequestContent: CreateNotificationRequestContent;

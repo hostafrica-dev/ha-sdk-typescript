@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { UserChangePasswordResponseData } from './UserChangePasswordResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { UserChangePasswordResponseData } from './UserChangePasswordResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

@@ -13,7 +13,7 @@
  */
 
 
-import * as runtime from '../runtime';
+import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
   ForbiddenErrorResponseContent,
@@ -24,7 +24,7 @@ import type {
   ServiceUnavailableErrorResponseContent,
   TooManyRequestsErrorResponseContent,
   UnauthorizedErrorResponseContent,
-} from '../models/index';
+} from '../models/index.js';
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
@@ -44,7 +44,7 @@ import {
     TooManyRequestsErrorResponseContentToJSON,
     UnauthorizedErrorResponseContentFromJSON,
     UnauthorizedErrorResponseContentToJSON,
-} from '../models/index';
+} from '../models/index.js';
 
 export interface GetNoVncConsoleRequest {
     getNoVncConsoleRequestContent: GetNoVncConsoleRequestContent;

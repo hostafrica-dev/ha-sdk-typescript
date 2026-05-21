@@ -18,8 +18,8 @@ exports.MountIsoResponseContentFromJSON = MountIsoResponseContentFromJSON;
 exports.MountIsoResponseContentFromJSONTyped = MountIsoResponseContentFromJSONTyped;
 exports.MountIsoResponseContentToJSON = MountIsoResponseContentToJSON;
 exports.MountIsoResponseContentToJSONTyped = MountIsoResponseContentToJSONTyped;
-const VpsSimpleActionResponseData_1 = require("./VpsSimpleActionResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const VpsSimpleActionResponseData_js_1 = require("./VpsSimpleActionResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the MountIsoResponseContent interface.
  */
@@ -38,8 +38,8 @@ function MountIsoResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, VpsSimpleActionResponseData_1.VpsSimpleActionResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, VpsSimpleActionResponseData_js_1.VpsSimpleActionResponseDataFromJSON)(json['data']),
     };
 }
 function MountIsoResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function MountIsoResponseContentToJSONTyped(value, ignoreDiscriminator = false) 
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, VpsSimpleActionResponseData_1.VpsSimpleActionResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, VpsSimpleActionResponseData_js_1.VpsSimpleActionResponseDataToJSON)(value['data']),
     };
 }

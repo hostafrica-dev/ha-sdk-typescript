@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { VpsConfigResponseData } from './VpsConfigResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { VpsConfigResponseData } from './VpsConfigResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

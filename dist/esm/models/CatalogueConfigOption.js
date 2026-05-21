@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CatalogueConfigSuboptionFromJSON, CatalogueConfigSuboptionToJSON, } from './CatalogueConfigSuboption';
+import { CatalogueConfigSuboptionFromJSON, CatalogueConfigSuboptionToJSON, } from './CatalogueConfigSuboption.js';
 /**
  * Check if a given object implements the CatalogueConfigOption interface.
  */

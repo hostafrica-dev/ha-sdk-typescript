@@ -18,8 +18,8 @@ exports.PowerTaskListResponseDataFromJSON = PowerTaskListResponseDataFromJSON;
 exports.PowerTaskListResponseDataFromJSONTyped = PowerTaskListResponseDataFromJSONTyped;
 exports.PowerTaskListResponseDataToJSON = PowerTaskListResponseDataToJSON;
 exports.PowerTaskListResponseDataToJSONTyped = PowerTaskListResponseDataToJSONTyped;
-const PowerTask_1 = require("./PowerTask");
-const PowerTaskDialogRules_1 = require("./PowerTaskDialogRules");
+const PowerTask_js_1 = require("./PowerTask.js");
+const PowerTaskDialogRules_js_1 = require("./PowerTaskDialogRules.js");
 /**
  * Check if a given object implements the PowerTaskListResponseData interface.
  */
@@ -45,10 +45,10 @@ function PowerTaskListResponseDataFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'message': json['message'],
-        'tasks': (json['tasks'].map(PowerTask_1.PowerTaskFromJSON)),
+        'tasks': (json['tasks'].map(PowerTask_js_1.PowerTaskFromJSON)),
         'availableActions': json['available_actions'],
         'availableJobTypes': json['available_job_types'],
-        'dialogRules': (0, PowerTaskDialogRules_1.PowerTaskDialogRulesFromJSON)(json['dialog_rules']),
+        'dialogRules': (0, PowerTaskDialogRules_js_1.PowerTaskDialogRulesFromJSON)(json['dialog_rules']),
     };
 }
 function PowerTaskListResponseDataToJSON(json) {
@@ -60,9 +60,9 @@ function PowerTaskListResponseDataToJSONTyped(value, ignoreDiscriminator = false
     }
     return {
         'message': value['message'],
-        'tasks': (value['tasks'].map(PowerTask_1.PowerTaskToJSON)),
+        'tasks': (value['tasks'].map(PowerTask_js_1.PowerTaskToJSON)),
         'available_actions': value['availableActions'],
         'available_job_types': value['availableJobTypes'],
-        'dialog_rules': (0, PowerTaskDialogRules_1.PowerTaskDialogRulesToJSON)(value['dialogRules']),
+        'dialog_rules': (0, PowerTaskDialogRules_js_1.PowerTaskDialogRulesToJSON)(value['dialogRules']),
     };
 }

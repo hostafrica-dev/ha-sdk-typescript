@@ -18,7 +18,7 @@ exports.ServiceSnapshotsResponseDataFromJSON = ServiceSnapshotsResponseDataFromJ
 exports.ServiceSnapshotsResponseDataFromJSONTyped = ServiceSnapshotsResponseDataFromJSONTyped;
 exports.ServiceSnapshotsResponseDataToJSON = ServiceSnapshotsResponseDataToJSON;
 exports.ServiceSnapshotsResponseDataToJSONTyped = ServiceSnapshotsResponseDataToJSONTyped;
-const SnapshotItem_1 = require("./SnapshotItem");
+const SnapshotItem_js_1 = require("./SnapshotItem.js");
 /**
  * Check if a given object implements the ServiceSnapshotsResponseData interface.
  */
@@ -36,7 +36,7 @@ function ServiceSnapshotsResponseDataFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'message': json['message'],
-        'snapshots': json['snapshots'] == null ? undefined : (json['snapshots'].map(SnapshotItem_1.SnapshotItemFromJSON)),
+        'snapshots': json['snapshots'] == null ? undefined : (json['snapshots'].map(SnapshotItem_js_1.SnapshotItemFromJSON)),
         'maxSnapshots': json['max_snapshots'] == null ? undefined : json['max_snapshots'],
         'snapshotsCount': json['snapshots_count'] == null ? undefined : json['snapshots_count'],
     };
@@ -50,7 +50,7 @@ function ServiceSnapshotsResponseDataToJSONTyped(value, ignoreDiscriminator = fa
     }
     return {
         'message': value['message'],
-        'snapshots': value['snapshots'] == null ? undefined : (value['snapshots'].map(SnapshotItem_1.SnapshotItemToJSON)),
+        'snapshots': value['snapshots'] == null ? undefined : (value['snapshots'].map(SnapshotItem_js_1.SnapshotItemToJSON)),
         'max_snapshots': value['maxSnapshots'],
         'snapshots_count': value['snapshotsCount'],
     };

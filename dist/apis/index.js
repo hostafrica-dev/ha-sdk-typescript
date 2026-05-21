@@ -16,14 +16,14 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */
 /* eslint-disable */
-__exportStar(require("./BackupsApi"), exports);
-__exportStar(require("./ConsoleAccessApi"), exports);
-__exportStar(require("./DNSApi"), exports);
-__exportStar(require("./FirewallApi"), exports);
-__exportStar(require("./MonitoringApi"), exports);
-__exportStar(require("./PowerManagementApi"), exports);
-__exportStar(require("./SecurityApi"), exports);
-__exportStar(require("./ServiceManagementApi"), exports);
-__exportStar(require("./SnapshotsApi"), exports);
-__exportStar(require("./UserManagementApi"), exports);
-__exportStar(require("./VPSManagementApi"), exports);
+__exportStar(require("./BackupsApi.js"), exports);
+__exportStar(require("./ConsoleAccessApi.js"), exports);
+__exportStar(require("./DNSApi.js"), exports);
+__exportStar(require("./FirewallApi.js"), exports);
+__exportStar(require("./MonitoringApi.js"), exports);
+__exportStar(require("./PowerManagementApi.js"), exports);
+__exportStar(require("./SecurityApi.js"), exports);
+__exportStar(require("./ServiceManagementApi.js"), exports);
+__exportStar(require("./SnapshotsApi.js"), exports);
+__exportStar(require("./UserManagementApi.js"), exports);
+__exportStar(require("./VPSManagementApi.js"), exports);

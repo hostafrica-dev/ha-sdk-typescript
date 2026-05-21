@@ -18,8 +18,8 @@ exports.ValidatePricingBreakdownFromJSON = ValidatePricingBreakdownFromJSON;
 exports.ValidatePricingBreakdownFromJSONTyped = ValidatePricingBreakdownFromJSONTyped;
 exports.ValidatePricingBreakdownToJSON = ValidatePricingBreakdownToJSON;
 exports.ValidatePricingBreakdownToJSONTyped = ValidatePricingBreakdownToJSONTyped;
-const ValidatePricingBase_1 = require("./ValidatePricingBase");
-const ValidatePricingConfigItem_1 = require("./ValidatePricingConfigItem");
+const ValidatePricingBase_js_1 = require("./ValidatePricingBase.js");
+const ValidatePricingConfigItem_js_1 = require("./ValidatePricingConfigItem.js");
 /**
  * Check if a given object implements the ValidatePricingBreakdown interface.
  */
@@ -40,8 +40,8 @@ function ValidatePricingBreakdownFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'base': (0, ValidatePricingBase_1.ValidatePricingBaseFromJSON)(json['base']),
-        '_configuration': (json['configuration'].map(ValidatePricingConfigItem_1.ValidatePricingConfigItemFromJSON)),
+        'base': (0, ValidatePricingBase_js_1.ValidatePricingBaseFromJSON)(json['base']),
+        '_configuration': (json['configuration'].map(ValidatePricingConfigItem_js_1.ValidatePricingConfigItemFromJSON)),
         'setupTotal': json['setup_total'],
     };
 }
@@ -53,8 +53,8 @@ function ValidatePricingBreakdownToJSONTyped(value, ignoreDiscriminator = false)
         return value;
     }
     return {
-        'base': (0, ValidatePricingBase_1.ValidatePricingBaseToJSON)(value['base']),
-        'configuration': (value['_configuration'].map(ValidatePricingConfigItem_1.ValidatePricingConfigItemToJSON)),
+        'base': (0, ValidatePricingBase_js_1.ValidatePricingBaseToJSON)(value['base']),
+        'configuration': (value['_configuration'].map(ValidatePricingConfigItem_js_1.ValidatePricingConfigItemToJSON)),
         'setup_total': value['setupTotal'],
     };
 }

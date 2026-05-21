@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { Order } from './Order';
+import { mapValues } from '../runtime.js';
+import type { Order } from './Order.js';
 import {
     OrderFromJSON,
     OrderFromJSONTyped,
     OrderToJSON,
     OrderToJSONTyped,
-} from './Order';
+} from './Order.js';
 
 /**
  * Top-level data payload for the ListOrders response

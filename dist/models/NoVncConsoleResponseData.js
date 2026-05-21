@@ -18,7 +18,7 @@ exports.NoVncConsoleResponseDataFromJSON = NoVncConsoleResponseDataFromJSON;
 exports.NoVncConsoleResponseDataFromJSONTyped = NoVncConsoleResponseDataFromJSONTyped;
 exports.NoVncConsoleResponseDataToJSON = NoVncConsoleResponseDataToJSON;
 exports.NoVncConsoleResponseDataToJSONTyped = NoVncConsoleResponseDataToJSONTyped;
-const NoVncConsoleDetails_1 = require("./NoVncConsoleDetails");
+const NoVncConsoleDetails_js_1 = require("./NoVncConsoleDetails.js");
 /**
  * Check if a given object implements the NoVncConsoleResponseData interface.
  */
@@ -38,7 +38,7 @@ function NoVncConsoleResponseDataFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'message': json['message'],
-        'console': (0, NoVncConsoleDetails_1.NoVncConsoleDetailsFromJSON)(json['console']),
+        'console': (0, NoVncConsoleDetails_js_1.NoVncConsoleDetailsFromJSON)(json['console']),
     };
 }
 function NoVncConsoleResponseDataToJSON(json) {
@@ -50,6 +50,6 @@ function NoVncConsoleResponseDataToJSONTyped(value, ignoreDiscriminator = false)
     }
     return {
         'message': value['message'],
-        'console': (0, NoVncConsoleDetails_1.NoVncConsoleDetailsToJSON)(value['console']),
+        'console': (0, NoVncConsoleDetails_js_1.NoVncConsoleDetailsToJSON)(value['console']),
     };
 }

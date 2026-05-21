@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import type { GetVpsConfigRequestContent, GetVpsConfigResponseContent, GetVpsDetailsRequestContent, GetVpsDetailsResponseContent, ListIsosRequestContent, ListIsosResponseContent, ListReinstallOsRequestContent, ListReinstallOsResponseContent, ListVpsServicesResponseContent, MountIsoRequestContent, MountIsoResponseContent, TriggerReinstallRequestContent, TriggerReinstallResponseContent, UpdateVpsConfigRequestContent, UpdateVpsConfigResponseContent } from '../models/index';
+import * as runtime from '../runtime.js';
+import type { GetVpsConfigRequestContent, GetVpsConfigResponseContent, GetVpsDetailsRequestContent, GetVpsDetailsResponseContent, ListIsosRequestContent, ListIsosResponseContent, ListReinstallOsRequestContent, ListReinstallOsResponseContent, ListVpsServicesResponseContent, MountIsoRequestContent, MountIsoResponseContent, TriggerReinstallRequestContent, TriggerReinstallResponseContent, UpdateVpsConfigRequestContent, UpdateVpsConfigResponseContent } from '../models/index.js';
 export interface GetVpsConfigRequest {
     getVpsConfigRequestContent: GetVpsConfigRequestContent;
 }

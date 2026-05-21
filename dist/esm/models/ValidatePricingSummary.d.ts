@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ValidatePricingSummaryRecurring } from './ValidatePricingSummaryRecurring';
+import type { ValidatePricingSummaryRecurring } from './ValidatePricingSummaryRecurring.js';
 /**
  * Order-level summary of totals
  * @export

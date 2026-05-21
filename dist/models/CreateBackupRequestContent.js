@@ -18,8 +18,8 @@ exports.CreateBackupRequestContentFromJSON = CreateBackupRequestContentFromJSON;
 exports.CreateBackupRequestContentFromJSONTyped = CreateBackupRequestContentFromJSONTyped;
 exports.CreateBackupRequestContentToJSON = CreateBackupRequestContentToJSON;
 exports.CreateBackupRequestContentToJSONTyped = CreateBackupRequestContentToJSONTyped;
-const BackupModeType_1 = require("./BackupModeType");
-const CompressionType_1 = require("./CompressionType");
+const BackupModeType_js_1 = require("./BackupModeType.js");
+const CompressionType_js_1 = require("./CompressionType.js");
 /**
  * Check if a given object implements the CreateBackupRequestContent interface.
  */
@@ -37,8 +37,8 @@ function CreateBackupRequestContentFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'serviceId': json['service_id'],
-        'compress': json['compress'] == null ? undefined : (0, CompressionType_1.CompressionTypeFromJSON)(json['compress']),
-        'mode': json['mode'] == null ? undefined : (0, BackupModeType_1.BackupModeTypeFromJSON)(json['mode']),
+        'compress': json['compress'] == null ? undefined : (0, CompressionType_js_1.CompressionTypeFromJSON)(json['compress']),
+        'mode': json['mode'] == null ? undefined : (0, BackupModeType_js_1.BackupModeTypeFromJSON)(json['mode']),
     };
 }
 function CreateBackupRequestContentToJSON(json) {
@@ -50,7 +50,7 @@ function CreateBackupRequestContentToJSONTyped(value, ignoreDiscriminator = fals
     }
     return {
         'service_id': value['serviceId'],
-        'compress': (0, CompressionType_1.CompressionTypeToJSON)(value['compress']),
-        'mode': (0, BackupModeType_1.BackupModeTypeToJSON)(value['mode']),
+        'compress': (0, CompressionType_js_1.CompressionTypeToJSON)(value['compress']),
+        'mode': (0, BackupModeType_js_1.BackupModeTypeToJSON)(value['mode']),
     };
 }

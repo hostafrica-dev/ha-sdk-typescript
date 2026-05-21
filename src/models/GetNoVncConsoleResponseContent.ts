@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { OperationStatus } from './OperationStatus';
+import { mapValues } from '../runtime.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
-import type { NoVncConsoleResponseData } from './NoVncConsoleResponseData';
+} from './OperationStatus.js';
+import type { NoVncConsoleResponseData } from './NoVncConsoleResponseData.js';
 import {
     NoVncConsoleResponseDataFromJSON,
     NoVncConsoleResponseDataFromJSONTyped,
     NoVncConsoleResponseDataToJSON,
     NoVncConsoleResponseDataToJSONTyped,
-} from './NoVncConsoleResponseData';
+} from './NoVncConsoleResponseData.js';
 
 /**
  * 

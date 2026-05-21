@@ -18,8 +18,8 @@ exports.ListBackupsResponseContentFromJSON = ListBackupsResponseContentFromJSON;
 exports.ListBackupsResponseContentFromJSONTyped = ListBackupsResponseContentFromJSONTyped;
 exports.ListBackupsResponseContentToJSON = ListBackupsResponseContentToJSON;
 exports.ListBackupsResponseContentToJSONTyped = ListBackupsResponseContentToJSONTyped;
-const ServiceBackupsResponseData_1 = require("./ServiceBackupsResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const ServiceBackupsResponseData_js_1 = require("./ServiceBackupsResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the ListBackupsResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListBackupsResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, ServiceBackupsResponseData_1.ServiceBackupsResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, ServiceBackupsResponseData_js_1.ServiceBackupsResponseDataFromJSON)(json['data']),
     };
 }
 function ListBackupsResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListBackupsResponseContentToJSONTyped(value, ignoreDiscriminator = fals
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, ServiceBackupsResponseData_1.ServiceBackupsResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, ServiceBackupsResponseData_js_1.ServiceBackupsResponseDataToJSON)(value['data']),
     };
 }

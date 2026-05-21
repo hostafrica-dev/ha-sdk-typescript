@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { Order } from './Order';
+import type { Order } from './Order.js';
 /**
  * Top-level data payload for the ListOrders response
  * @export

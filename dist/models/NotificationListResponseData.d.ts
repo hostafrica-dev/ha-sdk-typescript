@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { NotificationDialogRules } from './NotificationDialogRules';
-import type { Notification } from './Notification';
+import type { NotificationDialogRules } from './NotificationDialogRules.js';
+import type { Notification } from './Notification.js';
 /**
  * Response data for listing notifications
  * @export

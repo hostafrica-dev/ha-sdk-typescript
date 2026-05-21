@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { OperationStatus } from './OperationStatus';
-import type { NoVncConsoleResponseData } from './NoVncConsoleResponseData';
+import type { OperationStatus } from './OperationStatus.js';
+import type { NoVncConsoleResponseData } from './NoVncConsoleResponseData.js';
 /**
  *
  * @export

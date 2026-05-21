@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ListRdnsResponseData } from './ListRdnsResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { ListRdnsResponseData } from './ListRdnsResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

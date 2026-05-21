@@ -18,9 +18,9 @@ exports.CatalogueDataFromJSON = CatalogueDataFromJSON;
 exports.CatalogueDataFromJSONTyped = CatalogueDataFromJSONTyped;
 exports.CatalogueDataToJSON = CatalogueDataToJSON;
 exports.CatalogueDataToJSONTyped = CatalogueDataToJSONTyped;
-const CatalogueProduct_1 = require("./CatalogueProduct");
-const CatalogueCurrency_1 = require("./CatalogueCurrency");
-const CatalogueGroup_1 = require("./CatalogueGroup");
+const CatalogueProduct_js_1 = require("./CatalogueProduct.js");
+const CatalogueCurrency_js_1 = require("./CatalogueCurrency.js");
+const CatalogueGroup_js_1 = require("./CatalogueGroup.js");
 /**
  * Check if a given object implements the CatalogueData interface.
  */
@@ -37,9 +37,9 @@ function CatalogueDataFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'currency': (0, CatalogueCurrency_1.CatalogueCurrencyFromJSON)(json['currency']),
-        'groups': json['groups'] == null ? undefined : (json['groups'].map(CatalogueGroup_1.CatalogueGroupFromJSON)),
-        'product': json['product'] == null ? undefined : (0, CatalogueProduct_1.CatalogueProductFromJSON)(json['product']),
+        'currency': (0, CatalogueCurrency_js_1.CatalogueCurrencyFromJSON)(json['currency']),
+        'groups': json['groups'] == null ? undefined : (json['groups'].map(CatalogueGroup_js_1.CatalogueGroupFromJSON)),
+        'product': json['product'] == null ? undefined : (0, CatalogueProduct_js_1.CatalogueProductFromJSON)(json['product']),
     };
 }
 function CatalogueDataToJSON(json) {
@@ -50,8 +50,8 @@ function CatalogueDataToJSONTyped(value, ignoreDiscriminator = false) {
         return value;
     }
     return {
-        'currency': (0, CatalogueCurrency_1.CatalogueCurrencyToJSON)(value['currency']),
-        'groups': value['groups'] == null ? undefined : (value['groups'].map(CatalogueGroup_1.CatalogueGroupToJSON)),
-        'product': (0, CatalogueProduct_1.CatalogueProductToJSON)(value['product']),
+        'currency': (0, CatalogueCurrency_js_1.CatalogueCurrencyToJSON)(value['currency']),
+        'groups': value['groups'] == null ? undefined : (value['groups'].map(CatalogueGroup_js_1.CatalogueGroupToJSON)),
+        'product': (0, CatalogueProduct_js_1.CatalogueProductToJSON)(value['product']),
     };
 }

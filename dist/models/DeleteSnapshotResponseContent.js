@@ -18,8 +18,8 @@ exports.DeleteSnapshotResponseContentFromJSON = DeleteSnapshotResponseContentFro
 exports.DeleteSnapshotResponseContentFromJSONTyped = DeleteSnapshotResponseContentFromJSONTyped;
 exports.DeleteSnapshotResponseContentToJSON = DeleteSnapshotResponseContentToJSON;
 exports.DeleteSnapshotResponseContentToJSONTyped = DeleteSnapshotResponseContentToJSONTyped;
-const VpsSimpleActionResponseData_1 = require("./VpsSimpleActionResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const VpsSimpleActionResponseData_js_1 = require("./VpsSimpleActionResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the DeleteSnapshotResponseContent interface.
  */
@@ -38,8 +38,8 @@ function DeleteSnapshotResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, VpsSimpleActionResponseData_1.VpsSimpleActionResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, VpsSimpleActionResponseData_js_1.VpsSimpleActionResponseDataFromJSON)(json['data']),
     };
 }
 function DeleteSnapshotResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function DeleteSnapshotResponseContentToJSONTyped(value, ignoreDiscriminator = f
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, VpsSimpleActionResponseData_1.VpsSimpleActionResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, VpsSimpleActionResponseData_js_1.VpsSimpleActionResponseDataToJSON)(value['data']),
     };
 }

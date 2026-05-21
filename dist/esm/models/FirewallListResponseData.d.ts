@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { FirewallOption } from './FirewallOption';
-import type { FirewallRule } from './FirewallRule';
+import type { FirewallOption } from './FirewallOption.js';
+import type { FirewallRule } from './FirewallRule.js';
 /**
  * Response data for firewall list operation
  * @export

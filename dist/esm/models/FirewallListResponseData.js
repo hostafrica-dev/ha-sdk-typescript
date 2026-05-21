@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { FirewallOptionFromJSON, FirewallOptionToJSON, } from './FirewallOption';
-import { FirewallRuleFromJSON, FirewallRuleToJSON, } from './FirewallRule';
+import { FirewallOptionFromJSON, FirewallOptionToJSON, } from './FirewallOption.js';
+import { FirewallRuleFromJSON, FirewallRuleToJSON, } from './FirewallRule.js';
 /**
  * Check if a given object implements the FirewallListResponseData interface.
  */

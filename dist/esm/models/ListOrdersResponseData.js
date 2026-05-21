@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OrderFromJSON, OrderToJSON, } from './Order';
+import { OrderFromJSON, OrderToJSON, } from './Order.js';
 /**
  * Check if a given object implements the ListOrdersResponseData interface.
  */

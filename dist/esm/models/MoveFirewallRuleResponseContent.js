@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
-import { FirewallMoveResponseDataFromJSON, FirewallMoveResponseDataToJSON, } from './FirewallMoveResponseData';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
+import { FirewallMoveResponseDataFromJSON, FirewallMoveResponseDataToJSON, } from './FirewallMoveResponseData.js';
 /**
  * Check if a given object implements the MoveFirewallRuleResponseContent interface.
  */

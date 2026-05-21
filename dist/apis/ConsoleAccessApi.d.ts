@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import type { GetNoVncConsoleRequestContent, GetNoVncConsoleResponseContent } from '../models/index';
+import * as runtime from '../runtime.js';
+import type { GetNoVncConsoleRequestContent, GetNoVncConsoleResponseContent } from '../models/index.js';
 export interface GetNoVncConsoleRequest {
     getNoVncConsoleRequestContent: GetNoVncConsoleRequestContent;
 }

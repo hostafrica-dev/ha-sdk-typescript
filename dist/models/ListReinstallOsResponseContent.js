@@ -18,8 +18,8 @@ exports.ListReinstallOsResponseContentFromJSON = ListReinstallOsResponseContentF
 exports.ListReinstallOsResponseContentFromJSONTyped = ListReinstallOsResponseContentFromJSONTyped;
 exports.ListReinstallOsResponseContentToJSON = ListReinstallOsResponseContentToJSON;
 exports.ListReinstallOsResponseContentToJSONTyped = ListReinstallOsResponseContentToJSONTyped;
-const ListReinstallOsResponseData_1 = require("./ListReinstallOsResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const ListReinstallOsResponseData_js_1 = require("./ListReinstallOsResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the ListReinstallOsResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListReinstallOsResponseContentFromJSONTyped(json, ignoreDiscriminator) 
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, ListReinstallOsResponseData_1.ListReinstallOsResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, ListReinstallOsResponseData_js_1.ListReinstallOsResponseDataFromJSON)(json['data']),
     };
 }
 function ListReinstallOsResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListReinstallOsResponseContentToJSONTyped(value, ignoreDiscriminator = 
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, ListReinstallOsResponseData_1.ListReinstallOsResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, ListReinstallOsResponseData_js_1.ListReinstallOsResponseDataToJSON)(value['data']),
     };
 }

@@ -18,7 +18,7 @@ exports.CreateRdnsRecordResponseDataFromJSON = CreateRdnsRecordResponseDataFromJ
 exports.CreateRdnsRecordResponseDataFromJSONTyped = CreateRdnsRecordResponseDataFromJSONTyped;
 exports.CreateRdnsRecordResponseDataToJSON = CreateRdnsRecordResponseDataToJSON;
 exports.CreateRdnsRecordResponseDataToJSONTyped = CreateRdnsRecordResponseDataToJSONTyped;
-const RdnsRecord_1 = require("./RdnsRecord");
+const RdnsRecord_js_1 = require("./RdnsRecord.js");
 /**
  * Check if a given object implements the CreateRdnsRecordResponseData interface.
  */
@@ -35,7 +35,7 @@ function CreateRdnsRecordResponseDataFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'record': (0, RdnsRecord_1.RdnsRecordFromJSON)(json['record']),
+        'record': (0, RdnsRecord_js_1.RdnsRecordFromJSON)(json['record']),
     };
 }
 function CreateRdnsRecordResponseDataToJSON(json) {
@@ -46,6 +46,6 @@ function CreateRdnsRecordResponseDataToJSONTyped(value, ignoreDiscriminator = fa
         return value;
     }
     return {
-        'record': (0, RdnsRecord_1.RdnsRecordToJSON)(value['record']),
+        'record': (0, RdnsRecord_js_1.RdnsRecordToJSON)(value['record']),
     };
 }

@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
-import { FirewallListResponseDataFromJSON, FirewallListResponseDataToJSON, } from './FirewallListResponseData';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
+import { FirewallListResponseDataFromJSON, FirewallListResponseDataToJSON, } from './FirewallListResponseData.js';
 /**
  * Check if a given object implements the ListFirewallRulesResponseContent interface.
  */

@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { Notification } from './Notification';
+import { mapValues } from '../runtime.js';
+import type { Notification } from './Notification.js';
 import {
     NotificationFromJSON,
     NotificationFromJSONTyped,
     NotificationToJSON,
     NotificationToJSONTyped,
-} from './Notification';
+} from './Notification.js';
 
 /**
  * Response data for notification creation operation

@@ -18,7 +18,7 @@ exports.UpdateNotificationRequestContentFromJSON = UpdateNotificationRequestCont
 exports.UpdateNotificationRequestContentFromJSONTyped = UpdateNotificationRequestContentFromJSONTyped;
 exports.UpdateNotificationRequestContentToJSON = UpdateNotificationRequestContentToJSON;
 exports.UpdateNotificationRequestContentToJSONTyped = UpdateNotificationRequestContentToJSONTyped;
-const NotificationStatus_1 = require("./NotificationStatus");
+const NotificationStatus_js_1 = require("./NotificationStatus.js");
 /**
  * Check if a given object implements the UpdateNotificationRequestContent interface.
  */
@@ -40,7 +40,7 @@ function UpdateNotificationRequestContentFromJSONTyped(json, ignoreDiscriminator
         'serviceId': json['service_id'],
         'notificationId': json['notification_id'],
         'name': json['name'] == null ? undefined : json['name'],
-        'status': json['status'] == null ? undefined : (0, NotificationStatus_1.NotificationStatusFromJSON)(json['status']),
+        'status': json['status'] == null ? undefined : (0, NotificationStatus_js_1.NotificationStatusFromJSON)(json['status']),
         'notificationInterval': json['notification_interval'] == null ? undefined : json['notification_interval'],
         'dataTimeframe': json['data_timeframe'] == null ? undefined : json['data_timeframe'],
         'exceedAll': json['exceed_all'] == null ? undefined : json['exceed_all'],
@@ -63,7 +63,7 @@ function UpdateNotificationRequestContentToJSONTyped(value, ignoreDiscriminator 
         'service_id': value['serviceId'],
         'notification_id': value['notificationId'],
         'name': value['name'],
-        'status': (0, NotificationStatus_1.NotificationStatusToJSON)(value['status']),
+        'status': (0, NotificationStatus_js_1.NotificationStatusToJSON)(value['status']),
         'notification_interval': value['notificationInterval'],
         'data_timeframe': value['dataTimeframe'],
         'exceed_all': value['exceedAll'],

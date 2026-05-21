@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { VpsServiceInfo } from './VpsServiceInfo';
+import { mapValues } from '../runtime.js';
+import type { VpsServiceInfo } from './VpsServiceInfo.js';
 import {
     VpsServiceInfoFromJSON,
     VpsServiceInfoFromJSONTyped,
     VpsServiceInfoToJSON,
     VpsServiceInfoToJSONTyped,
-} from './VpsServiceInfo';
+} from './VpsServiceInfo.js';
 
 /**
  * List VPS response data - matches upstream API format

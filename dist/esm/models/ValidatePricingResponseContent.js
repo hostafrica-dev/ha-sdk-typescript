@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
-import { ValidatePricingResponseDataFromJSON, ValidatePricingResponseDataToJSON, } from './ValidatePricingResponseData';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
+import { ValidatePricingResponseDataFromJSON, ValidatePricingResponseDataToJSON, } from './ValidatePricingResponseData.js';
 /**
  * Check if a given object implements the ValidatePricingResponseContent interface.
  */

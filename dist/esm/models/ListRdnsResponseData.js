@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { RdnsRecordFromJSON, RdnsRecordToJSON, } from './RdnsRecord';
-import { RdnsAvailableItemFromJSON, RdnsAvailableItemToJSON, } from './RdnsAvailableItem';
+import { RdnsRecordFromJSON, RdnsRecordToJSON, } from './RdnsRecord.js';
+import { RdnsAvailableItemFromJSON, RdnsAvailableItemToJSON, } from './RdnsAvailableItem.js';
 /**
  * Check if a given object implements the ListRdnsResponseData interface.
  */

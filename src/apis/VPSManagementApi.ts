@@ -13,7 +13,7 @@
  */
 
 
-import * as runtime from '../runtime';
+import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
   ForbiddenErrorResponseContent,
@@ -39,7 +39,7 @@ import type {
   UpdateVpsConfigRequestContent,
   UpdateVpsConfigResponseContent,
   ValidationErrorResponseContent,
-} from '../models/index';
+} from '../models/index.js';
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
@@ -89,7 +89,7 @@ import {
     UpdateVpsConfigResponseContentToJSON,
     ValidationErrorResponseContentFromJSON,
     ValidationErrorResponseContentToJSON,
-} from '../models/index';
+} from '../models/index.js';
 
 export interface GetVpsConfigRequest {
     getVpsConfigRequestContent: GetVpsConfigRequestContent;

@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CreateOrderProductFromJSON, CreateOrderProductToJSON, } from './CreateOrderProduct';
+import { CreateOrderProductFromJSON, CreateOrderProductToJSON, } from './CreateOrderProduct.js';
 /**
  * Check if a given object implements the CreateOrderRequestContent interface.
  */

@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { SshKeyDetails } from './SshKeyDetails';
+import { mapValues } from '../runtime.js';
+import type { SshKeyDetails } from './SshKeyDetails.js';
 import {
     SshKeyDetailsFromJSON,
     SshKeyDetailsFromJSONTyped,
     SshKeyDetailsToJSON,
     SshKeyDetailsToJSONTyped,
-} from './SshKeyDetails';
+} from './SshKeyDetails.js';
 
 /**
  * Response data for public SSH key retrieval

@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { NotificationStatusFromJSON, NotificationStatusToJSON, } from './NotificationStatus';
+import { NotificationStatusFromJSON, NotificationStatusToJSON, } from './NotificationStatus.js';
 /**
  * Check if a given object implements the UpdateNotificationRequestContent interface.
  */

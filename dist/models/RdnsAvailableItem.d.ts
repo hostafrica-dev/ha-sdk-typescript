@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { RdnsPool } from './RdnsPool';
+import type { RdnsPool } from './RdnsPool.js';
 /**
  * One service the client can manage PTRs for
  * @export

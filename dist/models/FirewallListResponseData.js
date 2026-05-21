@@ -18,8 +18,8 @@ exports.FirewallListResponseDataFromJSON = FirewallListResponseDataFromJSON;
 exports.FirewallListResponseDataFromJSONTyped = FirewallListResponseDataFromJSONTyped;
 exports.FirewallListResponseDataToJSON = FirewallListResponseDataToJSON;
 exports.FirewallListResponseDataToJSONTyped = FirewallListResponseDataToJSONTyped;
-const FirewallOption_1 = require("./FirewallOption");
-const FirewallRule_1 = require("./FirewallRule");
+const FirewallOption_js_1 = require("./FirewallOption.js");
+const FirewallRule_js_1 = require("./FirewallRule.js");
 /**
  * Check if a given object implements the FirewallListResponseData interface.
  */
@@ -45,10 +45,10 @@ function FirewallListResponseDataFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'message': json['message'],
-        'rules': (json['rules'].map(FirewallRule_1.FirewallRuleFromJSON)),
-        'availableInterfaces': (json['available_interfaces'].map(FirewallOption_1.FirewallOptionFromJSON)),
-        'availableMacros': (json['available_macros'].map(FirewallOption_1.FirewallOptionFromJSON)),
-        'availableProtocols': (json['available_protocols'].map(FirewallOption_1.FirewallOptionFromJSON)),
+        'rules': (json['rules'].map(FirewallRule_js_1.FirewallRuleFromJSON)),
+        'availableInterfaces': (json['available_interfaces'].map(FirewallOption_js_1.FirewallOptionFromJSON)),
+        'availableMacros': (json['available_macros'].map(FirewallOption_js_1.FirewallOptionFromJSON)),
+        'availableProtocols': (json['available_protocols'].map(FirewallOption_js_1.FirewallOptionFromJSON)),
     };
 }
 function FirewallListResponseDataToJSON(json) {
@@ -60,9 +60,9 @@ function FirewallListResponseDataToJSONTyped(value, ignoreDiscriminator = false)
     }
     return {
         'message': value['message'],
-        'rules': (value['rules'].map(FirewallRule_1.FirewallRuleToJSON)),
-        'available_interfaces': (value['availableInterfaces'].map(FirewallOption_1.FirewallOptionToJSON)),
-        'available_macros': (value['availableMacros'].map(FirewallOption_1.FirewallOptionToJSON)),
-        'available_protocols': (value['availableProtocols'].map(FirewallOption_1.FirewallOptionToJSON)),
+        'rules': (value['rules'].map(FirewallRule_js_1.FirewallRuleToJSON)),
+        'available_interfaces': (value['availableInterfaces'].map(FirewallOption_js_1.FirewallOptionToJSON)),
+        'available_macros': (value['availableMacros'].map(FirewallOption_js_1.FirewallOptionToJSON)),
+        'available_protocols': (value['availableProtocols'].map(FirewallOption_js_1.FirewallOptionToJSON)),
     };
 }

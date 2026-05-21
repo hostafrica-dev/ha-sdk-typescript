@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ValidatePricingPlanPricing } from './ValidatePricingPlanPricing';
-import type { ValidatePricingPlanConfig } from './ValidatePricingPlanConfig';
+import type { ValidatePricingPlanPricing } from './ValidatePricingPlanPricing.js';
+import type { ValidatePricingPlanConfig } from './ValidatePricingPlanConfig.js';
 /**
  * A single configuration item in the pricing breakdown
  * @export

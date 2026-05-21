@@ -18,7 +18,7 @@ exports.UserChangePasswordResponseDataFromJSON = UserChangePasswordResponseDataF
 exports.UserChangePasswordResponseDataFromJSONTyped = UserChangePasswordResponseDataFromJSONTyped;
 exports.UserChangePasswordResponseDataToJSON = UserChangePasswordResponseDataToJSON;
 exports.UserChangePasswordResponseDataToJSONTyped = UserChangePasswordResponseDataToJSONTyped;
-const UserChangePasswordDetails_1 = require("./UserChangePasswordDetails");
+const UserChangePasswordDetails_js_1 = require("./UserChangePasswordDetails.js");
 /**
  * Check if a given object implements the UserChangePasswordResponseData interface.
  */
@@ -41,7 +41,7 @@ function UserChangePasswordResponseDataFromJSONTyped(json, ignoreDiscriminator) 
     return {
         'success': json['success'],
         'message': json['message'],
-        'data': (0, UserChangePasswordDetails_1.UserChangePasswordDetailsFromJSON)(json['data']),
+        'data': (0, UserChangePasswordDetails_js_1.UserChangePasswordDetailsFromJSON)(json['data']),
     };
 }
 function UserChangePasswordResponseDataToJSON(json) {
@@ -54,6 +54,6 @@ function UserChangePasswordResponseDataToJSONTyped(value, ignoreDiscriminator = 
     return {
         'success': value['success'],
         'message': value['message'],
-        'data': (0, UserChangePasswordDetails_1.UserChangePasswordDetailsToJSON)(value['data']),
+        'data': (0, UserChangePasswordDetails_js_1.UserChangePasswordDetailsToJSON)(value['data']),
     };
 }

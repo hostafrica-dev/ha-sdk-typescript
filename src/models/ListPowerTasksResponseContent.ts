@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { OperationStatus } from './OperationStatus';
+import { mapValues } from '../runtime.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
-import type { PowerTaskListResponseData } from './PowerTaskListResponseData';
+} from './OperationStatus.js';
+import type { PowerTaskListResponseData } from './PowerTaskListResponseData.js';
 import {
     PowerTaskListResponseDataFromJSON,
     PowerTaskListResponseDataFromJSONTyped,
     PowerTaskListResponseDataToJSON,
     PowerTaskListResponseDataToJSONTyped,
-} from './PowerTaskListResponseData';
+} from './PowerTaskListResponseData.js';
 
 /**
  * 

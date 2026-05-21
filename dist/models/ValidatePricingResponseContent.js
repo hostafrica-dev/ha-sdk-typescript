@@ -18,8 +18,8 @@ exports.ValidatePricingResponseContentFromJSON = ValidatePricingResponseContentF
 exports.ValidatePricingResponseContentFromJSONTyped = ValidatePricingResponseContentFromJSONTyped;
 exports.ValidatePricingResponseContentToJSON = ValidatePricingResponseContentToJSON;
 exports.ValidatePricingResponseContentToJSONTyped = ValidatePricingResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const ValidatePricingResponseData_1 = require("./ValidatePricingResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const ValidatePricingResponseData_js_1 = require("./ValidatePricingResponseData.js");
 /**
  * Check if a given object implements the ValidatePricingResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ValidatePricingResponseContentFromJSONTyped(json, ignoreDiscriminator) 
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, ValidatePricingResponseData_1.ValidatePricingResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, ValidatePricingResponseData_js_1.ValidatePricingResponseDataFromJSON)(json['data']),
     };
 }
 function ValidatePricingResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ValidatePricingResponseContentToJSONTyped(value, ignoreDiscriminator = 
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, ValidatePricingResponseData_1.ValidatePricingResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, ValidatePricingResponseData_js_1.ValidatePricingResponseDataToJSON)(value['data']),
     };
 }

@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ValidatePricingPlanPricingFromJSON, ValidatePricingPlanPricingToJSON, } from './ValidatePricingPlanPricing';
-import { ValidatePricingPlanConfigFromJSON, ValidatePricingPlanConfigToJSON, } from './ValidatePricingPlanConfig';
+import { ValidatePricingPlanPricingFromJSON, ValidatePricingPlanPricingToJSON, } from './ValidatePricingPlanPricing.js';
+import { ValidatePricingPlanConfigFromJSON, ValidatePricingPlanConfigToJSON, } from './ValidatePricingPlanConfig.js';
 /**
  * Check if a given object implements the ValidatePricingConfigItem interface.
  */

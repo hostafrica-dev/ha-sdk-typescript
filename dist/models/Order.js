@@ -18,7 +18,7 @@ exports.OrderFromJSON = OrderFromJSON;
 exports.OrderFromJSONTyped = OrderFromJSONTyped;
 exports.OrderToJSON = OrderToJSON;
 exports.OrderToJSONTyped = OrderToJSONTyped;
-const OrderLastAttempt_1 = require("./OrderLastAttempt");
+const OrderLastAttempt_js_1 = require("./OrderLastAttempt.js");
 /**
  * Check if a given object implements the Order interface.
  */
@@ -59,7 +59,7 @@ function OrderFromJSONTyped(json, ignoreDiscriminator) {
         'total': json['total'],
         'balanceDue': json['balance_due'],
         'invoiceStatus': json['invoice_status'],
-        'lastAttempt': json['last_attempt'] == null ? undefined : (0, OrderLastAttempt_1.OrderLastAttemptFromJSON)(json['last_attempt']),
+        'lastAttempt': json['last_attempt'] == null ? undefined : (0, OrderLastAttempt_js_1.OrderLastAttemptFromJSON)(json['last_attempt']),
         'paymentStatus': json['payment_status'],
     };
 }
@@ -79,7 +79,7 @@ function OrderToJSONTyped(value, ignoreDiscriminator = false) {
         'total': value['total'],
         'balance_due': value['balanceDue'],
         'invoice_status': value['invoiceStatus'],
-        'last_attempt': (0, OrderLastAttempt_1.OrderLastAttemptToJSON)(value['lastAttempt']),
+        'last_attempt': (0, OrderLastAttempt_js_1.OrderLastAttemptToJSON)(value['lastAttempt']),
         'payment_status': value['paymentStatus'],
     };
 }

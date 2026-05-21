@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { PowerTask } from './PowerTask';
+import { mapValues } from '../runtime.js';
+import type { PowerTask } from './PowerTask.js';
 import {
     PowerTaskFromJSON,
     PowerTaskFromJSONTyped,
     PowerTaskToJSON,
     PowerTaskToJSONTyped,
-} from './PowerTask';
-import type { PowerTaskDialogRules } from './PowerTaskDialogRules';
+} from './PowerTask.js';
+import type { PowerTaskDialogRules } from './PowerTaskDialogRules.js';
 import {
     PowerTaskDialogRulesFromJSON,
     PowerTaskDialogRulesFromJSONTyped,
     PowerTaskDialogRulesToJSON,
     PowerTaskDialogRulesToJSONTyped,
-} from './PowerTaskDialogRules';
+} from './PowerTaskDialogRules.js';
 
 /**
  * Response data for power task list operation

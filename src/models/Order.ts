@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { OrderLastAttempt } from './OrderLastAttempt';
+import { mapValues } from '../runtime.js';
+import type { OrderLastAttempt } from './OrderLastAttempt.js';
 import {
     OrderLastAttemptFromJSON,
     OrderLastAttemptFromJSONTyped,
     OrderLastAttemptToJSON,
     OrderLastAttemptToJSONTyped,
-} from './OrderLastAttempt';
+} from './OrderLastAttempt.js';
 
 /**
  * A single order entry in the list orders response

@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import type { CreateBackupRequestContent, CreateBackupResponseContent, CreateBackupScheduleRequestContent, CreateBackupScheduleResponseContent, DeleteBackupRequestContent, DeleteBackupResponseContent, DeleteBackupScheduleRequestContent, DeleteBackupScheduleResponseContent, EditBackupScheduleRequestContent, EditBackupScheduleResponseContent, ListBackupSchedulesRequestContent, ListBackupSchedulesResponseContent, ListBackupsRequestContent, ListBackupsResponseContent, RestoreBackupRequestContent, RestoreBackupResponseContent } from '../models/index';
+import * as runtime from '../runtime.js';
+import type { CreateBackupRequestContent, CreateBackupResponseContent, CreateBackupScheduleRequestContent, CreateBackupScheduleResponseContent, DeleteBackupRequestContent, DeleteBackupResponseContent, DeleteBackupScheduleRequestContent, DeleteBackupScheduleResponseContent, EditBackupScheduleRequestContent, EditBackupScheduleResponseContent, ListBackupSchedulesRequestContent, ListBackupSchedulesResponseContent, ListBackupsRequestContent, ListBackupsResponseContent, RestoreBackupRequestContent, RestoreBackupResponseContent } from '../models/index.js';
 export interface CreateBackupRequest {
     createBackupRequestContent: CreateBackupRequestContent;
 }

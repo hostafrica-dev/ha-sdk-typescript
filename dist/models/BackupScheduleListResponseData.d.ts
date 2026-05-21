@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { BackupSchedule } from './BackupSchedule';
+import type { BackupSchedule } from './BackupSchedule.js';
 /**
  * Response data for backup schedule list operation
  * @export

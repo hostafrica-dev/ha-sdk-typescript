@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { NotificationListResponseDataFromJSON, NotificationListResponseDataToJSON, } from './NotificationListResponseData';
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
+import { NotificationListResponseDataFromJSON, NotificationListResponseDataToJSON, } from './NotificationListResponseData.js';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
 /**
  * Check if a given object implements the ListNotificationsResponseContent interface.
  */

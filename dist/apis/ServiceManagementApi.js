@@ -23,8 +23,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ServiceManagementApi = void 0;
-const runtime = require("../runtime");
-const index_1 = require("../models/index");
+const runtime = require("../runtime.js");
+const index_js_1 = require("../models/index.js");
 /**
  *
  */
@@ -53,7 +53,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.CancelVpsRequestContentToJSON)(requestParameters['cancelVpsRequestContent']),
+                body: (0, index_js_1.CancelVpsRequestContentToJSON)(requestParameters['cancelVpsRequestContent']),
             };
         });
     }
@@ -64,7 +64,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.cancelVpsRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CancelVpsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.CancelVpsResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -100,7 +100,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.CreateOrderRequestContentToJSON)(requestParameters['createOrderRequestContent']),
+                body: (0, index_js_1.CreateOrderRequestContentToJSON)(requestParameters['createOrderRequestContent']),
             };
         });
     }
@@ -111,7 +111,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.createOrderRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CreateOrderResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.CreateOrderResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -144,7 +144,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.GetCatalogueRequestContentToJSON)(requestParameters['getCatalogueRequestContent']),
+                body: (0, index_js_1.GetCatalogueRequestContentToJSON)(requestParameters['getCatalogueRequestContent']),
             };
         });
     }
@@ -155,7 +155,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.getCatalogueRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.GetCatalogueResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.GetCatalogueResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -197,7 +197,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listOrdersRequestOpts();
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListOrdersResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListOrdersResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -233,7 +233,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.RetryPaymentRequestContentToJSON)(requestParameters['retryPaymentRequestContent']),
+                body: (0, index_js_1.RetryPaymentRequestContentToJSON)(requestParameters['retryPaymentRequestContent']),
             };
         });
     }
@@ -244,7 +244,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.retryPaymentRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.RetryPaymentResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.RetryPaymentResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -280,7 +280,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ValidatePricingRequestContentToJSON)(requestParameters['validatePricingRequestContent']),
+                body: (0, index_js_1.ValidatePricingRequestContentToJSON)(requestParameters['validatePricingRequestContent']),
             };
         });
     }
@@ -291,7 +291,7 @@ class ServiceManagementApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.validatePricingRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ValidatePricingResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ValidatePricingResponseContentFromJSON)(jsonValue));
         });
     }
     /**

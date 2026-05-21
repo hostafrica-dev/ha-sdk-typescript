@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { TriggerReinstallResponseDataFromJSON, TriggerReinstallResponseDataToJSON, } from './TriggerReinstallResponseData';
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
+import { TriggerReinstallResponseDataFromJSON, TriggerReinstallResponseDataToJSON, } from './TriggerReinstallResponseData.js';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
 /**
  * Check if a given object implements the TriggerReinstallResponseContent interface.
  */

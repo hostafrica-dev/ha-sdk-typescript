@@ -20,8 +20,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import * as runtime from '../runtime';
-import { CreateBackupRequestContentToJSON, CreateBackupResponseContentFromJSON, CreateBackupScheduleRequestContentToJSON, CreateBackupScheduleResponseContentFromJSON, DeleteBackupRequestContentToJSON, DeleteBackupResponseContentFromJSON, DeleteBackupScheduleRequestContentToJSON, DeleteBackupScheduleResponseContentFromJSON, EditBackupScheduleRequestContentToJSON, EditBackupScheduleResponseContentFromJSON, ListBackupSchedulesRequestContentToJSON, ListBackupSchedulesResponseContentFromJSON, ListBackupsRequestContentToJSON, ListBackupsResponseContentFromJSON, RestoreBackupRequestContentToJSON, RestoreBackupResponseContentFromJSON, } from '../models/index';
+import * as runtime from '../runtime.js';
+import { CreateBackupRequestContentToJSON, CreateBackupResponseContentFromJSON, CreateBackupScheduleRequestContentToJSON, CreateBackupScheduleResponseContentFromJSON, DeleteBackupRequestContentToJSON, DeleteBackupResponseContentFromJSON, DeleteBackupScheduleRequestContentToJSON, DeleteBackupScheduleResponseContentFromJSON, EditBackupScheduleRequestContentToJSON, EditBackupScheduleResponseContentFromJSON, ListBackupSchedulesRequestContentToJSON, ListBackupSchedulesResponseContentFromJSON, ListBackupsRequestContentToJSON, ListBackupsResponseContentFromJSON, RestoreBackupRequestContentToJSON, RestoreBackupResponseContentFromJSON, } from '../models/index.js';
 /**
  *
  */

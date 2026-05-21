@@ -23,8 +23,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SecurityApi = void 0;
-const runtime = require("../runtime");
-const index_1 = require("../models/index");
+const runtime = require("../runtime.js");
+const index_js_1 = require("../models/index.js");
 /**
  *
  */
@@ -53,7 +53,7 @@ class SecurityApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ChangePasswordRequestContentToJSON)(requestParameters['changePasswordRequestContent']),
+                body: (0, index_js_1.ChangePasswordRequestContentToJSON)(requestParameters['changePasswordRequestContent']),
             };
         });
     }
@@ -64,7 +64,7 @@ class SecurityApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.changePasswordRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ChangePasswordResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ChangePasswordResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -100,7 +100,7 @@ class SecurityApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.GetPrivateSshKeyRequestContentToJSON)(requestParameters['getPrivateSshKeyRequestContent']),
+                body: (0, index_js_1.GetPrivateSshKeyRequestContentToJSON)(requestParameters['getPrivateSshKeyRequestContent']),
             };
         });
     }
@@ -111,7 +111,7 @@ class SecurityApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.getPrivateSshKeyRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.GetPrivateSshKeyResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.GetPrivateSshKeyResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -147,7 +147,7 @@ class SecurityApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.GetPublicSshKeyRequestContentToJSON)(requestParameters['getPublicSshKeyRequestContent']),
+                body: (0, index_js_1.GetPublicSshKeyRequestContentToJSON)(requestParameters['getPublicSshKeyRequestContent']),
             };
         });
     }
@@ -158,7 +158,7 @@ class SecurityApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.getPublicSshKeyRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.GetPublicSshKeyResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.GetPublicSshKeyResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -194,7 +194,7 @@ class SecurityApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.UpdateSshKeysRequestContentToJSON)(requestParameters['updateSshKeysRequestContent']),
+                body: (0, index_js_1.UpdateSshKeysRequestContentToJSON)(requestParameters['updateSshKeysRequestContent']),
             };
         });
     }
@@ -205,7 +205,7 @@ class SecurityApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.updateSshKeysRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.UpdateSshKeysResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.UpdateSshKeysResponseContentFromJSON)(jsonValue));
         });
     }
     /**

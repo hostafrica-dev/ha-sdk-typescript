@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { BackupModeType } from './BackupModeType';
-import type { CompressionType } from './CompressionType';
+import type { BackupModeType } from './BackupModeType.js';
+import type { CompressionType } from './CompressionType.js';
 /**
  *
  * @export

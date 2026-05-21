@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { NotificationFromJSON, NotificationToJSON, } from './Notification';
+import { NotificationFromJSON, NotificationToJSON, } from './Notification.js';
 /**
  * Check if a given object implements the NotificationCreateResponseData interface.
  */

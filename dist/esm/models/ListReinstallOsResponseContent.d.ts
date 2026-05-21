@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ListReinstallOsResponseData } from './ListReinstallOsResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { ListReinstallOsResponseData } from './ListReinstallOsResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

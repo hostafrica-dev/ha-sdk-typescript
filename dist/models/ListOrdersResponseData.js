@@ -18,7 +18,7 @@ exports.ListOrdersResponseDataFromJSON = ListOrdersResponseDataFromJSON;
 exports.ListOrdersResponseDataFromJSONTyped = ListOrdersResponseDataFromJSONTyped;
 exports.ListOrdersResponseDataToJSON = ListOrdersResponseDataToJSON;
 exports.ListOrdersResponseDataToJSONTyped = ListOrdersResponseDataToJSONTyped;
-const Order_1 = require("./Order");
+const Order_js_1 = require("./Order.js");
 /**
  * Check if a given object implements the ListOrdersResponseData interface.
  */
@@ -35,7 +35,7 @@ function ListOrdersResponseDataFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'orders': (json['orders'].map(Order_1.OrderFromJSON)),
+        'orders': (json['orders'].map(Order_js_1.OrderFromJSON)),
     };
 }
 function ListOrdersResponseDataToJSON(json) {
@@ -46,6 +46,6 @@ function ListOrdersResponseDataToJSONTyped(value, ignoreDiscriminator = false) {
         return value;
     }
     return {
-        'orders': (value['orders'].map(Order_1.OrderToJSON)),
+        'orders': (value['orders'].map(Order_js_1.OrderToJSON)),
     };
 }

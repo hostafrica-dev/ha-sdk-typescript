@@ -12,70 +12,70 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { VpsDiskInfo } from './VpsDiskInfo';
+import { mapValues } from '../runtime.js';
+import type { VpsDiskInfo } from './VpsDiskInfo.js';
 import {
     VpsDiskInfoFromJSON,
     VpsDiskInfoFromJSONTyped,
     VpsDiskInfoToJSON,
     VpsDiskInfoToJSONTyped,
-} from './VpsDiskInfo';
-import type { VpsAvailableFeatures } from './VpsAvailableFeatures';
+} from './VpsDiskInfo.js';
+import type { VpsAvailableFeatures } from './VpsAvailableFeatures.js';
 import {
     VpsAvailableFeaturesFromJSON,
     VpsAvailableFeaturesFromJSONTyped,
     VpsAvailableFeaturesToJSON,
     VpsAvailableFeaturesToJSONTyped,
-} from './VpsAvailableFeatures';
-import type { VpsBandwidthInfo } from './VpsBandwidthInfo';
+} from './VpsAvailableFeatures.js';
+import type { VpsBandwidthInfo } from './VpsBandwidthInfo.js';
 import {
     VpsBandwidthInfoFromJSON,
     VpsBandwidthInfoFromJSONTyped,
     VpsBandwidthInfoToJSON,
     VpsBandwidthInfoToJSONTyped,
-} from './VpsBandwidthInfo';
-import type { VpsCredentials } from './VpsCredentials';
+} from './VpsBandwidthInfo.js';
+import type { VpsCredentials } from './VpsCredentials.js';
 import {
     VpsCredentialsFromJSON,
     VpsCredentialsFromJSONTyped,
     VpsCredentialsToJSON,
     VpsCredentialsToJSONTyped,
-} from './VpsCredentials';
-import type { VpsOsInfo } from './VpsOsInfo';
+} from './VpsCredentials.js';
+import type { VpsOsInfo } from './VpsOsInfo.js';
 import {
     VpsOsInfoFromJSON,
     VpsOsInfoFromJSONTyped,
     VpsOsInfoToJSON,
     VpsOsInfoToJSONTyped,
-} from './VpsOsInfo';
-import type { VpsCpuInfo } from './VpsCpuInfo';
+} from './VpsOsInfo.js';
+import type { VpsCpuInfo } from './VpsCpuInfo.js';
 import {
     VpsCpuInfoFromJSON,
     VpsCpuInfoFromJSONTyped,
     VpsCpuInfoToJSON,
     VpsCpuInfoToJSONTyped,
-} from './VpsCpuInfo';
-import type { VpsNetworkRate } from './VpsNetworkRate';
+} from './VpsCpuInfo.js';
+import type { VpsNetworkRate } from './VpsNetworkRate.js';
 import {
     VpsNetworkRateFromJSON,
     VpsNetworkRateFromJSONTyped,
     VpsNetworkRateToJSON,
     VpsNetworkRateToJSONTyped,
-} from './VpsNetworkRate';
-import type { VpsMemoryInfo } from './VpsMemoryInfo';
+} from './VpsNetworkRate.js';
+import type { VpsMemoryInfo } from './VpsMemoryInfo.js';
 import {
     VpsMemoryInfoFromJSON,
     VpsMemoryInfoFromJSONTyped,
     VpsMemoryInfoToJSON,
     VpsMemoryInfoToJSONTyped,
-} from './VpsMemoryInfo';
-import type { VpsVmInfo } from './VpsVmInfo';
+} from './VpsMemoryInfo.js';
+import type { VpsVmInfo } from './VpsVmInfo.js';
 import {
     VpsVmInfoFromJSON,
     VpsVmInfoFromJSONTyped,
     VpsVmInfoToJSON,
     VpsVmInfoToJSONTyped,
-} from './VpsVmInfo';
+} from './VpsVmInfo.js';
 
 /**
  * 

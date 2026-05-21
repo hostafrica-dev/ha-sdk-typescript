@@ -18,7 +18,7 @@ exports.BackupCreateResponseDataFromJSON = BackupCreateResponseDataFromJSON;
 exports.BackupCreateResponseDataFromJSONTyped = BackupCreateResponseDataFromJSONTyped;
 exports.BackupCreateResponseDataToJSON = BackupCreateResponseDataToJSON;
 exports.BackupCreateResponseDataToJSONTyped = BackupCreateResponseDataToJSONTyped;
-const BackupCreationInfo_1 = require("./BackupCreationInfo");
+const BackupCreationInfo_js_1 = require("./BackupCreationInfo.js");
 /**
  * Check if a given object implements the BackupCreateResponseData interface.
  */
@@ -44,7 +44,7 @@ function BackupCreateResponseDataFromJSONTyped(json, ignoreDiscriminator) {
         'message': json['message'],
         'taskId': json['task_id'],
         'backupIsCreating': json['backup_is_creating'],
-        'backupCreation': (0, BackupCreationInfo_1.BackupCreationInfoFromJSON)(json['backup_creation']),
+        'backupCreation': (0, BackupCreationInfo_js_1.BackupCreationInfoFromJSON)(json['backup_creation']),
     };
 }
 function BackupCreateResponseDataToJSON(json) {
@@ -58,6 +58,6 @@ function BackupCreateResponseDataToJSONTyped(value, ignoreDiscriminator = false)
         'message': value['message'],
         'task_id': value['taskId'],
         'backup_is_creating': value['backupIsCreating'],
-        'backup_creation': (0, BackupCreationInfo_1.BackupCreationInfoToJSON)(value['backupCreation']),
+        'backup_creation': (0, BackupCreationInfo_js_1.BackupCreationInfoToJSON)(value['backupCreation']),
     };
 }

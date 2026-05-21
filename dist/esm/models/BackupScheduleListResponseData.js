@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { BackupScheduleFromJSON, BackupScheduleToJSON, } from './BackupSchedule';
+import { BackupScheduleFromJSON, BackupScheduleToJSON, } from './BackupSchedule.js';
 /**
  * Check if a given object implements the BackupScheduleListResponseData interface.
  */

@@ -20,8 +20,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import * as runtime from '../runtime';
-import { CreateSnapshotRequestContentToJSON, CreateSnapshotResponseContentFromJSON, DeleteSnapshotRequestContentToJSON, DeleteSnapshotResponseContentFromJSON, ListSnapshotsRequestContentToJSON, ListSnapshotsResponseContentFromJSON, RollbackSnapshotRequestContentToJSON, RollbackSnapshotResponseContentFromJSON, UpdateSnapshotRequestContentToJSON, UpdateSnapshotResponseContentFromJSON, } from '../models/index';
+import * as runtime from '../runtime.js';
+import { CreateSnapshotRequestContentToJSON, CreateSnapshotResponseContentFromJSON, DeleteSnapshotRequestContentToJSON, DeleteSnapshotResponseContentFromJSON, ListSnapshotsRequestContentToJSON, ListSnapshotsResponseContentFromJSON, RollbackSnapshotRequestContentToJSON, RollbackSnapshotResponseContentFromJSON, UpdateSnapshotRequestContentToJSON, UpdateSnapshotResponseContentFromJSON, } from '../models/index.js';
 /**
  *
  */

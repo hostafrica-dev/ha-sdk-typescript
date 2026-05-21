@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { SnapshotCreateResponseDataFromJSON, SnapshotCreateResponseDataToJSON, } from './SnapshotCreateResponseData';
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
+import { SnapshotCreateResponseDataFromJSON, SnapshotCreateResponseDataToJSON, } from './SnapshotCreateResponseData.js';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
 /**
  * Check if a given object implements the CreateSnapshotResponseContent interface.
  */

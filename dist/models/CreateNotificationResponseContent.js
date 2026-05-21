@@ -18,8 +18,8 @@ exports.CreateNotificationResponseContentFromJSON = CreateNotificationResponseCo
 exports.CreateNotificationResponseContentFromJSONTyped = CreateNotificationResponseContentFromJSONTyped;
 exports.CreateNotificationResponseContentToJSON = CreateNotificationResponseContentToJSON;
 exports.CreateNotificationResponseContentToJSONTyped = CreateNotificationResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const NotificationCreateResponseData_1 = require("./NotificationCreateResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const NotificationCreateResponseData_js_1 = require("./NotificationCreateResponseData.js");
 /**
  * Check if a given object implements the CreateNotificationResponseContent interface.
  */
@@ -38,8 +38,8 @@ function CreateNotificationResponseContentFromJSONTyped(json, ignoreDiscriminato
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, NotificationCreateResponseData_1.NotificationCreateResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, NotificationCreateResponseData_js_1.NotificationCreateResponseDataFromJSON)(json['data']),
     };
 }
 function CreateNotificationResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function CreateNotificationResponseContentToJSONTyped(value, ignoreDiscriminator
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, NotificationCreateResponseData_1.NotificationCreateResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, NotificationCreateResponseData_js_1.NotificationCreateResponseDataToJSON)(value['data']),
     };
 }

@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { SnapshotCreateResponseData } from './SnapshotCreateResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { SnapshotCreateResponseData } from './SnapshotCreateResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

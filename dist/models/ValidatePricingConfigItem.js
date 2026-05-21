@@ -18,8 +18,8 @@ exports.ValidatePricingConfigItemFromJSON = ValidatePricingConfigItemFromJSON;
 exports.ValidatePricingConfigItemFromJSONTyped = ValidatePricingConfigItemFromJSONTyped;
 exports.ValidatePricingConfigItemToJSON = ValidatePricingConfigItemToJSON;
 exports.ValidatePricingConfigItemToJSONTyped = ValidatePricingConfigItemToJSONTyped;
-const ValidatePricingPlanPricing_1 = require("./ValidatePricingPlanPricing");
-const ValidatePricingPlanConfig_1 = require("./ValidatePricingPlanConfig");
+const ValidatePricingPlanPricing_js_1 = require("./ValidatePricingPlanPricing.js");
+const ValidatePricingPlanConfig_js_1 = require("./ValidatePricingPlanConfig.js");
 /**
  * Check if a given object implements the ValidatePricingConfigItem interface.
  */
@@ -45,8 +45,8 @@ function ValidatePricingConfigItemFromJSONTyped(json, ignoreDiscriminator) {
         'type': json['type'],
         'selected': json['selected'],
         'selectedName': json['selected_name'] == null ? undefined : json['selected_name'],
-        'planConfig': json['plan_config'] == null ? undefined : (0, ValidatePricingPlanConfig_1.ValidatePricingPlanConfigFromJSON)(json['plan_config']),
-        'pricing': json['pricing'] == null ? undefined : (0, ValidatePricingPlanPricing_1.ValidatePricingPlanPricingFromJSON)(json['pricing']),
+        'planConfig': json['plan_config'] == null ? undefined : (0, ValidatePricingPlanConfig_js_1.ValidatePricingPlanConfigFromJSON)(json['plan_config']),
+        'pricing': json['pricing'] == null ? undefined : (0, ValidatePricingPlanPricing_js_1.ValidatePricingPlanPricingFromJSON)(json['pricing']),
         'price': json['price'] == null ? undefined : json['price'],
         'setup': json['setup'] == null ? undefined : json['setup'],
     };
@@ -64,8 +64,8 @@ function ValidatePricingConfigItemToJSONTyped(value, ignoreDiscriminator = false
         'type': value['type'],
         'selected': value['selected'],
         'selected_name': value['selectedName'],
-        'plan_config': (0, ValidatePricingPlanConfig_1.ValidatePricingPlanConfigToJSON)(value['planConfig']),
-        'pricing': (0, ValidatePricingPlanPricing_1.ValidatePricingPlanPricingToJSON)(value['pricing']),
+        'plan_config': (0, ValidatePricingPlanConfig_js_1.ValidatePricingPlanConfigToJSON)(value['planConfig']),
+        'pricing': (0, ValidatePricingPlanPricing_js_1.ValidatePricingPlanPricingToJSON)(value['pricing']),
         'price': value['price'],
         'setup': value['setup'],
     };

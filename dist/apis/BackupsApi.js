@@ -23,8 +23,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BackupsApi = void 0;
-const runtime = require("../runtime");
-const index_1 = require("../models/index");
+const runtime = require("../runtime.js");
+const index_js_1 = require("../models/index.js");
 /**
  *
  */
@@ -53,7 +53,7 @@ class BackupsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.CreateBackupRequestContentToJSON)(requestParameters['createBackupRequestContent']),
+                body: (0, index_js_1.CreateBackupRequestContentToJSON)(requestParameters['createBackupRequestContent']),
             };
         });
     }
@@ -64,7 +64,7 @@ class BackupsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.createBackupRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CreateBackupResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.CreateBackupResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -100,7 +100,7 @@ class BackupsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.CreateBackupScheduleRequestContentToJSON)(requestParameters['createBackupScheduleRequestContent']),
+                body: (0, index_js_1.CreateBackupScheduleRequestContentToJSON)(requestParameters['createBackupScheduleRequestContent']),
             };
         });
     }
@@ -111,7 +111,7 @@ class BackupsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.createBackupScheduleRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CreateBackupScheduleResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.CreateBackupScheduleResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -147,7 +147,7 @@ class BackupsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.DeleteBackupRequestContentToJSON)(requestParameters['deleteBackupRequestContent']),
+                body: (0, index_js_1.DeleteBackupRequestContentToJSON)(requestParameters['deleteBackupRequestContent']),
             };
         });
     }
@@ -158,7 +158,7 @@ class BackupsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.deleteBackupRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.DeleteBackupResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.DeleteBackupResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -194,7 +194,7 @@ class BackupsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.DeleteBackupScheduleRequestContentToJSON)(requestParameters['deleteBackupScheduleRequestContent']),
+                body: (0, index_js_1.DeleteBackupScheduleRequestContentToJSON)(requestParameters['deleteBackupScheduleRequestContent']),
             };
         });
     }
@@ -205,7 +205,7 @@ class BackupsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.deleteBackupScheduleRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.DeleteBackupScheduleResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.DeleteBackupScheduleResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -241,7 +241,7 @@ class BackupsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.EditBackupScheduleRequestContentToJSON)(requestParameters['editBackupScheduleRequestContent']),
+                body: (0, index_js_1.EditBackupScheduleRequestContentToJSON)(requestParameters['editBackupScheduleRequestContent']),
             };
         });
     }
@@ -252,7 +252,7 @@ class BackupsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.editBackupScheduleRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.EditBackupScheduleResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.EditBackupScheduleResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -288,7 +288,7 @@ class BackupsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ListBackupSchedulesRequestContentToJSON)(requestParameters['listBackupSchedulesRequestContent']),
+                body: (0, index_js_1.ListBackupSchedulesRequestContentToJSON)(requestParameters['listBackupSchedulesRequestContent']),
             };
         });
     }
@@ -299,7 +299,7 @@ class BackupsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listBackupSchedulesRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListBackupSchedulesResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListBackupSchedulesResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -335,7 +335,7 @@ class BackupsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ListBackupsRequestContentToJSON)(requestParameters['listBackupsRequestContent']),
+                body: (0, index_js_1.ListBackupsRequestContentToJSON)(requestParameters['listBackupsRequestContent']),
             };
         });
     }
@@ -346,7 +346,7 @@ class BackupsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listBackupsRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListBackupsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListBackupsResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -382,7 +382,7 @@ class BackupsApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.RestoreBackupRequestContentToJSON)(requestParameters['restoreBackupRequestContent']),
+                body: (0, index_js_1.RestoreBackupRequestContentToJSON)(requestParameters['restoreBackupRequestContent']),
             };
         });
     }
@@ -393,7 +393,7 @@ class BackupsApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.restoreBackupRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.RestoreBackupResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.RestoreBackupResponseContentFromJSON)(jsonValue));
         });
     }
     /**

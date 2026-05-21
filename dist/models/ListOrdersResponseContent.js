@@ -18,8 +18,8 @@ exports.ListOrdersResponseContentFromJSON = ListOrdersResponseContentFromJSON;
 exports.ListOrdersResponseContentFromJSONTyped = ListOrdersResponseContentFromJSONTyped;
 exports.ListOrdersResponseContentToJSON = ListOrdersResponseContentToJSON;
 exports.ListOrdersResponseContentToJSONTyped = ListOrdersResponseContentToJSONTyped;
-const ListOrdersResponseData_1 = require("./ListOrdersResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const ListOrdersResponseData_js_1 = require("./ListOrdersResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the ListOrdersResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListOrdersResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, ListOrdersResponseData_1.ListOrdersResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, ListOrdersResponseData_js_1.ListOrdersResponseDataFromJSON)(json['data']),
     };
 }
 function ListOrdersResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListOrdersResponseContentToJSONTyped(value, ignoreDiscriminator = false
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, ListOrdersResponseData_1.ListOrdersResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, ListOrdersResponseData_js_1.ListOrdersResponseDataToJSON)(value['data']),
     };
 }

@@ -12,28 +12,28 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { ValidatePricingProductResult } from './ValidatePricingProductResult';
+import { mapValues } from '../runtime.js';
+import type { ValidatePricingProductResult } from './ValidatePricingProductResult.js';
 import {
     ValidatePricingProductResultFromJSON,
     ValidatePricingProductResultFromJSONTyped,
     ValidatePricingProductResultToJSON,
     ValidatePricingProductResultToJSONTyped,
-} from './ValidatePricingProductResult';
-import type { ValidatePricingSummary } from './ValidatePricingSummary';
+} from './ValidatePricingProductResult.js';
+import type { ValidatePricingSummary } from './ValidatePricingSummary.js';
 import {
     ValidatePricingSummaryFromJSON,
     ValidatePricingSummaryFromJSONTyped,
     ValidatePricingSummaryToJSON,
     ValidatePricingSummaryToJSONTyped,
-} from './ValidatePricingSummary';
-import type { ValidatePricingCurrency } from './ValidatePricingCurrency';
+} from './ValidatePricingSummary.js';
+import type { ValidatePricingCurrency } from './ValidatePricingCurrency.js';
 import {
     ValidatePricingCurrencyFromJSON,
     ValidatePricingCurrencyFromJSONTyped,
     ValidatePricingCurrencyToJSON,
     ValidatePricingCurrencyToJSONTyped,
-} from './ValidatePricingCurrency';
+} from './ValidatePricingCurrency.js';
 
 /**
  * Top-level data payload for the ValidatePricing response

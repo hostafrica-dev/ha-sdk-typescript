@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { RdnsPool } from './RdnsPool';
+import { mapValues } from '../runtime.js';
+import type { RdnsPool } from './RdnsPool.js';
 import {
     RdnsPoolFromJSON,
     RdnsPoolFromJSONTyped,
     RdnsPoolToJSON,
     RdnsPoolToJSONTyped,
-} from './RdnsPool';
+} from './RdnsPool.js';
 
 /**
  * One service the client can manage PTRs for

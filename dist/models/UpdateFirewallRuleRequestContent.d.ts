@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { FirewallRuleAction } from './FirewallRuleAction';
+import type { FirewallRuleAction } from './FirewallRuleAction.js';
 /**
  *
  * @export

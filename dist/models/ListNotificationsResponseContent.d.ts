@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { NotificationListResponseData } from './NotificationListResponseData';
-import type { OperationStatus } from './OperationStatus';
+import type { NotificationListResponseData } from './NotificationListResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

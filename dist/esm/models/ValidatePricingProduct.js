@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { BillingCycleFromJSON, BillingCycleToJSON, } from './BillingCycle';
+import { BillingCycleFromJSON, BillingCycleToJSON, } from './BillingCycle.js';
 /**
  * Check if a given object implements the ValidatePricingProduct interface.
  */

@@ -18,7 +18,7 @@ exports.ValidatePricingProductFromJSON = ValidatePricingProductFromJSON;
 exports.ValidatePricingProductFromJSONTyped = ValidatePricingProductFromJSONTyped;
 exports.ValidatePricingProductToJSON = ValidatePricingProductToJSON;
 exports.ValidatePricingProductToJSONTyped = ValidatePricingProductToJSONTyped;
-const BillingCycle_1 = require("./BillingCycle");
+const BillingCycle_js_1 = require("./BillingCycle.js");
 /**
  * Check if a given object implements the ValidatePricingProduct interface.
  */
@@ -42,7 +42,7 @@ function ValidatePricingProductFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'pid': json['pid'],
-        'billingCycle': (0, BillingCycle_1.BillingCycleFromJSON)(json['billing_cycle']),
+        'billingCycle': (0, BillingCycle_js_1.BillingCycleFromJSON)(json['billing_cycle']),
         'planId': json['plan_id'],
         'hostname': json['hostname'] == null ? undefined : json['hostname'],
         'configOptions': json['config_options'],
@@ -57,7 +57,7 @@ function ValidatePricingProductToJSONTyped(value, ignoreDiscriminator = false) {
     }
     return {
         'pid': value['pid'],
-        'billing_cycle': (0, BillingCycle_1.BillingCycleToJSON)(value['billingCycle']),
+        'billing_cycle': (0, BillingCycle_js_1.BillingCycleToJSON)(value['billingCycle']),
         'plan_id': value['planId'],
         'hostname': value['hostname'],
         'config_options': value['configOptions'],

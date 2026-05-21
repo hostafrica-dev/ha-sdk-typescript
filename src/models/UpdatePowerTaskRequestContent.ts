@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { DayOfWeek } from './DayOfWeek';
+import { mapValues } from '../runtime.js';
+import type { DayOfWeek } from './DayOfWeek.js';
 import {
     DayOfWeekFromJSON,
     DayOfWeekFromJSONTyped,
     DayOfWeekToJSON,
     DayOfWeekToJSONTyped,
-} from './DayOfWeek';
-import type { PowerTaskJobType } from './PowerTaskJobType';
+} from './DayOfWeek.js';
+import type { PowerTaskJobType } from './PowerTaskJobType.js';
 import {
     PowerTaskJobTypeFromJSON,
     PowerTaskJobTypeFromJSONTyped,
     PowerTaskJobTypeToJSON,
     PowerTaskJobTypeToJSONTyped,
-} from './PowerTaskJobType';
+} from './PowerTaskJobType.js';
 
 /**
  * 

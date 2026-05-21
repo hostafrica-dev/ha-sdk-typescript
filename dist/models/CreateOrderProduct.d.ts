@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { BillingCycle } from './BillingCycle';
+import type { BillingCycle } from './BillingCycle.js';
 /**
  * A single product line item in a create order request
  * @export

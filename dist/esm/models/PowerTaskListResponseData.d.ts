@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { PowerTask } from './PowerTask';
-import type { PowerTaskDialogRules } from './PowerTaskDialogRules';
+import type { PowerTask } from './PowerTask.js';
+import type { PowerTaskDialogRules } from './PowerTaskDialogRules.js';
 /**
  * Response data for power task list operation
  * @export

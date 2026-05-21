@@ -18,7 +18,7 @@ exports.RdnsAvailableItemFromJSON = RdnsAvailableItemFromJSON;
 exports.RdnsAvailableItemFromJSONTyped = RdnsAvailableItemFromJSONTyped;
 exports.RdnsAvailableItemToJSON = RdnsAvailableItemToJSON;
 exports.RdnsAvailableItemToJSONTyped = RdnsAvailableItemToJSONTyped;
-const RdnsPool_1 = require("./RdnsPool");
+const RdnsPool_js_1 = require("./RdnsPool.js");
 /**
  * Check if a given object implements the RdnsAvailableItem interface.
  */
@@ -55,7 +55,7 @@ function RdnsAvailableItemFromJSONTyped(json, ignoreDiscriminator) {
         'relid': json['relid'],
         'name': json['name'],
         'ips': json['ips'],
-        'pools': (json['pools'].map(RdnsPool_1.RdnsPoolFromJSON)),
+        'pools': (json['pools'].map(RdnsPool_js_1.RdnsPoolFromJSON)),
         'ptrLimit': json['ptr_limit'],
         'serverId': json['server_id'],
         'allowRdns': json['allow_rdns'],
@@ -74,7 +74,7 @@ function RdnsAvailableItemToJSONTyped(value, ignoreDiscriminator = false) {
         'relid': value['relid'],
         'name': value['name'],
         'ips': value['ips'],
-        'pools': (value['pools'].map(RdnsPool_1.RdnsPoolToJSON)),
+        'pools': (value['pools'].map(RdnsPool_js_1.RdnsPoolToJSON)),
         'ptr_limit': value['ptrLimit'],
         'server_id': value['serverId'],
         'allow_rdns': value['allowRdns'],

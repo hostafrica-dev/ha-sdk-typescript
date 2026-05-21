@@ -9,9 +9,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ValidatePricingProductResult } from './ValidatePricingProductResult';
-import type { ValidatePricingSummary } from './ValidatePricingSummary';
-import type { ValidatePricingCurrency } from './ValidatePricingCurrency';
+import type { ValidatePricingProductResult } from './ValidatePricingProductResult.js';
+import type { ValidatePricingSummary } from './ValidatePricingSummary.js';
+import type { ValidatePricingCurrency } from './ValidatePricingCurrency.js';
 /**
  * Top-level data payload for the ValidatePricing response
  * @export

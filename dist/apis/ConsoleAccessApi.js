@@ -23,8 +23,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConsoleAccessApi = void 0;
-const runtime = require("../runtime");
-const index_1 = require("../models/index");
+const runtime = require("../runtime.js");
+const index_js_1 = require("../models/index.js");
 /**
  *
  */
@@ -53,7 +53,7 @@ class ConsoleAccessApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.GetNoVncConsoleRequestContentToJSON)(requestParameters['getNoVncConsoleRequestContent']),
+                body: (0, index_js_1.GetNoVncConsoleRequestContentToJSON)(requestParameters['getNoVncConsoleRequestContent']),
             };
         });
     }
@@ -64,7 +64,7 @@ class ConsoleAccessApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.getNoVncConsoleRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.GetNoVncConsoleResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.GetNoVncConsoleResponseContentFromJSON)(jsonValue));
         });
     }
     /**

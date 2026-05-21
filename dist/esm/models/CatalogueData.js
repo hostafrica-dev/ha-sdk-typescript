@@ -11,9 +11,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { CatalogueProductFromJSON, CatalogueProductToJSON, } from './CatalogueProduct';
-import { CatalogueCurrencyFromJSON, CatalogueCurrencyToJSON, } from './CatalogueCurrency';
-import { CatalogueGroupFromJSON, CatalogueGroupToJSON, } from './CatalogueGroup';
+import { CatalogueProductFromJSON, CatalogueProductToJSON, } from './CatalogueProduct.js';
+import { CatalogueCurrencyFromJSON, CatalogueCurrencyToJSON, } from './CatalogueCurrency.js';
+import { CatalogueGroupFromJSON, CatalogueGroupToJSON, } from './CatalogueGroup.js';
 /**
  * Check if a given object implements the CatalogueData interface.
  */

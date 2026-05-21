@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { OperationStatus } from './OperationStatus';
-import type { PublicSshKeyResponseData } from './PublicSshKeyResponseData';
+import type { OperationStatus } from './OperationStatus.js';
+import type { PublicSshKeyResponseData } from './PublicSshKeyResponseData.js';
 /**
  *
  * @export

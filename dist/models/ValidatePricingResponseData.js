@@ -18,9 +18,9 @@ exports.ValidatePricingResponseDataFromJSON = ValidatePricingResponseDataFromJSO
 exports.ValidatePricingResponseDataFromJSONTyped = ValidatePricingResponseDataFromJSONTyped;
 exports.ValidatePricingResponseDataToJSON = ValidatePricingResponseDataToJSON;
 exports.ValidatePricingResponseDataToJSONTyped = ValidatePricingResponseDataToJSONTyped;
-const ValidatePricingProductResult_1 = require("./ValidatePricingProductResult");
-const ValidatePricingSummary_1 = require("./ValidatePricingSummary");
-const ValidatePricingCurrency_1 = require("./ValidatePricingCurrency");
+const ValidatePricingProductResult_js_1 = require("./ValidatePricingProductResult.js");
+const ValidatePricingSummary_js_1 = require("./ValidatePricingSummary.js");
+const ValidatePricingCurrency_js_1 = require("./ValidatePricingCurrency.js");
 /**
  * Check if a given object implements the ValidatePricingResponseData interface.
  */
@@ -43,9 +43,9 @@ function ValidatePricingResponseDataFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'currency': (0, ValidatePricingCurrency_1.ValidatePricingCurrencyFromJSON)(json['currency']),
-        'products': (json['products'].map(ValidatePricingProductResult_1.ValidatePricingProductResultFromJSON)),
-        'summary': (0, ValidatePricingSummary_1.ValidatePricingSummaryFromJSON)(json['summary']),
+        'currency': (0, ValidatePricingCurrency_js_1.ValidatePricingCurrencyFromJSON)(json['currency']),
+        'products': (json['products'].map(ValidatePricingProductResult_js_1.ValidatePricingProductResultFromJSON)),
+        'summary': (0, ValidatePricingSummary_js_1.ValidatePricingSummaryFromJSON)(json['summary']),
         'errors': json['errors'],
     };
 }
@@ -57,9 +57,9 @@ function ValidatePricingResponseDataToJSONTyped(value, ignoreDiscriminator = fal
         return value;
     }
     return {
-        'currency': (0, ValidatePricingCurrency_1.ValidatePricingCurrencyToJSON)(value['currency']),
-        'products': (value['products'].map(ValidatePricingProductResult_1.ValidatePricingProductResultToJSON)),
-        'summary': (0, ValidatePricingSummary_1.ValidatePricingSummaryToJSON)(value['summary']),
+        'currency': (0, ValidatePricingCurrency_js_1.ValidatePricingCurrencyToJSON)(value['currency']),
+        'products': (value['products'].map(ValidatePricingProductResult_js_1.ValidatePricingProductResultToJSON)),
+        'summary': (0, ValidatePricingSummary_js_1.ValidatePricingSummaryToJSON)(value['summary']),
         'errors': value['errors'],
     };
 }

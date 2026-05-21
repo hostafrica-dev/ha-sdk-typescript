@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { ListReinstallOsResponseData } from './ListReinstallOsResponseData';
+import { mapValues } from '../runtime.js';
+import type { ListReinstallOsResponseData } from './ListReinstallOsResponseData.js';
 import {
     ListReinstallOsResponseDataFromJSON,
     ListReinstallOsResponseDataFromJSONTyped,
     ListReinstallOsResponseDataToJSON,
     ListReinstallOsResponseDataToJSONTyped,
-} from './ListReinstallOsResponseData';
-import type { OperationStatus } from './OperationStatus';
+} from './ListReinstallOsResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
+} from './OperationStatus.js';
 
 /**
  * 

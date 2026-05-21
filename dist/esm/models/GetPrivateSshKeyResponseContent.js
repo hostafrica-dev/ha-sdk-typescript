@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
-import { PublicSshKeyResponseDataFromJSON, PublicSshKeyResponseDataToJSON, } from './PublicSshKeyResponseData';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
+import { PublicSshKeyResponseDataFromJSON, PublicSshKeyResponseDataToJSON, } from './PublicSshKeyResponseData.js';
 /**
  * Check if a given object implements the GetPrivateSshKeyResponseContent interface.
  */

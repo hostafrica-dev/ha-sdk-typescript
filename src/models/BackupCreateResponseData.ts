@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { BackupCreationInfo } from './BackupCreationInfo';
+import { mapValues } from '../runtime.js';
+import type { BackupCreationInfo } from './BackupCreationInfo.js';
 import {
     BackupCreationInfoFromJSON,
     BackupCreationInfoFromJSONTyped,
     BackupCreationInfoToJSON,
     BackupCreationInfoToJSONTyped,
-} from './BackupCreationInfo';
+} from './BackupCreationInfo.js';
 
 /**
  * Response data for backup creation operation

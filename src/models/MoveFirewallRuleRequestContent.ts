@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { FirewallMoveDirection } from './FirewallMoveDirection';
+import { mapValues } from '../runtime.js';
+import type { FirewallMoveDirection } from './FirewallMoveDirection.js';
 import {
     FirewallMoveDirectionFromJSON,
     FirewallMoveDirectionFromJSONTyped,
     FirewallMoveDirectionToJSON,
     FirewallMoveDirectionToJSONTyped,
-} from './FirewallMoveDirection';
+} from './FirewallMoveDirection.js';
 
 /**
  * 

@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
-import { NoVncConsoleResponseDataFromJSON, NoVncConsoleResponseDataToJSON, } from './NoVncConsoleResponseData';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
+import { NoVncConsoleResponseDataFromJSON, NoVncConsoleResponseDataToJSON, } from './NoVncConsoleResponseData.js';
 /**
  * Check if a given object implements the GetNoVncConsoleResponseContent interface.
  */

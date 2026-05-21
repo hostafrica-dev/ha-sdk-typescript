@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { UserChangePasswordDetails } from './UserChangePasswordDetails';
+import { mapValues } from '../runtime.js';
+import type { UserChangePasswordDetails } from './UserChangePasswordDetails.js';
 import {
     UserChangePasswordDetailsFromJSON,
     UserChangePasswordDetailsFromJSONTyped,
     UserChangePasswordDetailsToJSON,
     UserChangePasswordDetailsToJSONTyped,
-} from './UserChangePasswordDetails';
+} from './UserChangePasswordDetails.js';
 
 /**
  * Response data for user change password operation

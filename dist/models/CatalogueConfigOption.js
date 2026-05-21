@@ -18,7 +18,7 @@ exports.CatalogueConfigOptionFromJSON = CatalogueConfigOptionFromJSON;
 exports.CatalogueConfigOptionFromJSONTyped = CatalogueConfigOptionFromJSONTyped;
 exports.CatalogueConfigOptionToJSON = CatalogueConfigOptionToJSON;
 exports.CatalogueConfigOptionToJSONTyped = CatalogueConfigOptionToJSONTyped;
-const CatalogueConfigSuboption_1 = require("./CatalogueConfigSuboption");
+const CatalogueConfigSuboption_js_1 = require("./CatalogueConfigSuboption.js");
 /**
  * Check if a given object implements the CatalogueConfigOption interface.
  */
@@ -46,7 +46,7 @@ function CatalogueConfigOptionFromJSONTyped(json, ignoreDiscriminator) {
         'type': json['type'],
         'qtyMin': json['qty_min'] == null ? undefined : json['qty_min'],
         'qtyMax': json['qty_max'] == null ? undefined : json['qty_max'],
-        'suboptions': (json['suboptions'].map(CatalogueConfigSuboption_1.CatalogueConfigSuboptionFromJSON)),
+        'suboptions': (json['suboptions'].map(CatalogueConfigSuboption_js_1.CatalogueConfigSuboptionFromJSON)),
     };
 }
 function CatalogueConfigOptionToJSON(json) {
@@ -62,6 +62,6 @@ function CatalogueConfigOptionToJSONTyped(value, ignoreDiscriminator = false) {
         'type': value['type'],
         'qty_min': value['qtyMin'],
         'qty_max': value['qtyMax'],
-        'suboptions': (value['suboptions'].map(CatalogueConfigSuboption_1.CatalogueConfigSuboptionToJSON)),
+        'suboptions': (value['suboptions'].map(CatalogueConfigSuboption_js_1.CatalogueConfigSuboptionToJSON)),
     };
 }

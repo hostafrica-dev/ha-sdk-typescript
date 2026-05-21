@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { OperationStatus } from './OperationStatus';
-import type { FirewallListResponseData } from './FirewallListResponseData';
+import type { OperationStatus } from './OperationStatus.js';
+import type { FirewallListResponseData } from './FirewallListResponseData.js';
 /**
  *
  * @export

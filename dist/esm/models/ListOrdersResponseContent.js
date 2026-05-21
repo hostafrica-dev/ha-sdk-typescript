@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ListOrdersResponseDataFromJSON, ListOrdersResponseDataToJSON, } from './ListOrdersResponseData';
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
+import { ListOrdersResponseDataFromJSON, ListOrdersResponseDataToJSON, } from './ListOrdersResponseData.js';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
 /**
  * Check if a given object implements the ListOrdersResponseContent interface.
  */

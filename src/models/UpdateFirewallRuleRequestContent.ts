@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { FirewallRuleAction } from './FirewallRuleAction';
+import { mapValues } from '../runtime.js';
+import type { FirewallRuleAction } from './FirewallRuleAction.js';
 import {
     FirewallRuleActionFromJSON,
     FirewallRuleActionFromJSONTyped,
     FirewallRuleActionToJSON,
     FirewallRuleActionToJSONTyped,
-} from './FirewallRuleAction';
+} from './FirewallRuleAction.js';
 
 /**
  * 

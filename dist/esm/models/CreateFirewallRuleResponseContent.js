@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { VpsSimpleActionResponseDataFromJSON, VpsSimpleActionResponseDataToJSON, } from './VpsSimpleActionResponseData';
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
+import { VpsSimpleActionResponseDataFromJSON, VpsSimpleActionResponseDataToJSON, } from './VpsSimpleActionResponseData.js';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
 /**
  * Check if a given object implements the CreateFirewallRuleResponseContent interface.
  */

@@ -18,7 +18,7 @@ exports.BackupScheduleListResponseDataFromJSON = BackupScheduleListResponseDataF
 exports.BackupScheduleListResponseDataFromJSONTyped = BackupScheduleListResponseDataFromJSONTyped;
 exports.BackupScheduleListResponseDataToJSON = BackupScheduleListResponseDataToJSON;
 exports.BackupScheduleListResponseDataToJSONTyped = BackupScheduleListResponseDataToJSONTyped;
-const BackupSchedule_1 = require("./BackupSchedule");
+const BackupSchedule_js_1 = require("./BackupSchedule.js");
 /**
  * Check if a given object implements the BackupScheduleListResponseData interface.
  */
@@ -38,7 +38,7 @@ function BackupScheduleListResponseDataFromJSONTyped(json, ignoreDiscriminator) 
     }
     return {
         'message': json['message'],
-        'schedules': (json['schedules'].map(BackupSchedule_1.BackupScheduleFromJSON)),
+        'schedules': (json['schedules'].map(BackupSchedule_js_1.BackupScheduleFromJSON)),
     };
 }
 function BackupScheduleListResponseDataToJSON(json) {
@@ -50,6 +50,6 @@ function BackupScheduleListResponseDataToJSONTyped(value, ignoreDiscriminator = 
     }
     return {
         'message': value['message'],
-        'schedules': (value['schedules'].map(BackupSchedule_1.BackupScheduleToJSON)),
+        'schedules': (value['schedules'].map(BackupSchedule_js_1.BackupScheduleToJSON)),
     };
 }

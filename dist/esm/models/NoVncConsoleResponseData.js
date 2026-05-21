@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { NoVncConsoleDetailsFromJSON, NoVncConsoleDetailsToJSON, } from './NoVncConsoleDetails';
+import { NoVncConsoleDetailsFromJSON, NoVncConsoleDetailsToJSON, } from './NoVncConsoleDetails.js';
 /**
  * Check if a given object implements the NoVncConsoleResponseData interface.
  */

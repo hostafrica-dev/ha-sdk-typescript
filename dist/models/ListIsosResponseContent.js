@@ -18,8 +18,8 @@ exports.ListIsosResponseContentFromJSON = ListIsosResponseContentFromJSON;
 exports.ListIsosResponseContentFromJSONTyped = ListIsosResponseContentFromJSONTyped;
 exports.ListIsosResponseContentToJSON = ListIsosResponseContentToJSON;
 exports.ListIsosResponseContentToJSONTyped = ListIsosResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const ListIsosResponseData_1 = require("./ListIsosResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const ListIsosResponseData_js_1 = require("./ListIsosResponseData.js");
 /**
  * Check if a given object implements the ListIsosResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListIsosResponseContentFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, ListIsosResponseData_1.ListIsosResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, ListIsosResponseData_js_1.ListIsosResponseDataFromJSON)(json['data']),
     };
 }
 function ListIsosResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListIsosResponseContentToJSONTyped(value, ignoreDiscriminator = false) 
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, ListIsosResponseData_1.ListIsosResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, ListIsosResponseData_js_1.ListIsosResponseDataToJSON)(value['data']),
     };
 }

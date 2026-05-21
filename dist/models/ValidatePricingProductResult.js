@@ -18,10 +18,10 @@ exports.ValidatePricingProductResultFromJSON = ValidatePricingProductResultFromJ
 exports.ValidatePricingProductResultFromJSONTyped = ValidatePricingProductResultFromJSONTyped;
 exports.ValidatePricingProductResultToJSON = ValidatePricingProductResultToJSON;
 exports.ValidatePricingProductResultToJSONTyped = ValidatePricingProductResultToJSONTyped;
-const ValidatePricingBreakdown_1 = require("./ValidatePricingBreakdown");
-const ValidatePricingDiscount_1 = require("./ValidatePricingDiscount");
-const ValidatePricingProrata_1 = require("./ValidatePricingProrata");
-const ValidatePricingPriceRange_1 = require("./ValidatePricingPriceRange");
+const ValidatePricingBreakdown_js_1 = require("./ValidatePricingBreakdown.js");
+const ValidatePricingDiscount_js_1 = require("./ValidatePricingDiscount.js");
+const ValidatePricingProrata_js_1 = require("./ValidatePricingProrata.js");
+const ValidatePricingPriceRange_js_1 = require("./ValidatePricingPriceRange.js");
 /**
  * Check if a given object implements the ValidatePricingProductResult interface.
  */
@@ -50,12 +50,12 @@ function ValidatePricingProductResultFromJSONTyped(json, ignoreDiscriminator) {
         'name': json['name'],
         'billingCycle': json['billing_cycle'],
         'planId': json['plan_id'] == null ? undefined : json['plan_id'],
-        'prorata': json['prorata'] == null ? undefined : (0, ValidatePricingProrata_1.ValidatePricingProrataFromJSON)(json['prorata']),
-        'recurringPrice': json['recurring_price'] == null ? undefined : (0, ValidatePricingPriceRange_1.ValidatePricingPriceRangeFromJSON)(json['recurring_price']),
-        'discount': json['discount'] == null ? undefined : (0, ValidatePricingDiscount_1.ValidatePricingDiscountFromJSON)(json['discount']),
+        'prorata': json['prorata'] == null ? undefined : (0, ValidatePricingProrata_js_1.ValidatePricingProrataFromJSON)(json['prorata']),
+        'recurringPrice': json['recurring_price'] == null ? undefined : (0, ValidatePricingPriceRange_js_1.ValidatePricingPriceRangeFromJSON)(json['recurring_price']),
+        'discount': json['discount'] == null ? undefined : (0, ValidatePricingDiscount_js_1.ValidatePricingDiscountFromJSON)(json['discount']),
         'lineTotalBeforeDiscount': json['line_total_before_discount'],
         'lineTotal': json['line_total'],
-        'breakdown': json['breakdown'] == null ? undefined : (0, ValidatePricingBreakdown_1.ValidatePricingBreakdownFromJSON)(json['breakdown']),
+        'breakdown': json['breakdown'] == null ? undefined : (0, ValidatePricingBreakdown_js_1.ValidatePricingBreakdownFromJSON)(json['breakdown']),
     };
 }
 function ValidatePricingProductResultToJSON(json) {
@@ -70,11 +70,11 @@ function ValidatePricingProductResultToJSONTyped(value, ignoreDiscriminator = fa
         'name': value['name'],
         'billing_cycle': value['billingCycle'],
         'plan_id': value['planId'],
-        'prorata': (0, ValidatePricingProrata_1.ValidatePricingProrataToJSON)(value['prorata']),
-        'recurring_price': (0, ValidatePricingPriceRange_1.ValidatePricingPriceRangeToJSON)(value['recurringPrice']),
-        'discount': (0, ValidatePricingDiscount_1.ValidatePricingDiscountToJSON)(value['discount']),
+        'prorata': (0, ValidatePricingProrata_js_1.ValidatePricingProrataToJSON)(value['prorata']),
+        'recurring_price': (0, ValidatePricingPriceRange_js_1.ValidatePricingPriceRangeToJSON)(value['recurringPrice']),
+        'discount': (0, ValidatePricingDiscount_js_1.ValidatePricingDiscountToJSON)(value['discount']),
         'line_total_before_discount': value['lineTotalBeforeDiscount'],
         'line_total': value['lineTotal'],
-        'breakdown': (0, ValidatePricingBreakdown_1.ValidatePricingBreakdownToJSON)(value['breakdown']),
+        'breakdown': (0, ValidatePricingBreakdown_js_1.ValidatePricingBreakdownToJSON)(value['breakdown']),
     };
 }

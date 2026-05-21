@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { CatalogueConfigOption } from './CatalogueConfigOption';
+import { mapValues } from '../runtime.js';
+import type { CatalogueConfigOption } from './CatalogueConfigOption.js';
 import {
     CatalogueConfigOptionFromJSON,
     CatalogueConfigOptionFromJSONTyped,
     CatalogueConfigOptionToJSON,
     CatalogueConfigOptionToJSONTyped,
-} from './CatalogueConfigOption';
-import type { CataloguePlan } from './CataloguePlan';
+} from './CatalogueConfigOption.js';
+import type { CataloguePlan } from './CataloguePlan.js';
 import {
     CataloguePlanFromJSON,
     CataloguePlanFromJSONTyped,
     CataloguePlanToJSON,
     CataloguePlanToJSONTyped,
-} from './CataloguePlan';
+} from './CataloguePlan.js';
 
 /**
  * A product entry within a catalogue group

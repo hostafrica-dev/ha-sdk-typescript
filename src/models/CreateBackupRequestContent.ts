@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { BackupModeType } from './BackupModeType';
+import { mapValues } from '../runtime.js';
+import type { BackupModeType } from './BackupModeType.js';
 import {
     BackupModeTypeFromJSON,
     BackupModeTypeFromJSONTyped,
     BackupModeTypeToJSON,
     BackupModeTypeToJSONTyped,
-} from './BackupModeType';
-import type { CompressionType } from './CompressionType';
+} from './BackupModeType.js';
+import type { CompressionType } from './CompressionType.js';
 import {
     CompressionTypeFromJSON,
     CompressionTypeFromJSONTyped,
     CompressionTypeToJSON,
     CompressionTypeToJSONTyped,
-} from './CompressionType';
+} from './CompressionType.js';
 
 /**
  * 

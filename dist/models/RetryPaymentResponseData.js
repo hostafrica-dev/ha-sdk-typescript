@@ -18,8 +18,8 @@ exports.RetryPaymentResponseDataFromJSON = RetryPaymentResponseDataFromJSON;
 exports.RetryPaymentResponseDataFromJSONTyped = RetryPaymentResponseDataFromJSONTyped;
 exports.RetryPaymentResponseDataToJSON = RetryPaymentResponseDataToJSON;
 exports.RetryPaymentResponseDataToJSONTyped = RetryPaymentResponseDataToJSONTyped;
-const RetryPaymentTotal_1 = require("./RetryPaymentTotal");
-const PaymentStatus_1 = require("./PaymentStatus");
+const RetryPaymentTotal_js_1 = require("./RetryPaymentTotal.js");
+const PaymentStatus_js_1 = require("./PaymentStatus.js");
 /**
  * Check if a given object implements the RetryPaymentResponseData interface.
  */
@@ -44,8 +44,8 @@ function RetryPaymentResponseDataFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'orderId': json['order_id'],
         'invoiceId': json['invoice_id'],
-        'total': (0, RetryPaymentTotal_1.RetryPaymentTotalFromJSON)(json['total']),
-        'paymentStatus': (0, PaymentStatus_1.PaymentStatusFromJSON)(json['payment_status']),
+        'total': (0, RetryPaymentTotal_js_1.RetryPaymentTotalFromJSON)(json['total']),
+        'paymentStatus': (0, PaymentStatus_js_1.PaymentStatusFromJSON)(json['payment_status']),
     };
 }
 function RetryPaymentResponseDataToJSON(json) {
@@ -58,7 +58,7 @@ function RetryPaymentResponseDataToJSONTyped(value, ignoreDiscriminator = false)
     return {
         'order_id': value['orderId'],
         'invoice_id': value['invoiceId'],
-        'total': (0, RetryPaymentTotal_1.RetryPaymentTotalToJSON)(value['total']),
-        'payment_status': (0, PaymentStatus_1.PaymentStatusToJSON)(value['paymentStatus']),
+        'total': (0, RetryPaymentTotal_js_1.RetryPaymentTotalToJSON)(value['total']),
+        'payment_status': (0, PaymentStatus_js_1.PaymentStatusToJSON)(value['paymentStatus']),
     };
 }

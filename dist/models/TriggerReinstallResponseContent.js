@@ -18,8 +18,8 @@ exports.TriggerReinstallResponseContentFromJSON = TriggerReinstallResponseConten
 exports.TriggerReinstallResponseContentFromJSONTyped = TriggerReinstallResponseContentFromJSONTyped;
 exports.TriggerReinstallResponseContentToJSON = TriggerReinstallResponseContentToJSON;
 exports.TriggerReinstallResponseContentToJSONTyped = TriggerReinstallResponseContentToJSONTyped;
-const TriggerReinstallResponseData_1 = require("./TriggerReinstallResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const TriggerReinstallResponseData_js_1 = require("./TriggerReinstallResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the TriggerReinstallResponseContent interface.
  */
@@ -38,8 +38,8 @@ function TriggerReinstallResponseContentFromJSONTyped(json, ignoreDiscriminator)
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, TriggerReinstallResponseData_1.TriggerReinstallResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, TriggerReinstallResponseData_js_1.TriggerReinstallResponseDataFromJSON)(json['data']),
     };
 }
 function TriggerReinstallResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function TriggerReinstallResponseContentToJSONTyped(value, ignoreDiscriminator =
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, TriggerReinstallResponseData_1.TriggerReinstallResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, TriggerReinstallResponseData_js_1.TriggerReinstallResponseDataToJSON)(value['data']),
     };
 }

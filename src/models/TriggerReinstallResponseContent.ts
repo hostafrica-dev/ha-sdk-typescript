@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { TriggerReinstallResponseData } from './TriggerReinstallResponseData';
+import { mapValues } from '../runtime.js';
+import type { TriggerReinstallResponseData } from './TriggerReinstallResponseData.js';
 import {
     TriggerReinstallResponseDataFromJSON,
     TriggerReinstallResponseDataFromJSONTyped,
     TriggerReinstallResponseDataToJSON,
     TriggerReinstallResponseDataToJSONTyped,
-} from './TriggerReinstallResponseData';
-import type { OperationStatus } from './OperationStatus';
+} from './TriggerReinstallResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
+} from './OperationStatus.js';
 
 /**
  * 

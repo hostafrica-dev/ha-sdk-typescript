@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { BackupScheduleListResponseDataFromJSON, BackupScheduleListResponseDataToJSON, } from './BackupScheduleListResponseData';
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
+import { BackupScheduleListResponseDataFromJSON, BackupScheduleListResponseDataToJSON, } from './BackupScheduleListResponseData.js';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
 /**
  * Check if a given object implements the ListBackupSchedulesResponseContent interface.
  */

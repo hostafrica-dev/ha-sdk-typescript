@@ -18,8 +18,8 @@ exports.GetNoVncConsoleResponseContentFromJSON = GetNoVncConsoleResponseContentF
 exports.GetNoVncConsoleResponseContentFromJSONTyped = GetNoVncConsoleResponseContentFromJSONTyped;
 exports.GetNoVncConsoleResponseContentToJSON = GetNoVncConsoleResponseContentToJSON;
 exports.GetNoVncConsoleResponseContentToJSONTyped = GetNoVncConsoleResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const NoVncConsoleResponseData_1 = require("./NoVncConsoleResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const NoVncConsoleResponseData_js_1 = require("./NoVncConsoleResponseData.js");
 /**
  * Check if a given object implements the GetNoVncConsoleResponseContent interface.
  */
@@ -38,8 +38,8 @@ function GetNoVncConsoleResponseContentFromJSONTyped(json, ignoreDiscriminator) 
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, NoVncConsoleResponseData_1.NoVncConsoleResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, NoVncConsoleResponseData_js_1.NoVncConsoleResponseDataFromJSON)(json['data']),
     };
 }
 function GetNoVncConsoleResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function GetNoVncConsoleResponseContentToJSONTyped(value, ignoreDiscriminator = 
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, NoVncConsoleResponseData_1.NoVncConsoleResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, NoVncConsoleResponseData_js_1.NoVncConsoleResponseDataToJSON)(value['data']),
     };
 }

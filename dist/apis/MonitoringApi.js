@@ -23,8 +23,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MonitoringApi = void 0;
-const runtime = require("../runtime");
-const index_1 = require("../models/index");
+const runtime = require("../runtime.js");
+const index_js_1 = require("../models/index.js");
 /**
  *
  */
@@ -53,7 +53,7 @@ class MonitoringApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.CreateNotificationRequestContentToJSON)(requestParameters['createNotificationRequestContent']),
+                body: (0, index_js_1.CreateNotificationRequestContentToJSON)(requestParameters['createNotificationRequestContent']),
             };
         });
     }
@@ -64,7 +64,7 @@ class MonitoringApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.createNotificationRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CreateNotificationResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.CreateNotificationResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -100,7 +100,7 @@ class MonitoringApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.DeleteNotificationRequestContentToJSON)(requestParameters['deleteNotificationRequestContent']),
+                body: (0, index_js_1.DeleteNotificationRequestContentToJSON)(requestParameters['deleteNotificationRequestContent']),
             };
         });
     }
@@ -111,7 +111,7 @@ class MonitoringApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.deleteNotificationRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.DeleteNotificationResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.DeleteNotificationResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -147,7 +147,7 @@ class MonitoringApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.ListNotificationsRequestContentToJSON)(requestParameters['listNotificationsRequestContent']),
+                body: (0, index_js_1.ListNotificationsRequestContentToJSON)(requestParameters['listNotificationsRequestContent']),
             };
         });
     }
@@ -158,7 +158,7 @@ class MonitoringApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listNotificationsRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListNotificationsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListNotificationsResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -194,7 +194,7 @@ class MonitoringApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.UpdateNotificationRequestContentToJSON)(requestParameters['updateNotificationRequestContent']),
+                body: (0, index_js_1.UpdateNotificationRequestContentToJSON)(requestParameters['updateNotificationRequestContent']),
             };
         });
     }
@@ -205,7 +205,7 @@ class MonitoringApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.updateNotificationRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.UpdateNotificationResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.UpdateNotificationResponseContentFromJSON)(jsonValue));
         });
     }
     /**

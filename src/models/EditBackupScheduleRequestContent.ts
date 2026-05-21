@@ -12,28 +12,28 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { DayOfWeek } from './DayOfWeek';
+import { mapValues } from '../runtime.js';
+import type { DayOfWeek } from './DayOfWeek.js';
 import {
     DayOfWeekFromJSON,
     DayOfWeekFromJSONTyped,
     DayOfWeekToJSON,
     DayOfWeekToJSONTyped,
-} from './DayOfWeek';
-import type { BackupModeType } from './BackupModeType';
+} from './DayOfWeek.js';
+import type { BackupModeType } from './BackupModeType.js';
 import {
     BackupModeTypeFromJSON,
     BackupModeTypeFromJSONTyped,
     BackupModeTypeToJSON,
     BackupModeTypeToJSONTyped,
-} from './BackupModeType';
-import type { CompressionType } from './CompressionType';
+} from './BackupModeType.js';
+import type { CompressionType } from './CompressionType.js';
 import {
     CompressionTypeFromJSON,
     CompressionTypeFromJSONTyped,
     CompressionTypeToJSON,
     CompressionTypeToJSONTyped,
-} from './CompressionType';
+} from './CompressionType.js';
 
 /**
  * 

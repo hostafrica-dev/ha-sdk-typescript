@@ -9,10 +9,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { BackupItem } from './BackupItem';
-import type { BackupMode } from './BackupMode';
-import type { BackupCreationInfo } from './BackupCreationInfo';
-import type { CompressionMethod } from './CompressionMethod';
+import type { BackupItem } from './BackupItem.js';
+import type { BackupMode } from './BackupMode.js';
+import type { BackupCreationInfo } from './BackupCreationInfo.js';
+import type { CompressionMethod } from './CompressionMethod.js';
 /**
  * Response data for service backups operation
  * @export

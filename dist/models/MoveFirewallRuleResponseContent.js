@@ -18,8 +18,8 @@ exports.MoveFirewallRuleResponseContentFromJSON = MoveFirewallRuleResponseConten
 exports.MoveFirewallRuleResponseContentFromJSONTyped = MoveFirewallRuleResponseContentFromJSONTyped;
 exports.MoveFirewallRuleResponseContentToJSON = MoveFirewallRuleResponseContentToJSON;
 exports.MoveFirewallRuleResponseContentToJSONTyped = MoveFirewallRuleResponseContentToJSONTyped;
-const OperationStatus_1 = require("./OperationStatus");
-const FirewallMoveResponseData_1 = require("./FirewallMoveResponseData");
+const OperationStatus_js_1 = require("./OperationStatus.js");
+const FirewallMoveResponseData_js_1 = require("./FirewallMoveResponseData.js");
 /**
  * Check if a given object implements the MoveFirewallRuleResponseContent interface.
  */
@@ -38,8 +38,8 @@ function MoveFirewallRuleResponseContentFromJSONTyped(json, ignoreDiscriminator)
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, FirewallMoveResponseData_1.FirewallMoveResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, FirewallMoveResponseData_js_1.FirewallMoveResponseDataFromJSON)(json['data']),
     };
 }
 function MoveFirewallRuleResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function MoveFirewallRuleResponseContentToJSONTyped(value, ignoreDiscriminator =
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, FirewallMoveResponseData_1.FirewallMoveResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, FirewallMoveResponseData_js_1.FirewallMoveResponseDataToJSON)(value['data']),
     };
 }

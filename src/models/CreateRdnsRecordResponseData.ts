@@ -12,14 +12,14 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { RdnsRecord } from './RdnsRecord';
+import { mapValues } from '../runtime.js';
+import type { RdnsRecord } from './RdnsRecord.js';
 import {
     RdnsRecordFromJSON,
     RdnsRecordFromJSONTyped,
     RdnsRecordToJSON,
     RdnsRecordToJSONTyped,
-} from './RdnsRecord';
+} from './RdnsRecord.js';
 
 /**
  * Response data for the create-rdns-record operation

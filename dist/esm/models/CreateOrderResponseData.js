@@ -11,11 +11,11 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OrderWarningFromJSON, OrderWarningToJSON, } from './OrderWarning';
-import { CreateOrderItemsFromJSON, CreateOrderItemsToJSON, } from './CreateOrderItems';
-import { CreateOrderTotalFromJSON, CreateOrderTotalToJSON, } from './CreateOrderTotal';
-import { PaymentStatusFromJSON, PaymentStatusToJSON, } from './PaymentStatus';
-import { PaymentErrorFromJSON, PaymentErrorToJSON, } from './PaymentError';
+import { OrderWarningFromJSON, OrderWarningToJSON, } from './OrderWarning.js';
+import { CreateOrderItemsFromJSON, CreateOrderItemsToJSON, } from './CreateOrderItems.js';
+import { CreateOrderTotalFromJSON, CreateOrderTotalToJSON, } from './CreateOrderTotal.js';
+import { PaymentStatusFromJSON, PaymentStatusToJSON, } from './PaymentStatus.js';
+import { PaymentErrorFromJSON, PaymentErrorToJSON, } from './PaymentError.js';
 /**
  * Check if a given object implements the CreateOrderResponseData interface.
  */

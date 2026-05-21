@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { SshKeyDetailsFromJSON, SshKeyDetailsToJSON, } from './SshKeyDetails';
+import { SshKeyDetailsFromJSON, SshKeyDetailsToJSON, } from './SshKeyDetails.js';
 /**
  * Check if a given object implements the PublicSshKeyResponseData interface.
  */

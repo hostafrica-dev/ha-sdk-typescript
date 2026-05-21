@@ -13,7 +13,7 @@
  */
 
 
-import * as runtime from '../runtime';
+import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
   CancelVpsRequestContent,
@@ -35,7 +35,7 @@ import type {
   ValidatePricingRequestContent,
   ValidatePricingResponseContent,
   ValidationErrorResponseContent,
-} from '../models/index';
+} from '../models/index.js';
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
@@ -77,7 +77,7 @@ import {
     ValidatePricingResponseContentToJSON,
     ValidationErrorResponseContentFromJSON,
     ValidationErrorResponseContentToJSON,
-} from '../models/index';
+} from '../models/index.js';
 
 export interface CancelVpsRequest {
     cancelVpsRequestContent: CancelVpsRequestContent;

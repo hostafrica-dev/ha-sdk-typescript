@@ -18,7 +18,7 @@ exports.NotificationCreateResponseDataFromJSON = NotificationCreateResponseDataF
 exports.NotificationCreateResponseDataFromJSONTyped = NotificationCreateResponseDataFromJSONTyped;
 exports.NotificationCreateResponseDataToJSON = NotificationCreateResponseDataToJSON;
 exports.NotificationCreateResponseDataToJSONTyped = NotificationCreateResponseDataToJSONTyped;
-const Notification_1 = require("./Notification");
+const Notification_js_1 = require("./Notification.js");
 /**
  * Check if a given object implements the NotificationCreateResponseData interface.
  */
@@ -38,7 +38,7 @@ function NotificationCreateResponseDataFromJSONTyped(json, ignoreDiscriminator) 
     }
     return {
         'message': json['message'],
-        'notification': (0, Notification_1.NotificationFromJSON)(json['notification']),
+        'notification': (0, Notification_js_1.NotificationFromJSON)(json['notification']),
     };
 }
 function NotificationCreateResponseDataToJSON(json) {
@@ -50,6 +50,6 @@ function NotificationCreateResponseDataToJSONTyped(value, ignoreDiscriminator = 
     }
     return {
         'message': value['message'],
-        'notification': (0, Notification_1.NotificationToJSON)(value['notification']),
+        'notification': (0, Notification_js_1.NotificationToJSON)(value['notification']),
     };
 }

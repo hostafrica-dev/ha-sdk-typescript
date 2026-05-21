@@ -18,8 +18,8 @@ exports.UserChangePasswordResponseContentFromJSON = UserChangePasswordResponseCo
 exports.UserChangePasswordResponseContentFromJSONTyped = UserChangePasswordResponseContentFromJSONTyped;
 exports.UserChangePasswordResponseContentToJSON = UserChangePasswordResponseContentToJSON;
 exports.UserChangePasswordResponseContentToJSONTyped = UserChangePasswordResponseContentToJSONTyped;
-const UserChangePasswordResponseData_1 = require("./UserChangePasswordResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const UserChangePasswordResponseData_js_1 = require("./UserChangePasswordResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the UserChangePasswordResponseContent interface.
  */
@@ -38,8 +38,8 @@ function UserChangePasswordResponseContentFromJSONTyped(json, ignoreDiscriminato
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, UserChangePasswordResponseData_1.UserChangePasswordResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, UserChangePasswordResponseData_js_1.UserChangePasswordResponseDataFromJSON)(json['data']),
     };
 }
 function UserChangePasswordResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function UserChangePasswordResponseContentToJSONTyped(value, ignoreDiscriminator
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, UserChangePasswordResponseData_1.UserChangePasswordResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, UserChangePasswordResponseData_js_1.UserChangePasswordResponseDataToJSON)(value['data']),
     };
 }

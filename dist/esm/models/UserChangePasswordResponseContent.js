@@ -11,8 +11,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { UserChangePasswordResponseDataFromJSON, UserChangePasswordResponseDataToJSON, } from './UserChangePasswordResponseData';
-import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus';
+import { UserChangePasswordResponseDataFromJSON, UserChangePasswordResponseDataToJSON, } from './UserChangePasswordResponseData.js';
+import { OperationStatusFromJSON, OperationStatusToJSON, } from './OperationStatus.js';
 /**
  * Check if a given object implements the UserChangePasswordResponseContent interface.
  */

@@ -23,8 +23,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DNSApi = void 0;
-const runtime = require("../runtime");
-const index_1 = require("../models/index");
+const runtime = require("../runtime.js");
+const index_js_1 = require("../models/index.js");
 /**
  *
  */
@@ -53,7 +53,7 @@ class DNSApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.CreateRdnsRecordRequestContentToJSON)(requestParameters['createRdnsRecordRequestContent']),
+                body: (0, index_js_1.CreateRdnsRecordRequestContentToJSON)(requestParameters['createRdnsRecordRequestContent']),
             };
         });
     }
@@ -64,7 +64,7 @@ class DNSApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.createRdnsRecordRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CreateRdnsRecordResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.CreateRdnsRecordResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -100,7 +100,7 @@ class DNSApi extends runtime.BaseAPI {
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: (0, index_1.DeleteRdnsRecordRequestContentToJSON)(requestParameters['deleteRdnsRecordRequestContent']),
+                body: (0, index_js_1.DeleteRdnsRecordRequestContentToJSON)(requestParameters['deleteRdnsRecordRequestContent']),
             };
         });
     }
@@ -111,7 +111,7 @@ class DNSApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.deleteRdnsRecordRequestOpts(requestParameters);
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.DeleteRdnsRecordResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.DeleteRdnsRecordResponseContentFromJSON)(jsonValue));
         });
     }
     /**
@@ -153,7 +153,7 @@ class DNSApi extends runtime.BaseAPI {
         return __awaiter(this, void 0, void 0, function* () {
             const requestOptions = yield this.listRdnsRecordsRequestOpts();
             const response = yield this.request(requestOptions, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.ListRdnsRecordsResponseContentFromJSON)(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_js_1.ListRdnsRecordsResponseContentFromJSON)(jsonValue));
         });
     }
     /**

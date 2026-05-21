@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { ListVpsServicesData } from './ListVpsServicesData';
-import type { OperationStatus } from './OperationStatus';
+import type { ListVpsServicesData } from './ListVpsServicesData.js';
+import type { OperationStatus } from './OperationStatus.js';
 /**
  *
  * @export

@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { RdnsRecord } from './RdnsRecord';
+import type { RdnsRecord } from './RdnsRecord.js';
 /**
  * Response data for the create-rdns-record operation
  * @export

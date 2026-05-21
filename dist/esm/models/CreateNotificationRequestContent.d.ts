@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import type { NotificationStatus } from './NotificationStatus';
+import type { NotificationStatus } from './NotificationStatus.js';
 /**
  *
  * @export

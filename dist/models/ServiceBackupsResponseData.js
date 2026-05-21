@@ -18,10 +18,10 @@ exports.ServiceBackupsResponseDataFromJSON = ServiceBackupsResponseDataFromJSON;
 exports.ServiceBackupsResponseDataFromJSONTyped = ServiceBackupsResponseDataFromJSONTyped;
 exports.ServiceBackupsResponseDataToJSON = ServiceBackupsResponseDataToJSON;
 exports.ServiceBackupsResponseDataToJSONTyped = ServiceBackupsResponseDataToJSONTyped;
-const BackupItem_1 = require("./BackupItem");
-const BackupMode_1 = require("./BackupMode");
-const BackupCreationInfo_1 = require("./BackupCreationInfo");
-const CompressionMethod_1 = require("./CompressionMethod");
+const BackupItem_js_1 = require("./BackupItem.js");
+const BackupMode_js_1 = require("./BackupMode.js");
+const BackupCreationInfo_js_1 = require("./BackupCreationInfo.js");
+const CompressionMethod_js_1 = require("./CompressionMethod.js");
 /**
  * Check if a given object implements the ServiceBackupsResponseData interface.
  */
@@ -51,14 +51,14 @@ function ServiceBackupsResponseDataFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'message': json['message'],
-        'backups': (json['backups'].map(BackupItem_1.BackupItemFromJSON)),
+        'backups': (json['backups'].map(BackupItem_js_1.BackupItemFromJSON)),
         'quotaTotal': json['quota_total'] == null ? undefined : json['quota_total'],
         'quotaUsed': json['quota_used'],
         'quotaUnit': json['quota_unit'],
-        'availableCompressMethods': (json['available_compress_methods'].map(CompressionMethod_1.CompressionMethodFromJSON)),
-        'availableModes': (json['available_modes'].map(BackupMode_1.BackupModeFromJSON)),
+        'availableCompressMethods': (json['available_compress_methods'].map(CompressionMethod_js_1.CompressionMethodFromJSON)),
+        'availableModes': (json['available_modes'].map(BackupMode_js_1.BackupModeFromJSON)),
         'backupIsCreating': json['backup_is_creating'],
-        'backupCreation': json['backup_creation'] == null ? undefined : (0, BackupCreationInfo_1.BackupCreationInfoFromJSON)(json['backup_creation']),
+        'backupCreation': json['backup_creation'] == null ? undefined : (0, BackupCreationInfo_js_1.BackupCreationInfoFromJSON)(json['backup_creation']),
     };
 }
 function ServiceBackupsResponseDataToJSON(json) {
@@ -70,13 +70,13 @@ function ServiceBackupsResponseDataToJSONTyped(value, ignoreDiscriminator = fals
     }
     return {
         'message': value['message'],
-        'backups': (value['backups'].map(BackupItem_1.BackupItemToJSON)),
+        'backups': (value['backups'].map(BackupItem_js_1.BackupItemToJSON)),
         'quota_total': value['quotaTotal'],
         'quota_used': value['quotaUsed'],
         'quota_unit': value['quotaUnit'],
-        'available_compress_methods': (value['availableCompressMethods'].map(CompressionMethod_1.CompressionMethodToJSON)),
-        'available_modes': (value['availableModes'].map(BackupMode_1.BackupModeToJSON)),
+        'available_compress_methods': (value['availableCompressMethods'].map(CompressionMethod_js_1.CompressionMethodToJSON)),
+        'available_modes': (value['availableModes'].map(BackupMode_js_1.BackupModeToJSON)),
         'backup_is_creating': value['backupIsCreating'],
-        'backup_creation': (0, BackupCreationInfo_1.BackupCreationInfoToJSON)(value['backupCreation']),
+        'backup_creation': (0, BackupCreationInfo_js_1.BackupCreationInfoToJSON)(value['backupCreation']),
     };
 }

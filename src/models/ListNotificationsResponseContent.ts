@@ -12,21 +12,21 @@
  * Do not edit the class manually.
  */
 
-import { mapValues } from '../runtime';
-import type { NotificationListResponseData } from './NotificationListResponseData';
+import { mapValues } from '../runtime.js';
+import type { NotificationListResponseData } from './NotificationListResponseData.js';
 import {
     NotificationListResponseDataFromJSON,
     NotificationListResponseDataFromJSONTyped,
     NotificationListResponseDataToJSON,
     NotificationListResponseDataToJSONTyped,
-} from './NotificationListResponseData';
-import type { OperationStatus } from './OperationStatus';
+} from './NotificationListResponseData.js';
+import type { OperationStatus } from './OperationStatus.js';
 import {
     OperationStatusFromJSON,
     OperationStatusFromJSONTyped,
     OperationStatusToJSON,
     OperationStatusToJSONTyped,
-} from './OperationStatus';
+} from './OperationStatus.js';
 
 /**
  * 

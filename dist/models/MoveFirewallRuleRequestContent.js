@@ -18,7 +18,7 @@ exports.MoveFirewallRuleRequestContentFromJSON = MoveFirewallRuleRequestContentF
 exports.MoveFirewallRuleRequestContentFromJSONTyped = MoveFirewallRuleRequestContentFromJSONTyped;
 exports.MoveFirewallRuleRequestContentToJSON = MoveFirewallRuleRequestContentToJSON;
 exports.MoveFirewallRuleRequestContentToJSONTyped = MoveFirewallRuleRequestContentToJSONTyped;
-const FirewallMoveDirection_1 = require("./FirewallMoveDirection");
+const FirewallMoveDirection_js_1 = require("./FirewallMoveDirection.js");
 /**
  * Check if a given object implements the MoveFirewallRuleRequestContent interface.
  */
@@ -40,7 +40,7 @@ function MoveFirewallRuleRequestContentFromJSONTyped(json, ignoreDiscriminator) 
         'serviceId': json['service_id'],
         'pos': json['pos'],
         'targetPos': json['target_pos'] == null ? undefined : json['target_pos'],
-        'direction': json['direction'] == null ? undefined : (0, FirewallMoveDirection_1.FirewallMoveDirectionFromJSON)(json['direction']),
+        'direction': json['direction'] == null ? undefined : (0, FirewallMoveDirection_js_1.FirewallMoveDirectionFromJSON)(json['direction']),
     };
 }
 function MoveFirewallRuleRequestContentToJSON(json) {
@@ -54,6 +54,6 @@ function MoveFirewallRuleRequestContentToJSONTyped(value, ignoreDiscriminator = 
         'service_id': value['serviceId'],
         'pos': value['pos'],
         'target_pos': value['targetPos'],
-        'direction': (0, FirewallMoveDirection_1.FirewallMoveDirectionToJSON)(value['direction']),
+        'direction': (0, FirewallMoveDirection_js_1.FirewallMoveDirectionToJSON)(value['direction']),
     };
 }

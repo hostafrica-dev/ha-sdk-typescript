@@ -11,7 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { RdnsPoolFromJSON, RdnsPoolToJSON, } from './RdnsPool';
+import { RdnsPoolFromJSON, RdnsPoolToJSON, } from './RdnsPool.js';
 /**
  * Check if a given object implements the RdnsAvailableItem interface.
  */

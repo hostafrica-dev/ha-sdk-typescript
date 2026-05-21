@@ -18,8 +18,8 @@ exports.ListBackupSchedulesResponseContentFromJSON = ListBackupSchedulesResponse
 exports.ListBackupSchedulesResponseContentFromJSONTyped = ListBackupSchedulesResponseContentFromJSONTyped;
 exports.ListBackupSchedulesResponseContentToJSON = ListBackupSchedulesResponseContentToJSON;
 exports.ListBackupSchedulesResponseContentToJSONTyped = ListBackupSchedulesResponseContentToJSONTyped;
-const BackupScheduleListResponseData_1 = require("./BackupScheduleListResponseData");
-const OperationStatus_1 = require("./OperationStatus");
+const BackupScheduleListResponseData_js_1 = require("./BackupScheduleListResponseData.js");
+const OperationStatus_js_1 = require("./OperationStatus.js");
 /**
  * Check if a given object implements the ListBackupSchedulesResponseContent interface.
  */
@@ -38,8 +38,8 @@ function ListBackupSchedulesResponseContentFromJSONTyped(json, ignoreDiscriminat
         return json;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusFromJSON)(json['status']),
-        'data': (0, BackupScheduleListResponseData_1.BackupScheduleListResponseDataFromJSON)(json['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusFromJSON)(json['status']),
+        'data': (0, BackupScheduleListResponseData_js_1.BackupScheduleListResponseDataFromJSON)(json['data']),
     };
 }
 function ListBackupSchedulesResponseContentToJSON(json) {
@@ -50,7 +50,7 @@ function ListBackupSchedulesResponseContentToJSONTyped(value, ignoreDiscriminato
         return value;
     }
     return {
-        'status': (0, OperationStatus_1.OperationStatusToJSON)(value['status']),
-        'data': (0, BackupScheduleListResponseData_1.BackupScheduleListResponseDataToJSON)(value['data']),
+        'status': (0, OperationStatus_js_1.OperationStatusToJSON)(value['status']),
+        'data': (0, BackupScheduleListResponseData_js_1.BackupScheduleListResponseDataToJSON)(value['data']),
     };
 }
