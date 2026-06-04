@@ -24,6 +24,7 @@ import type {
   ServiceUnavailableErrorResponseContent,
   TooManyRequestsErrorResponseContent,
   UnauthorizedErrorResponseContent,
+  ValidationErrorResponseContent,
 } from '../models/index.js';
 import {
     BadRequestErrorResponseContentFromJSON,
@@ -44,6 +45,8 @@ import {
     TooManyRequestsErrorResponseContentToJSON,
     UnauthorizedErrorResponseContentFromJSON,
     UnauthorizedErrorResponseContentToJSON,
+    ValidationErrorResponseContentFromJSON,
+    ValidationErrorResponseContentToJSON,
 } from '../models/index.js';
 
 export interface GetNoVncConsoleRequest {
