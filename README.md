@@ -48,6 +48,8 @@ example().catch(console.error);
 
 ## Documentation
 
+[**API Reference Documentation**](https://api.hostafrica.com)
+
 [**Documentation per api/operation**](docs/)
 
 All request URIs are relative to *https://api.hostafrica.com*
