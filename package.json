@@ -5,7 +5,7 @@
   "author": "HostAfrica",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hostafrica/ha-sdk-typescript.git"
+    "url": "https://github.com/hostafrica-dev/ha-sdk-typescript.git"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
