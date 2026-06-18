@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write  # Required for OIDC trusted publishing
 
 jobs:
   release:
@@ -16,9 +17,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm install -g npm@latest
       - run: npm ci
       - run: npm run build
       - run: zip -r dist.zip dist/
       - uses: softprops/action-gh-release@v2
         with:
           files: dist.zip
+      - run: npm publish --access public
