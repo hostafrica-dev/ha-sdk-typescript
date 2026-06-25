@@ -20,46 +20,18 @@ import { mapValues } from '../runtime.js';
  */
 export interface NoVncConsoleDetails {
     /**
-     * VNC port number
+     * Redirect URL for the noVNC console
      * @type {string}
      * @memberof NoVncConsoleDetails
      */
-    port: string;
-    /**
-     * Proxmox Unique Process ID for the VNC proxy
-     * @type {string}
-     * @memberof NoVncConsoleDetails
-     */
-    upid: string;
-    /**
-     * Proxmox user for authentication
-     * @type {string}
-     * @memberof NoVncConsoleDetails
-     */
-    user: string;
-    /**
-     * Authentication ticket for VNC connection
-     * @type {string}
-     * @memberof NoVncConsoleDetails
-     */
-    ticket: string;
-    /**
-     * Certificate for secure connection
-     * @type {string}
-     * @memberof NoVncConsoleDetails
-     */
-    cert: string;
+    novncRedirectUrl: string;
 }
 
 /**
  * Check if a given object implements the NoVncConsoleDetails interface.
  */
 export function instanceOfNoVncConsoleDetails(value: object): value is NoVncConsoleDetails {
-    if (!('port' in value) || value['port'] === undefined) return false;
-    if (!('upid' in value) || value['upid'] === undefined) return false;
-    if (!('user' in value) || value['user'] === undefined) return false;
-    if (!('ticket' in value) || value['ticket'] === undefined) return false;
-    if (!('cert' in value) || value['cert'] === undefined) return false;
+    if (!('novncRedirectUrl' in value) || value['novncRedirectUrl'] === undefined) return false;
     return true;
 }
 
@@ -73,11 +45,7 @@ export function NoVncConsoleDetailsFromJSONTyped(json: any, ignoreDiscriminator:
     }
     return {
         
-        'port': json['port'],
-        'upid': json['upid'],
-        'user': json['user'],
-        'ticket': json['ticket'],
-        'cert': json['cert'],
+        'novncRedirectUrl': json['novnc_redirect_url'],
     };
 }
 
@@ -92,11 +60,7 @@ export function NoVncConsoleDetailsToJSONTyped(value?: NoVncConsoleDetails | nul
 
     return {
         
-        'port': value['port'],
-        'upid': value['upid'],
-        'user': value['user'],
-        'ticket': value['ticket'],
-        'cert': value['cert'],
+        'novnc_redirect_url': value['novncRedirectUrl'],
     };
 }
 

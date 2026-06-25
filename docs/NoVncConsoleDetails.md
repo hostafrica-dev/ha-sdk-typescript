@@ -7,11 +7,7 @@ noVNC console connection details
 
 Name | Type
 ------------ | -------------
-`port` | string
-`upid` | string
-`user` | string
-`ticket` | string
-`cert` | string
+`novncRedirectUrl` | string
 
 ## Example
 
@@ -20,11 +16,7 @@ import type { NoVncConsoleDetails } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "port": null,
-  "upid": null,
-  "user": null,
-  "ticket": null,
-  "cert": null,
+  "novncRedirectUrl": null,
 } satisfies NoVncConsoleDetails
 
 console.log(example)

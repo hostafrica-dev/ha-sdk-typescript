@@ -27,13 +27,6 @@ import {
     VpsAvailableFeaturesToJSON,
     VpsAvailableFeaturesToJSONTyped,
 } from './VpsAvailableFeatures.js';
-import type { VpsBandwidthInfo } from './VpsBandwidthInfo.js';
-import {
-    VpsBandwidthInfoFromJSON,
-    VpsBandwidthInfoFromJSONTyped,
-    VpsBandwidthInfoToJSON,
-    VpsBandwidthInfoToJSONTyped,
-} from './VpsBandwidthInfo.js';
 import type { VpsCredentials } from './VpsCredentials.js';
 import {
     VpsCredentialsFromJSON,
@@ -115,12 +108,6 @@ export interface VpsDetailsResponse {
     disk: VpsDiskInfo;
     /**
      * 
-     * @type {VpsBandwidthInfo}
-     * @memberof VpsDetailsResponse
-     */
-    bandwidth: VpsBandwidthInfo;
-    /**
-     * 
      * @type {VpsNetworkRate}
      * @memberof VpsDetailsResponse
      */
@@ -160,7 +147,6 @@ export function instanceOfVpsDetailsResponse(value: object): value is VpsDetails
     if (!('cpu' in value) || value['cpu'] === undefined) return false;
     if (!('memory' in value) || value['memory'] === undefined) return false;
     if (!('disk' in value) || value['disk'] === undefined) return false;
-    if (!('bandwidth' in value) || value['bandwidth'] === undefined) return false;
     if (!('ipAddresses' in value) || value['ipAddresses'] === undefined) return false;
     if (!('credentials' in value) || value['credentials'] === undefined) return false;
     if (!('availableFeatures' in value) || value['availableFeatures'] === undefined) return false;
@@ -182,7 +168,6 @@ export function VpsDetailsResponseFromJSONTyped(json: any, ignoreDiscriminator: 
         'cpu': VpsCpuInfoFromJSON(json['cpu']),
         'memory': VpsMemoryInfoFromJSON(json['memory']),
         'disk': VpsDiskInfoFromJSON(json['disk']),
-        'bandwidth': VpsBandwidthInfoFromJSON(json['bandwidth']),
         'networkRate': json['network_rate'] == null ? undefined : VpsNetworkRateFromJSON(json['network_rate']),
         'ipAddresses': json['ip_addresses'],
         'credentials': VpsCredentialsFromJSON(json['credentials']),
@@ -207,7 +192,6 @@ export function VpsDetailsResponseToJSONTyped(value?: VpsDetailsResponse | null,
         'cpu': VpsCpuInfoToJSON(value['cpu']),
         'memory': VpsMemoryInfoToJSON(value['memory']),
         'disk': VpsDiskInfoToJSON(value['disk']),
-        'bandwidth': VpsBandwidthInfoToJSON(value['bandwidth']),
         'network_rate': VpsNetworkRateToJSON(value['networkRate']),
         'ip_addresses': value['ipAddresses'],
         'credentials': VpsCredentialsToJSON(value['credentials']),

@@ -11,7 +11,6 @@ Name | Type
 `cpu` | [VpsCpuInfo](VpsCpuInfo.md)
 `memory` | [VpsMemoryInfo](VpsMemoryInfo.md)
 `disk` | [VpsDiskInfo](VpsDiskInfo.md)
-`bandwidth` | [VpsBandwidthInfo](VpsBandwidthInfo.md)
 `networkRate` | [VpsNetworkRate](VpsNetworkRate.md)
 `ipAddresses` | Array&lt;string&gt;
 `credentials` | [VpsCredentials](VpsCredentials.md)
@@ -30,7 +29,6 @@ const example = {
   "cpu": null,
   "memory": null,
   "disk": null,
-  "bandwidth": null,
   "networkRate": null,
   "ipAddresses": null,
   "credentials": null,

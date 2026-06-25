@@ -21,7 +21,6 @@ Name | Type
 `changeIsoImage` | boolean
 `networkStats` | boolean
 `graphs` | boolean
-`osTemplates` | Array&lt;string&gt;
 
 ## Example
 
@@ -44,7 +43,6 @@ const example = {
   "changeIsoImage": null,
   "networkStats": null,
   "graphs": null,
-  "osTemplates": null,
 } satisfies VpsAvailableFeatures
 
 console.log(example)

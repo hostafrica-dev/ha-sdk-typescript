@@ -103,12 +103,6 @@ export interface VpsAvailableFeatures {
      * @memberof VpsAvailableFeatures
      */
     graphs: boolean;
-    /**
-     * List of available OS templates
-     * @type {Array<string>}
-     * @memberof VpsAvailableFeatures
-     */
-    osTemplates: Array<string>;
 }
 
 /**
@@ -129,7 +123,6 @@ export function instanceOfVpsAvailableFeatures(value: object): value is VpsAvail
     if (!('changeIsoImage' in value) || value['changeIsoImage'] === undefined) return false;
     if (!('networkStats' in value) || value['networkStats'] === undefined) return false;
     if (!('graphs' in value) || value['graphs'] === undefined) return false;
-    if (!('osTemplates' in value) || value['osTemplates'] === undefined) return false;
     return true;
 }
 
@@ -157,7 +150,6 @@ export function VpsAvailableFeaturesFromJSONTyped(json: any, ignoreDiscriminator
         'changeIsoImage': json['change_iso_image'],
         'networkStats': json['network_stats'],
         'graphs': json['graphs'],
-        'osTemplates': json['os_templates'],
     };
 }
 
@@ -186,7 +178,6 @@ export function VpsAvailableFeaturesToJSONTyped(value?: VpsAvailableFeatures | n
         'change_iso_image': value['changeIsoImage'],
         'network_stats': value['networkStats'],
         'graphs': value['graphs'],
-        'os_templates': value['osTemplates'],
     };
 }
 
