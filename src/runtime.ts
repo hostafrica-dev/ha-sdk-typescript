@@ -1,5 +1,3 @@
-/* tslint:disable */
-/* eslint-disable */
 /**
  * HostAfricaApi
  * HostAfrica API
@@ -149,7 +147,11 @@ export class BaseAPI {
             url += '?' + this.configuration.queryParamsStringify(context.query);
         }
 
-        const headers = Object.assign({}, this.configuration.headers, context.headers);
+        const headers = Object.assign(
+            {'User-Agent': 'ha-sdk-typescript/1.0.0'},
+            this.configuration.headers,
+            context.headers,
+        );
         Object.keys(headers).forEach(key => headers[key] === undefined ? delete headers[key] : {});
 
         const initOverrideFn =

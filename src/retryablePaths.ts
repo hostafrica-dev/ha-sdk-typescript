@@ -13,7 +13,7 @@ export const RETRYABLE_PATHS = new Set<string>([
     "/vps/list-backup-schedules",
     "/vps/list-snapshots",
     "/vps/list-firewall-rules",
-    "/vps/change-password",
+    "/vps/list-power-tasks",
     "/vps/list-notifications",
     "/vps/list-isos",
     "/vps/list-reinstall-images",
