@@ -30,13 +30,19 @@ export interface CreateSnapshotRequestContent {
      * @type {string}
      * @memberof CreateSnapshotRequestContent
      */
-    snapname?: string;
+    name: string;
     /**
      * Description for the snapshot
      * @type {string}
      * @memberof CreateSnapshotRequestContent
      */
     description?: string;
+    /**
+     * Whether to include RAM state in the snapshot. Defaults to false when omitted.
+     * @type {boolean}
+     * @memberof CreateSnapshotRequestContent
+     */
+    includeRam?: boolean;
 }
 
 /**
@@ -44,6 +50,7 @@ export interface CreateSnapshotRequestContent {
  */
 export function instanceOfCreateSnapshotRequestContent(value: object): value is CreateSnapshotRequestContent {
     if (!('serviceId' in value) || value['serviceId'] === undefined) return false;
+    if (!('name' in value) || value['name'] === undefined) return false;
     return true;
 }
 
@@ -58,8 +65,9 @@ export function CreateSnapshotRequestContentFromJSONTyped(json: any, ignoreDiscr
     return {
         
         'serviceId': json['service_id'],
-        'snapname': json['snapname'] == null ? undefined : json['snapname'],
+        'name': json['name'],
         'description': json['description'] == null ? undefined : json['description'],
+        'includeRam': json['include_ram'] == null ? undefined : json['include_ram'],
     };
 }
 
@@ -75,8 +83,9 @@ export function CreateSnapshotRequestContentToJSONTyped(value?: CreateSnapshotRe
     return {
         
         'service_id': value['serviceId'],
-        'snapname': value['snapname'],
+        'name': value['name'],
         'description': value['description'],
+        'include_ram': value['includeRam'],
     };
 }
 

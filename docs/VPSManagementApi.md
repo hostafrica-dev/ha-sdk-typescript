@@ -257,7 +257,7 @@ example().catch(console.error);
 
 
 
-[Under development] Retrieves the list of available OS images for VPS reinstallation
+Retrieves the list of available OS images for VPS reinstallation
 
 ### Example
 

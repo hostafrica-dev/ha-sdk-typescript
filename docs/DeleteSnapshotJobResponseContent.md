@@ -1,28 +1,24 @@
 
-# CreateSnapshotRequestContent
+# DeleteSnapshotJobResponseContent
 
 
 ## Properties
 
 Name | Type
 ------------ | -------------
-`serviceId` | string
-`name` | string
-`description` | string
-`includeRam` | boolean
+`status` | [OperationStatus](OperationStatus.md)
+`data` | [SnapshotJobDeleteResponseData](SnapshotJobDeleteResponseData.md)
 
 ## Example
 
 ```typescript
-import type { CreateSnapshotRequestContent } from '@hostafrica/ha-sdk-typescript'
+import type { DeleteSnapshotJobResponseContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "serviceId": null,
-  "name": null,
-  "description": null,
-  "includeRam": null,
-} satisfies CreateSnapshotRequestContent
+  "status": null,
+  "data": null,
+} satisfies DeleteSnapshotJobResponseContent
 
 console.log(example)
 
@@ -31,7 +27,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as CreateSnapshotRequestContent
+const exampleParsed = JSON.parse(exampleJSON) as DeleteSnapshotJobResponseContent
 console.log(exampleParsed)
 ```
 

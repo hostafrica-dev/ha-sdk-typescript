@@ -1,5 +1,5 @@
 
-# CreateSnapshotRequestContent
+# ListSnapshotJobsRequestContent
 
 
 ## Properties
@@ -7,22 +7,16 @@
 Name | Type
 ------------ | -------------
 `serviceId` | string
-`name` | string
-`description` | string
-`includeRam` | boolean
 
 ## Example
 
 ```typescript
-import type { CreateSnapshotRequestContent } from '@hostafrica/ha-sdk-typescript'
+import type { ListSnapshotJobsRequestContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {
   "serviceId": null,
-  "name": null,
-  "description": null,
-  "includeRam": null,
-} satisfies CreateSnapshotRequestContent
+} satisfies ListSnapshotJobsRequestContent
 
 console.log(example)
 
@@ -31,7 +25,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as CreateSnapshotRequestContent
+const exampleParsed = JSON.parse(exampleJSON) as ListSnapshotJobsRequestContent
 console.log(exampleParsed)
 ```
 

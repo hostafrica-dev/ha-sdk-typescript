@@ -1,28 +1,25 @@
 
-# CreateSnapshotRequestContent
+# SnapshotJobDeleteResponseData
 
+Response data for snapshot job delete operation
 
 ## Properties
 
 Name | Type
 ------------ | -------------
-`serviceId` | string
-`name` | string
-`description` | string
-`includeRam` | boolean
+`message` | string
+`limits` | [SnapshotJobLimits](SnapshotJobLimits.md)
 
 ## Example
 
 ```typescript
-import type { CreateSnapshotRequestContent } from '@hostafrica/ha-sdk-typescript'
+import type { SnapshotJobDeleteResponseData } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "serviceId": null,
-  "name": null,
-  "description": null,
-  "includeRam": null,
-} satisfies CreateSnapshotRequestContent
+  "message": null,
+  "limits": null,
+} satisfies SnapshotJobDeleteResponseData
 
 console.log(example)
 
@@ -31,7 +28,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as CreateSnapshotRequestContent
+const exampleParsed = JSON.parse(exampleJSON) as SnapshotJobDeleteResponseData
 console.log(exampleParsed)
 ```
 

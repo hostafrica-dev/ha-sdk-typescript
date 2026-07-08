@@ -327,7 +327,7 @@ export class VPSManagementApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development] Retrieves the list of available OS images for VPS reinstallation
+     * Retrieves the list of available OS images for VPS reinstallation
      */
     async listReinstallOsRaw(requestParameters: ListReinstallOsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListReinstallOsResponseContent>> {
         const requestOptions = await this.listReinstallOsRequestOpts(requestParameters);
@@ -337,7 +337,7 @@ export class VPSManagementApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development] Retrieves the list of available OS images for VPS reinstallation
+     * Retrieves the list of available OS images for VPS reinstallation
      */
     async listReinstallOs(requestParameters: ListReinstallOsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListReinstallOsResponseContent> {
         const response = await this.listReinstallOsRaw(requestParameters, initOverrides);

@@ -11,6 +11,7 @@ export const RETRYABLE_PATHS = new Set<string>([
     "/vps/novnc-console",
     "/vps/list-backups",
     "/vps/list-backup-schedules",
+    "/vps/list-snapshot-jobs",
     "/vps/list-snapshots",
     "/vps/list-firewall-rules",
     "/vps/list-power-tasks",

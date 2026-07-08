@@ -16,12 +16,18 @@
 import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
+  CreateSnapshotJobRequestContent,
+  CreateSnapshotJobResponseContent,
   CreateSnapshotRequestContent,
   CreateSnapshotResponseContent,
+  DeleteSnapshotJobRequestContent,
+  DeleteSnapshotJobResponseContent,
   DeleteSnapshotRequestContent,
   DeleteSnapshotResponseContent,
   ForbiddenErrorResponseContent,
   InternalServiceErrorResponseContent,
+  ListSnapshotJobsRequestContent,
+  ListSnapshotJobsResponseContent,
   ListSnapshotsRequestContent,
   ListSnapshotsResponseContent,
   ResourceNotFoundErrorResponseContent,
@@ -30,6 +36,8 @@ import type {
   ServiceUnavailableErrorResponseContent,
   TooManyRequestsErrorResponseContent,
   UnauthorizedErrorResponseContent,
+  UpdateSnapshotJobRequestContent,
+  UpdateSnapshotJobResponseContent,
   UpdateSnapshotRequestContent,
   UpdateSnapshotResponseContent,
   ValidationErrorResponseContent,
@@ -37,10 +45,18 @@ import type {
 import {
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
+    CreateSnapshotJobRequestContentFromJSON,
+    CreateSnapshotJobRequestContentToJSON,
+    CreateSnapshotJobResponseContentFromJSON,
+    CreateSnapshotJobResponseContentToJSON,
     CreateSnapshotRequestContentFromJSON,
     CreateSnapshotRequestContentToJSON,
     CreateSnapshotResponseContentFromJSON,
     CreateSnapshotResponseContentToJSON,
+    DeleteSnapshotJobRequestContentFromJSON,
+    DeleteSnapshotJobRequestContentToJSON,
+    DeleteSnapshotJobResponseContentFromJSON,
+    DeleteSnapshotJobResponseContentToJSON,
     DeleteSnapshotRequestContentFromJSON,
     DeleteSnapshotRequestContentToJSON,
     DeleteSnapshotResponseContentFromJSON,
@@ -49,6 +65,10 @@ import {
     ForbiddenErrorResponseContentToJSON,
     InternalServiceErrorResponseContentFromJSON,
     InternalServiceErrorResponseContentToJSON,
+    ListSnapshotJobsRequestContentFromJSON,
+    ListSnapshotJobsRequestContentToJSON,
+    ListSnapshotJobsResponseContentFromJSON,
+    ListSnapshotJobsResponseContentToJSON,
     ListSnapshotsRequestContentFromJSON,
     ListSnapshotsRequestContentToJSON,
     ListSnapshotsResponseContentFromJSON,
@@ -65,6 +85,10 @@ import {
     TooManyRequestsErrorResponseContentToJSON,
     UnauthorizedErrorResponseContentFromJSON,
     UnauthorizedErrorResponseContentToJSON,
+    UpdateSnapshotJobRequestContentFromJSON,
+    UpdateSnapshotJobRequestContentToJSON,
+    UpdateSnapshotJobResponseContentFromJSON,
+    UpdateSnapshotJobResponseContentToJSON,
     UpdateSnapshotRequestContentFromJSON,
     UpdateSnapshotRequestContentToJSON,
     UpdateSnapshotResponseContentFromJSON,
@@ -77,8 +101,20 @@ export interface CreateSnapshotRequest {
     createSnapshotRequestContent: CreateSnapshotRequestContent;
 }
 
+export interface CreateSnapshotJobRequest {
+    createSnapshotJobRequestContent: CreateSnapshotJobRequestContent;
+}
+
 export interface DeleteSnapshotRequest {
     deleteSnapshotRequestContent: DeleteSnapshotRequestContent;
+}
+
+export interface DeleteSnapshotJobRequest {
+    deleteSnapshotJobRequestContent: DeleteSnapshotJobRequestContent;
+}
+
+export interface ListSnapshotJobsRequest {
+    listSnapshotJobsRequestContent: ListSnapshotJobsRequestContent;
 }
 
 export interface ListSnapshotsRequest {
@@ -91,6 +127,10 @@ export interface RollbackSnapshotRequest {
 
 export interface UpdateSnapshotRequest {
     updateSnapshotRequestContent: UpdateSnapshotRequestContent;
+}
+
+export interface UpdateSnapshotJobRequest {
+    updateSnapshotJobRequestContent: UpdateSnapshotJobRequestContent;
 }
 
 /**
@@ -154,6 +194,61 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
+     * Creates request options for createSnapshotJob without sending the request
+     */
+    async createSnapshotJobRequestOpts(requestParameters: CreateSnapshotJobRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['createSnapshotJobRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'createSnapshotJobRequestContent',
+                'Required parameter "createSnapshotJobRequestContent" was null or undefined when calling createSnapshotJob().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/vps/create-snapshot-job`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: CreateSnapshotJobRequestContentToJSON(requestParameters['createSnapshotJobRequestContent']),
+        };
+    }
+
+    /**
+     * [Under development] Creates a new snapshot job for a VPS service. Use period=\'hourly\' with run_every, or period=\'daily\' with days and start_time.
+     */
+    async createSnapshotJobRaw(requestParameters: CreateSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CreateSnapshotJobResponseContent>> {
+        const requestOptions = await this.createSnapshotJobRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => CreateSnapshotJobResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * [Under development] Creates a new snapshot job for a VPS service. Use period=\'hourly\' with run_every, or period=\'daily\' with days and start_time.
+     */
+    async createSnapshotJob(requestParameters: CreateSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CreateSnapshotJobResponseContent> {
+        const response = await this.createSnapshotJobRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
      * Creates request options for deleteSnapshot without sending the request
      */
     async deleteSnapshotRequestOpts(requestParameters: DeleteSnapshotRequest): Promise<runtime.RequestOpts> {
@@ -205,6 +300,116 @@ export class SnapshotsApi extends runtime.BaseAPI {
      */
     async deleteSnapshot(requestParameters: DeleteSnapshotRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DeleteSnapshotResponseContent> {
         const response = await this.deleteSnapshotRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for deleteSnapshotJob without sending the request
+     */
+    async deleteSnapshotJobRequestOpts(requestParameters: DeleteSnapshotJobRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['deleteSnapshotJobRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'deleteSnapshotJobRequestContent',
+                'Required parameter "deleteSnapshotJobRequestContent" was null or undefined when calling deleteSnapshotJob().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/vps/delete-snapshot-job`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: DeleteSnapshotJobRequestContentToJSON(requestParameters['deleteSnapshotJobRequestContent']),
+        };
+    }
+
+    /**
+     * [Under development]Deletes a snapshot job from a VPS service
+     */
+    async deleteSnapshotJobRaw(requestParameters: DeleteSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DeleteSnapshotJobResponseContent>> {
+        const requestOptions = await this.deleteSnapshotJobRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => DeleteSnapshotJobResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * [Under development]Deletes a snapshot job from a VPS service
+     */
+    async deleteSnapshotJob(requestParameters: DeleteSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DeleteSnapshotJobResponseContent> {
+        const response = await this.deleteSnapshotJobRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for listSnapshotJobs without sending the request
+     */
+    async listSnapshotJobsRequestOpts(requestParameters: ListSnapshotJobsRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['listSnapshotJobsRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'listSnapshotJobsRequestContent',
+                'Required parameter "listSnapshotJobsRequestContent" was null or undefined when calling listSnapshotJobs().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/vps/list-snapshot-jobs`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: ListSnapshotJobsRequestContentToJSON(requestParameters['listSnapshotJobsRequestContent']),
+        };
+    }
+
+    /**
+     * [Under development]Retrieves the list of snapshot jobs for a VPS service
+     */
+    async listSnapshotJobsRaw(requestParameters: ListSnapshotJobsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListSnapshotJobsResponseContent>> {
+        const requestOptions = await this.listSnapshotJobsRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ListSnapshotJobsResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * [Under development]Retrieves the list of snapshot jobs for a VPS service
+     */
+    async listSnapshotJobs(requestParameters: ListSnapshotJobsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListSnapshotJobsResponseContent> {
+        const response = await this.listSnapshotJobsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
@@ -301,7 +506,7 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development] Rolls back a VPS to a previous snapshot state
+     * Rolls back a VPS to a previous snapshot state
      */
     async rollbackSnapshotRaw(requestParameters: RollbackSnapshotRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RollbackSnapshotResponseContent>> {
         const requestOptions = await this.rollbackSnapshotRequestOpts(requestParameters);
@@ -311,7 +516,7 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development] Rolls back a VPS to a previous snapshot state
+     * Rolls back a VPS to a previous snapshot state
      */
     async rollbackSnapshot(requestParameters: RollbackSnapshotRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RollbackSnapshotResponseContent> {
         const response = await this.rollbackSnapshotRaw(requestParameters, initOverrides);
@@ -370,6 +575,61 @@ export class SnapshotsApi extends runtime.BaseAPI {
      */
     async updateSnapshot(requestParameters: UpdateSnapshotRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateSnapshotResponseContent> {
         const response = await this.updateSnapshotRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for updateSnapshotJob without sending the request
+     */
+    async updateSnapshotJobRequestOpts(requestParameters: UpdateSnapshotJobRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['updateSnapshotJobRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'updateSnapshotJobRequestContent',
+                'Required parameter "updateSnapshotJobRequestContent" was null or undefined when calling updateSnapshotJob().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/vps/update-snapshot-job`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: UpdateSnapshotJobRequestContentToJSON(requestParameters['updateSnapshotJobRequestContent']),
+        };
+    }
+
+    /**
+     * [Under development] Updates an existing snapshot job. Only provide fields you want to change.
+     */
+    async updateSnapshotJobRaw(requestParameters: UpdateSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UpdateSnapshotJobResponseContent>> {
+        const requestOptions = await this.updateSnapshotJobRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => UpdateSnapshotJobResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * [Under development] Updates an existing snapshot job. Only provide fields you want to change.
+     */
+    async updateSnapshotJob(requestParameters: UpdateSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateSnapshotJobResponseContent> {
+        const response = await this.updateSnapshotJobRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
