@@ -3,6 +3,7 @@
 export * from './BackupsApi.js';
 export * from './ConsoleAccessApi.js';
 export * from './DNSApi.js';
+export * from './DomainsApi.js';
 export * from './FirewallApi.js';
 export * from './MonitoringApi.js';
 export * from './PowerManagementApi.js';

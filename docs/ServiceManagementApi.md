@@ -19,7 +19,7 @@ All URIs are relative to *https://api.hostafrica.com*
 
 
 
-Cancels a VPS service through WHMCS. This action is irreversible
+Cancels a VPS service. This action is irreversible
 
 ### Example
 
@@ -242,6 +242,7 @@ example().catch(console.error);
 | **401** | UnauthorizedError 401 response |  -  |
 | **403** | ForbiddenError 403 response |  -  |
 | **404** | ResourceNotFoundError 404 response |  -  |
+| **422** | ValidationError 422 response |  -  |
 | **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
 | **500** | InternalServiceError 500 response |  -  |
 | **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
@@ -312,6 +313,7 @@ This endpoint does not need any parameter.
 | **401** | UnauthorizedError 401 response |  -  |
 | **403** | ForbiddenError 403 response |  -  |
 | **404** | ResourceNotFoundError 404 response |  -  |
+| **422** | ValidationError 422 response |  -  |
 | **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
 | **500** | InternalServiceError 500 response |  -  |
 | **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |

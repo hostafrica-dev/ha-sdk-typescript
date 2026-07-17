@@ -7,7 +7,7 @@
 Name | Type
 ------------ | -------------
 `serviceId` | string
-`backupId` | number
+`backupId` | string
 
 ## Example
 

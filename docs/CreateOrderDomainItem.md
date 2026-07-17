@@ -8,7 +8,7 @@ A domain line item returned in the order response
 Name | Type
 ------------ | -------------
 `lineId` | number
-`domainId` | number
+`domainId` | string
 `domain` | string
 `type` | string
 `period` | number
