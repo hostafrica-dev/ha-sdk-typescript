@@ -117,6 +117,12 @@ export interface DomainInfo {
      * @memberof DomainInfo
      */
     evaluation?: any | null;
+    /**
+     * True when EPP/auth code retrieval is disabled for this domain
+     * @type {boolean}
+     * @memberof DomainInfo
+     */
+    noEpp?: boolean;
 }
 
 /**
@@ -161,6 +167,7 @@ export function DomainInfoFromJSONTyped(json: any, ignoreDiscriminator: boolean)
         'hasHosting': json['has_hosting'] == null ? undefined : DomainHostingLinkFromJSON(json['has_hosting']),
         'hasDnsManagerZone': json['has_dns_manager_zone'],
         'evaluation': json['evaluation'] == null ? undefined : json['evaluation'],
+        'noEpp': json['no_epp'] == null ? undefined : json['no_epp'],
     };
 }
 
@@ -190,6 +197,7 @@ export function DomainInfoToJSONTyped(value?: DomainInfo | null, ignoreDiscrimin
         'has_hosting': DomainHostingLinkToJSON(value['hasHosting']),
         'has_dns_manager_zone': value['hasDnsManagerZone'],
         'evaluation': value['evaluation'],
+        'no_epp': value['noEpp'],
     };
 }
 

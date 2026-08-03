@@ -231,7 +231,7 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development] Creates a new snapshot job for a VPS service. Use period=\'hourly\' with run_every, or period=\'daily\' with days and start_time.
+     * Creates a new snapshot job for a VPS service. Use period=\'hourly\' with run_every, or period=\'daily\' with days and start_time.
      */
     async createSnapshotJobRaw(requestParameters: CreateSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CreateSnapshotJobResponseContent>> {
         const requestOptions = await this.createSnapshotJobRequestOpts(requestParameters);
@@ -241,7 +241,7 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development] Creates a new snapshot job for a VPS service. Use period=\'hourly\' with run_every, or period=\'daily\' with days and start_time.
+     * Creates a new snapshot job for a VPS service. Use period=\'hourly\' with run_every, or period=\'daily\' with days and start_time.
      */
     async createSnapshotJob(requestParameters: CreateSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CreateSnapshotJobResponseContent> {
         const response = await this.createSnapshotJobRaw(requestParameters, initOverrides);
@@ -341,7 +341,7 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development]Deletes a snapshot job from a VPS service
+     * Deletes a snapshot job from a VPS service
      */
     async deleteSnapshotJobRaw(requestParameters: DeleteSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DeleteSnapshotJobResponseContent>> {
         const requestOptions = await this.deleteSnapshotJobRequestOpts(requestParameters);
@@ -351,7 +351,7 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development]Deletes a snapshot job from a VPS service
+     * Deletes a snapshot job from a VPS service
      */
     async deleteSnapshotJob(requestParameters: DeleteSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DeleteSnapshotJobResponseContent> {
         const response = await this.deleteSnapshotJobRaw(requestParameters, initOverrides);
@@ -396,7 +396,7 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development]Retrieves the list of snapshot jobs for a VPS service
+     * Retrieves the list of snapshot jobs for a VPS service
      */
     async listSnapshotJobsRaw(requestParameters: ListSnapshotJobsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListSnapshotJobsResponseContent>> {
         const requestOptions = await this.listSnapshotJobsRequestOpts(requestParameters);
@@ -406,7 +406,7 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development]Retrieves the list of snapshot jobs for a VPS service
+     * Retrieves the list of snapshot jobs for a VPS service
      */
     async listSnapshotJobs(requestParameters: ListSnapshotJobsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListSnapshotJobsResponseContent> {
         const response = await this.listSnapshotJobsRaw(requestParameters, initOverrides);
@@ -616,7 +616,7 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development] Updates an existing snapshot job. Only provide fields you want to change.
+     * Updates an existing snapshot job. Only provide fields you want to change.
      */
     async updateSnapshotJobRaw(requestParameters: UpdateSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UpdateSnapshotJobResponseContent>> {
         const requestOptions = await this.updateSnapshotJobRequestOpts(requestParameters);
@@ -626,7 +626,7 @@ export class SnapshotsApi extends runtime.BaseAPI {
     }
 
     /**
-     * [Under development] Updates an existing snapshot job. Only provide fields you want to change.
+     * Updates an existing snapshot job. Only provide fields you want to change.
      */
     async updateSnapshotJob(requestParameters: UpdateSnapshotJobRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateSnapshotJobResponseContent> {
         const response = await this.updateSnapshotJobRaw(requestParameters, initOverrides);

@@ -197,7 +197,7 @@ export class ServiceManagementApi extends runtime.BaseAPI {
     }
 
     /**
-     * Creates an order through checkout. Returns payment status; on failure also includes payment_error with code and message.
+     * Creates an order for a VPS service. Returns payment status; on failure also includes payment_error with code and message.
      */
     async createOrderRaw(requestParameters: CreateOrderRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CreateOrderResponseContent>> {
         const requestOptions = await this.createOrderRequestOpts(requestParameters);
@@ -207,7 +207,7 @@ export class ServiceManagementApi extends runtime.BaseAPI {
     }
 
     /**
-     * Creates an order through checkout. Returns payment status; on failure also includes payment_error with code and message.
+     * Creates an order for a VPS service. Returns payment status; on failure also includes payment_error with code and message.
      */
     async createOrder(requestParameters: CreateOrderRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CreateOrderResponseContent> {
         const response = await this.createOrderRaw(requestParameters, initOverrides);
@@ -400,7 +400,7 @@ export class ServiceManagementApi extends runtime.BaseAPI {
     }
 
     /**
-     * Validates pricing for one or more products, returning per-product breakdown and order summary
+     * Validates pricing for one or more VPC service products, returning per-product breakdown and order summary
      */
     async validatePricingRaw(requestParameters: ValidatePricingRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ValidatePricingResponseContent>> {
         const requestOptions = await this.validatePricingRequestOpts(requestParameters);
@@ -410,7 +410,7 @@ export class ServiceManagementApi extends runtime.BaseAPI {
     }
 
     /**
-     * Validates pricing for one or more products, returning per-product breakdown and order summary
+     * Validates pricing for one or more VPC service products, returning per-product breakdown and order summary
      */
     async validatePricing(requestParameters: ValidatePricingRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ValidatePricingResponseContent> {
         const response = await this.validatePricingRaw(requestParameters, initOverrides);

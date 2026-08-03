@@ -7,10 +7,13 @@ All URIs are relative to *https://api.hostafrica.com*
 | [**checkDomainAvailability**](DomainsApi.md#checkdomainavailability) | **POST** /domain/check-availability |  |
 | [**getDomain**](DomainsApi.md#getdomain) | **POST** /domain/get-domain |  |
 | [**getDomainContacts**](DomainsApi.md#getdomaincontacts) | **POST** /domain/get-domain-contacts |  |
+| [**listDnssecRecords**](DomainsApi.md#listdnssecrecords) | **POST** /domain/list-dnssec-records |  |
 | [**listDomains**](DomainsApi.md#listdomains) | **POST** /domain/list-domains |  |
 | [**listDomainsRequiringData**](DomainsApi.md#listdomainsrequiringdata) | **POST** /domain/list-domains-requiring-data |  |
 | [**saveDomainRequiredData**](DomainsApi.md#savedomainrequireddata) | **POST** /domain/save-domain-required-data |  |
 | [**suggestDomains**](DomainsApi.md#suggestdomains) | **POST** /domain/suggest |  |
+| [**updateDomainContacts**](DomainsApi.md#updatedomaincontacts) | **POST** /domain/update-domain-contacts |  |
+| [**updateDomainNameservers**](DomainsApi.md#updatedomainnameservers) | **POST** /domain/update-nameservers |  |
 | [**updateDomainSettings**](DomainsApi.md#updatedomainsettings) | **POST** /domain/update-domain-settings |  |
 
 
@@ -239,6 +242,85 @@ example().catch(console.error);
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | GetDomainContacts 200 response |  -  |
+| **400** | BadRequestError 400 response |  -  |
+| **401** | UnauthorizedError 401 response |  -  |
+| **403** | ForbiddenError 403 response |  -  |
+| **404** | ResourceNotFoundError 404 response |  -  |
+| **422** | ValidationError 422 response |  -  |
+| **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+| **500** | InternalServiceError 500 response |  -  |
+| **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
+## listDnssecRecords
+
+> ListDnssecRecordsResponseContent listDnssecRecords(listDnssecRecordsRequestContent)
+
+
+
+Lists DNSSEC DS records configured for an owned domain.
+
+### Example
+
+```ts
+import {
+  Configuration,
+  DomainsApi,
+} from '@hostafrica/ha-sdk-typescript';
+import type { ListDnssecRecordsRequest } from '@hostafrica/ha-sdk-typescript';
+
+async function example() {
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: BearerAuth
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new DomainsApi(config);
+
+  const body = {
+    // ListDnssecRecordsRequestContent
+    listDnssecRecordsRequestContent: ...,
+  } satisfies ListDnssecRecordsRequest;
+
+  try {
+    const data = await api.listDnssecRecords(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **listDnssecRecordsRequestContent** | [ListDnssecRecordsRequestContent](ListDnssecRecordsRequestContent.md) |  | |
+
+### Return type
+
+[**ListDnssecRecordsResponseContent**](ListDnssecRecordsResponseContent.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | ListDnssecRecords 200 response |  -  |
 | **400** | BadRequestError 400 response |  -  |
 | **401** | UnauthorizedError 401 response |  -  |
 | **403** | ForbiddenError 403 response |  -  |
@@ -540,6 +622,164 @@ example().catch(console.error);
 | **400** | BadRequestError 400 response |  -  |
 | **401** | UnauthorizedError 401 response |  -  |
 | **403** | ForbiddenError 403 response |  -  |
+| **422** | ValidationError 422 response |  -  |
+| **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+| **500** | InternalServiceError 500 response |  -  |
+| **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
+## updateDomainContacts
+
+> UpdateDomainContactsResponseContent updateDomainContacts(updateDomainContactsRequestContent)
+
+
+
+Updates WHOIS contact information for an owned domain. Each role (Registrant, Admin, Tech, Billing) uses a source type: owner (client profile), contact (saved WHMCS contact id), or custom (inline WHOIS fields). WHOIS values must be nested under fields; for owner and contact they are flattened upstream when present.
+
+### Example
+
+```ts
+import {
+  Configuration,
+  DomainsApi,
+} from '@hostafrica/ha-sdk-typescript';
+import type { UpdateDomainContactsRequest } from '@hostafrica/ha-sdk-typescript';
+
+async function example() {
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: BearerAuth
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new DomainsApi(config);
+
+  const body = {
+    // UpdateDomainContactsRequestContent
+    updateDomainContactsRequestContent: ...,
+  } satisfies UpdateDomainContactsRequest;
+
+  try {
+    const data = await api.updateDomainContacts(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **updateDomainContactsRequestContent** | [UpdateDomainContactsRequestContent](UpdateDomainContactsRequestContent.md) |  | |
+
+### Return type
+
+[**UpdateDomainContactsResponseContent**](UpdateDomainContactsResponseContent.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | UpdateDomainContacts 200 response |  -  |
+| **400** | BadRequestError 400 response |  -  |
+| **401** | UnauthorizedError 401 response |  -  |
+| **403** | ForbiddenError 403 response |  -  |
+| **404** | ResourceNotFoundError 404 response |  -  |
+| **422** | ValidationError 422 response |  -  |
+| **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+| **500** | InternalServiceError 500 response |  -  |
+| **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
+## updateDomainNameservers
+
+> UpdateDomainNameserversResponseContent updateDomainNameservers(updateDomainNameserversRequestContent)
+
+
+
+Updates nameservers for an owned domain. ns1 and ns2 are required; ns3 through ns5 are optional.
+
+### Example
+
+```ts
+import {
+  Configuration,
+  DomainsApi,
+} from '@hostafrica/ha-sdk-typescript';
+import type { UpdateDomainNameserversRequest } from '@hostafrica/ha-sdk-typescript';
+
+async function example() {
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: BearerAuth
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new DomainsApi(config);
+
+  const body = {
+    // UpdateDomainNameserversRequestContent
+    updateDomainNameserversRequestContent: ...,
+  } satisfies UpdateDomainNameserversRequest;
+
+  try {
+    const data = await api.updateDomainNameservers(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **updateDomainNameserversRequestContent** | [UpdateDomainNameserversRequestContent](UpdateDomainNameserversRequestContent.md) |  | |
+
+### Return type
+
+[**UpdateDomainNameserversResponseContent**](UpdateDomainNameserversResponseContent.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | UpdateDomainNameservers 200 response |  -  |
+| **400** | BadRequestError 400 response |  -  |
+| **401** | UnauthorizedError 401 response |  -  |
+| **403** | ForbiddenError 403 response |  -  |
+| **404** | ResourceNotFoundError 404 response |  -  |
 | **422** | ValidationError 422 response |  -  |
 | **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
 | **500** | InternalServiceError 500 response |  -  |

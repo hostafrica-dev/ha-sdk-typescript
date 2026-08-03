@@ -20,25 +20,23 @@ import { mapValues } from '../runtime.js';
  */
 export interface DomainHostingLink {
     /**
-     * Linked hosting service id
+     * Linked hosting service id; omitted when no hosting is linked
      * @type {number}
      * @memberof DomainHostingLink
      */
-    hostingId: number;
+    hostingId?: number;
     /**
-     * Hosting module name (e.g. cpanel)
+     * Hosting module name (e.g. cpanel); omitted when no hosting is linked
      * @type {string}
      * @memberof DomainHostingLink
      */
-    module: string;
+    module?: string;
 }
 
 /**
  * Check if a given object implements the DomainHostingLink interface.
  */
 export function instanceOfDomainHostingLink(value: object): value is DomainHostingLink {
-    if (!('hostingId' in value) || value['hostingId'] === undefined) return false;
-    if (!('module' in value) || value['module'] === undefined) return false;
     return true;
 }
 
@@ -52,8 +50,8 @@ export function DomainHostingLinkFromJSONTyped(json: any, ignoreDiscriminator: b
     }
     return {
         
-        'hostingId': json['hosting_id'],
-        'module': json['module'],
+        'hostingId': json['hosting_id'] == null ? undefined : json['hosting_id'],
+        'module': json['module'] == null ? undefined : json['module'],
     };
 }
 

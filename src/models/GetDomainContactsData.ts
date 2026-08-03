@@ -13,6 +13,14 @@
  */
 
 import { mapValues } from '../runtime.js';
+import type { DomainContacts } from './DomainContacts.js';
+import {
+    DomainContactsFromJSON,
+    DomainContactsFromJSONTyped,
+    DomainContactsToJSON,
+    DomainContactsToJSONTyped,
+} from './DomainContacts.js';
+
 /**
  * Domain contact information returned by get-domain-contacts
  * @export
@@ -38,11 +46,11 @@ export interface GetDomainContactsData {
      */
     domain: string;
     /**
-     * Contact roles keyed by Registrant, Admin, Tech, and Billing, or an array of contact records. Inner field names and values vary by TLD/registrar.
-     * @type {any}
+     * 
+     * @type {DomainContacts}
      * @memberof GetDomainContactsData
      */
-    contacts: any | null;
+    contacts: DomainContacts;
 }
 
 /**
@@ -69,7 +77,7 @@ export function GetDomainContactsDataFromJSONTyped(json: any, ignoreDiscriminato
         'message': json['message'],
         'domainId': json['domain_id'],
         'domain': json['domain'],
-        'contacts': json['contacts'],
+        'contacts': DomainContactsFromJSON(json['contacts']),
     };
 }
 
@@ -87,7 +95,7 @@ export function GetDomainContactsDataToJSONTyped(value?: GetDomainContactsData |
         'message': value['message'],
         'domain_id': value['domainId'],
         'domain': value['domain'],
-        'contacts': value['contacts'],
+        'contacts': DomainContactsToJSON(value['contacts']),
     };
 }
 

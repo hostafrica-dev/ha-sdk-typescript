@@ -22,6 +22,7 @@ Name | Type
 `hasHosting` | [DomainHostingLink](DomainHostingLink.md)
 `hasDnsManagerZone` | boolean
 `evaluation` | any
+`noEpp` | boolean
 
 ## Example
 
@@ -45,6 +46,7 @@ const example = {
   "hasHosting": null,
   "hasDnsManagerZone": null,
   "evaluation": null,
+  "noEpp": null,
 } satisfies DomainInfo
 
 console.log(example)

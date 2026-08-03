@@ -24,6 +24,8 @@ import type {
   GetDomainRequestContent,
   GetDomainResponseContent,
   InternalServiceErrorResponseContent,
+  ListDnssecRecordsRequestContent,
+  ListDnssecRecordsResponseContent,
   ListDomainsRequiringDataResponseContent,
   ListDomainsResponseContent,
   ResourceNotFoundErrorResponseContent,
@@ -34,6 +36,10 @@ import type {
   SuggestDomainsResponseContent,
   TooManyRequestsErrorResponseContent,
   UnauthorizedErrorResponseContent,
+  UpdateDomainContactsRequestContent,
+  UpdateDomainContactsResponseContent,
+  UpdateDomainNameserversRequestContent,
+  UpdateDomainNameserversResponseContent,
   UpdateDomainSettingsRequestContent,
   UpdateDomainSettingsResponseContent,
   ValidationErrorResponseContent,
@@ -57,6 +63,10 @@ import {
     GetDomainResponseContentToJSON,
     InternalServiceErrorResponseContentFromJSON,
     InternalServiceErrorResponseContentToJSON,
+    ListDnssecRecordsRequestContentFromJSON,
+    ListDnssecRecordsRequestContentToJSON,
+    ListDnssecRecordsResponseContentFromJSON,
+    ListDnssecRecordsResponseContentToJSON,
     ListDomainsRequiringDataResponseContentFromJSON,
     ListDomainsRequiringDataResponseContentToJSON,
     ListDomainsResponseContentFromJSON,
@@ -77,6 +87,14 @@ import {
     TooManyRequestsErrorResponseContentToJSON,
     UnauthorizedErrorResponseContentFromJSON,
     UnauthorizedErrorResponseContentToJSON,
+    UpdateDomainContactsRequestContentFromJSON,
+    UpdateDomainContactsRequestContentToJSON,
+    UpdateDomainContactsResponseContentFromJSON,
+    UpdateDomainContactsResponseContentToJSON,
+    UpdateDomainNameserversRequestContentFromJSON,
+    UpdateDomainNameserversRequestContentToJSON,
+    UpdateDomainNameserversResponseContentFromJSON,
+    UpdateDomainNameserversResponseContentToJSON,
     UpdateDomainSettingsRequestContentFromJSON,
     UpdateDomainSettingsRequestContentToJSON,
     UpdateDomainSettingsResponseContentFromJSON,
@@ -97,12 +115,24 @@ export interface GetDomainContactsRequest {
     getDomainContactsRequestContent: GetDomainContactsRequestContent;
 }
 
+export interface ListDnssecRecordsRequest {
+    listDnssecRecordsRequestContent: ListDnssecRecordsRequestContent;
+}
+
 export interface SaveDomainRequiredDataRequest {
     saveDomainRequiredDataRequestContent: SaveDomainRequiredDataRequestContent;
 }
 
 export interface SuggestDomainsRequest {
     suggestDomainsRequestContent: SuggestDomainsRequestContent;
+}
+
+export interface UpdateDomainContactsRequest {
+    updateDomainContactsRequestContent: UpdateDomainContactsRequestContent;
+}
+
+export interface UpdateDomainNameserversRequest {
+    updateDomainNameserversRequestContent: UpdateDomainNameserversRequestContent;
 }
 
 export interface UpdateDomainSettingsRequest {
@@ -269,6 +299,61 @@ export class DomainsApi extends runtime.BaseAPI {
      */
     async getDomainContacts(requestParameters: GetDomainContactsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GetDomainContactsResponseContent> {
         const response = await this.getDomainContactsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for listDnssecRecords without sending the request
+     */
+    async listDnssecRecordsRequestOpts(requestParameters: ListDnssecRecordsRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['listDnssecRecordsRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'listDnssecRecordsRequestContent',
+                'Required parameter "listDnssecRecordsRequestContent" was null or undefined when calling listDnssecRecords().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/list-dnssec-records`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: ListDnssecRecordsRequestContentToJSON(requestParameters['listDnssecRecordsRequestContent']),
+        };
+    }
+
+    /**
+     * Lists DNSSEC DS records configured for an owned domain.
+     */
+    async listDnssecRecordsRaw(requestParameters: ListDnssecRecordsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListDnssecRecordsResponseContent>> {
+        const requestOptions = await this.listDnssecRecordsRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ListDnssecRecordsResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Lists DNSSEC DS records configured for an owned domain.
+     */
+    async listDnssecRecords(requestParameters: ListDnssecRecordsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListDnssecRecordsResponseContent> {
+        const response = await this.listDnssecRecordsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
@@ -469,6 +554,116 @@ export class DomainsApi extends runtime.BaseAPI {
      */
     async suggestDomains(requestParameters: SuggestDomainsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<SuggestDomainsResponseContent> {
         const response = await this.suggestDomainsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for updateDomainContacts without sending the request
+     */
+    async updateDomainContactsRequestOpts(requestParameters: UpdateDomainContactsRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['updateDomainContactsRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'updateDomainContactsRequestContent',
+                'Required parameter "updateDomainContactsRequestContent" was null or undefined when calling updateDomainContacts().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/update-domain-contacts`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: UpdateDomainContactsRequestContentToJSON(requestParameters['updateDomainContactsRequestContent']),
+        };
+    }
+
+    /**
+     * Updates WHOIS contact information for an owned domain. Each role (Registrant, Admin, Tech, Billing) uses a source type: owner (client profile), contact (saved WHMCS contact id), or custom (inline WHOIS fields). WHOIS values must be nested under fields; for owner and contact they are flattened upstream when present.
+     */
+    async updateDomainContactsRaw(requestParameters: UpdateDomainContactsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UpdateDomainContactsResponseContent>> {
+        const requestOptions = await this.updateDomainContactsRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => UpdateDomainContactsResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Updates WHOIS contact information for an owned domain. Each role (Registrant, Admin, Tech, Billing) uses a source type: owner (client profile), contact (saved WHMCS contact id), or custom (inline WHOIS fields). WHOIS values must be nested under fields; for owner and contact they are flattened upstream when present.
+     */
+    async updateDomainContacts(requestParameters: UpdateDomainContactsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateDomainContactsResponseContent> {
+        const response = await this.updateDomainContactsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for updateDomainNameservers without sending the request
+     */
+    async updateDomainNameserversRequestOpts(requestParameters: UpdateDomainNameserversRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['updateDomainNameserversRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'updateDomainNameserversRequestContent',
+                'Required parameter "updateDomainNameserversRequestContent" was null or undefined when calling updateDomainNameservers().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/update-nameservers`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: UpdateDomainNameserversRequestContentToJSON(requestParameters['updateDomainNameserversRequestContent']),
+        };
+    }
+
+    /**
+     * Updates nameservers for an owned domain. ns1 and ns2 are required; ns3 through ns5 are optional.
+     */
+    async updateDomainNameserversRaw(requestParameters: UpdateDomainNameserversRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UpdateDomainNameserversResponseContent>> {
+        const requestOptions = await this.updateDomainNameserversRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => UpdateDomainNameserversResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Updates nameservers for an owned domain. ns1 and ns2 are required; ns3 through ns5 are optional.
+     */
+    async updateDomainNameservers(requestParameters: UpdateDomainNameserversRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateDomainNameserversResponseContent> {
+        const response = await this.updateDomainNameserversRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

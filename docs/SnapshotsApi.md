@@ -101,7 +101,7 @@ example().catch(console.error);
 
 
 
-[Under development] Creates a new snapshot job for a VPS service. Use period&#x3D;\&#39;hourly\&#39; with run_every, or period&#x3D;\&#39;daily\&#39; with days and start_time.
+Creates a new snapshot job for a VPS service. Use period&#x3D;\&#39;hourly\&#39; with run_every, or period&#x3D;\&#39;daily\&#39; with days and start_time.
 
 ### Example
 
@@ -259,7 +259,7 @@ example().catch(console.error);
 
 
 
-[Under development]Deletes a snapshot job from a VPS service
+Deletes a snapshot job from a VPS service
 
 ### Example
 
@@ -338,7 +338,7 @@ example().catch(console.error);
 
 
 
-[Under development]Retrieves the list of snapshot jobs for a VPS service
+Retrieves the list of snapshot jobs for a VPS service
 
 ### Example
 
@@ -654,7 +654,7 @@ example().catch(console.error);
 
 
 
-[Under development] Updates an existing snapshot job. Only provide fields you want to change.
+Updates an existing snapshot job. Only provide fields you want to change.
 
 ### Example
 

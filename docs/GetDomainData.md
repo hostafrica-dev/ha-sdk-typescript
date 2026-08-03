@@ -8,7 +8,7 @@ Response data for get-domain
 Name | Type
 ------------ | -------------
 `message` | string
-`domain` | [DomainInfo](DomainInfo.md)
+`domain` | [DomainDetail](DomainDetail.md)
 
 ## Example
 

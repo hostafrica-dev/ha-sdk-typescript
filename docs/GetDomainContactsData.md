@@ -10,7 +10,7 @@ Name | Type
 `message` | string
 `domainId` | string
 `domain` | string
-`contacts` | any
+`contacts` | [DomainContacts](DomainContacts.md)
 
 ## Example
 

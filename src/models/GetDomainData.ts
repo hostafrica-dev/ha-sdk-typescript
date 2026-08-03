@@ -13,13 +13,13 @@
  */
 
 import { mapValues } from '../runtime.js';
-import type { DomainInfo } from './DomainInfo.js';
+import type { DomainDetail } from './DomainDetail.js';
 import {
-    DomainInfoFromJSON,
-    DomainInfoFromJSONTyped,
-    DomainInfoToJSON,
-    DomainInfoToJSONTyped,
-} from './DomainInfo.js';
+    DomainDetailFromJSON,
+    DomainDetailFromJSONTyped,
+    DomainDetailToJSON,
+    DomainDetailToJSONTyped,
+} from './DomainDetail.js';
 
 /**
  * Response data for get-domain
@@ -35,10 +35,10 @@ export interface GetDomainData {
     message: string;
     /**
      * 
-     * @type {DomainInfo}
+     * @type {DomainDetail}
      * @memberof GetDomainData
      */
-    domain: DomainInfo;
+    domain: DomainDetail;
 }
 
 /**
@@ -61,7 +61,7 @@ export function GetDomainDataFromJSONTyped(json: any, ignoreDiscriminator: boole
     return {
         
         'message': json['message'],
-        'domain': DomainInfoFromJSON(json['domain']),
+        'domain': DomainDetailFromJSON(json['domain']),
     };
 }
 
@@ -77,7 +77,7 @@ export function GetDomainDataToJSONTyped(value?: GetDomainData | null, ignoreDis
     return {
         
         'message': value['message'],
-        'domain': DomainInfoToJSON(value['domain']),
+        'domain': DomainDetailToJSON(value['domain']),
     };
 }
 
