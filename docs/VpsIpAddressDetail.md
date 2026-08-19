@@ -1,29 +1,31 @@
 
-# NoVncConsoleDetails
+# VpsIpAddressDetail
 
-noVNC console connection details
+Detailed IP address assignment for a VPS
 
 ## Properties
 
 Name | Type
 ------------ | -------------
-`novncRedirectUrl` | string
-`mode` | string
-`websocketUrl` | string
-`password` | string
+`ip` | string
+`address` | string
+`subnet` | string
+`gateway` | string
+`mac` | string
 
 ## Example
 
 ```typescript
-import type { NoVncConsoleDetails } from '@hostafrica/ha-sdk-typescript'
+import type { VpsIpAddressDetail } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "novncRedirectUrl": null,
-  "mode": null,
-  "websocketUrl": null,
-  "password": null,
-} satisfies NoVncConsoleDetails
+  "ip": null,
+  "address": null,
+  "subnet": null,
+  "gateway": null,
+  "mac": null,
+} satisfies VpsIpAddressDetail
 
 console.log(example)
 
@@ -32,7 +34,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as NoVncConsoleDetails
+const exampleParsed = JSON.parse(exampleJSON) as VpsIpAddressDetail
 console.log(exampleParsed)
 ```
 

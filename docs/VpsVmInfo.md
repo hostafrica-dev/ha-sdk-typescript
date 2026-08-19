@@ -11,7 +11,7 @@ Name | Type
 `uptime` | string
 `uptimeSeconds` | number
 `hostname` | string
-`bootDevices` | string
+`bootDevices` | Array&lt;string&gt;
 `vmid` | string
 `node` | string
 `virtualization` | string

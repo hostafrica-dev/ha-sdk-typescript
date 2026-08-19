@@ -44,11 +44,11 @@ export interface VpsVmInfo {
      */
     hostname?: string;
     /**
-     * Boot devices configuration
-     * @type {string}
+     * Boot devices configuration (e.g., scsi0, scsi1)
+     * @type {Array<string>}
      * @memberof VpsVmInfo
      */
-    bootDevices?: string;
+    bootDevices?: Array<string>;
     /**
      * Proxmox VM ID
      * @type {string}

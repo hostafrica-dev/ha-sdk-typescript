@@ -7,6 +7,7 @@
 export const RETRYABLE_PATHS = new Set<string>([
     "/vps/list-vps-services",
     "/vps/get-details",
+    "/vps/get-encrypted-password",
     "/vps/get-config",
     "/vps/novnc-console",
     "/vps/list-backups",

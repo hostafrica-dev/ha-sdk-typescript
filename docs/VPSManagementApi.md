@@ -4,6 +4,7 @@ All URIs are relative to *https://api.hostafrica.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**getEncryptedPassword**](VPSManagementApi.md#getencryptedpassword) | **POST** /vps/get-encrypted-password |  |
 | [**getVpsConfig**](VPSManagementApi.md#getvpsconfig) | **POST** /vps/get-config |  |
 | [**getVpsDetails**](VPSManagementApi.md#getvpsdetails) | **POST** /vps/get-details |  |
 | [**listIsos**](VPSManagementApi.md#listisos) | **POST** /vps/list-isos |  |
@@ -13,6 +14,85 @@ All URIs are relative to *https://api.hostafrica.com*
 | [**triggerReinstall**](VPSManagementApi.md#triggerreinstall) | **POST** /vps/trigger-reinstall |  |
 | [**updateVpsConfig**](VPSManagementApi.md#updatevpsconfig) | **POST** /vps/update-config |  |
 
+
+
+## getEncryptedPassword
+
+> GetEncryptedPasswordResponseContent getEncryptedPassword(getEncryptedPasswordRequestContent)
+
+
+
+Retrieves the VPS username and root password without exposing plaintext over the API. Send a PEM-encoded RSA 4096-bit public key; the API encrypts the password with RSA-OAEP (SHA-256), and returns base64 ciphertext plus encryption metadata. Never send the private key. Invalid or non-4096-bit keys return HTTP 422 ValidationError. Generate a key with: openssl genrsa -out private.pem 4096 &amp;&amp; openssl rsa -in private.pem -pubout -out public.pem. Decrypt with: echo CIPHERTEXT | base64 -d | openssl pkeyutl -decrypt -inkey private.pem -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256 (macOS: base64 -D).
+
+### Example
+
+```ts
+import {
+  Configuration,
+  VPSManagementApi,
+} from '@hostafrica/ha-sdk-typescript';
+import type { GetEncryptedPasswordRequest } from '@hostafrica/ha-sdk-typescript';
+
+async function example() {
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: BearerAuth
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new VPSManagementApi(config);
+
+  const body = {
+    // GetEncryptedPasswordRequestContent
+    getEncryptedPasswordRequestContent: ...,
+  } satisfies GetEncryptedPasswordRequest;
+
+  try {
+    const data = await api.getEncryptedPassword(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **getEncryptedPasswordRequestContent** | [GetEncryptedPasswordRequestContent](GetEncryptedPasswordRequestContent.md) |  | |
+
+### Return type
+
+[**GetEncryptedPasswordResponseContent**](GetEncryptedPasswordResponseContent.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | GetEncryptedPassword 200 response |  -  |
+| **400** | BadRequestError 400 response |  -  |
+| **401** | UnauthorizedError 401 response |  -  |
+| **403** | ForbiddenError 403 response |  -  |
+| **404** | ResourceNotFoundError 404 response |  -  |
+| **422** | ValidationError 422 response |  -  |
+| **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+| **500** | InternalServiceError 500 response |  -  |
+| **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 
 ## getVpsConfig
@@ -100,7 +180,7 @@ example().catch(console.error);
 
 
 
-Gets detailed information about a VPS service including configuration, network settings, and statistics
+Gets detailed information about a VPS service including configuration, network settings, and statistics. Credentials.password is always \&quot;&lt;redacted&gt;\&quot;; plaintext passwords are never returned. To retrieve the password securely, use GetEncryptedPassword (/vps/get-encrypted-password).
 
 ### Example
 

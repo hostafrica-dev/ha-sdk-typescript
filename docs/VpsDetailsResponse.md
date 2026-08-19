@@ -12,7 +12,7 @@ Name | Type
 `memory` | [VpsMemoryInfo](VpsMemoryInfo.md)
 `disk` | [VpsDiskInfo](VpsDiskInfo.md)
 `networkRate` | [VpsNetworkRate](VpsNetworkRate.md)
-`ipAddresses` | Array&lt;string&gt;
+`ipAddresses` | [Array&lt;VpsIpAddressDetail&gt;](VpsIpAddressDetail.md)
 `credentials` | [VpsCredentials](VpsCredentials.md)
 `availableFeatures` | [VpsAvailableFeatures](VpsAvailableFeatures.md)
 `osInfo` | [VpsOsInfo](VpsOsInfo.md)

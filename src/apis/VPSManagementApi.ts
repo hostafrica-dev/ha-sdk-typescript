@@ -17,6 +17,8 @@ import * as runtime from '../runtime.js';
 import type {
   BadRequestErrorResponseContent,
   ForbiddenErrorResponseContent,
+  GetEncryptedPasswordRequestContent,
+  GetEncryptedPasswordResponseContent,
   GetVpsConfigRequestContent,
   GetVpsConfigResponseContent,
   GetVpsDetailsRequestContent,
@@ -45,6 +47,10 @@ import {
     BadRequestErrorResponseContentToJSON,
     ForbiddenErrorResponseContentFromJSON,
     ForbiddenErrorResponseContentToJSON,
+    GetEncryptedPasswordRequestContentFromJSON,
+    GetEncryptedPasswordRequestContentToJSON,
+    GetEncryptedPasswordResponseContentFromJSON,
+    GetEncryptedPasswordResponseContentToJSON,
     GetVpsConfigRequestContentFromJSON,
     GetVpsConfigRequestContentToJSON,
     GetVpsConfigResponseContentFromJSON,
@@ -91,6 +97,10 @@ import {
     ValidationErrorResponseContentToJSON,
 } from '../models/index.js';
 
+export interface GetEncryptedPasswordRequest {
+    getEncryptedPasswordRequestContent: GetEncryptedPasswordRequestContent;
+}
+
 export interface GetVpsConfigRequest {
     getVpsConfigRequestContent: GetVpsConfigRequestContent;
 }
@@ -123,6 +133,61 @@ export interface UpdateVpsConfigRequest {
  * 
  */
 export class VPSManagementApi extends runtime.BaseAPI {
+
+    /**
+     * Creates request options for getEncryptedPassword without sending the request
+     */
+    async getEncryptedPasswordRequestOpts(requestParameters: GetEncryptedPasswordRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['getEncryptedPasswordRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'getEncryptedPasswordRequestContent',
+                'Required parameter "getEncryptedPasswordRequestContent" was null or undefined when calling getEncryptedPassword().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/vps/get-encrypted-password`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: GetEncryptedPasswordRequestContentToJSON(requestParameters['getEncryptedPasswordRequestContent']),
+        };
+    }
+
+    /**
+     * Retrieves the VPS username and root password without exposing plaintext over the API. Send a PEM-encoded RSA 4096-bit public key; the API encrypts the password with RSA-OAEP (SHA-256), and returns base64 ciphertext plus encryption metadata. Never send the private key. Invalid or non-4096-bit keys return HTTP 422 ValidationError. Generate a key with: openssl genrsa -out private.pem 4096 && openssl rsa -in private.pem -pubout -out public.pem. Decrypt with: echo CIPHERTEXT | base64 -d | openssl pkeyutl -decrypt -inkey private.pem -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256 (macOS: base64 -D).
+     */
+    async getEncryptedPasswordRaw(requestParameters: GetEncryptedPasswordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<GetEncryptedPasswordResponseContent>> {
+        const requestOptions = await this.getEncryptedPasswordRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => GetEncryptedPasswordResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Retrieves the VPS username and root password without exposing plaintext over the API. Send a PEM-encoded RSA 4096-bit public key; the API encrypts the password with RSA-OAEP (SHA-256), and returns base64 ciphertext plus encryption metadata. Never send the private key. Invalid or non-4096-bit keys return HTTP 422 ValidationError. Generate a key with: openssl genrsa -out private.pem 4096 && openssl rsa -in private.pem -pubout -out public.pem. Decrypt with: echo CIPHERTEXT | base64 -d | openssl pkeyutl -decrypt -inkey private.pem -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256 (macOS: base64 -D).
+     */
+    async getEncryptedPassword(requestParameters: GetEncryptedPasswordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GetEncryptedPasswordResponseContent> {
+        const response = await this.getEncryptedPasswordRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
 
     /**
      * Creates request options for getVpsConfig without sending the request
@@ -217,7 +282,7 @@ export class VPSManagementApi extends runtime.BaseAPI {
     }
 
     /**
-     * Gets detailed information about a VPS service including configuration, network settings, and statistics
+     * Gets detailed information about a VPS service including configuration, network settings, and statistics. Credentials.password is always \"<redacted>\"; plaintext passwords are never returned. To retrieve the password securely, use GetEncryptedPassword (/vps/get-encrypted-password).
      */
     async getVpsDetailsRaw(requestParameters: GetVpsDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<GetVpsDetailsResponseContent>> {
         const requestOptions = await this.getVpsDetailsRequestOpts(requestParameters);
@@ -227,7 +292,7 @@ export class VPSManagementApi extends runtime.BaseAPI {
     }
 
     /**
-     * Gets detailed information about a VPS service including configuration, network settings, and statistics
+     * Gets detailed information about a VPS service including configuration, network settings, and statistics. Credentials.password is always \"<redacted>\"; plaintext passwords are never returned. To retrieve the password securely, use GetEncryptedPassword (/vps/get-encrypted-password).
      */
     async getVpsDetails(requestParameters: GetVpsDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GetVpsDetailsResponseContent> {
         const response = await this.getVpsDetailsRaw(requestParameters, initOverrides);

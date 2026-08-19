@@ -1,29 +1,27 @@
 
-# NoVncConsoleDetails
+# EncryptedPasswordResponseData
 
-noVNC console connection details
+Response data for get-encrypted-password
 
 ## Properties
 
 Name | Type
 ------------ | -------------
-`novncRedirectUrl` | string
-`mode` | string
-`websocketUrl` | string
+`username` | string
 `password` | string
+`encryption` | [PasswordEncryptionInfo](PasswordEncryptionInfo.md)
 
 ## Example
 
 ```typescript
-import type { NoVncConsoleDetails } from '@hostafrica/ha-sdk-typescript'
+import type { EncryptedPasswordResponseData } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "novncRedirectUrl": null,
-  "mode": null,
-  "websocketUrl": null,
+  "username": null,
   "password": null,
-} satisfies NoVncConsoleDetails
+  "encryption": null,
+} satisfies EncryptedPasswordResponseData
 
 console.log(example)
 
@@ -32,7 +30,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as NoVncConsoleDetails
+const exampleParsed = JSON.parse(exampleJSON) as EncryptedPasswordResponseData
 console.log(exampleParsed)
 ```
 

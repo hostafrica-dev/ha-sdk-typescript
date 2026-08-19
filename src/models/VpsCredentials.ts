@@ -26,7 +26,7 @@ export interface VpsCredentials {
      */
     username: string;
     /**
-     * Password for VPS access
+     * Password for VPS access. Always returned as "<redacted>" from get-details; plaintext passwords are never included in API responses.
      * @type {string}
      * @memberof VpsCredentials
      */

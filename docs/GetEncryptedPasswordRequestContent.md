@@ -1,29 +1,24 @@
 
-# NoVncConsoleDetails
+# GetEncryptedPasswordRequestContent
 
-noVNC console connection details
 
 ## Properties
 
 Name | Type
 ------------ | -------------
-`novncRedirectUrl` | string
-`mode` | string
-`websocketUrl` | string
-`password` | string
+`serviceId` | string
+`publicKey` | string
 
 ## Example
 
 ```typescript
-import type { NoVncConsoleDetails } from '@hostafrica/ha-sdk-typescript'
+import type { GetEncryptedPasswordRequestContent } from '@hostafrica/ha-sdk-typescript'
 
 // TODO: Update the object below with actual values
 const example = {
-  "novncRedirectUrl": null,
-  "mode": null,
-  "websocketUrl": null,
-  "password": null,
-} satisfies NoVncConsoleDetails
+  "serviceId": null,
+  "publicKey": null,
+} satisfies GetEncryptedPasswordRequestContent
 
 console.log(example)
 
@@ -32,7 +27,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as NoVncConsoleDetails
+const exampleParsed = JSON.parse(exampleJSON) as GetEncryptedPasswordRequestContent
 console.log(exampleParsed)
 ```
 

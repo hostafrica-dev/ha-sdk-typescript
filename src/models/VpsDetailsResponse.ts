@@ -55,6 +55,13 @@ import {
     VpsNetworkRateToJSON,
     VpsNetworkRateToJSONTyped,
 } from './VpsNetworkRate.js';
+import type { VpsIpAddressDetail } from './VpsIpAddressDetail.js';
+import {
+    VpsIpAddressDetailFromJSON,
+    VpsIpAddressDetailFromJSONTyped,
+    VpsIpAddressDetailToJSON,
+    VpsIpAddressDetailToJSONTyped,
+} from './VpsIpAddressDetail.js';
 import type { VpsMemoryInfo } from './VpsMemoryInfo.js';
 import {
     VpsMemoryInfoFromJSON,
@@ -113,11 +120,11 @@ export interface VpsDetailsResponse {
      */
     networkRate?: VpsNetworkRate;
     /**
-     * List of IP addresses assigned to the VPS
-     * @type {Array<string>}
+     * List of IP addresses assigned to the VPS, including subnet, gateway, and MAC
+     * @type {Array<VpsIpAddressDetail>}
      * @memberof VpsDetailsResponse
      */
-    ipAddresses: Array<string>;
+    ipAddresses: Array<VpsIpAddressDetail>;
     /**
      * 
      * @type {VpsCredentials}
@@ -169,7 +176,7 @@ export function VpsDetailsResponseFromJSONTyped(json: any, ignoreDiscriminator: 
         'memory': VpsMemoryInfoFromJSON(json['memory']),
         'disk': VpsDiskInfoFromJSON(json['disk']),
         'networkRate': json['network_rate'] == null ? undefined : VpsNetworkRateFromJSON(json['network_rate']),
-        'ipAddresses': json['ip_addresses'],
+        'ipAddresses': ((json['ip_addresses'] as Array<any>).map(VpsIpAddressDetailFromJSON)),
         'credentials': VpsCredentialsFromJSON(json['credentials']),
         'availableFeatures': VpsAvailableFeaturesFromJSON(json['available_features']),
         'osInfo': json['os_info'] == null ? undefined : VpsOsInfoFromJSON(json['os_info']),
@@ -193,7 +200,7 @@ export function VpsDetailsResponseToJSONTyped(value?: VpsDetailsResponse | null,
         'memory': VpsMemoryInfoToJSON(value['memory']),
         'disk': VpsDiskInfoToJSON(value['disk']),
         'network_rate': VpsNetworkRateToJSON(value['networkRate']),
-        'ip_addresses': value['ipAddresses'],
+        'ip_addresses': ((value['ipAddresses'] as Array<any>).map(VpsIpAddressDetailToJSON)),
         'credentials': VpsCredentialsToJSON(value['credentials']),
         'available_features': VpsAvailableFeaturesToJSON(value['availableFeatures']),
         'os_info': VpsOsInfoToJSON(value['osInfo']),

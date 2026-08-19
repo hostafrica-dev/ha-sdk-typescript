@@ -24,14 +24,31 @@ export interface NoVncConsoleDetails {
      * @type {string}
      * @memberof NoVncConsoleDetails
      */
-    novncRedirectUrl: string;
+    novncRedirectUrl?: string;
+    /**
+     * Console connection mode
+     * @type {string}
+     * @memberof NoVncConsoleDetails
+     */
+    mode?: string;
+    /**
+     * WebSocket URL for proxied console access
+     * @type {string}
+     * @memberof NoVncConsoleDetails
+     */
+    websocketUrl?: string;
+    /**
+     * Password for proxied console access
+     * @type {string}
+     * @memberof NoVncConsoleDetails
+     */
+    password?: string;
 }
 
 /**
  * Check if a given object implements the NoVncConsoleDetails interface.
  */
 export function instanceOfNoVncConsoleDetails(value: object): value is NoVncConsoleDetails {
-    if (!('novncRedirectUrl' in value) || value['novncRedirectUrl'] === undefined) return false;
     return true;
 }
 
@@ -45,7 +62,10 @@ export function NoVncConsoleDetailsFromJSONTyped(json: any, ignoreDiscriminator:
     }
     return {
         
-        'novncRedirectUrl': json['novnc_redirect_url'],
+        'novncRedirectUrl': json['novnc_redirect_url'] == null ? undefined : json['novnc_redirect_url'],
+        'mode': json['mode'] == null ? undefined : json['mode'],
+        'websocketUrl': json['websocket_url'] == null ? undefined : json['websocket_url'],
+        'password': json['password'] == null ? undefined : json['password'],
     };
 }
 
@@ -61,6 +81,9 @@ export function NoVncConsoleDetailsToJSONTyped(value?: NoVncConsoleDetails | nul
     return {
         
         'novnc_redirect_url': value['novncRedirectUrl'],
+        'mode': value['mode'],
+        'websocket_url': value['websocketUrl'],
+        'password': value['password'],
     };
 }
 
