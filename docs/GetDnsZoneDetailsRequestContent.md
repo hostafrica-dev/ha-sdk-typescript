@@ -7,6 +7,7 @@
 Name | Type
 ------------ | -------------
 `domainId` | string
+`backend` | [DnsBackend](DnsBackend.md)
 
 ## Example
 
@@ -16,6 +17,7 @@ import type { GetDnsZoneDetailsRequestContent } from '@hostafrica/ha-sdk-typescr
 // TODO: Update the object below with actual values
 const example = {
   "domainId": null,
+  "backend": null,
 } satisfies GetDnsZoneDetailsRequestContent
 
 console.log(example)

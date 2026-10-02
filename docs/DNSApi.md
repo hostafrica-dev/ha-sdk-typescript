@@ -22,7 +22,7 @@ All URIs are relative to *https://api.hostafrica.com*
 
 
 
-Adds a DNS record to a zone via DNSManager.
+Adds a DNS record to a zone. Legacy callers pass zone_id only (DNS Manager v1). For DirectAdmin, pass backend&#x3D;directadmin with domain_id; upstream v2 receives domain_id and record only.
 
 ### Example
 
@@ -180,7 +180,7 @@ example().catch(console.error);
 
 
 
-Deletes a DNS record from a zone via DNSManager.
+Deletes a DNS record from a zone. Legacy callers pass zone_id only (DNS Manager v1). For DirectAdmin, pass backend&#x3D;directadmin with domain_id; upstream v2 receives domain_id and record only.
 
 ### Example
 
@@ -338,7 +338,7 @@ example().catch(console.error);
 
 
 
-Edits a DNS record in a zone via DNSManager.
+Edits a DNS record in a zone. Legacy callers pass zone_id only (DNS Manager v1). For DirectAdmin, pass backend&#x3D;directadmin with domain_id; upstream v2 receives domain_id and record only.
 
 ### Example
 
@@ -417,7 +417,7 @@ example().catch(console.error);
 
 
 
-Retrieves DNS zone details and records for an owned domain.
+Retrieves DNS zone details and records for an owned domain. Omit backend for the legacy DNS Manager (v1) path; set backend from list-dns-zones to route DirectAdmin zones to v2.
 
 ### Example
 

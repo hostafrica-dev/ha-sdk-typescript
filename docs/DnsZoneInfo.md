@@ -16,6 +16,7 @@ Name | Type
 `packageName` | string
 `hasHosting` | [DomainHostingLink](DomainHostingLink.md)
 `hasDnsManagerZone` | boolean
+`backend` | [DnsBackend](DnsBackend.md)
 
 ## Example
 
@@ -33,6 +34,7 @@ const example = {
   "packageName": null,
   "hasHosting": null,
   "hasDnsManagerZone": null,
+  "backend": null,
 } satisfies DnsZoneInfo
 
 console.log(example)

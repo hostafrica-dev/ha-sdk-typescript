@@ -1,7 +1,7 @@
 
 # DnsRecordMutationRecord
 
-DNS record fields for add, edit, or delete via DNSManager.  See `DnsRecordInfo` for how `content` and structured fields map to upstream record data. Delete requires only `id`, `name`, and `type`.
+DNS record fields for add, edit, or delete via DNSManager.  See `DnsRecordInfo` for how `content` and structured fields map to upstream record data. Delete requires only `id`, `name`, and `type`. For edit and delete, `id` must be the numeric zone line from get-dns-zone-details (a positive integer string).
 
 ## Properties
 

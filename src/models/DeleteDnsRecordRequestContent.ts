@@ -20,6 +20,13 @@ import {
     DnsRecordMutationRecordToJSON,
     DnsRecordMutationRecordToJSONTyped,
 } from './DnsRecordMutationRecord.js';
+import type { DnsBackend } from './DnsBackend.js';
+import {
+    DnsBackendFromJSON,
+    DnsBackendFromJSONTyped,
+    DnsBackendToJSON,
+    DnsBackendToJSONTyped,
+} from './DnsBackend.js';
 
 /**
  * 
@@ -28,17 +35,35 @@ import {
  */
 export interface DeleteDnsRecordRequestContent {
     /**
-     * DNS zone domain name (FQDN); optional when zone_id is provided
+     * DNS zone domain name (FQDN); optional for dns_manager when zone_id is provided. Not forwarded on DirectAdmin mutations.
      * @type {string}
      * @memberof DeleteDnsRecordRequestContent
      */
     domainName?: string;
     /**
-     * DNS zone identifier from list-dns-zones or get-dns-zone-details
+     * DNS zone identifier from list-dns-zones or get-dns-zone-details; required for dns_manager / legacy callers
      * @type {string}
      * @memberof DeleteDnsRecordRequestContent
      */
-    zoneId: string;
+    zoneId?: string;
+    /**
+     * WHMCS domain id from list-dns-zones; required when backend is directadmin
+     * @type {string}
+     * @memberof DeleteDnsRecordRequestContent
+     */
+    domainId?: string;
+    /**
+     * Optional WHMCS hosting service id from list-dns-zones hosting_id. Not forwarded on DirectAdmin mutations.
+     * @type {number}
+     * @memberof DeleteDnsRecordRequestContent
+     */
+    serviceId?: number;
+    /**
+     * 
+     * @type {DnsBackend}
+     * @memberof DeleteDnsRecordRequestContent
+     */
+    backend?: DnsBackend;
     /**
      * 
      * @type {DnsRecordMutationRecord}
@@ -47,11 +72,12 @@ export interface DeleteDnsRecordRequestContent {
     record: DnsRecordMutationRecord;
 }
 
+
+
 /**
  * Check if a given object implements the DeleteDnsRecordRequestContent interface.
  */
 export function instanceOfDeleteDnsRecordRequestContent(value: object): value is DeleteDnsRecordRequestContent {
-    if (!('zoneId' in value) || value['zoneId'] === undefined) return false;
     if (!('record' in value) || value['record'] === undefined) return false;
     return true;
 }
@@ -67,7 +93,10 @@ export function DeleteDnsRecordRequestContentFromJSONTyped(json: any, ignoreDisc
     return {
         
         'domainName': json['domain_name'] == null ? undefined : json['domain_name'],
-        'zoneId': json['zone_id'],
+        'zoneId': json['zone_id'] == null ? undefined : json['zone_id'],
+        'domainId': json['domain_id'] == null ? undefined : json['domain_id'],
+        'serviceId': json['service_id'] == null ? undefined : json['service_id'],
+        'backend': json['backend'] == null ? undefined : DnsBackendFromJSON(json['backend']),
         'record': DnsRecordMutationRecordFromJSON(json['record']),
     };
 }
@@ -85,6 +114,9 @@ export function DeleteDnsRecordRequestContentToJSONTyped(value?: DeleteDnsRecord
         
         'domain_name': value['domainName'],
         'zone_id': value['zoneId'],
+        'domain_id': value['domainId'],
+        'service_id': value['serviceId'],
+        'backend': DnsBackendToJSON(value['backend']),
         'record': DnsRecordMutationRecordToJSON(value['record']),
     };
 }

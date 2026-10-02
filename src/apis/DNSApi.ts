@@ -158,7 +158,7 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
-     * Adds a DNS record to a zone via DNSManager.
+     * Adds a DNS record to a zone. Legacy callers pass zone_id only (DNS Manager v1). For DirectAdmin, pass backend=directadmin with domain_id; upstream v2 receives domain_id and record only.
      */
     async addDnsRecordRaw(requestParameters: AddDnsRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AddDnsRecordResponseContent>> {
         const requestOptions = await this.addDnsRecordRequestOpts(requestParameters);
@@ -168,7 +168,7 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
-     * Adds a DNS record to a zone via DNSManager.
+     * Adds a DNS record to a zone. Legacy callers pass zone_id only (DNS Manager v1). For DirectAdmin, pass backend=directadmin with domain_id; upstream v2 receives domain_id and record only.
      */
     async addDnsRecord(requestParameters: AddDnsRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AddDnsRecordResponseContent> {
         const response = await this.addDnsRecordRaw(requestParameters, initOverrides);
@@ -268,7 +268,7 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
-     * Deletes a DNS record from a zone via DNSManager.
+     * Deletes a DNS record from a zone. Legacy callers pass zone_id only (DNS Manager v1). For DirectAdmin, pass backend=directadmin with domain_id; upstream v2 receives domain_id and record only.
      */
     async deleteDnsRecordRaw(requestParameters: DeleteDnsRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DeleteDnsRecordResponseContent>> {
         const requestOptions = await this.deleteDnsRecordRequestOpts(requestParameters);
@@ -278,7 +278,7 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
-     * Deletes a DNS record from a zone via DNSManager.
+     * Deletes a DNS record from a zone. Legacy callers pass zone_id only (DNS Manager v1). For DirectAdmin, pass backend=directadmin with domain_id; upstream v2 receives domain_id and record only.
      */
     async deleteDnsRecord(requestParameters: DeleteDnsRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DeleteDnsRecordResponseContent> {
         const response = await this.deleteDnsRecordRaw(requestParameters, initOverrides);
@@ -378,7 +378,7 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
-     * Edits a DNS record in a zone via DNSManager.
+     * Edits a DNS record in a zone. Legacy callers pass zone_id only (DNS Manager v1). For DirectAdmin, pass backend=directadmin with domain_id; upstream v2 receives domain_id and record only.
      */
     async editDnsRecordRaw(requestParameters: EditDnsRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<EditDnsRecordResponseContent>> {
         const requestOptions = await this.editDnsRecordRequestOpts(requestParameters);
@@ -388,7 +388,7 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
-     * Edits a DNS record in a zone via DNSManager.
+     * Edits a DNS record in a zone. Legacy callers pass zone_id only (DNS Manager v1). For DirectAdmin, pass backend=directadmin with domain_id; upstream v2 receives domain_id and record only.
      */
     async editDnsRecord(requestParameters: EditDnsRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<EditDnsRecordResponseContent> {
         const response = await this.editDnsRecordRaw(requestParameters, initOverrides);
@@ -433,7 +433,7 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
-     * Retrieves DNS zone details and records for an owned domain.
+     * Retrieves DNS zone details and records for an owned domain. Omit backend for the legacy DNS Manager (v1) path; set backend from list-dns-zones to route DirectAdmin zones to v2.
      */
     async getDnsZoneDetailsRaw(requestParameters: GetDnsZoneDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<GetDnsZoneDetailsResponseContent>> {
         const requestOptions = await this.getDnsZoneDetailsRequestOpts(requestParameters);
@@ -443,7 +443,7 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
-     * Retrieves DNS zone details and records for an owned domain.
+     * Retrieves DNS zone details and records for an owned domain. Omit backend for the legacy DNS Manager (v1) path; set backend from list-dns-zones to route DirectAdmin zones to v2.
      */
     async getDnsZoneDetails(requestParameters: GetDnsZoneDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GetDnsZoneDetailsResponseContent> {
         const response = await this.getDnsZoneDetailsRaw(requestParameters, initOverrides);

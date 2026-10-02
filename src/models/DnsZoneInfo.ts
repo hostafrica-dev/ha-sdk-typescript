@@ -20,6 +20,13 @@ import {
     DomainHostingLinkToJSON,
     DomainHostingLinkToJSONTyped,
 } from './DomainHostingLink.js';
+import type { DnsBackend } from './DnsBackend.js';
+import {
+    DnsBackendFromJSON,
+    DnsBackendFromJSONTyped,
+    DnsBackendToJSON,
+    DnsBackendToJSONTyped,
+} from './DnsBackend.js';
 
 /**
  * A DNS zone owned by the authenticated client
@@ -81,7 +88,15 @@ export interface DnsZoneInfo {
      * @memberof DnsZoneInfo
      */
     hasDnsManagerZone: boolean;
+    /**
+     * 
+     * @type {DnsBackend}
+     * @memberof DnsZoneInfo
+     */
+    backend?: DnsBackend;
 }
+
+
 
 /**
  * Check if a given object implements the DnsZoneInfo interface.
@@ -110,6 +125,7 @@ export function DnsZoneInfoFromJSONTyped(json: any, ignoreDiscriminator: boolean
         'packageName': json['package_name'] == null ? undefined : json['package_name'],
         'hasHosting': json['has_hosting'] == null ? undefined : DomainHostingLinkFromJSON(json['has_hosting']),
         'hasDnsManagerZone': json['has_dns_manager_zone'],
+        'backend': json['backend'] == null ? undefined : DnsBackendFromJSON(json['backend']),
     };
 }
 
@@ -133,6 +149,7 @@ export function DnsZoneInfoToJSONTyped(value?: DnsZoneInfo | null, ignoreDiscrim
         'package_name': value['packageName'],
         'has_hosting': DomainHostingLinkToJSON(value['hasHosting']),
         'has_dns_manager_zone': value['hasDnsManagerZone'],
+        'backend': DnsBackendToJSON(value['backend']),
     };
 }
 

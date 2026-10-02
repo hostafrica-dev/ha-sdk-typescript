@@ -13,6 +13,14 @@
  */
 
 import { mapValues } from '../runtime.js';
+import type { DnsBackend } from './DnsBackend.js';
+import {
+    DnsBackendFromJSON,
+    DnsBackendFromJSONTyped,
+    DnsBackendToJSON,
+    DnsBackendToJSONTyped,
+} from './DnsBackend.js';
+
 /**
  * 
  * @export
@@ -25,7 +33,15 @@ export interface GetDnsZoneDetailsRequestContent {
      * @memberof GetDnsZoneDetailsRequestContent
      */
     domainId: string;
+    /**
+     * 
+     * @type {DnsBackend}
+     * @memberof GetDnsZoneDetailsRequestContent
+     */
+    backend?: DnsBackend;
 }
+
+
 
 /**
  * Check if a given object implements the GetDnsZoneDetailsRequestContent interface.
@@ -46,6 +62,7 @@ export function GetDnsZoneDetailsRequestContentFromJSONTyped(json: any, ignoreDi
     return {
         
         'domainId': json['domain_id'],
+        'backend': json['backend'] == null ? undefined : DnsBackendFromJSON(json['backend']),
     };
 }
 
@@ -61,6 +78,7 @@ export function GetDnsZoneDetailsRequestContentToJSONTyped(value?: GetDnsZoneDet
     return {
         
         'domain_id': value['domainId'],
+        'backend': DnsBackendToJSON(value['backend']),
     };
 }
 

@@ -1,6 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export * from './BackupsApi.js';
+export * from './BillingApi.js';
 export * from './ConsoleAccessApi.js';
 export * from './DNSApi.js';
 export * from './DomainsApi.js';

@@ -8,6 +8,9 @@ Name | Type
 ------------ | -------------
 `domainName` | string
 `zoneId` | string
+`domainId` | string
+`serviceId` | number
+`backend` | [DnsBackend](DnsBackend.md)
 `record` | [DnsRecordMutationRecord](DnsRecordMutationRecord.md)
 
 ## Example
@@ -19,6 +22,9 @@ import type { AddDnsRecordRequestContent } from '@hostafrica/ha-sdk-typescript'
 const example = {
   "domainName": null,
   "zoneId": null,
+  "domainId": null,
+  "serviceId": null,
+  "backend": null,
   "record": null,
 } satisfies AddDnsRecordRequestContent
 
