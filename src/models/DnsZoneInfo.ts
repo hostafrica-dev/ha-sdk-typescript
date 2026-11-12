@@ -35,25 +35,25 @@ import {
  */
 export interface DnsZoneInfo {
     /**
-     * DNS zone identifier
+     * DNS Manager zone id (or DirectAdmin index id). Required for dns_manager record mutations and delete-zone. Often null on DirectAdmin — use domain_id (+ service_id from hosting_id) instead.
      * @type {string}
      * @memberof DnsZoneInfo
      */
     zoneId?: string;
     /**
-     * Domain service id when the zone is tied to a domain
+     * Domain id. Preferred identity when present; required for DirectAdmin get-zone/record/delete-zone when the row is a registered domain.
      * @type {string}
      * @memberof DnsZoneInfo
      */
     domainId?: string;
     /**
-     * Zone domain name (FQDN)
+     * Zone domain name (FQDN). Send as domain_name on manage POSTs.
      * @type {string}
      * @memberof DnsZoneInfo
      */
     domainName?: string;
     /**
-     * Linked hosting service id; omitted when no hosting is linked
+     * Hosting service id. Pass as service_id on create-zone/delete-zone (and record mutations when needed) when domain_id is null, or to help DirectAdmin routing.
      * @type {number}
      * @memberof DnsZoneInfo
      */
@@ -65,7 +65,7 @@ export interface DnsZoneInfo {
      */
     type?: number;
     /**
-     * Zone type key (e.g. other, domain, hosting, addon)
+     * Zone type key (e.g. other, domain, hosting, addon). Indicates which id fields are populated; does not change URLs.
      * @type {string}
      * @memberof DnsZoneInfo
      */

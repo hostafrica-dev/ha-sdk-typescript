@@ -26,7 +26,7 @@ export interface SuggestDomainsRequestContent {
      */
     prompt: string;
     /**
-     * Currency for pricing. Accepts ISO code, symbol, country name, or numeric ID. Defaults to ZAR.
+     * Optional; default ZAR. Preferred: ZAR, USD, NGN, KES, GHS, EUR, EGP.
      * @type {string}
      * @memberof SuggestDomainsRequestContent
      */

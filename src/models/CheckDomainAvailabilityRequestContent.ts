@@ -20,19 +20,19 @@ import { mapValues } from '../runtime.js';
  */
 export interface CheckDomainAvailabilityRequestContent {
     /**
-     * A single domain name to look up, e.g. "example.co.za". Required unless domains is provided.
+     * Optional single FQDN. Use instead of domains.
      * @type {string}
      * @memberof CheckDomainAvailabilityRequestContent
      */
     domain?: string;
     /**
-     * Comma-separated list of domain names for a batch check. Required unless domain is provided.
+     * Optional comma-separated FQDNs (1–20). Use instead of domain.
      * @type {string}
      * @memberof CheckDomainAvailabilityRequestContent
      */
     domains?: string;
     /**
-     * Currency for pricing. Accepts ISO code, symbol, country name, or numeric ID. Defaults to ZAR.
+     * Optional; default ZAR. Preferred: ZAR, USD, NGN, KES, GHS, EUR, EGP.
      * @type {string}
      * @memberof CheckDomainAvailabilityRequestContent
      */

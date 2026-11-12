@@ -34,5 +34,7 @@ export const RETRYABLE_PATHS = new Set<string>([
     "/dns/list-zones",
     "/dns/list-create-candidates",
     "/dns/get-zone",
+    "/domain/list-redirects",
+    "/domain/get-redirect-details",
     "/domain/list-dnssec-records",
 ]);

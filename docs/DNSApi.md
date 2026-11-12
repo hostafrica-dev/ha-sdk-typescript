@@ -5,10 +5,13 @@ All URIs are relative to *https://api.hostafrica.com*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**addDnsRecord**](DNSApi.md#adddnsrecord) | **POST** /dns/add-record |  |
+| [**createDnsZone**](DNSApi.md#creatednszone) | **POST** /dns/create-zone |  |
 | [**createRdnsRecord**](DNSApi.md#createrdnsrecord) | **POST** /dns/create-rdns-record |  |
 | [**deleteDnsRecord**](DNSApi.md#deletednsrecord) | **POST** /dns/delete-record |  |
+| [**deleteDnsZone**](DNSApi.md#deletednszone) | **POST** /dns/delete-zone |  |
 | [**deleteRdnsRecord**](DNSApi.md#deleterdnsrecord) | **POST** /dns/delete-rdns-record |  |
 | [**editDnsRecord**](DNSApi.md#editdnsrecord) | **POST** /dns/edit-record |  |
+| [**editRdnsRecord**](DNSApi.md#editrdnsrecord) | **POST** /dns/edit-rdns-record |  |
 | [**getDnsZoneDetails**](DNSApi.md#getdnszonedetails) | **POST** /dns/get-zone |  |
 | [**listDnsCreateCandidates**](DNSApi.md#listdnscreatecandidates) | **POST** /dns/list-create-candidates |  |
 | [**listDnsZones**](DNSApi.md#listdnszones) | **POST** /dns/list-zones |  |
@@ -83,6 +86,85 @@ example().catch(console.error);
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | AddDnsRecord 200 response |  -  |
+| **400** | BadRequestError 400 response |  -  |
+| **401** | UnauthorizedError 401 response |  -  |
+| **403** | ForbiddenError 403 response |  -  |
+| **404** | ResourceNotFoundError 404 response |  -  |
+| **422** | ValidationError 422 response |  -  |
+| **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+| **500** | InternalServiceError 500 response |  -  |
+| **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
+## createDnsZone
+
+> CreateDnsZoneResponseContent createDnsZone(createDnsZoneRequestContent)
+
+
+
+Creates a DNS zone for an owned domain. Prefer list-dns-create-candidates first. domain_id and zone_ip are required. Also send service_id from hosting_id when the domain has linked hosting or backend will be directadmin. Optional type/relid select the DNS package (relid from create-candidates); otherwise upstream picks the first eligible package. Do not send zone_id — the zone does not exist yet.
+
+### Example
+
+```ts
+import {
+  Configuration,
+  DNSApi,
+} from '@hostafrica/ha-sdk-typescript';
+import type { CreateDnsZoneRequest } from '@hostafrica/ha-sdk-typescript';
+
+async function example() {
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: BearerAuth
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new DNSApi(config);
+
+  const body = {
+    // CreateDnsZoneRequestContent
+    createDnsZoneRequestContent: ...,
+  } satisfies CreateDnsZoneRequest;
+
+  try {
+    const data = await api.createDnsZone(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createDnsZoneRequestContent** | [CreateDnsZoneRequestContent](CreateDnsZoneRequestContent.md) |  | |
+
+### Return type
+
+[**CreateDnsZoneResponseContent**](CreateDnsZoneResponseContent.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | CreateDnsZone 200 response |  -  |
 | **400** | BadRequestError 400 response |  -  |
 | **401** | UnauthorizedError 401 response |  -  |
 | **403** | ForbiddenError 403 response |  -  |
@@ -253,6 +335,85 @@ example().catch(console.error);
 [[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
 
 
+## deleteDnsZone
+
+> DeleteDnsZoneResponseContent deleteDnsZone(deleteDnsZoneRequestContent)
+
+
+
+Deletes a live DNS Manager zone (all records). zone_id from list-dns-zones is required. Optional domain_id/service_id are forwarded when present. DirectAdmin rows with null zone_id are not supported by upstream deletezone.
+
+### Example
+
+```ts
+import {
+  Configuration,
+  DNSApi,
+} from '@hostafrica/ha-sdk-typescript';
+import type { DeleteDnsZoneRequest } from '@hostafrica/ha-sdk-typescript';
+
+async function example() {
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: BearerAuth
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new DNSApi(config);
+
+  const body = {
+    // DeleteDnsZoneRequestContent
+    deleteDnsZoneRequestContent: ...,
+  } satisfies DeleteDnsZoneRequest;
+
+  try {
+    const data = await api.deleteDnsZone(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deleteDnsZoneRequestContent** | [DeleteDnsZoneRequestContent](DeleteDnsZoneRequestContent.md) |  | |
+
+### Return type
+
+[**DeleteDnsZoneResponseContent**](DeleteDnsZoneResponseContent.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | DeleteDnsZone 200 response |  -  |
+| **400** | BadRequestError 400 response |  -  |
+| **401** | UnauthorizedError 401 response |  -  |
+| **403** | ForbiddenError 403 response |  -  |
+| **404** | ResourceNotFoundError 404 response |  -  |
+| **422** | ValidationError 422 response |  -  |
+| **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+| **500** | InternalServiceError 500 response |  -  |
+| **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
 ## deleteRdnsRecord
 
 > DeleteRdnsRecordResponseContent deleteRdnsRecord(deleteRdnsRecordRequestContent)
@@ -399,6 +560,85 @@ example().catch(console.error);
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | EditDnsRecord 200 response |  -  |
+| **400** | BadRequestError 400 response |  -  |
+| **401** | UnauthorizedError 401 response |  -  |
+| **403** | ForbiddenError 403 response |  -  |
+| **404** | ResourceNotFoundError 404 response |  -  |
+| **422** | ValidationError 422 response |  -  |
+| **429** | TooManyRequestsError 429 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+| **500** | InternalServiceError 500 response |  -  |
+| **503** | ServiceUnavailableError 503 response |  * Retry-After - Number of seconds to wait before retrying <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints) [[Back to Model list]](../README.md#models) [[Back to README]](../README.md)
+
+
+## editRdnsRecord
+
+> EditRdnsRecordResponseContent editRdnsRecord(editRdnsRecordRequestContent)
+
+
+
+Updates the hostname and optional TTL of a PTR (rDNS) record owned by the authenticated client. The record_id remains valid after the call.
+
+### Example
+
+```ts
+import {
+  Configuration,
+  DNSApi,
+} from '@hostafrica/ha-sdk-typescript';
+import type { EditRdnsRecordRequest } from '@hostafrica/ha-sdk-typescript';
+
+async function example() {
+  console.log("🚀 Testing @hostafrica/ha-sdk-typescript SDK...");
+  const config = new Configuration({ 
+    // Configure HTTP bearer authorization: BearerAuth
+    accessToken: "YOUR BEARER TOKEN",
+  });
+  const api = new DNSApi(config);
+
+  const body = {
+    // EditRdnsRecordRequestContent
+    editRdnsRecordRequestContent: ...,
+  } satisfies EditRdnsRecordRequest;
+
+  try {
+    const data = await api.editRdnsRecord(body);
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Run the test
+example().catch(console.error);
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **editRdnsRecordRequestContent** | [EditRdnsRecordRequestContent](EditRdnsRecordRequestContent.md) |  | |
+
+### Return type
+
+[**EditRdnsRecordResponseContent**](EditRdnsRecordResponseContent.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | EditRdnsRecord 200 response |  -  |
 | **400** | BadRequestError 400 response |  -  |
 | **401** | UnauthorizedError 401 response |  -  |
 | **403** | ForbiddenError 403 response |  -  |
@@ -566,7 +806,7 @@ This endpoint does not need any parameter.
 
 
 
-Lists DNS zones belonging to the authenticated client.
+Lists DNS zones belonging to the authenticated client. Use each row\&#39;s ids on later calls: domain_id preferred; zone_id for dns_manager record/zone mutations; hosting_id as service_id when domain_id is null (hosting-only zone).
 
 ### Example
 

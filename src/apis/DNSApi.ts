@@ -18,14 +18,20 @@ import type {
   AddDnsRecordRequestContent,
   AddDnsRecordResponseContent,
   BadRequestErrorResponseContent,
+  CreateDnsZoneRequestContent,
+  CreateDnsZoneResponseContent,
   CreateRdnsRecordRequestContent,
   CreateRdnsRecordResponseContent,
   DeleteDnsRecordRequestContent,
   DeleteDnsRecordResponseContent,
+  DeleteDnsZoneRequestContent,
+  DeleteDnsZoneResponseContent,
   DeleteRdnsRecordRequestContent,
   DeleteRdnsRecordResponseContent,
   EditDnsRecordRequestContent,
   EditDnsRecordResponseContent,
+  EditRdnsRecordRequestContent,
+  EditRdnsRecordResponseContent,
   ForbiddenErrorResponseContent,
   GetDnsZoneDetailsRequestContent,
   GetDnsZoneDetailsResponseContent,
@@ -47,6 +53,10 @@ import {
     AddDnsRecordResponseContentToJSON,
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
+    CreateDnsZoneRequestContentFromJSON,
+    CreateDnsZoneRequestContentToJSON,
+    CreateDnsZoneResponseContentFromJSON,
+    CreateDnsZoneResponseContentToJSON,
     CreateRdnsRecordRequestContentFromJSON,
     CreateRdnsRecordRequestContentToJSON,
     CreateRdnsRecordResponseContentFromJSON,
@@ -55,6 +65,10 @@ import {
     DeleteDnsRecordRequestContentToJSON,
     DeleteDnsRecordResponseContentFromJSON,
     DeleteDnsRecordResponseContentToJSON,
+    DeleteDnsZoneRequestContentFromJSON,
+    DeleteDnsZoneRequestContentToJSON,
+    DeleteDnsZoneResponseContentFromJSON,
+    DeleteDnsZoneResponseContentToJSON,
     DeleteRdnsRecordRequestContentFromJSON,
     DeleteRdnsRecordRequestContentToJSON,
     DeleteRdnsRecordResponseContentFromJSON,
@@ -63,6 +77,10 @@ import {
     EditDnsRecordRequestContentToJSON,
     EditDnsRecordResponseContentFromJSON,
     EditDnsRecordResponseContentToJSON,
+    EditRdnsRecordRequestContentFromJSON,
+    EditRdnsRecordRequestContentToJSON,
+    EditRdnsRecordResponseContentFromJSON,
+    EditRdnsRecordResponseContentToJSON,
     ForbiddenErrorResponseContentFromJSON,
     ForbiddenErrorResponseContentToJSON,
     GetDnsZoneDetailsRequestContentFromJSON,
@@ -95,6 +113,10 @@ export interface AddDnsRecordRequest {
     addDnsRecordRequestContent: AddDnsRecordRequestContent;
 }
 
+export interface CreateDnsZoneRequest {
+    createDnsZoneRequestContent: CreateDnsZoneRequestContent;
+}
+
 export interface CreateRdnsRecordRequest {
     createRdnsRecordRequestContent: CreateRdnsRecordRequestContent;
 }
@@ -103,12 +125,20 @@ export interface DeleteDnsRecordRequest {
     deleteDnsRecordRequestContent: DeleteDnsRecordRequestContent;
 }
 
+export interface DeleteDnsZoneRequest {
+    deleteDnsZoneRequestContent: DeleteDnsZoneRequestContent;
+}
+
 export interface DeleteRdnsRecordRequest {
     deleteRdnsRecordRequestContent: DeleteRdnsRecordRequestContent;
 }
 
 export interface EditDnsRecordRequest {
     editDnsRecordRequestContent: EditDnsRecordRequestContent;
+}
+
+export interface EditRdnsRecordRequest {
+    editRdnsRecordRequestContent: EditRdnsRecordRequestContent;
 }
 
 export interface GetDnsZoneDetailsRequest {
@@ -172,6 +202,61 @@ export class DNSApi extends runtime.BaseAPI {
      */
     async addDnsRecord(requestParameters: AddDnsRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AddDnsRecordResponseContent> {
         const response = await this.addDnsRecordRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for createDnsZone without sending the request
+     */
+    async createDnsZoneRequestOpts(requestParameters: CreateDnsZoneRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['createDnsZoneRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'createDnsZoneRequestContent',
+                'Required parameter "createDnsZoneRequestContent" was null or undefined when calling createDnsZone().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/dns/create-zone`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: CreateDnsZoneRequestContentToJSON(requestParameters['createDnsZoneRequestContent']),
+        };
+    }
+
+    /**
+     * Creates a DNS zone for an owned domain. Prefer list-dns-create-candidates first. domain_id and zone_ip are required. Also send service_id from hosting_id when the domain has linked hosting or backend will be directadmin. Optional type/relid select the DNS package (relid from create-candidates); otherwise upstream picks the first eligible package. Do not send zone_id — the zone does not exist yet.
+     */
+    async createDnsZoneRaw(requestParameters: CreateDnsZoneRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CreateDnsZoneResponseContent>> {
+        const requestOptions = await this.createDnsZoneRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => CreateDnsZoneResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Creates a DNS zone for an owned domain. Prefer list-dns-create-candidates first. domain_id and zone_ip are required. Also send service_id from hosting_id when the domain has linked hosting or backend will be directadmin. Optional type/relid select the DNS package (relid from create-candidates); otherwise upstream picks the first eligible package. Do not send zone_id — the zone does not exist yet.
+     */
+    async createDnsZone(requestParameters: CreateDnsZoneRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CreateDnsZoneResponseContent> {
+        const response = await this.createDnsZoneRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
@@ -286,6 +371,61 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
+     * Creates request options for deleteDnsZone without sending the request
+     */
+    async deleteDnsZoneRequestOpts(requestParameters: DeleteDnsZoneRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['deleteDnsZoneRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'deleteDnsZoneRequestContent',
+                'Required parameter "deleteDnsZoneRequestContent" was null or undefined when calling deleteDnsZone().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/dns/delete-zone`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: DeleteDnsZoneRequestContentToJSON(requestParameters['deleteDnsZoneRequestContent']),
+        };
+    }
+
+    /**
+     * Deletes a live DNS Manager zone (all records). zone_id from list-dns-zones is required. Optional domain_id/service_id are forwarded when present. DirectAdmin rows with null zone_id are not supported by upstream deletezone.
+     */
+    async deleteDnsZoneRaw(requestParameters: DeleteDnsZoneRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DeleteDnsZoneResponseContent>> {
+        const requestOptions = await this.deleteDnsZoneRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => DeleteDnsZoneResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Deletes a live DNS Manager zone (all records). zone_id from list-dns-zones is required. Optional domain_id/service_id are forwarded when present. DirectAdmin rows with null zone_id are not supported by upstream deletezone.
+     */
+    async deleteDnsZone(requestParameters: DeleteDnsZoneRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DeleteDnsZoneResponseContent> {
+        const response = await this.deleteDnsZoneRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
      * Creates request options for deleteRdnsRecord without sending the request
      */
     async deleteRdnsRecordRequestOpts(requestParameters: DeleteRdnsRecordRequest): Promise<runtime.RequestOpts> {
@@ -392,6 +532,61 @@ export class DNSApi extends runtime.BaseAPI {
      */
     async editDnsRecord(requestParameters: EditDnsRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<EditDnsRecordResponseContent> {
         const response = await this.editDnsRecordRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for editRdnsRecord without sending the request
+     */
+    async editRdnsRecordRequestOpts(requestParameters: EditRdnsRecordRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['editRdnsRecordRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'editRdnsRecordRequestContent',
+                'Required parameter "editRdnsRecordRequestContent" was null or undefined when calling editRdnsRecord().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/dns/edit-rdns-record`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: EditRdnsRecordRequestContentToJSON(requestParameters['editRdnsRecordRequestContent']),
+        };
+    }
+
+    /**
+     * Updates the hostname and optional TTL of a PTR (rDNS) record owned by the authenticated client. The record_id remains valid after the call.
+     */
+    async editRdnsRecordRaw(requestParameters: EditRdnsRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<EditRdnsRecordResponseContent>> {
+        const requestOptions = await this.editRdnsRecordRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => EditRdnsRecordResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Updates the hostname and optional TTL of a PTR (rDNS) record owned by the authenticated client. The record_id remains valid after the call.
+     */
+    async editRdnsRecord(requestParameters: EditRdnsRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<EditRdnsRecordResponseContent> {
+        const response = await this.editRdnsRecordRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
@@ -523,7 +718,7 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
-     * Lists DNS zones belonging to the authenticated client.
+     * Lists DNS zones belonging to the authenticated client. Use each row\'s ids on later calls: domain_id preferred; zone_id for dns_manager record/zone mutations; hosting_id as service_id when domain_id is null (hosting-only zone).
      */
     async listDnsZonesRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListDnsZonesResponseContent>> {
         const requestOptions = await this.listDnsZonesRequestOpts();
@@ -533,7 +728,7 @@ export class DNSApi extends runtime.BaseAPI {
     }
 
     /**
-     * Lists DNS zones belonging to the authenticated client.
+     * Lists DNS zones belonging to the authenticated client. Use each row\'s ids on later calls: domain_id preferred; zone_id for dns_manager record/zone mutations; hosting_id as service_id when domain_id is null (hosting-only zone).
      */
     async listDnsZones(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListDnsZonesResponseContent> {
         const response = await this.listDnsZonesRaw(initOverrides);

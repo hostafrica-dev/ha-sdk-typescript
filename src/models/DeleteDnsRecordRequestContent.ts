@@ -53,7 +53,7 @@ export interface DeleteDnsRecordRequestContent {
      */
     domainId?: string;
     /**
-     * Optional WHMCS hosting service id from list-dns-zones hosting_id. Not forwarded on DirectAdmin mutations.
+     * WHMCS hosting service id — pass list-dns-zones hosting_id. Use when domain_id is null (hosting-only). Not forwarded on DirectAdmin record mutations.
      * @type {number}
      * @memberof DeleteDnsRecordRequestContent
      */

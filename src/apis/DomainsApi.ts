@@ -15,19 +15,37 @@
 
 import * as runtime from '../runtime.js';
 import type {
+  AddDnssecRecordRequestContent,
+  AddDnssecRecordResponseContent,
+  AddDomainRedirectRequestContent,
+  AddDomainRedirectResponseContent,
   BadRequestErrorResponseContent,
   CheckDomainAvailabilityRequestContent,
   CheckDomainAvailabilityResponseContent,
+  DeleteDnssecRecordRequestContent,
+  DeleteDnssecRecordResponseContent,
+  DeleteDomainRedirectRequestContent,
+  DeleteDomainRedirectResponseContent,
+  DeletePrivateNameserverRequestContent,
+  DeletePrivateNameserverResponseContent,
   ForbiddenErrorResponseContent,
   GetDomainContactsRequestContent,
   GetDomainContactsResponseContent,
+  GetDomainRedirectDetailsRequestContent,
+  GetDomainRedirectDetailsResponseContent,
   GetDomainRequestContent,
   GetDomainResponseContent,
   InternalServiceErrorResponseContent,
+  InvalidStateErrorResponseContent,
   ListDnssecRecordsRequestContent,
   ListDnssecRecordsResponseContent,
+  ListDomainRedirectsResponseContent,
   ListDomainsRequiringDataResponseContent,
   ListDomainsResponseContent,
+  ModifyPrivateNameserverRequestContent,
+  ModifyPrivateNameserverResponseContent,
+  RegisterPrivateNameserverRequestContent,
+  RegisterPrivateNameserverResponseContent,
   ResourceNotFoundErrorResponseContent,
   SaveDomainRequiredDataRequestContent,
   SaveDomainRequiredDataResponseContent,
@@ -38,6 +56,8 @@ import type {
   UnauthorizedErrorResponseContent,
   UpdateDomainContactsRequestContent,
   UpdateDomainContactsResponseContent,
+  UpdateDomainLockStatusRequestContent,
+  UpdateDomainLockStatusResponseContent,
   UpdateDomainNameserversRequestContent,
   UpdateDomainNameserversResponseContent,
   UpdateDomainSettingsRequestContent,
@@ -45,32 +65,68 @@ import type {
   ValidationErrorResponseContent,
 } from '../models/index.js';
 import {
+    AddDnssecRecordRequestContentFromJSON,
+    AddDnssecRecordRequestContentToJSON,
+    AddDnssecRecordResponseContentFromJSON,
+    AddDnssecRecordResponseContentToJSON,
+    AddDomainRedirectRequestContentFromJSON,
+    AddDomainRedirectRequestContentToJSON,
+    AddDomainRedirectResponseContentFromJSON,
+    AddDomainRedirectResponseContentToJSON,
     BadRequestErrorResponseContentFromJSON,
     BadRequestErrorResponseContentToJSON,
     CheckDomainAvailabilityRequestContentFromJSON,
     CheckDomainAvailabilityRequestContentToJSON,
     CheckDomainAvailabilityResponseContentFromJSON,
     CheckDomainAvailabilityResponseContentToJSON,
+    DeleteDnssecRecordRequestContentFromJSON,
+    DeleteDnssecRecordRequestContentToJSON,
+    DeleteDnssecRecordResponseContentFromJSON,
+    DeleteDnssecRecordResponseContentToJSON,
+    DeleteDomainRedirectRequestContentFromJSON,
+    DeleteDomainRedirectRequestContentToJSON,
+    DeleteDomainRedirectResponseContentFromJSON,
+    DeleteDomainRedirectResponseContentToJSON,
+    DeletePrivateNameserverRequestContentFromJSON,
+    DeletePrivateNameserverRequestContentToJSON,
+    DeletePrivateNameserverResponseContentFromJSON,
+    DeletePrivateNameserverResponseContentToJSON,
     ForbiddenErrorResponseContentFromJSON,
     ForbiddenErrorResponseContentToJSON,
     GetDomainContactsRequestContentFromJSON,
     GetDomainContactsRequestContentToJSON,
     GetDomainContactsResponseContentFromJSON,
     GetDomainContactsResponseContentToJSON,
+    GetDomainRedirectDetailsRequestContentFromJSON,
+    GetDomainRedirectDetailsRequestContentToJSON,
+    GetDomainRedirectDetailsResponseContentFromJSON,
+    GetDomainRedirectDetailsResponseContentToJSON,
     GetDomainRequestContentFromJSON,
     GetDomainRequestContentToJSON,
     GetDomainResponseContentFromJSON,
     GetDomainResponseContentToJSON,
     InternalServiceErrorResponseContentFromJSON,
     InternalServiceErrorResponseContentToJSON,
+    InvalidStateErrorResponseContentFromJSON,
+    InvalidStateErrorResponseContentToJSON,
     ListDnssecRecordsRequestContentFromJSON,
     ListDnssecRecordsRequestContentToJSON,
     ListDnssecRecordsResponseContentFromJSON,
     ListDnssecRecordsResponseContentToJSON,
+    ListDomainRedirectsResponseContentFromJSON,
+    ListDomainRedirectsResponseContentToJSON,
     ListDomainsRequiringDataResponseContentFromJSON,
     ListDomainsRequiringDataResponseContentToJSON,
     ListDomainsResponseContentFromJSON,
     ListDomainsResponseContentToJSON,
+    ModifyPrivateNameserverRequestContentFromJSON,
+    ModifyPrivateNameserverRequestContentToJSON,
+    ModifyPrivateNameserverResponseContentFromJSON,
+    ModifyPrivateNameserverResponseContentToJSON,
+    RegisterPrivateNameserverRequestContentFromJSON,
+    RegisterPrivateNameserverRequestContentToJSON,
+    RegisterPrivateNameserverResponseContentFromJSON,
+    RegisterPrivateNameserverResponseContentToJSON,
     ResourceNotFoundErrorResponseContentFromJSON,
     ResourceNotFoundErrorResponseContentToJSON,
     SaveDomainRequiredDataRequestContentFromJSON,
@@ -91,6 +147,10 @@ import {
     UpdateDomainContactsRequestContentToJSON,
     UpdateDomainContactsResponseContentFromJSON,
     UpdateDomainContactsResponseContentToJSON,
+    UpdateDomainLockStatusRequestContentFromJSON,
+    UpdateDomainLockStatusRequestContentToJSON,
+    UpdateDomainLockStatusResponseContentFromJSON,
+    UpdateDomainLockStatusResponseContentToJSON,
     UpdateDomainNameserversRequestContentFromJSON,
     UpdateDomainNameserversRequestContentToJSON,
     UpdateDomainNameserversResponseContentFromJSON,
@@ -103,8 +163,28 @@ import {
     ValidationErrorResponseContentToJSON,
 } from '../models/index.js';
 
+export interface AddDnssecRecordRequest {
+    addDnssecRecordRequestContent: AddDnssecRecordRequestContent;
+}
+
+export interface AddDomainRedirectRequest {
+    addDomainRedirectRequestContent: AddDomainRedirectRequestContent;
+}
+
 export interface CheckDomainAvailabilityRequest {
     checkDomainAvailabilityRequestContent?: CheckDomainAvailabilityRequestContent;
+}
+
+export interface DeleteDnssecRecordRequest {
+    deleteDnssecRecordRequestContent: DeleteDnssecRecordRequestContent;
+}
+
+export interface DeleteDomainRedirectRequest {
+    deleteDomainRedirectRequestContent: DeleteDomainRedirectRequestContent;
+}
+
+export interface DeletePrivateNameserverRequest {
+    deletePrivateNameserverRequestContent: DeletePrivateNameserverRequestContent;
 }
 
 export interface GetDomainRequest {
@@ -115,8 +195,20 @@ export interface GetDomainContactsRequest {
     getDomainContactsRequestContent: GetDomainContactsRequestContent;
 }
 
+export interface GetDomainRedirectDetailsRequest {
+    getDomainRedirectDetailsRequestContent: GetDomainRedirectDetailsRequestContent;
+}
+
 export interface ListDnssecRecordsRequest {
     listDnssecRecordsRequestContent: ListDnssecRecordsRequestContent;
+}
+
+export interface ModifyPrivateNameserverRequest {
+    modifyPrivateNameserverRequestContent: ModifyPrivateNameserverRequestContent;
+}
+
+export interface RegisterPrivateNameserverRequest {
+    registerPrivateNameserverRequestContent: RegisterPrivateNameserverRequestContent;
 }
 
 export interface SaveDomainRequiredDataRequest {
@@ -131,6 +223,10 @@ export interface UpdateDomainContactsRequest {
     updateDomainContactsRequestContent: UpdateDomainContactsRequestContent;
 }
 
+export interface UpdateDomainLockStatusRequest {
+    updateDomainLockStatusRequestContent: UpdateDomainLockStatusRequestContent;
+}
+
 export interface UpdateDomainNameserversRequest {
     updateDomainNameserversRequestContent: UpdateDomainNameserversRequestContent;
 }
@@ -143,6 +239,116 @@ export interface UpdateDomainSettingsRequest {
  * 
  */
 export class DomainsApi extends runtime.BaseAPI {
+
+    /**
+     * Creates request options for addDnssecRecord without sending the request
+     */
+    async addDnssecRecordRequestOpts(requestParameters: AddDnssecRecordRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['addDnssecRecordRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'addDnssecRecordRequestContent',
+                'Required parameter "addDnssecRecordRequestContent" was null or undefined when calling addDnssecRecord().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/add-dnssec-record`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: AddDnssecRecordRequestContentToJSON(requestParameters['addDnssecRecordRequestContent']),
+        };
+    }
+
+    /**
+     * Adds a DNSSEC DS record for an owned domain on supported registrars.
+     */
+    async addDnssecRecordRaw(requestParameters: AddDnssecRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AddDnssecRecordResponseContent>> {
+        const requestOptions = await this.addDnssecRecordRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => AddDnssecRecordResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Adds a DNSSEC DS record for an owned domain on supported registrars.
+     */
+    async addDnssecRecord(requestParameters: AddDnssecRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AddDnssecRecordResponseContent> {
+        const response = await this.addDnssecRecordRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for addDomainRedirect without sending the request
+     */
+    async addDomainRedirectRequestOpts(requestParameters: AddDomainRedirectRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['addDomainRedirectRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'addDomainRedirectRequestContent',
+                'Required parameter "addDomainRedirectRequestContent" was null or undefined when calling addDomainRedirect().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/add-redirect`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: AddDomainRedirectRequestContentToJSON(requestParameters['addDomainRedirectRequestContent']),
+        };
+    }
+
+    /**
+     * Creates or updates HTTP redirect configuration for an owned domain. Upstream may create a DNS zone and point @/www A records at the redirector. If conflicting A records exist, retry with override=true after confirming via get-redirect-details.
+     */
+    async addDomainRedirectRaw(requestParameters: AddDomainRedirectRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AddDomainRedirectResponseContent>> {
+        const requestOptions = await this.addDomainRedirectRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => AddDomainRedirectResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Creates or updates HTTP redirect configuration for an owned domain. Upstream may create a DNS zone and point @/www A records at the redirector. If conflicting A records exist, retry with override=true after confirming via get-redirect-details.
+     */
+    async addDomainRedirect(requestParameters: AddDomainRedirectRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AddDomainRedirectResponseContent> {
+        const response = await this.addDomainRedirectRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
 
     /**
      * Creates request options for checkDomainAvailability without sending the request
@@ -175,7 +381,7 @@ export class DomainsApi extends runtime.BaseAPI {
     }
 
     /**
-     * Checks domain name availability for a single domain or a comma-separated batch. Exactly one of domain or domains must be provided. Returns pricing, suggestions, and register_url scoped to the requested currency.
+     * Use to check availability/pricing for known domain names. Pass exactly one of domain or domains (comma-separated, max 20); API rejects both omitted or both set. Optional currency (default ZAR). Returns availability, prices, and an external register_url. Prefer suggest_domains for name ideas.
      */
     async checkDomainAvailabilityRaw(requestParameters: CheckDomainAvailabilityRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CheckDomainAvailabilityResponseContent>> {
         const requestOptions = await this.checkDomainAvailabilityRequestOpts(requestParameters);
@@ -185,10 +391,175 @@ export class DomainsApi extends runtime.BaseAPI {
     }
 
     /**
-     * Checks domain name availability for a single domain or a comma-separated batch. Exactly one of domain or domains must be provided. Returns pricing, suggestions, and register_url scoped to the requested currency.
+     * Use to check availability/pricing for known domain names. Pass exactly one of domain or domains (comma-separated, max 20); API rejects both omitted or both set. Optional currency (default ZAR). Returns availability, prices, and an external register_url. Prefer suggest_domains for name ideas.
      */
     async checkDomainAvailability(requestParameters: CheckDomainAvailabilityRequest = {}, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CheckDomainAvailabilityResponseContent> {
         const response = await this.checkDomainAvailabilityRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for deleteDnssecRecord without sending the request
+     */
+    async deleteDnssecRecordRequestOpts(requestParameters: DeleteDnssecRecordRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['deleteDnssecRecordRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'deleteDnssecRecordRequestContent',
+                'Required parameter "deleteDnssecRecordRequestContent" was null or undefined when calling deleteDnssecRecord().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/delete-dnssec-record`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: DeleteDnssecRecordRequestContentToJSON(requestParameters['deleteDnssecRecordRequestContent']),
+        };
+    }
+
+    /**
+     * Removes a DNSSEC DS record from an owned domain on supported registrars.
+     */
+    async deleteDnssecRecordRaw(requestParameters: DeleteDnssecRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DeleteDnssecRecordResponseContent>> {
+        const requestOptions = await this.deleteDnssecRecordRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => DeleteDnssecRecordResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Removes a DNSSEC DS record from an owned domain on supported registrars.
+     */
+    async deleteDnssecRecord(requestParameters: DeleteDnssecRecordRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DeleteDnssecRecordResponseContent> {
+        const response = await this.deleteDnssecRecordRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for deleteDomainRedirect without sending the request
+     */
+    async deleteDomainRedirectRequestOpts(requestParameters: DeleteDomainRedirectRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['deleteDomainRedirectRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'deleteDomainRedirectRequestContent',
+                'Required parameter "deleteDomainRedirectRequestContent" was null or undefined when calling deleteDomainRedirect().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/delete-redirect`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: DeleteDomainRedirectRequestContentToJSON(requestParameters['deleteDomainRedirectRequestContent']),
+        };
+    }
+
+    /**
+     * Removes redirect configuration for an owned domain from the redirector service. DNS records and zones are not modified.
+     */
+    async deleteDomainRedirectRaw(requestParameters: DeleteDomainRedirectRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DeleteDomainRedirectResponseContent>> {
+        const requestOptions = await this.deleteDomainRedirectRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => DeleteDomainRedirectResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Removes redirect configuration for an owned domain from the redirector service. DNS records and zones are not modified.
+     */
+    async deleteDomainRedirect(requestParameters: DeleteDomainRedirectRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DeleteDomainRedirectResponseContent> {
+        const response = await this.deleteDomainRedirectRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for deletePrivateNameserver without sending the request
+     */
+    async deletePrivateNameserverRequestOpts(requestParameters: DeletePrivateNameserverRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['deletePrivateNameserverRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'deletePrivateNameserverRequestContent',
+                'Required parameter "deletePrivateNameserverRequestContent" was null or undefined when calling deletePrivateNameserver().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/delete-private-nameserver`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: DeletePrivateNameserverRequestContentToJSON(requestParameters['deletePrivateNameserverRequestContent']),
+        };
+    }
+
+    /**
+     * Deletes a private/child nameserver glue host for an owned domain.
+     */
+    async deletePrivateNameserverRaw(requestParameters: DeletePrivateNameserverRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<DeletePrivateNameserverResponseContent>> {
+        const requestOptions = await this.deletePrivateNameserverRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => DeletePrivateNameserverResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Deletes a private/child nameserver glue host for an owned domain.
+     */
+    async deletePrivateNameserver(requestParameters: DeletePrivateNameserverRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<DeletePrivateNameserverResponseContent> {
+        const response = await this.deletePrivateNameserverRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
@@ -303,6 +674,61 @@ export class DomainsApi extends runtime.BaseAPI {
     }
 
     /**
+     * Creates request options for getDomainRedirectDetails without sending the request
+     */
+    async getDomainRedirectDetailsRequestOpts(requestParameters: GetDomainRedirectDetailsRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['getDomainRedirectDetailsRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'getDomainRedirectDetailsRequestContent',
+                'Required parameter "getDomainRedirectDetailsRequestContent" was null or undefined when calling getDomainRedirectDetails().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/get-redirect-details`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: GetDomainRedirectDetailsRequestContentToJSON(requestParameters['getDomainRedirectDetailsRequestContent']),
+        };
+    }
+
+    /**
+     * Retrieves redirect configuration and DNS readiness flags for an owned domain.
+     */
+    async getDomainRedirectDetailsRaw(requestParameters: GetDomainRedirectDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<GetDomainRedirectDetailsResponseContent>> {
+        const requestOptions = await this.getDomainRedirectDetailsRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => GetDomainRedirectDetailsResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Retrieves redirect configuration and DNS readiness flags for an owned domain.
+     */
+    async getDomainRedirectDetails(requestParameters: GetDomainRedirectDetailsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GetDomainRedirectDetailsResponseContent> {
+        const response = await this.getDomainRedirectDetailsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
      * Creates request options for listDnssecRecords without sending the request
      */
     async listDnssecRecordsRequestOpts(requestParameters: ListDnssecRecordsRequest): Promise<runtime.RequestOpts> {
@@ -354,6 +780,51 @@ export class DomainsApi extends runtime.BaseAPI {
      */
     async listDnssecRecords(requestParameters: ListDnssecRecordsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListDnssecRecordsResponseContent> {
         const response = await this.listDnssecRecordsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for listDomainRedirects without sending the request
+     */
+    async listDomainRedirectsRequestOpts(): Promise<runtime.RequestOpts> {
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/list-redirects`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+        };
+    }
+
+    /**
+     * Lists configured domain redirects for the authenticated client.
+     */
+    async listDomainRedirectsRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ListDomainRedirectsResponseContent>> {
+        const requestOptions = await this.listDomainRedirectsRequestOpts();
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ListDomainRedirectsResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Lists configured domain redirects for the authenticated client.
+     */
+    async listDomainRedirects(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListDomainRedirectsResponseContent> {
+        const response = await this.listDomainRedirectsRaw(initOverrides);
         return await response.value();
     }
 
@@ -444,6 +915,116 @@ export class DomainsApi extends runtime.BaseAPI {
      */
     async listDomainsRequiringData(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ListDomainsRequiringDataResponseContent> {
         const response = await this.listDomainsRequiringDataRaw(initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for modifyPrivateNameserver without sending the request
+     */
+    async modifyPrivateNameserverRequestOpts(requestParameters: ModifyPrivateNameserverRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['modifyPrivateNameserverRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'modifyPrivateNameserverRequestContent',
+                'Required parameter "modifyPrivateNameserverRequestContent" was null or undefined when calling modifyPrivateNameserver().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/modify-private-nameserver`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: ModifyPrivateNameserverRequestContentToJSON(requestParameters['modifyPrivateNameserverRequestContent']),
+        };
+    }
+
+    /**
+     * Modifies a private/child nameserver. Provide at least one of new_nameserver or new_ip_address. Some registrars (COZA/COCCA) require new_ip_address and reject hostname changes.
+     */
+    async modifyPrivateNameserverRaw(requestParameters: ModifyPrivateNameserverRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ModifyPrivateNameserverResponseContent>> {
+        const requestOptions = await this.modifyPrivateNameserverRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ModifyPrivateNameserverResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Modifies a private/child nameserver. Provide at least one of new_nameserver or new_ip_address. Some registrars (COZA/COCCA) require new_ip_address and reject hostname changes.
+     */
+    async modifyPrivateNameserver(requestParameters: ModifyPrivateNameserverRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ModifyPrivateNameserverResponseContent> {
+        const response = await this.modifyPrivateNameserverRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for registerPrivateNameserver without sending the request
+     */
+    async registerPrivateNameserverRequestOpts(requestParameters: RegisterPrivateNameserverRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['registerPrivateNameserverRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'registerPrivateNameserverRequestContent',
+                'Required parameter "registerPrivateNameserverRequestContent" was null or undefined when calling registerPrivateNameserver().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/register-private-nameserver`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: RegisterPrivateNameserverRequestContentToJSON(requestParameters['registerPrivateNameserverRequestContent']),
+        };
+    }
+
+    /**
+     * Registers a private/child nameserver (glue host) under an owned domain. Requires available_features.private_nameservers on get-domain. Distinct from update-nameservers.
+     */
+    async registerPrivateNameserverRaw(requestParameters: RegisterPrivateNameserverRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<RegisterPrivateNameserverResponseContent>> {
+        const requestOptions = await this.registerPrivateNameserverRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => RegisterPrivateNameserverResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Registers a private/child nameserver (glue host) under an owned domain. Requires available_features.private_nameservers on get-domain. Distinct from update-nameservers.
+     */
+    async registerPrivateNameserver(requestParameters: RegisterPrivateNameserverRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<RegisterPrivateNameserverResponseContent> {
+        const response = await this.registerPrivateNameserverRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
@@ -540,7 +1121,7 @@ export class DomainsApi extends runtime.BaseAPI {
     }
 
     /**
-     * Generates AI-powered domain name suggestions from a natural-language description. Returns suggested domains with availability status and pricing.
+     * Use for domain name ideas from a description. For specific domains, use check_domain_availability.
      */
     async suggestDomainsRaw(requestParameters: SuggestDomainsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<SuggestDomainsResponseContent>> {
         const requestOptions = await this.suggestDomainsRequestOpts(requestParameters);
@@ -550,7 +1131,7 @@ export class DomainsApi extends runtime.BaseAPI {
     }
 
     /**
-     * Generates AI-powered domain name suggestions from a natural-language description. Returns suggested domains with availability status and pricing.
+     * Use for domain name ideas from a description. For specific domains, use check_domain_availability.
      */
     async suggestDomains(requestParameters: SuggestDomainsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<SuggestDomainsResponseContent> {
         const response = await this.suggestDomainsRaw(requestParameters, initOverrides);
@@ -609,6 +1190,61 @@ export class DomainsApi extends runtime.BaseAPI {
      */
     async updateDomainContacts(requestParameters: UpdateDomainContactsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateDomainContactsResponseContent> {
         const response = await this.updateDomainContactsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     * Creates request options for updateDomainLockStatus without sending the request
+     */
+    async updateDomainLockStatusRequestOpts(requestParameters: UpdateDomainLockStatusRequest): Promise<runtime.RequestOpts> {
+        if (requestParameters['updateDomainLockStatusRequestContent'] == null) {
+            throw new runtime.RequiredError(
+                'updateDomainLockStatusRequestContent',
+                'Required parameter "updateDomainLockStatusRequestContent" was null or undefined when calling updateDomainLockStatus().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("BearerAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+
+        let urlPath = `/domain/update-lock-status`;
+
+        return {
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: UpdateDomainLockStatusRequestContentToJSON(requestParameters['updateDomainLockStatusRequestContent']),
+        };
+    }
+
+    /**
+     * Sets the registrar transfer lock for an owned domain. When the account has 2FA enabled, upstream may return 403 until two_fa_code (or two_fa_backup) is supplied.
+     */
+    async updateDomainLockStatusRaw(requestParameters: UpdateDomainLockStatusRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UpdateDomainLockStatusResponseContent>> {
+        const requestOptions = await this.updateDomainLockStatusRequestOpts(requestParameters);
+        const response = await this.request(requestOptions, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => UpdateDomainLockStatusResponseContentFromJSON(jsonValue));
+    }
+
+    /**
+     * Sets the registrar transfer lock for an owned domain. When the account has 2FA enabled, upstream may return 403 until two_fa_code (or two_fa_backup) is supplied.
+     */
+    async updateDomainLockStatus(requestParameters: UpdateDomainLockStatusRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UpdateDomainLockStatusResponseContent> {
+        const response = await this.updateDomainLockStatusRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
